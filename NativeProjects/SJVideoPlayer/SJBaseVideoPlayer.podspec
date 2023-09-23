@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'SJBaseVideoPlayer/*.{h,m}'
-  s.default_subspecs = 'Common', 'AVPlayer'
+  s.default_subspecs = 'Common', 'AVPlayer', 'IJKPlayer'
   
   s.subspec 'Common' do |ss|
     ss.source_files = 'SJBaseVideoPlayer/Common/**/*.{h,m}'

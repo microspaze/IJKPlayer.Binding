@@ -54,12 +54,12 @@ target 'SJVideoPlayer_Example' do
 #  pod 'SJBaseVideoPlayer/PLPlayer', :path => '../../SJBaseVideoPlayer'
 
   # 默认为 AVPlayer
-  pod 'SJBaseVideoPlayer'#, :path => '../../SJBaseVideoPlayer'
+  pod 'SJBaseVideoPlayer', :path => '../'
   pod 'SJVideoPlayer', :path => '../'
-  pod 'SJUIKit'
+  pod 'SJUIKit', :path=> '../'
   
   # 列表控制
-  pod 'SJUIKit/PlaybackListController'
+  #pod 'SJUIKit/PlaybackListController'
 
   # 边播边缓存的库
   pod 'SJMediaCacheServer'
@@ -76,9 +76,8 @@ target 'SJVideoPlayer_Example' do
 end
 
 target 'iPadDemo' do
-  pod 'SJBaseVideoPlayer'#, :path => '../../SJBaseVideoPlayer'
+  pod 'SJBaseVideoPlayer', :path => '../'
   pod 'SJVideoPlayer', :path => '../'
-
   pod 'Masonry', :inhibit_warnings => true
   pod 'MJRefresh', '3.4.3', :inhibit_warnings => true
 end
