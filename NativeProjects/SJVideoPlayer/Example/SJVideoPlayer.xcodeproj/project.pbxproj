@@ -1659,7 +1659,7 @@
 				INFOPLIST_FILE = "SJVideoPlayer/SJVideoPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.SJVideoPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.i7chi.sjvideoplayer;
 				PRODUCT_NAME = "播放器";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
@@ -1684,7 +1684,7 @@
 				INFOPLIST_FILE = "SJVideoPlayer/SJVideoPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.SJVideoPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.i7chi.sjvideoplayer;
 				PRODUCT_NAME = "播放器";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
