@@ -1154,22 +1154,23 @@
 						};
 					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = SMBMHSCYNR;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 					A697AC79287BEF4500569C2B = {
 						CreatedOnToolsVersion = 14.0;
-						DevelopmentTeam = DVCY355DY9;
+						DevelopmentTeam = SMBMHSCYNR;
 						ProvisioningStyle = Automatic;
 					};
 					A697AC93287BEF4700569C2B = {
 						CreatedOnToolsVersion = 14.0;
-						DevelopmentTeam = DVCY355DY9;
+						DevelopmentTeam = SMBMHSCYNR;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A697AC79287BEF4500569C2B;
 					};
 					A697AC9D287BEF4800569C2B = {
 						CreatedOnToolsVersion = 14.0;
-						DevelopmentTeam = DVCY355DY9;
+						DevelopmentTeam = SMBMHSCYNR;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A697AC79287BEF4500569C2B;
 					};
@@ -1695,6 +1696,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1718,6 +1720,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1749,7 +1752,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = DVCY355DY9;
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iPadDemo/Info.plist;
@@ -1786,7 +1789,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = DVCY355DY9;
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iPadDemo/Info.plist;
@@ -1820,7 +1823,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = DVCY355DY9;
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1850,7 +1853,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = DVCY355DY9;
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1878,7 +1881,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = DVCY355DY9;
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1907,7 +1910,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = DVCY355DY9;
+				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
