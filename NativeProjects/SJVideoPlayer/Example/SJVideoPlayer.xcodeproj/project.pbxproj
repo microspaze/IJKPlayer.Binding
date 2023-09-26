@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13FEB85DCAAE0D2C731299D6 /* libPods-SJVideoPlayer_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD2CA6C02217556CFBFA7AB /* libPods-SJVideoPlayer_Example.a */; };
-		2E5187B651B9ECE360D0557C /* libPods-iPadDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E71EFE1686BFE92368A9E891 /* libPods-iPadDemo.a */; };
+		2BB784A2E6EF9DF7CE0A4B97 /* Pods_SJVideoPlayer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520404A4D40191B331EDF319 /* Pods_SJVideoPlayer_Example.framework */; };
 		3B070E8C25FC88C300960506 /* SJBaseVideoPlayer+ListPlaybackExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B070E8B25FC88C300960506 /* SJBaseVideoPlayer+ListPlaybackExtended.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -24,6 +23,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		72401473B2DAC2DE9628FC35 /* Pods_iPadDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB672033146D57736F00F8A /* Pods_iPadDemo.framework */; };
 		7700905C24988F6900A99906 /* SJDYPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700905424988F6900A99906 /* SJDYPlaybackListViewController.m */; };
 		7700905D24988F6900A99906 /* SJDYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700905524988F6900A99906 /* SJDYTableViewCell.m */; };
 		7700905E24988F6900A99906 /* SJDYDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7700905624988F6900A99906 /* SJDYDataProvider.m */; };
@@ -157,10 +157,12 @@
 
 /* Begin PBXFileReference section */
 		0913D8D9BFC4EE68E3F1EF64 /* Pods-SJVideoPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJVideoPlayer_Example.release.xcconfig"; path = "Target Support Files/Pods-SJVideoPlayer_Example/Pods-SJVideoPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0AB672033146D57736F00F8A /* Pods_iPadDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPadDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29015EDA298D269CBC7AD126 /* Pods-iPadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPadDemo.release.xcconfig"; path = "Target Support Files/Pods-iPadDemo/Pods-iPadDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3B070E8A25FC88C300960506 /* SJBaseVideoPlayer+ListPlaybackExtended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SJBaseVideoPlayer+ListPlaybackExtended.h"; sourceTree = "<group>"; };
 		3B070E8B25FC88C300960506 /* SJBaseVideoPlayer+ListPlaybackExtended.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SJBaseVideoPlayer+ListPlaybackExtended.m"; sourceTree = "<group>"; };
 		3DE6356926AEF70F060F33F3 /* SJVideoPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SJVideoPlayer.podspec; path = ../SJVideoPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		520404A4D40191B331EDF319 /* Pods_SJVideoPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJVideoPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* 播放器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "播放器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -365,8 +367,6 @@
 		A6F19DFF22D9D8050043B508 /* SJViewController7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJViewController7.m; sourceTree = "<group>"; };
 		A6F19E0022D9D8050043B508 /* SJViewController7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJViewController7.xib; sourceTree = "<group>"; };
 		B07A3D702ABD89070047D7E9 /* SJUIKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SJUIKit.podspec; path = ../SJUIKit.podspec; sourceTree = "<group>"; };
-		CCD2CA6C02217556CFBFA7AB /* libPods-SJVideoPlayer_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJVideoPlayer_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E71EFE1686BFE92368A9E891 /* libPods-iPadDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iPadDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7D2ADB76D2D75618F47694 /* Pods-iPadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPadDemo.debug.xcconfig"; path = "Target Support Files/Pods-iPadDemo/Pods-iPadDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FD50424EAFCFA1AF356F36DF /* Pods-SJVideoPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJVideoPlayer_Example.debug.xcconfig"; path = "Target Support Files/Pods-SJVideoPlayer_Example/Pods-SJVideoPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -380,7 +380,7 @@
 				77D0CFBA235727D90081C855 /* MediaPlayer.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				13FEB85DCAAE0D2C731299D6 /* libPods-SJVideoPlayer_Example.a in Frameworks */,
+				2BB784A2E6EF9DF7CE0A4B97 /* Pods_SJVideoPlayer_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +398,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5187B651B9ECE360D0557C /* libPods-iPadDemo.a in Frameworks */,
+				72401473B2DAC2DE9628FC35 /* Pods_iPadDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,8 +465,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				CCD2CA6C02217556CFBFA7AB /* libPods-SJVideoPlayer_Example.a */,
-				E71EFE1686BFE92368A9E891 /* libPods-iPadDemo.a */,
+				520404A4D40191B331EDF319 /* Pods_SJVideoPlayer_Example.framework */,
+				0AB672033146D57736F00F8A /* Pods_iPadDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1050,7 +1050,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				09CC984351C8AA5FD418E7BC /* [CP] Copy Pods Resources */,
+				B585069FB5CF453A7DF19FBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1087,7 +1087,7 @@
 				A697AC76287BEF4500569C2B /* Sources */,
 				A697AC77287BEF4500569C2B /* Frameworks */,
 				A697AC78287BEF4500569C2B /* Resources */,
-				3C0F7DAEF40D93A97A95B8DA /* [CP] Copy Pods Resources */,
+				602C4859DECBE4A57FDB5270 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1269,48 +1269,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09CC984351C8AA5FD418E7BC /* [CP] Copy Pods Resources */ = {
+		602C4859DECBE4A57FDB5270 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SJVideoPlayer_Example/Pods-SJVideoPlayer_Example-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/../../SJBaseVideoPlayer/ResourceLoader/SJBaseVideoPlayerResources.bundle",
-				"${PODS_ROOT}/../../SJVideoPlayer/ResourceLoader/SJVideoPlayer.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-iPadDemo/Pods-iPadDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer.common/SJBaseVideoPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/SJUIKit-68d28646/SJUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SJBaseVideoPlayerResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SJVideoPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJBaseVideoPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJVideoPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SJVideoPlayer_Example/Pods-SJVideoPlayer_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPadDemo/Pods-iPadDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C0F7DAEF40D93A97A95B8DA /* [CP] Copy Pods Resources */ = {
+		B585069FB5CF453A7DF19FBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iPadDemo/Pods-iPadDemo-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/../../SJBaseVideoPlayer/ResourceLoader/SJBaseVideoPlayerResources.bundle",
-				"${PODS_ROOT}/../../SJVideoPlayer/ResourceLoader/SJVideoPlayer.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-SJVideoPlayer_Example/Pods-SJVideoPlayer_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer.common-IJKPlayer/SJBaseVideoPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/SJMediaCacheServer/SJMediaCacheServer.framework",
+				"${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/SJUIKit-98d45660/SJUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SJBaseVideoPlayerResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SJVideoPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJBaseVideoPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJMediaCacheServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJVideoPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPadDemo/Pods-iPadDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SJVideoPlayer_Example/Pods-SJVideoPlayer_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E81B7FEC30068D32F95F4D37 /* [CP] Check Pods Manifest.lock */ = {

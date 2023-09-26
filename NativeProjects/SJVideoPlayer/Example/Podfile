@@ -10,6 +10,10 @@ platform :ios, '11.0'
 #  end
 #end
 
+pre_install do |installer|
+  # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
@@ -39,10 +43,10 @@ end
 
 
 target 'SJVideoPlayer_Example' do
-#  use_frameworks!
+  use_frameworks!
   
 ## 切换为 ijkplayer, 详见: https://github.com/changsanjiang/SJVideoPlayer/wiki/Use-ijkplayer
-#  pod 'SJBaseVideoPlayer/IJKPlayer', :path => '../../SJBaseVideoPlayer'
+  pod 'SJBaseVideoPlayer/IJKPlayer'#, :path => '../../SJBaseVideoPlayer'
 #
 ## 切换为 Aliplayer, 详见: https://github.com/changsanjiang/SJVideoPlayer/wiki/Use-AliPlayer
 #  pod 'SJBaseVideoPlayer/AliPlayer', :path => '../../SJBaseVideoPlayer'
@@ -54,8 +58,8 @@ target 'SJVideoPlayer_Example' do
 #  pod 'SJBaseVideoPlayer/PLPlayer', :path => '../../SJBaseVideoPlayer'
 
   # 默认为 AVPlayer
-  pod 'SJBaseVideoPlayer', :path => '../'
-  pod 'SJVideoPlayer', :path => '../'
+  #pod 'SJBaseVideoPlayer'#, :path => '../'
+  pod 'SJVideoPlayer'#, :path => '../'
   pod 'SJUIKit'#, :path=> '../'
   
   # 列表控制
@@ -76,8 +80,10 @@ target 'SJVideoPlayer_Example' do
 end
 
 target 'iPadDemo' do
-  pod 'SJBaseVideoPlayer', :path => '../'
-  pod 'SJVideoPlayer', :path => '../'
+  use_frameworks!
+  
+  pod 'SJBaseVideoPlayer'#, :path => '../'
+  pod 'SJVideoPlayer'#, :path => '../'
   pod 'Masonry', :inhibit_warnings => true
   pod 'MJRefresh', '3.4.3', :inhibit_warnings => true
 end
