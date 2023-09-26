@@ -46,7 +46,7 @@ target 'SJVideoPlayer_Example' do
   use_frameworks!
   
 ## 切换为 ijkplayer, 详见: https://github.com/changsanjiang/SJVideoPlayer/wiki/Use-ijkplayer
-  pod 'SJBaseVideoPlayer/IJKPlayer'#, :path => '../../SJBaseVideoPlayer'
+  #pod 'SJBaseVideoPlayer/IJKPlayer'#, :path => '../../SJBaseVideoPlayer'
 #
 ## 切换为 Aliplayer, 详见: https://github.com/changsanjiang/SJVideoPlayer/wiki/Use-AliPlayer
 #  pod 'SJBaseVideoPlayer/AliPlayer', :path => '../../SJBaseVideoPlayer'
@@ -58,8 +58,8 @@ target 'SJVideoPlayer_Example' do
 #  pod 'SJBaseVideoPlayer/PLPlayer', :path => '../../SJBaseVideoPlayer'
 
   # 默认为 AVPlayer
-  #pod 'SJBaseVideoPlayer'#, :path => '../'
-  pod 'SJVideoPlayer'#, :path => '../'
+  pod 'SJBaseVideoPlayer', :path => '../'
+  pod 'SJVideoPlayer', :path => '../'
   pod 'SJUIKit'#, :path=> '../'
   
   # 列表控制
@@ -82,8 +82,8 @@ end
 target 'iPadDemo' do
   use_frameworks!
   
-  pod 'SJBaseVideoPlayer'#, :path => '../'
-  pod 'SJVideoPlayer'#, :path => '../'
+  pod 'SJBaseVideoPlayer', :path => '../'
+  pod 'SJVideoPlayer', :path => '../'
   pod 'Masonry', :inhibit_warnings => true
   pod 'MJRefresh', '3.4.3', :inhibit_warnings => true
 end
