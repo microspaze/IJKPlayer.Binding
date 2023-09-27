@@ -22,7 +22,7 @@ extern SJControlLayerIdentifier SJControlLayer_Uninitialized;
 ///
 /// - 使用示例请查看`SJVideoPlayer`的`init`方法.
 @protocol SJControlLayerSwitcher <NSObject>
-- (instancetype)initWithPlayer:(__weak SJBaseVideoPlayer *)player;
+- (instancetype)initWithPlayer:(SJBaseVideoPlayer *)player;
 
 /// 切换控制层
 ///

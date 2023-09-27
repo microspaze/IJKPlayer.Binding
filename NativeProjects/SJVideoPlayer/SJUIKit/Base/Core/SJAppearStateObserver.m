@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @synthesize vc_viewDidDisappearExeBlock = _vc_viewDidDisappearExeBlock;
 static char appearStateKey;
 
-- (instancetype)initWithViewController:(__kindof __weak id<SJAppearProtocol>)viewController {
+- (instancetype)initWithViewController:(__kindof id<SJAppearProtocol>)viewController {
     self = [super init];
     if ( !self ) return nil;
     [viewController sj_addObserver:self forKeyPath:@"appearState" context:&appearStateKey];

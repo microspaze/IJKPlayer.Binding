@@ -170,8 +170,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// - UIScrollView
 ///     - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///         - player
-+ (instancetype)playModelWithScrollView:(__weak UIScrollView *)scrollView;
-+ (instancetype)playModelWithScrollView:(__weak UIScrollView *)scrollView superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithScrollView:(UIScrollView *)scrollView;
++ (instancetype)playModelWithScrollView:(UIScrollView *)scrollView superviewSelector:(SEL)superviewSelector;
 
 #pragma mark - UITableView
 
@@ -179,36 +179,36 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - UITableViewCell
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
++ (instancetype)playModelWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector;
 
 /// - UITableView
 ///     - UITableView.TableHeaderView
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView tableHeaderView:(__weak UIView *)tableHeaderView;
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView tableHeaderView:(__weak UIView *)tableHeaderView superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableHeaderView:(UIView *)tableHeaderView;
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableHeaderView:(UIView *)tableHeaderView superviewSelector:(SEL)superviewSelector;
 
 /// - UITableView
 ///     - UITableView.TableFooterView
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView tableFooterView:(__weak UIView *)tableFooterView;
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView tableFooterView:(__weak UIView *)tableFooterView superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableFooterView:(UIView *)tableFooterView;
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableFooterView:(UIView *)tableFooterView superviewSelector:(SEL)superviewSelector;
 
 /// - UITableView
 ///     - UITableViewSectionHeaderView
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inHeaderForSection:(NSInteger)section;
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithTableView:(UITableView *)tableView inHeaderForSection:(NSInteger)section;
++ (instancetype)playModelWithTableView:(UITableView *)tableView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
 
 /// - UITableView
 ///     - UITableViewSectionFooterView
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inFooterForSection:(NSInteger)section;
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithTableView:(UITableView *)tableView inFooterForSection:(NSInteger)section;
++ (instancetype)playModelWithTableView:(UITableView *)tableView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
 
 
 #pragma mark - UICollectionView
@@ -217,22 +217,22 @@ NS_ASSUME_NONNULL_BEGIN
 ///     - UICollectionViewCell
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithCollectionView:(__weak UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
-+ (instancetype)playModelWithCollectionView:(__weak UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector;
 
 /// - UICollectionView
 ///     - UICollectionElementKindSectionHeader
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inHeaderForSection:(NSInteger)section;
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inHeaderForSection:(NSInteger)section;
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
 
 /// - UICollectionView
 ///     - UICollectionElementKindSectionFooter
 ///         - PlayerSuperview<SJPlayModelPlayerSuperview>
 ///             - player
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inFooterForSection:(NSInteger)section;
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inFooterForSection:(NSInteger)section;
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector;
 
 #pragma mark -
 
@@ -312,7 +312,7 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
 ///             - player
 + (instancetype)UITableViewCellPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                    atIndexPath:(__strong NSIndexPath *)indexPath
-                                                     tableView:(__weak UITableView *)tableView __deprecated_msg("use `playModelWithTableView:indexPath`!");
+                                                     tableView:(UITableView *)tableView __deprecated_msg("use `playModelWithTableView:indexPath`!");
 
 /// - UICollectionView
 ///     - UICollectionViewCell
@@ -320,7 +320,7 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
 ///             - player
 + (instancetype)UICollectionViewCellPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                         atIndexPath:(__strong NSIndexPath *)indexPath
-                                                     collectionView:(__weak UICollectionView *)collectionView __deprecated_msg("use `playModelWithCollectionView:indexPath`!");
+                                                     collectionView:(UICollectionView *)collectionView __deprecated_msg("use `playModelWithCollectionView:indexPath`!");
 
 
 
@@ -328,8 +328,8 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
 ///     - UITableViewHeaderView
 ///         - PlayerSuperview
 ///             - player
-+ (instancetype)UITableViewHeaderViewPlayModelWithPlayerSuperview:(__weak UIView *)playerSuperview
-                                                        tableView:(__weak UITableView *)tableView __deprecated_msg("use `playModelWithTableView:tableHeaderView`!");
++ (instancetype)UITableViewHeaderViewPlayModelWithPlayerSuperview:(UIView *)playerSuperview
+                                                        tableView:(UITableView *)tableView __deprecated_msg("use `playModelWithTableView:tableHeaderView`!");
 
 /// - UITableView
 ///     - UITableViewHeaderFooterView
@@ -338,7 +338,7 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
 + (instancetype)UITableViewHeaderFooterViewPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                                         inSection:(NSInteger)section
                                                                          isHeader:(BOOL)isHeader    // 是否是Header, 如果是传YES, 如果是Footer传NO
-                                                                        tableView:(__weak UITableView *)tableView __deprecated_msg("use `playModelWithTableView:tableFooterView`!");
+                                                                        tableView:(UITableView *)tableView __deprecated_msg("use `playModelWithTableView:tableFooterView`!");
 
 /// - UITableView
 ///     - UITableViewHeaderView
@@ -348,8 +348,8 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
 ///                     - player
 + (instancetype)UICollectionViewNestedInUITableViewHeaderViewPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                                                  atIndexPath:(NSIndexPath *)indexPath
-                                                                              collectionView:(__weak UICollectionView *)collectionView
-                                                                                   tableView:(__weak UITableView *)tableView __deprecated_msg("use `nextPlayModel`!");
+                                                                              collectionView:(UICollectionView *)collectionView
+                                                                                   tableView:(UITableView *)tableView __deprecated_msg("use `nextPlayModel`!");
 
 /// - UITableView
 ///     - UITableViewCell
@@ -361,7 +361,7 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
                                                                            atIndexPath:(__strong NSIndexPath *)indexPath
                                                                      collectionViewTag:(NSInteger)collectionViewTag
                                                              collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                                                                             tableView:(__weak UITableView *)tableView __deprecated_msg("use `nextPlayModel`!");
+                                                                             tableView:(UITableView *)tableView __deprecated_msg("use `nextPlayModel`!");
 
 /// - UICollectionView
 ///     - UICollectionViewCell
@@ -373,7 +373,7 @@ __deprecated_msg("use `playModel.nextPlayModel` and `playModel.scrollViewSelecto
                                                                                 atIndexPath:(__strong NSIndexPath *)indexPath
                                                                           collectionViewTag:(NSInteger)collectionViewTag
                                                                   collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                                                                         rootCollectionView:(__weak UICollectionView *)rootCollectionView __deprecated_msg("use `nextPlayModel`!");
+                                                                         rootCollectionView:(UICollectionView *)rootCollectionView __deprecated_msg("use `nextPlayModel`!");
 @end
 
 @protocol SJPlayerDefaultSelectors <NSObject>

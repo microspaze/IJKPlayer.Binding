@@ -9,13 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface SJScrollViewPlayModel : SJPlayModel
-- (instancetype)initWithScrollView:(__weak UIScrollView *)scrollView;
+- (instancetype)initWithScrollView:(UIScrollView *)scrollView;
 
 @property (nonatomic, weak, readonly, nullable) UIScrollView *scrollView;
 @end
 
 @interface SJTableViewCellPlayModel : SJPlayModel
-- (instancetype)initWithTableView:(__weak UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+- (instancetype)initWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 @property (nonatomic, weak, readonly, nullable) UITableView *tableView;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface SJTableViewTableHeaderViewPlayModel : SJPlayModel
-- (instancetype)initWithTableView:(UITableView *__weak)tableView tableHeaderView:(__weak UIView *)tableHeaderView;
+- (instancetype)initWithTableView:(UITableView *)tableView tableHeaderView:(UIView *)tableHeaderView;
 
 @property (nonatomic, weak, readonly, nullable) UITableView *tableView;
 @property (nonatomic, weak, readonly, nullable) UIView *tableHeaderView;
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface SJTableViewTableFooterViewPlayModel : SJPlayModel
-- (instancetype)initWithTableView:(UITableView *__weak)tableView tableFooterView:(__weak UIView *)tableFooterView;
+- (instancetype)initWithTableView:(UITableView *)tableView tableFooterView:(UIView *)tableFooterView;
 
 @property (nonatomic, weak, readonly, nullable) UITableView *tableView;
 @property (nonatomic, weak, readonly, nullable) UIView *tableFooterView;
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface SJTableViewSectionHeaderViewPlayModel : SJPlayModel
-- (instancetype)initWithTableView:(__weak UITableView *)tableView inHeaderForSection:(NSInteger)section;
+- (instancetype)initWithTableView:(UITableView *)tableView inHeaderForSection:(NSInteger)section;
 
 @property (nonatomic, weak, readonly, nullable) UITableView *tableView;
 @property (nonatomic, readonly) NSInteger section;
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface SJTableViewSectionFooterViewPlayModel : SJPlayModel
-- (instancetype)initWithTableView:(__weak UITableView *)tableView inFooterForSection:(NSInteger)section;
+- (instancetype)initWithTableView:(UITableView *)tableView inFooterForSection:(NSInteger)section;
 
 @property (nonatomic, weak, readonly, nullable) UITableView *tableView;
 @property (nonatomic, readonly) NSInteger section;
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 
 @interface SJCollectionViewCellPlayModel : SJPlayModel
-- (instancetype)initWithCollectionView:(__weak UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
 
 @property (nonatomic, weak, readonly, nullable) UICollectionView *collectionView;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -65,14 +65,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface SJCollectionViewSectionHeaderViewPlayModel : SJPlayModel
-- (instancetype)initWithCollectionView:(__weak UICollectionView *)collectionView inHeaderForSection:(NSInteger)section;
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView inHeaderForSection:(NSInteger)section;
 
 @property (nonatomic, weak, readonly, nullable) UICollectionView *collectionView;
 @property (nonatomic, readonly) NSInteger section;
 @end
 
 @interface SJCollectionViewSectionFooterViewPlayModel : SJPlayModel
-- (instancetype)initWithCollectionView:(__weak UICollectionView *)collectionView inFooterForSection:(NSInteger)section;
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView inFooterForSection:(NSInteger)section;
 
 @property (nonatomic, weak, readonly, nullable) UICollectionView *collectionView;
 @property (nonatomic, readonly) NSInteger section;
@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperview:(__unused UIView *)playerSuperview
                             atIndexPath:(__strong NSIndexPath *)indexPath
-                              tableView:(__weak UITableView *)tableView;
+                              tableView:(UITableView *)tableView;
 
 @property (nonatomic, readonly) NSInteger playerSuperviewTag;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(__strong NSIndexPath *)indexPath
-                                 tableView:(__weak UITableView *)tableView;
+                                 tableView:(UITableView *)tableView;
 @end
 
 /// 视图层级
@@ -110,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperview:(__unused UIView *)playerSuperview
                             atIndexPath:(__strong NSIndexPath *)indexPath
-                         collectionView:(__weak UICollectionView *)collectionView;
+                         collectionView:(UICollectionView *)collectionView;
 
 @property (nonatomic, readonly) NSInteger playerSuperviewTag;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -118,7 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(__strong NSIndexPath *)indexPath
-                            collectionView:(__weak UICollectionView *)collectionView;
+                            collectionView:(UICollectionView *)collectionView;
 @end
 
 /// 视图层级
@@ -128,8 +128,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///             - player
 @interface SJUITableViewHeaderViewPlayModel: SJPlayModel
 
-- (instancetype)initWithPlayerSuperview:(__weak UIView *)playerSuperview
-                              tableView:(__weak UITableView *)tableView;
+- (instancetype)initWithPlayerSuperview:(UIView *)playerSuperview
+                              tableView:(UITableView *)tableView;
 
 @property (nonatomic, weak, readonly) UIView *playerSuperview;
 @property (nonatomic, weak, readonly) UITableView *tableView;
@@ -147,8 +147,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperview:(__unused UIView *)playerSuperview
                             atIndexPath:(NSIndexPath *)indexPath
-                         collectionView:(__weak UICollectionView *)collectionView
-                              tableView:(__weak UITableView *)tableView;
+                         collectionView:(UICollectionView *)collectionView
+                              tableView:(UITableView *)tableView;
 
 @property (nonatomic, readonly) NSInteger playerSuperviewTag;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -157,8 +157,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(NSIndexPath *)indexPath
-                            collectionView:(__weak UICollectionView *)collectionView
-                                 tableView:(__weak UITableView *)tableView;
+                            collectionView:(UICollectionView *)collectionView
+                                 tableView:(UITableView *)tableView;
 @end
 
 /// 视图层级
@@ -174,7 +174,7 @@ NS_ASSUME_NONNULL_BEGIN
                             atIndexPath:(__strong NSIndexPath *)indexPath
                          collectionView:(__unused UICollectionView *)collectionView
               collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                              tableView:(__weak UITableView *)tableView;
+                              tableView:(UITableView *)tableView;
 
 @property (nonatomic, readonly) NSInteger playerSuperviewTag;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -186,7 +186,7 @@ NS_ASSUME_NONNULL_BEGIN
                                atIndexPath:(__strong NSIndexPath *)indexPath
                          collectionViewTag:(NSInteger)collectionViewTag
                  collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                                 tableView:(__weak UITableView *)tableView;
+                                 tableView:(UITableView *)tableView;
 
 - (UICollectionView *)collectionView;
 @end
@@ -202,7 +202,7 @@ NS_ASSUME_NONNULL_BEGIN
                                atIndexPath:(__strong NSIndexPath *)indexPath
                          collectionViewTag:(NSInteger)collectionViewTag
                  collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                        rootCollectionView:(__weak UICollectionView *)rootCollectionView;
+                        rootCollectionView:(UICollectionView *)rootCollectionView;
 
 @property (nonatomic, readonly) NSInteger playerSuperviewTag;
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
@@ -221,7 +221,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                  inSection:(NSInteger)inSection
                                   isHeader:(BOOL)isHeader
-                                 tableView:(__weak UITableView *)tableView;
+                                 tableView:(UITableView *)tableView;
 
 @property (nonatomic, readonly) NSInteger playerSuperviewTag;
 @property (nonatomic, readonly) NSInteger inSection;

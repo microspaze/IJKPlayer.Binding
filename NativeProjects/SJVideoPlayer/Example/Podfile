@@ -18,6 +18,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      config.build_settings['CLANG_ENABLE_OBJC_WEAK'] ||= 'YES'
       if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 11.0
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
       end
@@ -60,11 +61,11 @@ target 'SJVideoPlayer_Example' do
   # 默认为 AVPlayer
   pod 'SJBaseVideoPlayer', :path => '../'
   pod 'SJVideoPlayer', :path => '../'
-  pod 'SJUIKit'#, :path=> '../'
+  pod 'SJUIKit', :path=> '../'
   
   # 列表控制
-  pod 'SJUIKit/PlaybackListController'
-
+  pod 'SJUIKit/PlaybackListController',:path=> '../'
+  
   # 边播边缓存的库
   pod 'SJMediaCacheServer'
   

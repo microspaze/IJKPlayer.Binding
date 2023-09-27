@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// ViewController appear state Observer
 @protocol SJAppearStateObserver
-- (instancetype)initWithViewController:(__kindof __weak id<SJAppearProtocol>)viewController;
+- (instancetype)initWithViewController:(__kindof id<SJAppearProtocol>)viewController;
 
 @property (nonatomic, copy, nullable) void(^vc_viewWillAppearExeBlock)(__kindof id<SJAppearProtocol> viewController);
 @property (nonatomic, copy, nullable) void(^vc_viewDidAppearExeBlock)(__kindof id<SJAppearProtocol> viewController);
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @protocol SJHiddenNavigationBarProtocol
-@property (nonatomic) BOOL needsNavigationBarHidden;
+@property (nonatomic) BOOL mNeedsNavigationBarHidden;
 @end
 
 @protocol SJStatusBarManager <NSObject>

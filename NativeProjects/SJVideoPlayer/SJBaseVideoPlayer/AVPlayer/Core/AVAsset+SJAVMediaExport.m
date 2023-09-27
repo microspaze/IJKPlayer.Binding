@@ -15,7 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface _SJAVAssetPreviewImagesGenerator : NSObject
-- (instancetype)initWithAsset:(__weak AVAsset *)asset;
+- (instancetype)initWithAsset:(AVAsset *)asset;
 @property (nonatomic, weak, readonly, nullable) AVAsset *asset;
 - (void)generatePreviewImagesWithMaxItemSize:(CGSize)itemSize count:(NSUInteger)count completionHandler:(void (^)(AVAsset * _Nonnull, NSArray<UIImage *> * _Nullable, NSError * _Nullable))block;
 - (void)cancel;
@@ -107,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface _SJAVAssetExporter : NSObject
-- (instancetype)initWithAsset:(__weak AVAsset *)asset;
+- (instancetype)initWithAsset:(AVAsset *)asset;
 @property (nonatomic, weak, readonly, nullable) AVAsset *asset;
 @end
 
@@ -217,7 +217,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface _SJAVAssetScreenshotGenerator : NSObject
-- (instancetype)initWithAsset:(__weak AVAsset *)asset;
+- (instancetype)initWithAsset:(AVAsset *)asset;
 @property (nonatomic, strong, readonly) AVAssetImageGenerator *screenshotGenerator;
 @property (nonatomic, weak, readonly, nullable) AVAsset *asset;
 @end
@@ -310,7 +310,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface _SJAVAssetGIFGenerator : NSObject
-- (instancetype)initWithAsset:(__weak AVAsset *)asset;
+- (instancetype)initWithAsset:(AVAsset *)asset;
 @property (nonatomic, strong, readonly) AVAssetImageGenerator *generator;
 @property (nonatomic, weak, readonly, nullable) AVAsset *asset;
 @property (nonatomic, strong, nullable) _SJGIFCreator *creator;
