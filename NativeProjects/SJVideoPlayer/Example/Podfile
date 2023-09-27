@@ -61,11 +61,11 @@ target 'SJVideoPlayer_Example' do
   # 默认为 AVPlayer
   pod 'SJBaseVideoPlayer', :path => '../'
   pod 'SJVideoPlayer', :path => '../'
-  pod 'SJUIKit'#, :path=> '../'
+  pod 'SJUIKit', :path=> '../'
   
   # 列表控制
-  pod 'SJUIKit/PlaybackListController'
-
+  pod 'SJUIKit/PlaybackListController',:path=> '../'
+  
   # 边播边缓存的库
   pod 'SJMediaCacheServer'
   

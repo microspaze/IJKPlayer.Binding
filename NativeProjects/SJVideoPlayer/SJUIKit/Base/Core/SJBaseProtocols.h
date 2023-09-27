@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// ViewController appear state Observer
 @protocol SJAppearStateObserver
-- (instancetype)initWithViewController:(__kindof __weak id<SJAppearProtocol>)viewController;
+- (instancetype)initWithViewController:(__kindof id<SJAppearProtocol>)viewController;
 
 @property (nonatomic, copy, nullable) void(^vc_viewWillAppearExeBlock)(__kindof id<SJAppearProtocol> viewController);
 @property (nonatomic, copy, nullable) void(^vc_viewDidAppearExeBlock)(__kindof id<SJAppearProtocol> viewController);
