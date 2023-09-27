@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="SJUIKitApis.cs" />
+    <ObjcBindingCoreSource Include="SJUIKitEnums.cs" />
+    <ObjcBindingApiDefinition Include="SJBaseVideoPlayerApis.cs" />
+    <ObjcBindingCoreSource Include="SJBaseVideoPlayerEnums.cs" />
+    <ObjcBindingApiDefinition Include="SJVideoPlayerApis.cs" />
+    <ObjcBindingCoreSource Include="SJVideoPlayerEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="Libs/Masonry.framework">
+      <Kind>Framework</Kind>
+      <Frameworks></Frameworks>
+      <LinkerFlags></LinkerFlags>
+      <WeakFrameworks></WeakFrameworks>
+      <ForceLoad>False</ForceLoad>
+      <NeedsGccExceptionHandling>False</NeedsGccExceptionHandling>
+      <IsCxx>False</IsCxx>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="Libs/YYModel.framework">
+      <Kind>Framework</Kind>
+      <Frameworks></Frameworks>
+      <LinkerFlags></LinkerFlags>
+      <WeakFrameworks></WeakFrameworks>
+      <ForceLoad>False</ForceLoad>
+      <NeedsGccExceptionHandling>False</NeedsGccExceptionHandling>
+      <IsCxx>False</IsCxx>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="Libs/SJUIKit.framework">
+      <Kind>Framework</Kind>
+      <Frameworks></Frameworks>
+      <LinkerFlags></LinkerFlags>
+      <WeakFrameworks></WeakFrameworks>
+      <ForceLoad>False</ForceLoad>
+      <NeedsGccExceptionHandling>False</NeedsGccExceptionHandling>
+      <IsCxx>False</IsCxx>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="Libs/SJBaseVideoPlayer.framework">
+      <Kind>Framework</Kind>
+      <Frameworks></Frameworks>
+      <LinkerFlags></LinkerFlags>
+      <WeakFrameworks></WeakFrameworks>
+      <ForceLoad>False</ForceLoad>
+      <NeedsGccExceptionHandling>False</NeedsGccExceptionHandling>
+      <IsCxx>False</IsCxx>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+    <NativeReference Include="Libs/SJVideoPlayer.framework">
+      <Kind>Framework</Kind>
+      <Frameworks></Frameworks>
+      <LinkerFlags></LinkerFlags>
+      <WeakFrameworks></WeakFrameworks>
+      <ForceLoad>False</ForceLoad>
+      <NeedsGccExceptionHandling>False</NeedsGccExceptionHandling>
+      <IsCxx>False</IsCxx>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+  
+  
+</Project>

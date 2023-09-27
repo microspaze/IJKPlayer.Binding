@@ -1,0 +1,6 @@
+framework module SJUIKit {
+  umbrella header "SJUIKit-68d28646-umbrella.h"
+
+  export *
+  module * { export * }
+}
