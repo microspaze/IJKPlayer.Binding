@@ -14,6 +14,13 @@
 #import "SJViewController4.h"
 #import <AVKit/AVPictureInPictureController.h>
 
+#if __has_include(<PodIJKPlayer/PodIJKPlayer.h>)
+#import "SJIJKMediaPlaybackController.h"
+#import <PodIJKPlayer/PodIJKPlayer.h>
+#endif
+
+//#import "SJAliMediaPlaybackController.h"
+
 @interface SJRotationModeDemoViewController1 ()
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
 @property (nonatomic, strong) SJVideoPlayer *player;
@@ -51,11 +58,31 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     _player = [SJVideoPlayer player];
-    _player.defaultEdgeControlLayer.fixesBackItem = YES; // 返回按钮一直显示
+    _player.defaultEdgeControlLayer.fixesBackItem = NO; // 返回按钮一直显示
     _player.pausedInBackground = NO;
     _player.controlLayerAppearManager.interval = 5; // 设置控制层隐藏间隔
-//    _player.resumePlaybackWhenAppDidEnterForeground = YES;
-
+    _player.resumePlaybackWhenAppDidEnterForeground = YES;
+    
+#if __has_include(<PodIJKPlayer/PodIJKPlayer.h>)
+    SJIJKMediaPlaybackController *controller = SJIJKMediaPlaybackController.new;
+    IJKFFOptions *options = [IJKFFOptions optionsByDefault];
+    //[options setPlayerOptionIntValue: 1024 forKey: @"probesize"];
+    //[options setPlayerOptionIntValue: 100 forKey: @"analyzemaxduration"];
+    //[options setPlayerOptionIntValue: 1 forKey: @"flush_packets"];
+    //[options setPlayerOptionIntValue: 0 forKey: @"packet-buffering"];
+    //[options setPlayerOptionIntValue: 1 forKey: @"framedrop"];
+    [options setPlayerOptionIntValue: -1 forKey: @"probesize"];
+    [options setPlayerOptionIntValue: 0 forKey: @"packet-buffering"];
+    [options setPlayerOptionIntValue: 0 forKey: @"enable-accurate-seek"];
+    [options setPlayerOptionIntValue: 10*1024*1024 forKey: @"max-buffer-size"];
+    //[options setPlayerOptionValue: @"fastseek" forKey: @"fflags"];
+    controller.options = options;
+    _player.playbackController = controller;
+#endif
+    //_player.playbackController = SJAliMediaPlaybackController.new;
+    
+    _textField.text = @"https://gastaticqn.gatime.cn/big_buck_bunny_4k.mp4";
+    
     SJVideoPlayerURLAsset *asset = [[SJVideoPlayerURLAsset alloc] initWithURL:SourceURL0];
     asset.startPosition = 5;
 //    asset.trialEndPosition = 30; // 试看30秒
