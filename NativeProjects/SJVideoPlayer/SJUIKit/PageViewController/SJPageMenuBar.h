@@ -6,9 +6,9 @@
 //  Copyright © 2020 changsanjiang@gmail.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "SJPageMenuItemViewDefines.h"
+#import "SJPageMenuBarInterfaces.h"
 @protocol SJPageMenuBarDataSource, SJPageMenuBarDelegate, SJPageMenuBarGestureHandler, SJPageMenuBarScrollIndicator;
+@class SJPageMenuBarScrollInRangeTransitionContext;
 
 typedef NS_ENUM(NSUInteger, SJPageMenuBarDistribution) {
     SJPageMenuBarDistributionEqualSpacing,
@@ -64,7 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, null_resettable) UIColor *scrollIndicatorTintColor;
 @property (nonatomic) SJPageMenuBarScrollIndicatorLayoutMode scrollIndicatorLayoutMode;
 
-@property (nonatomic) CGFloat centerlineOffset;                     ///< default is `0`.
+@property (nonatomic) CGFloat baselineOffset;                       ///< default is `0`.
+@property (nonatomic) CGFloat centerPositionOffset;                 ///< default is `0`.
 
 @property (nonatomic, strong, null_resettable) id<SJPageMenuBarGestureHandler> gestureHandler;
 @property (nonatomic, strong, null_resettable) UIView<SJPageMenuBarScrollIndicator> *scrollIndicator;
@@ -84,8 +85,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @protocol SJPageMenuBarDelegate <NSObject>
+/// @param transitionProgress 0..1, 1 => isFocused
+- (CGSize)pageMenuBar:(SJPageMenuBar *)bar sizeForItemAtIndex:(NSUInteger)index transitionProgress:(CGFloat)transitionProgress;
+
 @optional
 - (void)pageMenuBar:(SJPageMenuBar *)bar focusedIndexDidChange:(NSUInteger)index;
+
+- (UIColor *)pageMenuBar:(SJPageMenuBar *)bar tintColorForItemAtIndex:(NSUInteger)index inContext:(SJPageMenuBarScrollInRangeTransitionContext *)context;
 @end
 
 
@@ -93,4 +99,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) void(^singleTapHandler)(SJPageMenuBar *bar, CGPoint location); // 单击手势的处理, 默认为滚动到点击的位置
 @end
 
+
+@interface SJPageMenuBarScrollInRangeTransitionContext : NSObject
+- (instancetype)initWithRange:(NSRange)range distanceProgress:(CGFloat)progress;
+
+@property (nonatomic, readonly) NSRange range;
+@property (nonatomic, readonly) CGFloat distanceProgress;
+@end
 NS_ASSUME_NONNULL_END
