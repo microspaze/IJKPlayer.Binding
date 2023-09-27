@@ -22,91 +22,91 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
-+ (instancetype)playModelWithScrollView:(__weak UIScrollView *)scrollView {
++ (instancetype)playModelWithScrollView:(UIScrollView *)scrollView {
     return [SJScrollViewPlayModel.alloc initWithScrollView:scrollView];
 }
 
-+ (instancetype)playModelWithScrollView:(__weak UIScrollView *)scrollView superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithScrollView:(UIScrollView *)scrollView superviewSelector:(SEL)superviewSelector {
     SJScrollViewPlayModel *model = [SJScrollViewPlayModel.alloc initWithScrollView:scrollView];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
++ (instancetype)playModelWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     return [SJTableViewCellPlayModel.alloc initWithTableView:tableView indexPath:indexPath];
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector {
     SJTableViewCellPlayModel *model = [SJTableViewCellPlayModel.alloc initWithTableView:tableView indexPath:indexPath];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithTableView:(UITableView *__weak)tableView tableHeaderView:(__weak UIView *)tableHeaderView {
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableHeaderView:(UIView *)tableHeaderView {
     return [SJTableViewTableHeaderViewPlayModel.alloc initWithTableView:tableView tableHeaderView:tableHeaderView];
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView tableHeaderView:(__weak UIView *)tableHeaderView superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableHeaderView:(UIView *)tableHeaderView superviewSelector:(SEL)superviewSelector {
     SJTableViewTableHeaderViewPlayModel *model = [SJTableViewTableHeaderViewPlayModel.alloc initWithTableView:tableView tableHeaderView:tableHeaderView];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithTableView:(UITableView *__weak)tableView tableFooterView:(__weak UIView *)tableFooterView {
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableFooterView:(UIView *)tableFooterView {
     return [SJTableViewTableFooterViewPlayModel.alloc initWithTableView:tableView tableFooterView:tableFooterView];
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView tableFooterView:(__weak UIView *)tableFooterView superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithTableView:(UITableView *)tableView tableFooterView:(UIView *)tableFooterView superviewSelector:(SEL)superviewSelector {
     SJTableViewTableFooterViewPlayModel *model = [SJTableViewTableFooterViewPlayModel.alloc initWithTableView:tableView tableFooterView:tableFooterView];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inHeaderForSection:(NSInteger)section {
++ (instancetype)playModelWithTableView:(UITableView *)tableView inHeaderForSection:(NSInteger)section {
     return [SJTableViewSectionHeaderViewPlayModel.alloc initWithTableView:tableView inHeaderForSection:section];
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithTableView:(UITableView *)tableView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
     SJTableViewSectionHeaderViewPlayModel *model = [SJTableViewSectionHeaderViewPlayModel.alloc initWithTableView:tableView inHeaderForSection:section];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inFooterForSection:(NSInteger)section {
++ (instancetype)playModelWithTableView:(UITableView *)tableView inFooterForSection:(NSInteger)section {
     return [SJTableViewSectionFooterViewPlayModel.alloc initWithTableView:tableView inFooterForSection:section];
 }
 
-+ (instancetype)playModelWithTableView:(__weak UITableView *)tableView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithTableView:(UITableView *)tableView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
     SJTableViewSectionFooterViewPlayModel *model = [SJTableViewSectionFooterViewPlayModel.alloc initWithTableView:tableView inFooterForSection:section];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithCollectionView:(__weak UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     return [SJCollectionViewCellPlayModel.alloc initWithCollectionView:collectionView indexPath:indexPath];
 }
 
-+ (instancetype)playModelWithCollectionView:(__weak UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath superviewSelector:(SEL)superviewSelector {
     SJCollectionViewCellPlayModel *model = [SJCollectionViewCellPlayModel.alloc initWithCollectionView:collectionView indexPath:indexPath];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inHeaderForSection:(NSInteger)section {
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inHeaderForSection:(NSInteger)section {
     return [SJCollectionViewSectionHeaderViewPlayModel.alloc initWithCollectionView:collectionView inHeaderForSection:section];
 }
 
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inHeaderForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
     SJCollectionViewSectionHeaderViewPlayModel *model = [SJCollectionViewSectionHeaderViewPlayModel.alloc initWithCollectionView:collectionView inHeaderForSection:section];
     model.superviewSelector = superviewSelector;
     return model;
 }
 
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inFooterForSection:(NSInteger)section {
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inFooterForSection:(NSInteger)section {
     return [SJCollectionViewSectionFooterViewPlayModel.alloc initWithCollectionView:collectionView inFooterForSection:section];
 }
 
-+ (instancetype)playModelWithCollectionView:(UICollectionView *__weak)collectionView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
++ (instancetype)playModelWithCollectionView:(UICollectionView *)collectionView inFooterForSection:(NSInteger)section superviewSelector:(SEL)superviewSelector {
     SJCollectionViewSectionFooterViewPlayModel *model = [SJCollectionViewSectionFooterViewPlayModel.alloc initWithCollectionView:collectionView inFooterForSection:section];
     model.superviewSelector = superviewSelector;
     return model;
@@ -121,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJScrollViewPlayModel
-- (instancetype)initWithScrollView:(__weak UIScrollView *)scrollView {
+- (instancetype)initWithScrollView:(UIScrollView *)scrollView {
     self = [super init];
     if ( self ) {
         _scrollView = scrollView;
@@ -147,7 +147,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJTableViewCellPlayModel
-- (instancetype)initWithTableView:(__weak UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+- (instancetype)initWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     self = [super init];
     if ( self ) {
         _tableView = tableView;
@@ -172,7 +172,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJTableViewTableHeaderViewPlayModel
-- (instancetype)initWithTableView:(UITableView *__weak)tableView tableHeaderView:(__weak UIView *)tableHeaderView {
+- (instancetype)initWithTableView:(UITableView *)tableView tableHeaderView:(UIView *)tableHeaderView {
     self = [super init];
     if ( self ) {
         _tableView = tableView;
@@ -197,7 +197,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJTableViewTableFooterViewPlayModel
-- (instancetype)initWithTableView:(UITableView *__weak)tableView tableFooterView:(__weak UIView *)tableFooterView {
+- (instancetype)initWithTableView:(UITableView *)tableView tableFooterView:(UIView *)tableFooterView {
     self = [super init];
     if ( self ) {
         _tableView = tableView;
@@ -222,7 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJTableViewSectionHeaderViewPlayModel
-- (instancetype)initWithTableView:(__weak UITableView *)tableView inHeaderForSection:(NSInteger)section {
+- (instancetype)initWithTableView:(UITableView *)tableView inHeaderForSection:(NSInteger)section {
     self = [super init];
     if ( self ) {
         _tableView = tableView;
@@ -247,7 +247,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJTableViewSectionFooterViewPlayModel
-- (instancetype)initWithTableView:(__weak UITableView *)tableView inFooterForSection:(NSInteger)section {
+- (instancetype)initWithTableView:(UITableView *)tableView inFooterForSection:(NSInteger)section {
     self = [super init];
     if ( self ) {
         _tableView = tableView;
@@ -272,7 +272,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJCollectionViewCellPlayModel
-- (instancetype)initWithCollectionView:(__weak UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     self = [super init];
     if ( self ) {
         _collectionView = collectionView;
@@ -353,7 +353,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation SJCollectionViewSectionHeaderViewPlayModel
-- (instancetype)initWithCollectionView:(__weak UICollectionView *)collectionView inHeaderForSection:(NSInteger)section {
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView inHeaderForSection:(NSInteger)section {
     self = [super init];
     if ( self ) {
         _collectionView = collectionView;
@@ -379,7 +379,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @implementation SJCollectionViewSectionFooterViewPlayModel
-- (instancetype)initWithCollectionView:(__weak UICollectionView *)collectionView inFooterForSection:(NSInteger)section {
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView inFooterForSection:(NSInteger)section {
     self = [super init];
     if ( self ) {
         _collectionView = collectionView;
@@ -464,12 +464,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperview:(__unused UIView *)playerSuperview
                             atIndexPath:(__strong NSIndexPath *)indexPath
-                              tableView:(__weak UITableView *)tableView {
+                              tableView:(UITableView *)tableView {
     return [self initWithPlayerSuperviewTag:playerSuperview.tag atIndexPath:indexPath tableView:tableView];
 }
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(__strong NSIndexPath *)indexPath
-                                 tableView:(__weak UITableView *)tableView {
+                                 tableView:(UITableView *)tableView {
     NSParameterAssert(playerSuperviewTag != 0);
     NSParameterAssert(indexPath);
     NSParameterAssert(tableView);
@@ -494,13 +494,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperview:(__unused UIView *)playerSuperview
                             atIndexPath:(__strong NSIndexPath *)indexPath
-                         collectionView:(__weak UICollectionView *)collectionView {
+                         collectionView:(UICollectionView *)collectionView {
     return [self initWithPlayerSuperviewTag:playerSuperview.tag atIndexPath:indexPath collectionView:collectionView];
 }
 
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(__strong NSIndexPath *)indexPath
-                            collectionView:(__weak UICollectionView *)collectionView {
+                            collectionView:(UICollectionView *)collectionView {
     NSParameterAssert(playerSuperviewTag != 0);
     NSParameterAssert(indexPath);
     NSParameterAssert(collectionView);
@@ -523,8 +523,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation SJUITableViewHeaderViewPlayModel
 
-- (instancetype)initWithPlayerSuperview:(UIView * _Nonnull __weak)playerSuperview
-                              tableView:(UITableView * _Nonnull __weak)tableView {
+- (instancetype)initWithPlayerSuperview:(UIView * _Nonnull )playerSuperview
+                              tableView:(UITableView * _Nonnull )tableView {
     NSParameterAssert(playerSuperview);
     NSParameterAssert(tableView);
 
@@ -545,15 +545,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithPlayerSuperview:(UIView *)playerSuperview
                             atIndexPath:(NSIndexPath *)indexPath
-                         collectionView:(UICollectionView * _Nonnull __weak)collectionView
-                              tableView:(UITableView * _Nonnull __weak)tableView {
+                         collectionView:(UICollectionView * _Nonnull )collectionView
+                              tableView:(UITableView * _Nonnull )tableView {
     return [self initWithPlayerSuperviewTag:playerSuperview.tag atIndexPath:indexPath collectionView:collectionView tableView:tableView];
 }
 
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(NSIndexPath *)indexPath
-                            collectionView:(__weak UICollectionView *)collectionView
-                                 tableView:(__weak UITableView *)tableView {
+                            collectionView:(UICollectionView *)collectionView
+                                 tableView:(UITableView *)tableView {
     NSParameterAssert(playerSuperviewTag != 0);
     NSParameterAssert(indexPath);
     NSParameterAssert(collectionView);
@@ -583,14 +583,14 @@ NS_ASSUME_NONNULL_BEGIN
                             atIndexPath:(NSIndexPath * _Nonnull)indexPath
                          collectionView:(UICollectionView *)collectionView
               collectionViewAtIndexPath:(NSIndexPath * _Nonnull)collectionViewAtIndexPath
-                              tableView:(UITableView * _Nonnull __weak)tableView {
+                              tableView:(UITableView * _Nonnull )tableView {
     return [self initWithPlayerSuperviewTag:playerSuperview.tag atIndexPath:indexPath collectionViewTag:collectionView.tag collectionViewAtIndexPath:collectionViewAtIndexPath tableView:tableView];
 }
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                atIndexPath:(__strong NSIndexPath *)indexPath
                          collectionViewTag:(NSInteger)collectionViewTag
                  collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                                 tableView:(__weak UITableView *)tableView {
+                                 tableView:(UITableView *)tableView {
     NSParameterAssert(playerSuperviewTag != 0);
     NSParameterAssert(indexPath);
     NSParameterAssert(collectionViewTag != 0);
@@ -624,7 +624,7 @@ NS_ASSUME_NONNULL_BEGIN
                                    atIndexPath:(__strong NSIndexPath *)indexPath
                              collectionViewTag:(NSInteger)collectionViewTag
                      collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                            rootCollectionView:(__weak UICollectionView *)rootCollectionView {
+                            rootCollectionView:(UICollectionView *)rootCollectionView {
     NSParameterAssert(playerSuperviewTag != 0);
     NSParameterAssert(indexPath);
     NSParameterAssert(collectionViewTag != 0);
@@ -658,7 +658,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                  inSection:(NSInteger)inSection
                                   isHeader:(BOOL)isHeader
-                                 tableView:(UITableView * _Nonnull __weak)tableView {
+                                 tableView:(UITableView * _Nonnull )tableView {
     NSParameterAssert(playerSuperviewTag != 0);
     NSParameterAssert(tableView);
     
@@ -720,25 +720,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)UITableViewCellPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                    atIndexPath:(__strong NSIndexPath *)indexPath
-                                                     tableView:(__weak UITableView *)tableView {
+                                                     tableView:(UITableView *)tableView {
     return [[SJUITableViewCellPlayModel alloc] initWithPlayerSuperviewTag:playerSuperviewTag atIndexPath:indexPath tableView:tableView];
 }
 
 + (instancetype)UICollectionViewCellPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                         atIndexPath:(__strong NSIndexPath *)indexPath
-                                                     collectionView:(__weak UICollectionView *)collectionView {
+                                                     collectionView:(UICollectionView *)collectionView {
     return [[SJUICollectionViewCellPlayModel alloc] initWithPlayerSuperviewTag:playerSuperviewTag atIndexPath:indexPath collectionView:collectionView];
 }
 
-+ (instancetype)UITableViewHeaderViewPlayModelWithPlayerSuperview:(__weak UIView *)playerSuperview
-                                                        tableView:(__weak UITableView *)tableView {
++ (instancetype)UITableViewHeaderViewPlayModelWithPlayerSuperview:(UIView *)playerSuperview
+                                                        tableView:(UITableView *)tableView {
     return [[SJUITableViewHeaderViewPlayModel alloc] initWithPlayerSuperview:playerSuperview tableView:tableView];
 }
 
 + (instancetype)UICollectionViewNestedInUITableViewHeaderViewPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag
                                                                                  atIndexPath:(NSIndexPath *)indexPath
-                                                                              collectionView:(__weak UICollectionView *)collectionView
-                                                                                   tableView:(__weak UITableView *)tableView {
+                                                                              collectionView:(UICollectionView *)collectionView
+                                                                                   tableView:(UITableView *)tableView {
     return [[SJUICollectionViewNestedInUITableViewHeaderViewPlayModel alloc] initWithPlayerSuperviewTag:playerSuperviewTag atIndexPath:indexPath collectionView:collectionView tableView:tableView];
 }
 
@@ -746,7 +746,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                            atIndexPath:(__strong NSIndexPath *)indexPath
                                                                      collectionViewTag:(NSInteger)collectionViewTag
                                                              collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                                                                             tableView:(__weak UITableView *)tableView {
+                                                                             tableView:(UITableView *)tableView {
     return [[SJUICollectionViewNestedInUITableViewCellPlayModel alloc] initWithPlayerSuperviewTag:playerSuperviewTag atIndexPath:indexPath collectionViewTag:collectionViewTag collectionViewAtIndexPath:collectionViewAtIndexPath tableView:tableView];
 }
 
@@ -754,11 +754,11 @@ NS_ASSUME_NONNULL_BEGIN
                                                                                 atIndexPath:(__strong NSIndexPath *)indexPath
                                                                           collectionViewTag:(NSInteger)collectionViewTag
                                                                   collectionViewAtIndexPath:(__strong NSIndexPath *)collectionViewAtIndexPath
-                                                                         rootCollectionView:(__weak UICollectionView *)rootCollectionView {
+                                                                         rootCollectionView:(UICollectionView *)rootCollectionView {
     return [[SJUICollectionViewNestedInUICollectionViewCellPlayModel alloc] initWithPlayerSuperviewTag:playerSuperviewTag atIndexPath:indexPath collectionViewTag:collectionViewTag collectionViewAtIndexPath:collectionViewAtIndexPath rootCollectionView:rootCollectionView];
 }
 
-+ (instancetype)UITableViewHeaderFooterViewPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag inSection:(NSInteger)section isHeader:(BOOL)isHeader tableView:(UITableView * _Nonnull __weak)tableView {
++ (instancetype)UITableViewHeaderFooterViewPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag inSection:(NSInteger)section isHeader:(BOOL)isHeader tableView:(UITableView * _Nonnull )tableView {
     return [[SJUITableViewHeaderFooterViewPlayModel alloc] initWithPlayerSuperviewTag:playerSuperviewTag inSection:section isHeader:isHeader tableView:tableView];
 }
 @end

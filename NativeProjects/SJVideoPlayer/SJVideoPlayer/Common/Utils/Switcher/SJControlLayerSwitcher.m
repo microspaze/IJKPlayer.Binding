@@ -60,7 +60,7 @@ static NSNotificationName const SJPlayerDidEndSwitchControlLayerNotification = @
 }
 #endif
 
-- (instancetype)initWithPlayer:(__weak SJBaseVideoPlayer *)videoPlayer {
+- (instancetype)initWithPlayer:(SJBaseVideoPlayer *)videoPlayer {
     self = [super init];
     if ( !self ) return nil;
     _videoPlayer = videoPlayer;
