@@ -6,7 +6,7 @@ using CoreGraphics;
 using CoreMedia;
 using Foundation;
 using ObjCRuntime;
-using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
+//using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
 using SJUIKit;
 using UIKit;
 
@@ -25,7 +25,7 @@ namespace IJKPlayer.SJPlayer
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJFitOnScreenManager
+    interface ISJFitOnScreenManager
     {
         // @required -(instancetype _Nonnull)initWithTarget:(UIView * _Nonnull)target targetSuperview:(UIView * _Nonnull)superview;
         [Abstract]
@@ -106,7 +106,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJRotationManager
+    interface ISJRotationManager
     {
         // @required -(id<SJRotationManagerObserver> _Nonnull)getObserver;
         [Abstract]
@@ -227,7 +227,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJReachability
+    interface ISJReachability
     {
         // @required -(id<SJReachabilityObserver> _Nonnull)getObserver;
         [Abstract]
@@ -1202,7 +1202,7 @@ namespace IJKPlayer.SJPlayer
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJFlipTransitionManager
+    interface ISJFlipTransitionManager
     {
         // @required -(instancetype _Nonnull)initWithTarget:(UIView * _Nonnull)target;
         [Abstract]
@@ -1654,7 +1654,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJDeviceVolumeAndBrightnessController
+    interface ISJDeviceVolumeAndBrightnessController
     {
         // @required -(id<SJDeviceVolumeAndBrightnessControllerObserver> _Nonnull)getObserver;
         [Abstract]
@@ -1705,7 +1705,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJDeviceVolumeAndBrightnessTargetViewContext
+    interface ISJDeviceVolumeAndBrightnessTargetViewContext
     {
         // @required @property (readonly, nonatomic) BOOL isFullscreen;
         [Abstract]
@@ -1773,7 +1773,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface SJSmallViewFloatingController
+    interface ISJSmallViewFloatingController
     {
         // @required -(id<SJSmallViewFloatingControllerObserverProtocol> _Nonnull)getObserver;
         [Abstract]
@@ -1909,7 +1909,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJPromptingPopupController
+    interface ISJPromptingPopupController
     {
         // @required @property (nonatomic) UIEdgeInsets contentInset;
         [Abstract]
@@ -2090,7 +2090,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJVideoPlayerPresentView
+    interface ISJVideoPlayerPresentView
     {
         // @required @property (readonly, nonatomic, strong) UIImageView * _Nonnull placeholderImageView;
         [Abstract]
@@ -2130,7 +2130,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJSubtitlePopupController
+    interface ISJSubtitlePopupController
     {
         // @required @property (copy, nonatomic) NSArray<id<SJSubtitleItem>> * _Nullable subtitles;
         [Abstract]
@@ -2171,7 +2171,7 @@ namespace IJKPlayer.SJPlayer
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJSubtitleItem
+    interface ISJSubtitleItem
     {
         // @required -(instancetype _Nonnull)initWithContent:(NSAttributedString * _Nonnull)content range:(SJTimeRange)range;
         [Abstract]
@@ -2207,7 +2207,7 @@ namespace IJKPlayer.SJPlayer
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJDanmakuPopupController
+    interface ISJDanmakuPopupController
     {
         // @required -(instancetype _Nonnull)initWithNumberOfTracks:(NSUInteger)numberOfTracks;
         [Abstract]
@@ -2289,7 +2289,7 @@ namespace IJKPlayer.SJPlayer
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJDanmakuItem
+    interface ISJDanmakuItem
     {
         // @required -(instancetype _Nonnull)initWithContent:(NSAttributedString * _Nonnull)content;
         [Abstract]
@@ -2359,7 +2359,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJTextPopupController
+    interface ISJTextPopupController
     {
         // @required -(void)show:(NSAttributedString * _Nonnull)title;
         [Abstract]
@@ -2419,7 +2419,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJWatermarkView
+    interface ISJWatermarkView
     {
         // @required -(void)layoutWatermarkInRect:(CGRect)rect videoPresentationSize:(CGSize)vSize videoGravity:(SJVideoGravity)videoGravity;
         [Abstract]
@@ -3109,7 +3109,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJPlaybackHistoryController
+    interface ISJPlaybackHistoryController
     {
         // @required -(void)save:(id<SJPlaybackRecord> _Nonnull)record;
         [Abstract]
@@ -3184,7 +3184,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJPlaybackRecord
+    interface ISJPlaybackRecord
     {
         // @required @property (readonly, nonatomic) NSInteger mediaId;
         [Abstract]
@@ -4527,7 +4527,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJViewControllerManager
+    interface ISJViewControllerManager
     {
         // @required @property (readonly, getter = isViewDisappeared, nonatomic) BOOL viewDisappeared;
         [Abstract]

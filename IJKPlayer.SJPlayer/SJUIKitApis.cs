@@ -3,7 +3,7 @@ using CoreFoundation;
 using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
-using static IJKPlayer.SJPlayer.SJUIKit;
+//using static IJKPlayer.SJPlayer.SJUIKit;
 using UIKit;
 
 namespace IJKPlayer.SJPlayer
@@ -350,7 +350,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface SJUTStroke
+    interface ISJUTStroke
     {
         // @required @property (nonatomic, strong) UIColor * _Nullable color;
         [Abstract]
@@ -374,7 +374,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface SJUTDecoration
+    interface ISJUTDecoration
     {
         // @required @property (nonatomic, strong) UIColor * _Nullable color;
         [Abstract]
@@ -399,7 +399,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJUTImageAttachment
+    interface ISJUTImageAttachment
     {
         // @required @property (nonatomic, strong) UIImage * _Nullable image;
         [Abstract]

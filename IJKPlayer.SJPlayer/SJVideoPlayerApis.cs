@@ -4,8 +4,8 @@ using CoreGraphics;
 using CoreMedia;
 using Foundation;
 using ObjCRuntime;
-using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
-using static IJKPlayer.SJPlayer.SJVideoPlayer;
+//using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
+//using static IJKPlayer.SJPlayer.SJVideoPlayer;
 using UIKit;
 
 namespace IJKPlayer.SJPlayer
@@ -803,7 +803,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJVideoPlayerClipsParameters
+    interface ISJVideoPlayerClipsParameters
     {
         // @required @property (readonly, nonatomic) SJVideoPlayerClipsOperation operation;
         [Abstract]
@@ -1000,7 +1000,7 @@ namespace IJKPlayer.SJPlayer
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJControlLayerSwitcher
+    interface ISJControlLayerSwitcher
     {
         // @required -(instancetype _Nonnull)initWithPlayer:(SJBaseVideoPlayer * _Nonnull)player;
         [Abstract]
@@ -1598,7 +1598,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJDraggingProgressPopupView
+    interface ISJDraggingProgressPopupView
     {
         // @required @property (nonatomic) SJDraggingProgressPopupViewStyle style;
         [Abstract]
@@ -1643,7 +1643,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJDraggingObservation
+    interface ISJDraggingObservation
     {
         // @required @property (copy, nonatomic) void (^ _Nullable)(NSTimeInterval) willBeginDraggingExeBlock;
         [Abstract]
@@ -1678,7 +1678,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJLoadingView
+    interface ISJLoadingView
     {
         // @required @property (readonly, getter = isAnimating, nonatomic) BOOL animating;
         [Abstract]
@@ -1718,7 +1718,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJScrollingTextMarqueeView
+    interface ISJScrollingTextMarqueeView
     {
         // @required @property (copy, nonatomic) NSAttributedString * _Nullable attributedText;
         [Abstract]
@@ -1759,7 +1759,7 @@ namespace IJKPlayer.SJPlayer
     //[iOS(11, 0)]
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJFullscreenModeStatusBar
+    interface ISJFullscreenModeStatusBar
     {
         // @required @property (nonatomic) SJNetworkStatus networkStatus;
         [Abstract]
@@ -1794,7 +1794,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJSpeedupPlaybackPopupView
+    interface ISJSpeedupPlaybackPopupView
     {
         // @required @property (nonatomic) CGFloat rate;
         [Abstract]
@@ -2864,7 +2864,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJClipsSaveResultToAlbumHandler
+    interface ISJClipsSaveResultToAlbumHandler
     {
         // @required -(void)saveResult:(id<SJVideoPlayerClipsResult> _Nonnull)result completionHandler:(void (^ _Nonnull)(BOOL, id<SJClipsSaveResultFailed> _Nonnull))completionHandler;
         [Abstract]
