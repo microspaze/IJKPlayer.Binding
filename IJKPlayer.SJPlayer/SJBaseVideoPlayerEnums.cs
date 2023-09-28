@@ -8,25 +8,25 @@ using UIKit;
 namespace IJKPlayer.SJPlayer
 {
     [Native]
-    public enum SJOrientation : ulong
+    public enum SJOrientation
     {
-        Portrait = UIDeviceOrientation.Portrait,
-        LandscapeLeft = UIDeviceOrientation.LandscapeLeft,
-        LandscapeRight = UIDeviceOrientation.LandscapeRight
+        Portrait = (int)UIDeviceOrientation.Portrait,
+        LandscapeLeft = (int)UIDeviceOrientation.LandscapeLeft,
+        LandscapeRight = (int)UIDeviceOrientation.LandscapeRight
     }
 
     [Flags]
     [Native]
-    public enum SJOrientationMask : ulong
+    public enum SJOrientationMask
     {
-        Portrait = 1uL << SJOrientation.Portrait,
-        LandscapeLeft = 1uL << SJOrientation.LandscapeLeft,
-        LandscapeRight = 1uL << SJOrientation.LandscapeRight,
+        Portrait = 1 << SJOrientation.Portrait,
+        LandscapeLeft = 1 << SJOrientation.LandscapeLeft,
+        LandscapeRight = 1 << SJOrientation.LandscapeRight,
         All = Portrait | LandscapeLeft | LandscapeRight
     }
 
     [Native]
-    public enum SJNetworkStatus : long
+    public enum SJNetworkStatus
     {
         NotReachable = 0,
         ReachableViaWWAN = 1,
@@ -34,7 +34,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJPlaybackType : long
+    public enum SJPlaybackType
     {
         Unknown,
         Live,
@@ -43,7 +43,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJAssetStatus : long
+    public enum SJAssetStatus
     {
         Unknown,
         Preparing,
@@ -52,7 +52,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJPlaybackTimeControlStatus : long
+    public enum SJPlaybackTimeControlStatus
     {
         Paused,
         WaitingToPlay,
@@ -60,7 +60,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJDefinitionSwitchStatus : long
+    public enum SJDefinitionSwitchStatus
     {
         Unknown,
         Switching,
@@ -70,7 +70,7 @@ namespace IJKPlayer.SJPlayer
 
     //[iOS(14, 0)]
     [Native]
-    public enum SJPictureInPictureStatus : ulong
+    public enum SJPictureInPictureStatus
     {
         Unknown,
         Starting,
@@ -88,7 +88,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJPlayerGestureType : ulong
+    public enum SJPlayerGestureType
     {
         SingleTap,
         DoubleTap,
@@ -99,36 +99,36 @@ namespace IJKPlayer.SJPlayer
 
     [Flags]
     [Native]
-    public enum SJPlayerGestureTypeMask : ulong
+    public enum SJPlayerGestureTypeMask
     {
         None,
-        SingleTap = 1uL << SJPlayerGestureType.SingleTap,
-        DoubleTap = 1uL << SJPlayerGestureType.DoubleTap,
+        SingleTap = 1 << SJPlayerGestureType.SingleTap,
+        DoubleTap = 1 << SJPlayerGestureType.DoubleTap,
         Pan_H = 0x100,
         Pan_V = 0x200,
         Pan = Pan_H | Pan_V,
-        Pinch = 1uL << SJPlayerGestureType.Pinch,
-        LongPress = 1uL << SJPlayerGestureType.LongPress,
+        Pinch = 1 << SJPlayerGestureType.Pinch,
+        LongPress = 1 << SJPlayerGestureType.LongPress,
         Default = SingleTap | DoubleTap | Pan | Pinch,
         All = Default | LongPress
     }
 
     [Native]
-    public enum SJPanGestureMovingDirection : ulong
+    public enum SJPanGestureMovingDirection
     {
         H,
         V
     }
 
     [Native]
-    public enum SJPanGestureTriggeredPosition : ulong
+    public enum SJPanGestureTriggeredPosition
     {
         Left,
         Right
     }
 
     [Native]
-    public enum SJPanGestureRecognizerState : ulong
+    public enum SJPanGestureRecognizerState
     {
         Began,
         Changed,
@@ -136,7 +136,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJLongPressGestureRecognizerState : ulong
+    public enum SJLongPressGestureRecognizerState
     {
         Began,
         Changed,
@@ -144,7 +144,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJViewFlipTransition : ulong
+    public enum SJViewFlipTransition
     {
         Identity,
         Horizontally
@@ -182,7 +182,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJPlayerEvent : ulong
+    public enum SJPlayerEvent
     {
         URLAssetWillChange,
         PlaybackControllerWillDeallocate,
@@ -195,15 +195,15 @@ namespace IJKPlayer.SJPlayer
 
     [Flags]
     [Native]
-    public enum SJPlayerEventMask : ulong
+    public enum SJPlayerEventMask
     {
-        URLAssetWillChange = 1uL << SJPlayerEvent.URLAssetWillChange,
-        PlaybackControllerWillDeallocate = 1uL << SJPlayerEvent.PlaybackControllerWillDeallocate,
-        PlaybackDidPause = 1uL << SJPlayerEvent.PlaybackDidPause,
-        PlaybackWillStop = 1uL << SJPlayerEvent.PlaybackWillStop,
-        PlaybackWillRefresh = 1uL << SJPlayerEvent.PlaybackWillRefresh,
-        ApplicationDidEnterBackground = 1uL << SJPlayerEvent.ApplicationDidEnterBackground,
-        ApplicationWillTerminate = 1uL << SJPlayerEvent.ApplicationWillTerminate,
+        URLAssetWillChange = 1 << SJPlayerEvent.URLAssetWillChange,
+        PlaybackControllerWillDeallocate = 1 << SJPlayerEvent.PlaybackControllerWillDeallocate,
+        PlaybackDidPause = 1 << SJPlayerEvent.PlaybackDidPause,
+        PlaybackWillStop = 1 << SJPlayerEvent.PlaybackWillStop,
+        PlaybackWillRefresh = 1 << SJPlayerEvent.PlaybackWillRefresh,
+        ApplicationDidEnterBackground = 1 << SJPlayerEvent.ApplicationDidEnterBackground,
+        ApplicationWillTerminate = 1 << SJPlayerEvent.ApplicationWillTerminate,
         PlaybackEvents = PlaybackControllerWillDeallocate | PlaybackWillStop | PlaybackWillRefresh | PlaybackDidPause,
         ApplicationEvents = ApplicationDidEnterBackground | ApplicationWillTerminate,
         All = (URLAssetWillChange | PlaybackEvents | ApplicationEvents)
@@ -213,20 +213,20 @@ namespace IJKPlayer.SJPlayer
     //[Deprecated(PlatformName.iOS, 0x10, 0x0, message: "deprecated!")]
     [Flags]
     [Native]
-    public enum SJSafeAreaInsetsMask : ulong
+    public enum SJSafeAreaInsetsMask
     {
         None = 0x0,
-        Top = 1uL << 0,
-        Left = 1uL << 1,
-        Bottom = 1uL << 2,
-        Right = 1uL << 3,
+        Top = 1 << 0,
+        Left = 1 << 1,
+        Bottom = 1 << 2,
+        Right = 1 << 3,
         Horizontal = Left | Right,
         Vertical = Top | Right,
         All = Horizontal | Vertical
     }
 
     [Native]
-    public enum SJSmallViewLayoutPosition : long
+    public enum SJSmallViewLayoutPosition
     {
         TopLeft,
         TopRight,
@@ -235,7 +235,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJWatermarkLayoutPosition : ulong
+    public enum SJWatermarkLayoutPosition
     {
         TopLeft,
         TopRight,
@@ -244,7 +244,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     [Native]
-    public enum SJVideoPlayerAppState : ulong
+    public enum SJVideoPlayerAppState
     {
         Active,
         Inactive,
