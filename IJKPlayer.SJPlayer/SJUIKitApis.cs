@@ -65,13 +65,16 @@ namespace IJKPlayer.SJPlayer
     delegate SJUTAttributesProtocol SJUTKernAttribute(nfloat arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTShadowAttribute)(void (^ _Nonnull)(NSShadow * _Nonnull));
-    delegate SJUTAttributesProtocol SJUTShadowAttribute(Action<NSShadow> arg0);
+    delegate void NSShaowArgumentAction(NSShadow arg0);
+    delegate SJUTAttributesProtocol SJUTShadowAttribute(NSShaowArgumentAction arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTStrokeAttribute)(void (^ _Nonnull)(id<SJUTStroke> _Nonnull));
-    delegate SJUTAttributesProtocol SJUTStrokeAttribute(Action<SJUTStroke> arg0);
+    delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
+    delegate SJUTAttributesProtocol SJUTStrokeAttribute(SJUTStrokeArgumentAction arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTDecorationAttribute)(void (^ _Nonnull)(id<SJUTDecoration> _Nonnull));
-    delegate SJUTAttributesProtocol SJUTDecorationAttribute(Action<SJUTDecoration> arg0);
+    delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
+    delegate SJUTAttributesProtocol SJUTDecorationAttribute(SJUTDecorationArgumentAction arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTBaseLineOffsetAttribute)(CGFloat);
     delegate SJUTAttributesProtocol SJUTBaseLineOffsetAttribute(nfloat arg0);
