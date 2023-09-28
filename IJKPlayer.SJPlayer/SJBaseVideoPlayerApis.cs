@@ -683,47 +683,47 @@ namespace IJKPlayer.SJPlayer
     {
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller assetStatusDidChange:(SJAssetStatus)status;
         [Export("playbackController:assetStatusDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, SJAssetStatus status);
+        void PlaybackControllerAssetStatusDidChange(SJVideoPlayerPlaybackController controller, SJAssetStatus status);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller timeControlStatusDidChange:(SJPlaybackTimeControlStatus)status;
         [Export("playbackController:timeControlStatusDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, SJPlaybackTimeControlStatus status);
+        void PlaybackControllerTimeControlStatusDidChange(SJVideoPlayerPlaybackController controller, SJPlaybackTimeControlStatus status);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller volumeDidChange:(float)volume;
         [Export("playbackController:volumeDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, float volume);
+        void PlaybackControllerVolumeDidChange(SJVideoPlayerPlaybackController controller, float volume);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller rateDidChange:(float)rate;
         [Export("playbackController:rateDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, float rate);
+        void PlaybackControllerRateDidChange(SJVideoPlayerPlaybackController controller, float rate);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller mutedDidChange:(BOOL)isMuted;
         [Export("playbackController:mutedDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, bool isMuted);
+        void PlaybackControllerMutedDidChange(SJVideoPlayerPlaybackController controller, bool isMuted);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller playbackDidFinish:(SJFinishedReason _Nonnull)reason;
         [Export("playbackController:playbackDidFinish:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, string reason);
+        void PlaybackControllerPlaybackDidFinish(SJVideoPlayerPlaybackController controller, string reason);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller durationDidChange:(NSTimeInterval)duration;
         [Export("playbackController:durationDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, double duration);
+        void PlaybackControllerDurationDidChange(SJVideoPlayerPlaybackController controller, double duration);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller currentTimeDidChange:(NSTimeInterval)currentTime;
         [Export("playbackController:currentTimeDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, double currentTime);
+        void PlaybackControllerCurrentTimeDidChange(SJVideoPlayerPlaybackController controller, double currentTime);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller presentationSizeDidChange:(CGSize)presentationSize;
         [Export("playbackController:presentationSizeDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, CGSize presentationSize);
+        void PlaybackControllerPresentationSizeDidChange(SJVideoPlayerPlaybackController controller, CGSize presentationSize);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller playbackTypeDidChange:(SJPlaybackType)playbackType;
         [Export("playbackController:playbackTypeDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, SJPlaybackType playbackType);
+        void PlaybackControllerPlaybackTypeDidChange(SJVideoPlayerPlaybackController controller, SJPlaybackType playbackType);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller playableDurationDidChange:(NSTimeInterval)playableDuration;
         [Export("playbackController:playableDurationDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, double playableDuration);
+        void PlaybackControllerPlayableDurationDidChange(SJVideoPlayerPlaybackController controller, double playableDuration);
 
         // @optional -(void)playbackControllerIsReadyForDisplay:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
         [Export("playbackControllerIsReadyForDisplay:")]
@@ -731,24 +731,24 @@ namespace IJKPlayer.SJPlayer
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller switchingDefinitionStatusDidChange:(SJDefinitionSwitchStatus)status media:(id<SJMediaModelProtocol> _Nonnull)media;
         [Export("playbackController:switchingDefinitionStatusDidChange:media:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, SJDefinitionSwitchStatus status, SJMediaModelProtocol media);
+        void PlaybackControllerSwitchingDefinitionStatusDidChange(SJVideoPlayerPlaybackController controller, SJDefinitionSwitchStatus status, SJMediaModelProtocol media);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller didReplay:(id<SJMediaModelProtocol> _Nonnull)media;
         [Export("playbackController:didReplay:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, SJMediaModelProtocol media);
+        void PlaybackControllerDidReplay(SJVideoPlayerPlaybackController controller, SJMediaModelProtocol media);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller pictureInPictureStatusDidChange:(SJPictureInPictureStatus)status __attribute__((availability(ios, introduced=14.0)));
         //[iOS(14, 0)]
         [Export("playbackController:pictureInPictureStatusDidChange:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, SJPictureInPictureStatus status);
+        void PlaybackControllerPictureInPictureStatusDidChange(SJVideoPlayerPlaybackController controller, SJPictureInPictureStatus status);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller willSeekToTime:(CMTime)time;
         [Export("playbackController:willSeekToTime:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, CMTime time);
+        void PlaybackControllerWillSeekToTime(SJVideoPlayerPlaybackController controller, CMTime time);
 
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller didSeekToTime:(CMTime)time;
         [Export("playbackController:didSeekToTime:")]
-        void PlaybackController(SJVideoPlayerPlaybackController controller, CMTime time);
+        void PlaybackControllerDidSeekToTime(SJVideoPlayerPlaybackController controller, CMTime time);
 
         // @optional -(void)applicationWillEnterForegroundWithPlaybackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
         [Export("applicationWillEnterForegroundWithPlaybackController:")]
@@ -884,7 +884,7 @@ namespace IJKPlayer.SJPlayer
 
     // @protocol SJVideoPlayerControlLayerDelegate <SJPlaybackInfoDelegate, SJRotationControlDelegate, SJGestureControllerDelegate, SJNetworkStatusControlDelegate, SJVolumeBrightnessRateControlDelegate, SJLockScreenStateControlDelegate, SJAppActivityControlDelegate, SJFitOnScreenControlDelegate, SJSwitchVideoDefinitionControlDelegate, SJPlaybackControlDelegate>
     [Protocol, Model(AutoGeneratedName = true)]
-    interface SJVideoPlayerControlLayerDelegate : ISJPlaybackInfoDelegate, ISJRotationControlDelegate, ISJGestureControllerDelegate, ISJNetworkStatusControlDelegate, ISJVolumeBrightnessRateControlDelegate, ISJLockScreenStateControlDelegate, ISJAppActivityControlDelegate, ISJFitOnScreenControlDelegate, ISJSwitchVideoDefinitionControlDelegate, ISJPlaybackControlDelegate
+    interface SJVideoPlayerControlLayerDelegate : SJPlaybackInfoDelegate, SJRotationControlDelegate, SJGestureControllerDelegate, SJNetworkStatusControlDelegate, SJVolumeBrightnessRateControlDelegate, SJLockScreenStateControlDelegate, SJAppActivityControlDelegate, SJFitOnScreenControlDelegate, SJSwitchVideoDefinitionControlDelegate, SJPlaybackControlDelegate
     {
         // @optional -(void)controlLayerNeedAppear:(__kindof SJBaseVideoPlayer *)videoPlayer;
         [Export("controlLayerNeedAppear:")]
@@ -932,7 +932,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer prepareToPlay:(SJVideoPlayerURLAsset *)asset;
         [Export("videoPlayer:prepareToPlay:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, SJVideoPlayerURLAsset asset);
+        void VideoPlayerPrepareToPlay(SJBaseVideoPlayer videoPlayer, SJVideoPlayerURLAsset asset);
 
         // @optional -(void)videoPlayerPlaybackStatusDidChange:(__kindof SJBaseVideoPlayer *)videoPlayer;
         [Export("videoPlayerPlaybackStatusDidChange:")]
@@ -941,27 +941,27 @@ namespace IJKPlayer.SJPlayer
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer pictureInPictureStatusDidChange:(SJPictureInPictureStatus)status __attribute__((availability(ios, introduced=14.0)));
         //[iOS(14, 0)]
         [Export("videoPlayer:pictureInPictureStatusDidChange:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, SJPictureInPictureStatus status);
+        void VideoPlayerPictureInPictureStatusDidChange(SJBaseVideoPlayer videoPlayer, SJPictureInPictureStatus status);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer currentTimeDidChange:(NSTimeInterval)currentTime;
         [Export("videoPlayer:currentTimeDidChange:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, double currentTime);
+        void VideoPlayerCurrentTimeDidChange(SJBaseVideoPlayer videoPlayer, double currentTime);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer durationDidChange:(NSTimeInterval)duration;
         [Export("videoPlayer:durationDidChange:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, double duration);
+        void VideoPlayerDurationDidChange(SJBaseVideoPlayer videoPlayer, double duration);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer playableDurationDidChange:(NSTimeInterval)duration;
         [Export("videoPlayer:playableDurationDidChange:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, double duration);
+        void VideoPlayerPlayableDurationDidChange(SJBaseVideoPlayer videoPlayer, double duration);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer playbackTypeDidChange:(SJPlaybackType)playbackType;
         [Export("videoPlayer:playbackTypeDidChange:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, SJPlaybackType playbackType);
+        void VideoPlayerPlaybackTypeDidChange(SJBaseVideoPlayer videoPlayer, SJPlaybackType playbackType);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer presentationSizeDidChange:(CGSize)size;
         [Export("videoPlayer:presentationSizeDidChange:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, CGSize size);
+        void VideoPlayerPresentationSizeDidChange(SJBaseVideoPlayer videoPlayer, CGSize size);
     }
 
     // @protocol SJVolumeBrightnessRateControlDelegate <NSObject>
@@ -997,11 +997,11 @@ namespace IJKPlayer.SJPlayer
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer willRotateView:(BOOL)isFull;
         [Export("videoPlayer:willRotateView:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, bool isFull);
+        void VideoPlayerWillRotateView(SJBaseVideoPlayer videoPlayer, bool isFull);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer didEndRotation:(BOOL)isFull;
         [Export("videoPlayer:didEndRotation:")]
-        void VideoPlayer(SJBaseVideoPlayer videoPlayer, bool isFull);
+        void VideoPlayerDidEndRotation(SJBaseVideoPlayer videoPlayer, bool isFull);
 
         // @optional -(void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer onRotationTransitioningChanged:(BOOL)isTransitioning;
         [Export("videoPlayer:onRotationTransitioningChanged:")]
@@ -1299,87 +1299,87 @@ namespace IJKPlayer.SJPlayer
         // +(instancetype _Nonnull)playModelWithScrollView:(UIScrollView * _Nonnull)scrollView superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithScrollView:superviewSelector:")]
-        SJPlayModel PlayModelWithScrollView(UIScrollView scrollView, Selector superviewSelector);
+        SJPlayModel PlayModelWithScrollViewSuperviewSelector(UIScrollView scrollView, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath;
         [Static]
         [Export("playModelWithTableView:indexPath:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, NSIndexPath indexPath);
+        SJPlayModel PlayModelWithTableViewIndexPath(UITableView tableView, NSIndexPath indexPath);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithTableView:indexPath:superviewSelector:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, NSIndexPath indexPath, Selector superviewSelector);
+        SJPlayModel PlayModelWithTableViewIndexPathSuperviewSelector(UITableView tableView, NSIndexPath indexPath, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView tableHeaderView:(UIView * _Nonnull)tableHeaderView;
         [Static]
         [Export("playModelWithTableView:tableHeaderView:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, UIView tableHeaderView);
+        SJPlayModel PlayModelWithTableViewTableHeaderView(UITableView tableView, UIView tableHeaderView);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView tableHeaderView:(UIView * _Nonnull)tableHeaderView superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithTableView:tableHeaderView:superviewSelector:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, UIView tableHeaderView, Selector superviewSelector);
+        SJPlayModel PlayModelWithTableViewTableHeaderViewSuperviewSelector(UITableView tableView, UIView tableHeaderView, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView tableFooterView:(UIView * _Nonnull)tableFooterView;
         [Static]
         [Export("playModelWithTableView:tableFooterView:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, UIView tableFooterView);
+        SJPlayModel PlayModelWithTableViewTableFooterView(UITableView tableView, UIView tableFooterView);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView tableFooterView:(UIView * _Nonnull)tableFooterView superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithTableView:tableFooterView:superviewSelector:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, UIView tableFooterView, Selector superviewSelector);
+        SJPlayModel PlayModelWithTableViewTableFooterViewSuperviewSelector(UITableView tableView, UIView tableFooterView, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView inHeaderForSection:(NSInteger)section;
         [Static]
         [Export("playModelWithTableView:inHeaderForSection:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, nint section);
+        SJPlayModel PlayModelWithTableViewInHeaderForSection(UITableView tableView, nint section);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView inHeaderForSection:(NSInteger)section superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithTableView:inHeaderForSection:superviewSelector:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, nint section, Selector superviewSelector);
+        SJPlayModel PlayModelWithTableViewInHeaderForSectionSuperviewSelector(UITableView tableView, nint section, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView inFooterForSection:(NSInteger)section;
         [Static]
         [Export("playModelWithTableView:inFooterForSection:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, nint section);
+        SJPlayModel PlayModelWithTableViewInFooterForSection(UITableView tableView, nint section);
 
         // +(instancetype _Nonnull)playModelWithTableView:(UITableView * _Nonnull)tableView inFooterForSection:(NSInteger)section superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithTableView:inFooterForSection:superviewSelector:")]
-        SJPlayModel PlayModelWithTableView(UITableView tableView, nint section, Selector superviewSelector);
+        SJPlayModel PlayModelWithTableViewInFooterForSectionSuperviewSelector(UITableView tableView, nint section, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithCollectionView:(UICollectionView * _Nonnull)collectionView indexPath:(NSIndexPath * _Nonnull)indexPath;
         [Static]
         [Export("playModelWithCollectionView:indexPath:")]
-        SJPlayModel PlayModelWithCollectionView(UICollectionView collectionView, NSIndexPath indexPath);
+        SJPlayModel PlayModelWithCollectionViewIndexPath(UICollectionView collectionView, NSIndexPath indexPath);
 
         // +(instancetype _Nonnull)playModelWithCollectionView:(UICollectionView * _Nonnull)collectionView indexPath:(NSIndexPath * _Nonnull)indexPath superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithCollectionView:indexPath:superviewSelector:")]
-        SJPlayModel PlayModelWithCollectionView(UICollectionView collectionView, NSIndexPath indexPath, Selector superviewSelector);
+        SJPlayModel PlayModelWithCollectionViewIndexPathSuperviewSelector(UICollectionView collectionView, NSIndexPath indexPath, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithCollectionView:(UICollectionView * _Nonnull)collectionView inHeaderForSection:(NSInteger)section;
         [Static]
         [Export("playModelWithCollectionView:inHeaderForSection:")]
-        SJPlayModel PlayModelWithCollectionView(UICollectionView collectionView, nint section);
+        SJPlayModel PlayModelWithCollectionViewInHeaderForSection(UICollectionView collectionView, nint section);
 
         // +(instancetype _Nonnull)playModelWithCollectionView:(UICollectionView * _Nonnull)collectionView inHeaderForSection:(NSInteger)section superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithCollectionView:inHeaderForSection:superviewSelector:")]
-        SJPlayModel PlayModelWithCollectionView(UICollectionView collectionView, nint section, Selector superviewSelector);
+        SJPlayModel PlayModelWithCollectionViewInHeaderForSectionSuperviewSelector(UICollectionView collectionView, nint section, Selector superviewSelector);
 
         // +(instancetype _Nonnull)playModelWithCollectionView:(UICollectionView * _Nonnull)collectionView inFooterForSection:(NSInteger)section;
         [Static]
         [Export("playModelWithCollectionView:inFooterForSection:")]
-        SJPlayModel PlayModelWithCollectionView(UICollectionView collectionView, nint section);
+        SJPlayModel PlayModelWithCollectionViewInFooterForSection(UICollectionView collectionView, nint section);
 
         // +(instancetype _Nonnull)playModelWithCollectionView:(UICollectionView * _Nonnull)collectionView inFooterForSection:(NSInteger)section superviewSelector:(SEL _Nonnull)superviewSelector;
         [Static]
         [Export("playModelWithCollectionView:inFooterForSection:superviewSelector:")]
-        SJPlayModel PlayModelWithCollectionView(UICollectionView collectionView, nint section, Selector superviewSelector);
+        SJPlayModel PlayModelWithCollectionViewInFooterForSectionSuperviewSelector(UICollectionView collectionView, nint section, Selector superviewSelector);
 
         // -(BOOL)isPlayInScrollView;
         [Export("isPlayInScrollView")]
@@ -1515,7 +1515,7 @@ namespace IJKPlayer.SJPlayer
     // @interface SJVideoPlayerURLAsset : NSObject <SJMediaModelProtocol>
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
-    interface SJVideoPlayerURLAsset : ISJMediaModelProtocol
+    interface SJVideoPlayerURLAsset : SJMediaModelProtocol
     {
         // -(instancetype _Nullable)initWithURL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
         [Export("initWithURL:startPosition:playModel:")]
@@ -2520,7 +2520,7 @@ namespace IJKPlayer.SJPlayer
     // @interface Playback (SJBaseVideoPlayer) <SJVideoPlayerPlaybackControllerDelegate>
     [Category]
     [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Playback : ISJVideoPlayerPlaybackControllerDelegate
+    interface SJBaseVideoPlayer_Playback : SJVideoPlayerPlaybackControllerDelegate
     {
         // @property (nonatomic, strong, null_resettable) __kindof id<SJVideoPlayerPlaybackController> _Null_unspecified playbackController;
         [NullAllowed, Export("playbackController", ArgumentSemantic.Strong)]
@@ -3263,7 +3263,7 @@ namespace IJKPlayer.SJPlayer
     // @interface SJSQLite3Extended (SJPlaybackRecord) <SJSQLiteTableModelProtocol>
     [Category]
     [BaseType(typeof(SJPlaybackRecord))]
-    interface SJPlaybackRecord_SJSQLite3Extended : ISJSQLiteTableModelProtocol
+    interface SJPlaybackRecord_SJSQLite3Extended : SJSQLiteTableModelProtocol
     {
     }
 
@@ -3272,12 +3272,12 @@ namespace IJKPlayer.SJPlayer
     partial interface Constants
     {
         // extern const SJMediaType _Nonnull SJMediaTypeVideo;
-        [Field("SJMediaTypeVideo", "__Internal")]
-        NSString SJMediaTypeVideo { get; }
+        //[Field("SJMediaTypeVideo", "__Internal")]
+        //NSString SJMediaTypeVideo { get; }
 
         // extern const SJMediaType _Nonnull SJMediaTypeAudio;
-        [Field("SJMediaTypeAudio", "__Internal")]
-        NSString SJMediaTypeAudio { get; }
+        //[Field("SJMediaTypeAudio", "__Internal")]
+        //NSString SJMediaTypeAudio { get; }
     }
 
     // @interface SJPlaybackHistoryController : NSObject <SJPlaybackHistoryController>
@@ -3530,7 +3530,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJMediaPlaybackController : NSObject <SJVideoPlayerPlaybackController>
     [BaseType(typeof(NSObject))]
-    interface SJMediaPlaybackController : ISJVideoPlayerPlaybackController
+    interface SJMediaPlaybackController : SJVideoPlayerPlaybackController
     {
         // @property (nonatomic, strong) SJVideoPlayerURLAsset * _Nullable media;
         [NullAllowed, Export("media", ArgumentSemantic.Strong)]
@@ -3801,7 +3801,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJAVMediaPlayer : NSObject <SJMediaPlayer>
     [BaseType(typeof(NSObject))]
-    interface SJAVMediaPlayer : ISJMediaPlayer
+    interface SJAVMediaPlayer : SJMediaPlayer
     {
         // -(instancetype _Nonnull)initWithAVPlayer:(AVPlayer * _Nonnull)player startPosition:(NSTimeInterval)time;
         [Export("initWithAVPlayer:startPosition:")]
@@ -3834,7 +3834,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJAVMediaPlayerLayerView : UIView <SJMediaPlayerView>
     [BaseType(typeof(UIView))]
-    interface SJAVMediaPlayerLayerView : ISJMediaPlayerView
+    interface SJAVMediaPlayerLayerView : SJMediaPlayerView
     {
         // @property (readonly, nonatomic, strong) AVPlayerLayer * _Nonnull layer;
         [Export("layer", ArgumentSemantic.Strong)]
@@ -3864,7 +3864,7 @@ namespace IJKPlayer.SJPlayer
     // @interface SJAVPictureInPictureController : NSObject <SJPictureInPictureController>
     //[iOS(14, 0)]
     [BaseType(typeof(NSObject))]
-    interface SJAVPictureInPictureController : ISJPictureInPictureController
+    interface SJAVPictureInPictureController : SJPictureInPictureController
     {
         // +(BOOL)isPictureInPictureSupported;
         [Static]
@@ -4191,7 +4191,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJControlLayerAppearStateManager : NSObject <SJControlLayerAppearManager>
     [BaseType(typeof(NSObject))]
-    interface SJControlLayerAppearStateManager : ISJControlLayerAppearManager
+    interface SJControlLayerAppearStateManager : SJControlLayerAppearManager
     {
     }
 
@@ -4988,11 +4988,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @optional -(void)observer:(SJPlayModelPropertiesObserver * _Nonnull)observer userTouchedTableView:(BOOL)touched;
         [Export("observer:userTouchedTableView:")]
-        void Observer(SJPlayModelPropertiesObserver observer, bool touched);
+        void ObserverUserTouchedTableView(SJPlayModelPropertiesObserver observer, bool touched);
 
         // @optional -(void)observer:(SJPlayModelPropertiesObserver * _Nonnull)observer userTouchedCollectionView:(BOOL)touched;
         [Export("observer:userTouchedCollectionView:")]
-        void Observer(SJPlayModelPropertiesObserver observer, bool touched);
+        void ObserverUserTouchedCollectionView(SJPlayModelPropertiesObserver observer, bool touched);
 
         // @optional -(void)playerWillAppearForObserver:(SJPlayModelPropertiesObserver * _Nonnull)observer superview:(UIView * _Nonnull)superview;
         [Export("playerWillAppearForObserver:superview:")]
@@ -5267,7 +5267,7 @@ namespace IJKPlayer.SJPlayer
     // @interface Internal (SJRotationManager) <SJRotationFullscreenViewControllerDelegate>
     [Category]
     [BaseType(typeof(SJRotationManager))]
-    interface SJRotationManager_Internal : ISJRotationFullscreenViewControllerDelegate
+    interface SJRotationManager_Internal : SJRotationFullscreenViewControllerDelegate
     {
         // -(UIInterfaceOrientationMask)supportedInterfaceOrientationsForWindow:(UIWindow * _Nullable)window;
         [Export("supportedInterfaceOrientationsForWindow:")]
@@ -5284,7 +5284,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(BOOL)allowsRotation __attribute__((objc_requires_super));
         [Export("allowsRotation")]
-        [RequiresSuper]
+        //[RequiresSuper]
         //[Verify(MethodToProperty)]
         bool AllowsRotation { get; }
 
@@ -5350,7 +5350,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJRotationObserver : NSObject <SJRotationManagerObserver>
     [BaseType(typeof(NSObject))]
-    interface SJRotationObserver : ISJRotationManagerObserver
+    interface SJRotationObserver : SJRotationManagerObserver
     {
         // -(instancetype _Nonnull)initWithManager:(SJRotationManager * _Nonnull)manager;
         [Export("initWithManager:")]
@@ -5455,7 +5455,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJVideoPlayerPresentView : UIView <SJVideoPlayerPresentView, SJGestureController>
     [BaseType(typeof(UIView))]
-    interface SJVideoPlayerPresentView : ISJVideoPlayerPresentView, ISJGestureController
+    interface SJVideoPlayerPresentView : ISJVideoPlayerPresentView, SJGestureController
     {
         [Wrap("WeakDelegate")]
         [NullAllowed]
@@ -5492,7 +5492,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJViewControllerManager : NSObject <SJViewControllerManager, SJRotationActionForwarder>
     [BaseType(typeof(NSObject))]
-    interface SJViewControllerManager : ISJViewControllerManager, ISJRotationActionForwarder
+    interface SJViewControllerManager : ISJViewControllerManager, SJRotationActionForwarder
     {
         // @property (nonatomic, weak) id<SJFitOnScreenManager> _Nullable fitOnScreenManager;
         [NullAllowed, Export("fitOnScreenManager", ArgumentSemantic.Weak)]
@@ -5585,17 +5585,17 @@ namespace IJKPlayer.SJPlayer
         // -(__kindof UIView * _Nullable)viewWithProtocol:(Protocol * _Nonnull)protocol tag:(NSInteger)tag atIndexPath:(NSIndexPath * _Nonnull)indexPath;
         [Export("viewWithProtocol:tag:atIndexPath:")]
         //[return: NullAllowed]
-        UIView ViewWithProtocol(Protocol protocol, nint tag, NSIndexPath indexPath);
+        UIView ViewWithProtocolTagAtIndexPath(Protocol protocol, nint tag, NSIndexPath indexPath);
 
         // -(__kindof UIView * _Nullable)viewWithProtocol:(Protocol * _Nonnull)protocol tag:(NSInteger)tag inHeaderForSection:(NSInteger)section;
         [Export("viewWithProtocol:tag:inHeaderForSection:")]
         //[return: NullAllowed]
-        UIView ViewWithProtocol(Protocol protocol, nint tag, nint section);
+        UIView ViewWithProtocolTagInHeaderForSection(Protocol protocol, nint tag, nint section);
 
         // -(__kindof UIView * _Nullable)viewWithProtocol:(Protocol * _Nonnull)protocol tag:(NSInteger)tag inFooterForSection:(NSInteger)section;
         [Export("viewWithProtocol:tag:inFooterForSection:")]
         //[return: NullAllowed]
-        UIView ViewWithProtocol(Protocol protocol, nint tag, nint section);
+        UIView ViewWithProtocolTagInFooterForSection(Protocol protocol, nint tag, nint section);
 
         // -(BOOL)isViewAppearedWithProtocol:(Protocol * _Nonnull)protocol tag:(NSInteger)tag insets:(UIEdgeInsets)insets atIndexPath:(NSIndexPath * _Nonnull)indexPath;
         [Export("isViewAppearedWithProtocol:tag:insets:atIndexPath:")]
@@ -5604,17 +5604,17 @@ namespace IJKPlayer.SJPlayer
         // -(__kindof UIView * _Nullable)viewForSelector:(SEL _Nonnull)selector atIndexPath:(NSIndexPath * _Nonnull)indexPath;
         [Export("viewForSelector:atIndexPath:")]
         //[return: NullAllowed]
-        UIView ViewForSelector(Selector selector, NSIndexPath indexPath);
+        UIView ViewForSelectorAtIndexPath(Selector selector, NSIndexPath indexPath);
 
         // -(__kindof UIView * _Nullable)viewForSelector:(SEL _Nonnull)selector inHeaderForSection:(NSInteger)section;
         [Export("viewForSelector:inHeaderForSection:")]
         //[return: NullAllowed]
-        UIView ViewForSelector(Selector selector, nint section);
+        UIView ViewForSelectorInHeaderForSection(Selector selector, nint section);
 
         // -(__kindof UIView * _Nullable)viewForSelector:(SEL _Nonnull)selector inFooterForSection:(NSInteger)section;
         [Export("viewForSelector:inFooterForSection:")]
         //[return: NullAllowed]
-        UIView ViewForSelector(Selector selector, nint section);
+        UIView ViewForSelectorInFooterForSection(Selector selector, nint section);
 
         // -(BOOL)isViewAppearedForSelector:(SEL _Nonnull)selector insets:(UIEdgeInsets)insets atIndexPath:(NSIndexPath * _Nonnull)indexPath;
         [Export("isViewAppearedForSelector:insets:atIndexPath:")]
@@ -5776,7 +5776,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJIJKMediaPlayer : NSObject <SJMediaPlayer>
     [BaseType(typeof(NSObject))]
-    interface SJIJKMediaPlayer : ISJMediaPlayer
+    interface SJIJKMediaPlayer : SJMediaPlayer
     {
         // -(instancetype _Nonnull)initWithURL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition options:(IJKFFOptions * _Nonnull)ops;
         [Export("initWithURL:startPosition:options:")]
@@ -5809,7 +5809,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJIJKMediaPlayerLayerView : UIView <SJMediaPlayerView>
     [BaseType(typeof(UIView))]
-    interface SJIJKMediaPlayerLayerView : ISJMediaPlayerView
+    interface SJIJKMediaPlayerLayerView : SJMediaPlayerView
     {
         // -(instancetype _Nonnull)initWithPlayer:(SJIJKMediaPlayer * _Nonnull)player;
         [Export("initWithPlayer:")]

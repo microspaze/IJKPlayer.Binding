@@ -21,7 +21,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface SJControlLayer : ISJVideoPlayerControlLayerDataSource, ISJVideoPlayerControlLayerDelegate, ISJControlLayerRestartProtocol, ISJControlLayerExitProtocol
+    interface SJControlLayer : SJVideoPlayerControlLayerDataSource, SJVideoPlayerControlLayerDelegate, SJControlLayerRestartProtocol, SJControlLayerExitProtocol
     {
     }
 
@@ -1083,12 +1083,12 @@ namespace IJKPlayer.SJPlayer
     {
         // @optional -(BOOL)switcher:(id<SJControlLayerSwitcher> _Nonnull)switcher shouldSwitchToControlLayer:(SJControlLayerIdentifier)identifier;
         [Export("switcher:shouldSwitchToControlLayer:")]
-        bool Switcher(SJControlLayerSwitcher switcher, nint identifier);
+        bool SwitcherShouldSwitchToControlLayer(SJControlLayerSwitcher switcher, nint identifier);
 
         // @optional -(id<SJControlLayer> _Nullable)switcher:(id<SJControlLayerSwitcher> _Nonnull)switcher controlLayerForIdentifier:(SJControlLayerIdentifier)identifier;
         [Export("switcher:controlLayerForIdentifier:")]
         //[return: NullAllowed]
-        SJControlLayer Switcher(SJControlLayerSwitcher switcher, nint identifier);
+        SJControlLayer SwitcherControlLayerForIdentifier(SJControlLayerSwitcher switcher, nint identifier);
     }
 
     // @protocol SJControlLayerSwitcherObserver <NSObject>
@@ -1448,15 +1448,15 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)insertItem:(SJEdgeControlButtonItem * _Nonnull)item atIndex:(NSInteger)index;
         [Export("insertItem:atIndex:")]
-        void InsertItem(SJEdgeControlButtonItem item, nint index);
+        void InsertItemAtIndex(SJEdgeControlButtonItem item, nint index);
 
         // -(void)insertItem:(SJEdgeControlButtonItem * _Nonnull)item frontItem:(SJEdgeControlButtonItemTag)tag;
         [Export("insertItem:frontItem:")]
-        void InsertItem(SJEdgeControlButtonItem item, nint tag);
+        void InsertItemFrontItem(SJEdgeControlButtonItem item, nint tag);
 
         // -(void)insertItem:(SJEdgeControlButtonItem * _Nonnull)item rearItem:(SJEdgeControlButtonItemTag)tag;
         [Export("insertItem:rearItem:")]
-        void InsertItem(SJEdgeControlButtonItem item, nint tag);
+        void InsertItemRearItem(SJEdgeControlButtonItem item, nint tag);
 
         // -(void)removeItemAtIndex:(NSInteger)index;
         [Export("removeItemAtIndex:")]
@@ -1889,7 +1889,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJEdgeControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJEdgeControlLayer : ISJControlLayer
+    interface SJEdgeControlLayer : SJControlLayer
     {
         // @property (nonatomic, strong, null_resettable) __kindof UIView<SJLoadingView> * _Null_unspecified loadingView;
         [NullAllowed, Export("loadingView", ArgumentSemantic.Strong)]
@@ -1990,7 +1990,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJClipsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJClipsControlLayer : ISJControlLayer
+    interface SJClipsControlLayer : SJControlLayer
     {
         // @property (copy, nonatomic) void (^ _Nullable)(SJClipsControlLayer * _Nonnull) cancelledOperationExeBlock;
         [NullAllowed, Export("cancelledOperationExeBlock", ArgumentSemantic.Copy)]
@@ -2020,7 +2020,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJMoreSettingControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJMoreSettingControlLayer : ISJControlLayer
+    interface SJMoreSettingControlLayer : SJControlLayer
     {
         [Wrap("WeakDelegate")]
         [NullAllowed]
@@ -2053,7 +2053,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJNotReachableControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJNotReachableControlLayer : ISJControlLayer
+    interface SJNotReachableControlLayer : SJControlLayer
     {
         [Wrap("WeakDelegate")]
         [NullAllowed]
@@ -2130,7 +2130,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJSmallViewControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJSmallViewControlLayer : ISJControlLayer
+    interface SJSmallViewControlLayer : SJControlLayer
     {
     }
 
@@ -2150,7 +2150,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJVideoDefinitionSwitchingControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJVideoDefinitionSwitchingControlLayer : ISJControlLayer
+    interface SJVideoDefinitionSwitchingControlLayer : SJControlLayer
     {
         // @property (copy, nonatomic) NSArray<SJVideoPlayerURLAsset *> * _Nullable assets;
         [NullAllowed, Export("assets", ArgumentSemantic.Copy)]
@@ -2773,7 +2773,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJClipsGIFRecordsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJClipsGIFRecordsControlLayer : ISJControlLayer
+    interface SJClipsGIFRecordsControlLayer : SJControlLayer
     {
         // @property (readonly, nonatomic) SJClipsStatus status;
         [Export("status")]
@@ -2790,7 +2790,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJClipsResultsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJClipsResultsControlLayer : ISJControlLayer
+    interface SJClipsResultsControlLayer : SJControlLayer
     {
         // @property (nonatomic, strong) NSArray<SJClipsResultShareItem *> * _Nullable shareItems;
         [NullAllowed, Export("shareItems", ArgumentSemantic.Strong)]
@@ -2811,7 +2811,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJClipsVideoRecordsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
-    interface SJClipsVideoRecordsControlLayer : ISJControlLayer
+    interface SJClipsVideoRecordsControlLayer : SJControlLayer
     {
         // @property (readonly, nonatomic) SJClipsStatus status;
         [Export("status")]
@@ -2880,7 +2880,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJVideoPlayerClipsGeneratedResult : NSObject <SJVideoPlayerClipsResult>
     [BaseType(typeof(NSObject))]
-    interface SJVideoPlayerClipsGeneratedResult : ISJVideoPlayerClipsResult
+    interface SJVideoPlayerClipsGeneratedResult : SJVideoPlayerClipsResult
     {
         // @property (nonatomic) SJVideoPlayerClipsOperation operation;
         [Export("operation", ArgumentSemantic.Assign)]

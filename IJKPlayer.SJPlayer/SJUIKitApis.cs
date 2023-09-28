@@ -19,7 +19,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface SJUIKitTextMakerProtocol : ISJUTAttributesProtocol
+    interface SJUIKitTextMakerProtocol : SJUTAttributesProtocol
     {
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) append;
         [Abstract]
@@ -141,7 +141,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface ISJUTAttributesProtocol
+    interface SJUTAttributesProtocol
     {
         // @required @property (readonly, copy, nonatomic) SJUTFontAttribute _Nonnull font;
         [Abstract]
@@ -321,7 +321,7 @@ namespace IJKPlayer.SJPlayer
   be used.
 */
     [Protocol]
-    interface SJUTRegexHandlerProtocol : ISJUTRangeHandlerProtocol
+    interface SJUTRegexHandlerProtocol : SJUTRangeHandlerProtocol
     {
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(NSMutableAttributedString * _Nonnull, NSTextCheckingResult * _Nonnull)) handler;
         [Abstract]
@@ -938,7 +938,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJUTAttributes : NSObject <SJUTAttributesProtocol>
     [BaseType(typeof(NSObject))]
-    interface SJUTAttributes : ISJUTAttributesProtocol
+    interface SJUTAttributes : SJUTAttributesProtocol
     {
         // @property (readonly, nonatomic, strong) SJUTRecorder * _Nonnull recorder;
         [Export("recorder", ArgumentSemantic.Strong)]
@@ -947,7 +947,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJUIKitTextMaker : SJUTAttributes <SJUIKitTextMakerProtocol>
     [BaseType(typeof(SJUTAttributes))]
-    interface SJUIKitTextMaker : ISJUIKitTextMakerProtocol
+    interface SJUIKitTextMaker : SJUIKitTextMakerProtocol
     {
         // -(NSMutableAttributedString * _Nonnull)install;
         [Export("install")]
@@ -957,7 +957,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJUTRangeHandler : NSObject <SJUTRangeHandlerProtocol>
     [BaseType(typeof(NSObject))]
-    interface SJUTRangeHandler : ISJUTRangeHandlerProtocol
+    interface SJUTRangeHandler : SJUTRangeHandlerProtocol
     {
         // -(instancetype _Nonnull)initWithRange:(NSRange)range;
         [Export("initWithRange:")]
@@ -991,7 +991,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJUTRegexHandler : NSObject <SJUTRegexHandlerProtocol>
     [BaseType(typeof(NSObject))]
-    interface SJUTRegexHandler : ISJUTRegexHandlerProtocol
+    interface SJUTRegexHandler : SJUTRegexHandlerProtocol
     {
         // -(instancetype _Nonnull)initWithRegex:(NSString * _Nonnull)regex;
         [Export("initWithRegex:")]
@@ -1202,8 +1202,8 @@ namespace IJKPlayer.SJPlayer
         Func<SJRunLoopTaskQueue> Empty { get; }
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(void) destroy;
-        [Export("destroy", ArgumentSemantic.Copy)]
-        Action Destroy { get; }
+        //[Export("destroy", ArgumentSemantic.Copy)]
+        //Action Destroy { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull name;
         [Export("name", ArgumentSemantic.Strong)]
@@ -1253,8 +1253,8 @@ namespace IJKPlayer.SJPlayer
         Func<SJTaskQueue> Empty { get; }
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(void) destroy;
-        [Export("destroy", ArgumentSemantic.Copy)]
-        Action Destroy { get; }
+        //[Export("destroy", ArgumentSemantic.Copy)]
+        //Action Destroy { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull name;
         [Export("name", ArgumentSemantic.Strong)]
@@ -1716,17 +1716,17 @@ namespace IJKPlayer.SJPlayer
         [Static]
         [Export("conditionWithColumn:notIn:")]
         //[Verify(StronglyTypedNSArray)]
-        SJSQLite3Condition ConditionWithColumn(string column, NSObject[] values);
+        SJSQLite3Condition ConditionWithColumnNotIn(string column, NSObject[] values);
 
         // +(instancetype _Nonnull)conditionWithColumn:(NSString * _Nonnull)column between:(id _Nonnull)start and:(id _Nonnull)end;
         [Static]
         [Export("conditionWithColumn:between:and:")]
-        SJSQLite3Condition ConditionWithColumn(string column, NSObject start, NSObject end);
+        SJSQLite3Condition ConditionWithColumnBetween(string column, NSObject start, NSObject end);
 
         // +(instancetype _Nonnull)conditionWithColumn:(NSString * _Nonnull)column like:(NSString * _Nonnull)like;
         [Static]
         [Export("conditionWithColumn:like:")]
-        SJSQLite3Condition ConditionWithColumn(string column, string like);
+        SJSQLite3Condition ConditionWithColumnLike(string column, string like);
 
         // +(instancetype _Nonnull)conditionWithIsNullColumn:(NSString * _Nonnull)column;
         [Static]
