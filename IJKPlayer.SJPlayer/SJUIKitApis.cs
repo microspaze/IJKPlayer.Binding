@@ -51,6 +51,13 @@ namespace IJKPlayer.SJPlayer
         [Export("range", ArgumentSemantic.Copy)]
         Func<NSRange, SJUTRangeHandlerProtocol> Range { get; }
     }
+    
+    // common argument actions
+    delegate void NSShaowArgumentAction(NSShadow arg0);
+    delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
+    delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
+    delegate void SJUIKitTextMakerProtocolArgumentAction(SJUIKitTextMakerProtocol arg0);
+    
 
     // typedef void (^SJUTAppendImageHandler)(id<SJUTImageAttachment> _Nonnull);
     delegate void SJUTAppendImageHandler(SJUTImageAttachment arg0);
@@ -65,15 +72,12 @@ namespace IJKPlayer.SJPlayer
     delegate SJUTAttributesProtocol SJUTKernAttribute(nfloat arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTShadowAttribute)(void (^ _Nonnull)(NSShadow * _Nonnull));
-    delegate void NSShaowArgumentAction(NSShadow arg0);
     delegate SJUTAttributesProtocol SJUTShadowAttribute(NSShaowArgumentAction arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTStrokeAttribute)(void (^ _Nonnull)(id<SJUTStroke> _Nonnull));
-    delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
     delegate SJUTAttributesProtocol SJUTStrokeAttribute(SJUTStrokeArgumentAction arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTDecorationAttribute)(void (^ _Nonnull)(id<SJUTDecoration> _Nonnull));
-    delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
     delegate SJUTAttributesProtocol SJUTDecorationAttribute(SJUTDecorationArgumentAction arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTBaseLineOffsetAttribute)(CGFloat);
@@ -428,7 +432,7 @@ namespace IJKPlayer.SJPlayer
         // +(instancetype _Nonnull)sj_UIKitText:(void (^ _Nonnull)(id<SJUIKitTextMakerProtocol> _Nonnull))block;
         [Static]
         [Export("sj_UIKitText:")]
-        NSAttributedString Sj_UIKitText(Action<SJUIKitTextMakerProtocol> block);
+        NSAttributedString Sj_UIKitText(SJUIKitTextMakerProtocolArgumentAction block);
 
         // -(CGSize)sj_textSize;
         [Export("sj_textSize")]
