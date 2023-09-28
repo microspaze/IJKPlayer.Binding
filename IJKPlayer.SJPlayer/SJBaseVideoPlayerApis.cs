@@ -12,6 +12,11 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
+    // common argument actions
+    delegate void SJFitOnScreenManagerArgumentAction(SJFitOnScreenManager arg0);
+    delegate void SJRotationManagerArgumentAction(SJRotationManager arg0);
+    delegate void SJFlipTransitionManagerArgumentAction(SJFlipTransitionManager arg0);
+    
     // @protocol SJFitOnScreenManager <NSObject>
     /*
       Check whether adding [Model] to this declaration is appropriate.
@@ -61,7 +66,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)setFitOnScreen:(BOOL)fitOnScreen animated:(BOOL)animated completionHandler:(void (^ _Nullable)(id<SJFitOnScreenManager> _Nonnull))completionHandler;
         [Abstract]
         [Export("setFitOnScreen:animated:completionHandler:")]
-        void SetFitOnScreen(bool fitOnScreen, bool animated, Action<SJFitOnScreenManager> completionHandler);
+        void SetFitOnScreen(bool fitOnScreen, bool animated, SJFitOnScreenManagerArgumentAction completionHandler);
 
         // @required @property (readonly, nonatomic, strong) UIView * _Nonnull superviewInFitOnScreen;
         [Abstract]
@@ -142,7 +147,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)rotate:(SJOrientation)orientation animated:(BOOL)animated completionHandler:(void (^ _Nullable)(id<SJRotationManager> _Nonnull))completionHandler;
         [Abstract]
         [Export("rotate:animated:completionHandler:")]
-        void Animated(SJOrientation orientation, bool animated, Action<SJRotationManager> completionHandler);
+        void Animated(SJOrientation orientation, bool animated, SJRotationManagerArgumentAction completionHandler);
 
         // @required @property (readonly, nonatomic) SJOrientation currentOrientation;
         [Abstract]
@@ -1238,7 +1243,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)setFlipTransition:(SJViewFlipTransition)t animated:(BOOL)animated completionHandler:(void (^ _Nullable)(id<SJFlipTransitionManager> _Nonnull))completionHandler;
         [Abstract]
         [Export("setFlipTransition:animated:completionHandler:")]
-        void SetFlipTransition(SJViewFlipTransition t, bool animated, Action<SJFlipTransitionManager> completionHandler);
+        void SetFlipTransition(SJViewFlipTransition t, bool animated, SJFlipTransitionManagerArgumentAction completionHandler);
 
         // @required @property (nonatomic, strong) UIView * _Nullable target;
         [Abstract]

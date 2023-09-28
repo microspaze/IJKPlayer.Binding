@@ -57,8 +57,11 @@ namespace IJKPlayer.SJPlayer
     delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
     delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
     delegate void SJUIKitTextMakerProtocolArgumentAction(SJUIKitTextMakerProtocol arg0);
+    delegate void SJUTAttributesProtocolArgumentAction(SJUTAttributesProtocol arg0);
+    delegate void NSMutableAttributedStringNSTextCheckingResultArgumentsAction(NSMutableAttributedString arg0, NSTextCheckingResult arg1);
+    delegate void SJAttributeWorkerArgumentAction(SJAttributeWorker arg0);
+    delegate void SJAttributesRangeOperatorArgumentAction(SJAttributesRangeOperator arg0);
     
-
     // typedef void (^SJUTAppendImageHandler)(id<SJUTImageAttachment> _Nonnull);
     delegate void SJUTAppendImageHandler(SJUTImageAttachment arg0);
 
@@ -304,12 +307,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUTAttributesProtocol> _Nonnull)) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<Action<SJUTAttributesProtocol>> Update { get; }
+        Action<SJUTAttributesProtocolArgumentAction> Update { get; }
 
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUIKitTextMakerProtocol> _Nonnull)) replaceWithText;
         [Abstract]
         [Export("replaceWithText", ArgumentSemantic.Copy)]
-        Action<Action<SJUIKitTextMakerProtocol>> ReplaceWithText { get; }
+        Action<SJUIKitTextMakerProtocolArgumentAction> ReplaceWithText { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) replaceWithString;
         [Abstract]
@@ -333,7 +336,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(NSMutableAttributedString * _Nonnull, NSTextCheckingResult * _Nonnull)) handler;
         [Abstract]
         [Export("handler", ArgumentSemantic.Copy)]
-        Action<Action<NSMutableAttributedString, NSTextCheckingResult>> Handler { get; }
+        Action<NSMutableAttributedStringNSTextCheckingResultArgumentsAction> Handler { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSRegularExpressionOptions) regularExpressionOptions;
         [Abstract]
@@ -625,7 +628,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(NSMutableAttributedString * _Nonnull)endTaskAndComplete:(void (^ _Nonnull)(SJAttributeWorker * _Nonnull))block;
         [Export("endTaskAndComplete:")]
-        NSMutableAttributedString EndTaskAndComplete(Action<SJAttributeWorker> block);
+        NSMutableAttributedString EndTaskAndComplete(SJAttributeWorkerArgumentAction block);
 
         // @property (nonatomic, strong, null_resettable) UIFont * _Null_unspecified defaultFont;
         [NullAllowed, Export("defaultFont", ArgumentSemantic.Strong)]
@@ -637,7 +640,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSRange, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) rangeEdit;
         [Export("rangeEdit", ArgumentSemantic.Copy)]
-        Func<NSRange, Action<SJAttributesRangeOperator>, SJAttributeWorker> RangeEdit { get; }
+        Func<NSRange, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> RangeEdit { get; }
 
         // @property (readonly, copy, nonatomic) NSAttributedString * _Nonnull (^ _Nonnull)(NSRange) subAttrStr;
         [Export("subAttrStr", ArgumentSemantic.Copy)]
@@ -659,7 +662,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) regexp;
         [Export("regexp", ArgumentSemantic.Copy)]
-        Func<NSString, Action<SJAttributesRangeOperator>, SJAttributeWorker> Regexp { get; }
+        Func<NSString, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> Regexp { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(NSArray<NSValue *> * _Nonnull), BOOL) regexp_r;
         [Export("regexp_r", ArgumentSemantic.Copy)]
@@ -711,7 +714,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) lastInserted;
         [Export("lastInserted", ArgumentSemantic.Copy)]
-        Func<Action<SJAttributesRangeOperator>, SJAttributeWorker> LastInserted { get; }
+        Func<SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> LastInserted { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedStringKey _Nonnull, id _Nonnull, NSRange) add;
         [Export("add", ArgumentSemantic.Copy)]
@@ -905,7 +908,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMakerProtocol> _Nonnull) block;
         [NullAllowed, Export("block", ArgumentSemantic.Copy)]
-        Action<SJUIKitTextMakerProtocol> Block { get; set; }
+        SJUIKitTextMakerProtocolArgumentAction Block { get; set; }
     }
 
     // @interface SJUTRecorder : NSObject
@@ -989,7 +992,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMakerProtocol> _Nonnull) replaceWithText;
         [NullAllowed, Export("replaceWithText", ArgumentSemantic.Copy)]
-        Action<SJUIKitTextMakerProtocol> ReplaceWithText { get; set; }
+        SJUIKitTextMakerProtocolArgumentAction ReplaceWithText { get; set; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(id<SJUTAttributesProtocol> _Nonnull) update;
         [NullAllowed, Export("update", ArgumentSemantic.Copy)]
@@ -1031,7 +1034,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMakerProtocol> _Nonnull) replaceWithText;
         [NullAllowed, Export("replaceWithText", ArgumentSemantic.Copy)]
-        Action<SJUIKitTextMakerProtocol> ReplaceWithText { get; set; }
+        SJUIKitTextMakerProtocolArgumentAction ReplaceWithText { get; set; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(id<SJUTAttributesProtocol> _Nonnull) update;
         [NullAllowed, Export("update", ArgumentSemantic.Copy)]

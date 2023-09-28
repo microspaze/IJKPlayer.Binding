@@ -6,6 +6,9 @@ using ObjCRuntime;
 
 namespace IJKPlayer.SJPlayer
 {
+    // common argument actions
+    delegate void SJAttributeWorkerArgumentAction(SJAttributeWorker arg0);
+    
     [Native]
     public enum SJUTVerticalAlignment : ulong
     {
@@ -25,12 +28,12 @@ namespace IJKPlayer.SJPlayer
         // extern NSMutableAttributedString * _Nonnull sj_makeAttributesString (void (^ _Nonnull)(SJAttributeWorker * _Nonnull) block);
         //[DllImport("__Internal")]
         //[Verify(PlatformInvoke)]
-        //static extern NSMutableAttributedString sj_makeAttributesString(Action<SJAttributeWorker> block);
+        //static extern NSMutableAttributedString sj_makeAttributesString(SJAttributeWorkerArgumentAction block);
 
         // extern NSMutableAttributedString * _Nonnull sj_makeAttributesString (void (^ _Nonnull)(SJAttributeWorker *) block);
         [DllImport("__Internal")]
         //[Verify(PlatformInvoke)]
-        static extern NSMutableAttributedString sj_makeAttributesString(Action<SJAttributeWorker>? block);
+        static extern NSMutableAttributedString sj_makeAttributesString(SJAttributeWorkerArgumentAction? block);
 
         // extern BOOL SJUTRangeContains (NSRange main, NSRange sub);
         [DllImport("__Internal")]

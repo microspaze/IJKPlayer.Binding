@@ -10,6 +10,12 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
+    // common argument actions
+    delegate void SJVideoPlayerConfigurationsArgumentAction(SJVideoPlayerConfigurations arg0);
+    delegate void SJVideoPlayerLocalizedStringsArgumentAction(SJVideoPlayerLocalizedStrings arg0);
+    delegate void SJVideoPlayerControlLayerResourcesArgumentAction(SJVideoPlayerControlLayerResources arg0);
+    delegate void SJEdgeControlButtonItemActionArgumentAction(SJEdgeControlButtonItemAction arg0);
+    
     // @protocol SJControlLayer <SJVideoPlayerControlLayerDataSource, SJVideoPlayerControlLayerDelegate, SJControlLayerRestartProtocol, SJControlLayerExitProtocol>
     /*
   Check whether adding [Model] to this declaration is appropriate.
@@ -239,7 +245,7 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(SJVideoPlayerConfigurations * _Nonnull)) update;
         [Static]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<Action<SJVideoPlayerConfigurations>> Update { get; }
+        Action<SJVideoPlayerConfigurationsArgumentAction> Update { get; }
 
         // @property (nonatomic, strong, null_resettable) id<SJVideoPlayerLocalizedStrings> _Null_unspecified localizedStrings;
         [NullAllowed, Export("localizedStrings", ArgumentSemantic.Strong)]
@@ -1285,11 +1291,11 @@ namespace IJKPlayer.SJPlayer
         // +(instancetype _Nonnull)actionWithHandler:(void (^ _Nonnull)(SJEdgeControlButtonItemAction * _Nonnull))handler;
         [Static]
         [Export("actionWithHandler:")]
-        SJEdgeControlButtonItemAction ActionWithHandler(Action<SJEdgeControlButtonItemAction> handler);
+        SJEdgeControlButtonItemAction ActionWithHandler(SJEdgeControlButtonItemActionArgumentAction handler);
 
         // -(instancetype _Nonnull)initWithHandler:(void (^ _Nonnull)(SJEdgeControlButtonItemAction * _Nonnull))handler;
         [Export("initWithHandler:")]
-        NativeHandle Constructor(Action<SJEdgeControlButtonItemAction> handler);
+        NativeHandle Constructor(SJEdgeControlButtonItemActionArgumentAction handler);
 
         // @property (readonly, nonatomic, weak) id _Nullable target;
         [NullAllowed, Export("target", ArgumentSemantic.Weak)]
@@ -2277,12 +2283,12 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(id<SJVideoPlayerControlLayerResources> _Nonnull)) updateResources;
         [Static]
         [Export("updateResources", ArgumentSemantic.Copy)]
-        Action<Action<SJVideoPlayerControlLayerResources>> UpdateResources { get; }
+        Action<SJVideoPlayerControlLayerResourcesArgumentAction> UpdateResources { get; }
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(id<SJVideoPlayerLocalizedStrings> _Nonnull)) updateLocalizedStrings;
         [Static]
         [Export("updateLocalizedStrings", ArgumentSemantic.Copy)]
-        Action<Action<SJVideoPlayerLocalizedStrings>> UpdateLocalizedStrings { get; }
+        Action<SJVideoPlayerLocalizedStringsArgumentAction> UpdateLocalizedStrings { get; }
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(NSBundle * _Nonnull) setLocalizedStrings;
         [Static]
@@ -2292,7 +2298,7 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(SJVideoPlayerConfigurations * _Nonnull)) update;
         [Static]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<Action<SJVideoPlayerConfigurations>> Update { get; }
+        Action<SJVideoPlayerConfigurationsArgumentAction> Update { get; }
     }
 
     // @interface SJExtendedVideoDefinitionSwitchingControlLayer (SJVideoPlayer)
