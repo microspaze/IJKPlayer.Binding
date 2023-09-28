@@ -1900,7 +1900,7 @@ namespace IJKPlayer.SJPlayer
         string Sql_tableName { get; set; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {

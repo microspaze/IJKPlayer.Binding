@@ -978,7 +978,7 @@ namespace IJKPlayer.SJPlayer
         void Config(SJVideoPlayerClipsConfig otherConfig);
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -1129,7 +1129,7 @@ namespace IJKPlayer.SJPlayer
         void CleanColors();
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -1821,7 +1821,7 @@ namespace IJKPlayer.SJPlayer
         void LayoutInRect(CGRect rect, SJLongPressGestureRecognizerState state, nfloat rate);
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -2001,7 +2001,7 @@ namespace IJKPlayer.SJPlayer
         SJVideoPlayerClipsConfig Config { get; set; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -2042,7 +2042,7 @@ namespace IJKPlayer.SJPlayer
         void TappedBlankAreaOnTheControlLayer(SJControlLayer controlLayer);
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -2119,7 +2119,7 @@ namespace IJKPlayer.SJPlayer
     {
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -3021,7 +3021,7 @@ namespace IJKPlayer.SJPlayer
         SJProgressSlider ProgressSlider { get; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {

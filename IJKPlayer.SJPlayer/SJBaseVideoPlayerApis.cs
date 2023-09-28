@@ -281,7 +281,7 @@ namespace IJKPlayer.SJPlayer
         Action<SJReachability> NetworkSpeedDidChangeExeBlock { get; set; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -3084,7 +3084,7 @@ namespace IJKPlayer.SJPlayer
         bool IsPlayedToEndTime { get; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -3267,7 +3267,7 @@ namespace IJKPlayer.SJPlayer
     {
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -3573,7 +3573,7 @@ namespace IJKPlayer.SJPlayer
         Action<SJVideoPlayerPlaybackController, Action<bool>> RestoreUserInterfaceForPictureInPictureStop { get; set; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -3779,7 +3779,7 @@ namespace IJKPlayer.SJPlayer
         UIImage Screenshot { get; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -3966,7 +3966,7 @@ namespace IJKPlayer.SJPlayer
     {
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -4022,7 +4022,7 @@ namespace IJKPlayer.SJPlayer
         nint PlaybackViewZIndex { get; set; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -5056,7 +5056,7 @@ namespace IJKPlayer.SJPlayer
         SJReachability Shared();
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -5765,7 +5765,7 @@ namespace IJKPlayer.SJPlayer
         Action<SJVideoPlayerRegistrar> AudioSessionInterruption { get; set; }
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
@@ -5852,7 +5852,7 @@ namespace IJKPlayer.SJPlayer
         UIImage ImageNamed(string name);
     }
 
-    [Static]
+    //[Static]
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
