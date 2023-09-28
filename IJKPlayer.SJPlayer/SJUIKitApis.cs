@@ -1910,6 +1910,6 @@ namespace IJKPlayer.SJPlayer
 
         // extern const unsigned char[] SJUIKitVersionString;
         [Field("SJUIKitVersionString", "__Internal")]
-        byte[] SJUIKitVersionString { get; }
+        NSString SJUIKitVersionString { get; }
     }
 }

@@ -3031,6 +3031,6 @@ namespace IJKPlayer.SJPlayer
 
         // extern const unsigned char[] SJVideoPlayerVersionString;
         [Field("SJVideoPlayerVersionString", "__Internal")]
-        byte[] SJVideoPlayerVersionString { get; }
+        NSString SJVideoPlayerVersionString { get; }
     }
 }
