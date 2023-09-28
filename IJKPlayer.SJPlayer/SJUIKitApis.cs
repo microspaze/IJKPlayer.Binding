@@ -54,6 +54,7 @@ namespace IJKPlayer.SJPlayer
     
     // common argument actions
     delegate void BoolArgumentAction(bool arg0);
+    delegate void NSArrayNSValueArgumentAction(NSArray<NSValue> arg0);
     delegate void NSShaowArgumentAction(NSShadow arg0);
     delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
     delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
@@ -666,7 +667,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(NSArray<NSValue *> * _Nonnull), BOOL) regexp_r;
         [Export("regexp_r", ArgumentSemantic.Copy)]
-        Func<NSString, Action<NSArray<NSValue>>, bool, SJAttributeWorker> Regexp_r { get; }
+        Func<NSString, NSArrayNSValueArgumentAction, bool, SJAttributeWorker> Regexp_r { get; }
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, id _Nonnull, ...) regexp_replace;
         [Export("regexp_replace", ArgumentSemantic.Copy)]
