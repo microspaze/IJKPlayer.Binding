@@ -7,7 +7,7 @@ using CoreMedia;
 using Foundation;
 using ObjCRuntime;
 //using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
-using SJUIKit;
+//using static IJKPlayer.SJPlayer.SJUIKit;
 using UIKit;
 
 namespace IJKPlayer.SJPlayer
