@@ -5165,7 +5165,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)rotate:(SJOrientation)orientation animated:(BOOL)animated completionHandler:(void (^ _Nullable)(id<SJRotationManager> _Nonnull))completionHandler;
         [Export("rotate:animated:completionHandler:")]
-        void Rotate(SJOrientation orientation, bool animated, Action<SJRotationManager> completionHandler);
+        void Rotate(SJOrientation orientation, bool animated, SJRotationManagerArgumentAction completionHandler);
 
         // @property (readonly, nonatomic) SJOrientation currentOrientation;
         [Export("currentOrientation")]
