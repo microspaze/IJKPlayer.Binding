@@ -561,12 +561,12 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)seekToTime:(NSTimeInterval)secs completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Abstract]
         [Export("seekToTime:completionHandler:")]
-        void SeekToTime(double secs, Action<bool> completionHandler);
+        void SeekToTime(double secs, BoolArgumentAction completionHandler);
 
         // @required -(void)seekToTime:(CMTime)time toleranceBefore:(CMTime)toleranceBefore toleranceAfter:(CMTime)toleranceAfter completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Abstract]
         [Export("seekToTime:toleranceBefore:toleranceAfter:completionHandler:")]
-        void SeekToTime(CMTime time, CMTime toleranceBefore, CMTime toleranceAfter, Action<bool> completionHandler);
+        void SeekToTime(CMTime time, CMTime toleranceBefore, CMTime toleranceAfter, BoolArgumentAction completionHandler);
 
         // @required -(UIImage * _Nullable)screenshot;
         [Abstract]
@@ -607,7 +607,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJVideoPlayerPlaybackController> _Nonnull, void (^ _Nonnull)(BOOL)) restoreUserInterfaceForPictureInPictureStop;
         [Abstract]
         [NullAllowed, Export("restoreUserInterfaceForPictureInPictureStop", ArgumentSemantic.Copy)]
-        Action<SJVideoPlayerPlaybackController, Action<bool>> RestoreUserInterfaceForPictureInPictureStop { get; set; }
+        Action<SJVideoPlayerPlaybackController, BoolArgumentAction> RestoreUserInterfaceForPictureInPictureStop { get; set; }
 
         // @required -(void)startPictureInPicture __attribute__((availability(ios, introduced=14.0)));
         //[iOS(14, 0)]
@@ -2685,11 +2685,11 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)seekToTime:(NSTimeInterval)secs completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Export("seekToTime:completionHandler:")]
-        void SeekToTime(double secs, Action<bool> completionHandler);
+        void SeekToTime(double secs, BoolArgumentAction completionHandler);
 
         // -(void)seekToTime:(CMTime)time toleranceBefore:(CMTime)toleranceBefore toleranceAfter:(CMTime)toleranceAfter completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Export("seekToTime:toleranceBefore:toleranceAfter:completionHandler:")]
-        void SeekToTime(CMTime time, CMTime toleranceBefore, CMTime toleranceAfter, Action<bool> completionHandler);
+        void SeekToTime(CMTime time, CMTime toleranceBefore, CMTime toleranceAfter, BoolArgumentAction completionHandler);
 
         // -(void)switchVideoDefinition:(SJVideoPlayerURLAsset * _Nonnull)URLAsset;
         [Export("switchVideoDefinition:")]
@@ -3575,7 +3575,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(id<SJVideoPlayerPlaybackController> _Nonnull, void (^ _Nonnull)(BOOL)) restoreUserInterfaceForPictureInPictureStop;
         [NullAllowed, Export("restoreUserInterfaceForPictureInPictureStop", ArgumentSemantic.Copy)]
-        Action<SJVideoPlayerPlaybackController, Action<bool>> RestoreUserInterfaceForPictureInPictureStop { get; set; }
+        Action<SJVideoPlayerPlaybackController, BoolArgumentAction> RestoreUserInterfaceForPictureInPictureStop { get; set; }
     }
 
     //[Static]
@@ -3740,7 +3740,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)seekToTime:(CMTime)time completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Abstract]
         [Export("seekToTime:completionHandler:")]
-        void SeekToTime(CMTime time, Action<bool> completionHandler);
+        void SeekToTime(CMTime time, BoolArgumentAction completionHandler);
 
         // @required @property (readonly, nonatomic) NSTimeInterval currentTime;
         [Abstract]
@@ -3834,7 +3834,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)seekToTime:(CMTime)time toleranceBefore:(CMTime)toleranceBefore toleranceAfter:(CMTime)toleranceAfter completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Export("seekToTime:toleranceBefore:toleranceAfter:completionHandler:")]
-        void SeekToTime(CMTime time, CMTime toleranceBefore, CMTime toleranceAfter, Action<bool> completionHandler);
+        void SeekToTime(CMTime time, CMTime toleranceBefore, CMTime toleranceAfter, BoolArgumentAction completionHandler);
     }
 
     // @interface SJAVMediaPlayerLayerView : UIView <SJMediaPlayerView>

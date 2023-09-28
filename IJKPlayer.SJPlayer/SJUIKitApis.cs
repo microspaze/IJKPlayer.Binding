@@ -53,6 +53,7 @@ namespace IJKPlayer.SJPlayer
     }
     
     // common argument actions
+    delegate void BoolArgumentAction(bool arg0);
     delegate void NSShaowArgumentAction(NSShadow arg0);
     delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
     delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
