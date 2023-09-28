@@ -658,7 +658,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)exportWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration presetName:(NSString * _Nullable)presetName progress:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, float))progress completion:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSURL * _Nullable, UIImage * _Nullable))completion failure:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSError * _Nullable))failure;
         [Abstract]
         [Export("exportWithBeginTime:duration:presetName:progress:completion:failure:")]
-        void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJVideoPlayerPlaybackController, float> progress, Action<SJVideoPlayerPlaybackController, NSURL, UIImage> completion, Action<SJVideoPlayerPlaybackController, NSError> failure);
+        void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJVideoPlayerPlaybackController, float> progress, Action<SJVideoPlayerPlaybackController, NSUrl, UIImage> completion, Action<SJVideoPlayerPlaybackController, NSError> failure);
 
         // @required -(void)generateGIFWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration maximumSize:(CGSize)maximumSize interval:(float)interval gifSavePath:(NSURL * _Nonnull)gifSavePath progress:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, float))progressBlock completion:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, UIImage * _Nonnull, UIImage * _Nonnull))completion failure:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSError * _Nonnull))failure;
         [Abstract]
@@ -2963,7 +2963,7 @@ namespace IJKPlayer.SJPlayer
     {
         // -(void)exportWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration presetName:(NSString * _Nullable)presetName progress:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, float))progressBlock completion:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, NSURL * _Nonnull, UIImage * _Nonnull))completion failure:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, NSError * _Nonnull))failure;
         [Export("exportWithBeginTime:duration:presetName:progress:completion:failure:")]
-        void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJBaseVideoPlayer, float> progressBlock, Action<SJBaseVideoPlayer, NSURL, UIImage> completion, Action<SJBaseVideoPlayer, NSError> failure);
+        void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJBaseVideoPlayer, float> progressBlock, Action<SJBaseVideoPlayer, NSUrl, UIImage> completion, Action<SJBaseVideoPlayer, NSError> failure);
 
         // -(void)cancelExportOperation;
         [Export("cancelExportOperation")]
@@ -2971,7 +2971,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)generateGIFWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration progress:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, float))progressBlock completion:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, UIImage * _Nonnull, UIImage * _Nonnull, NSURL * _Nonnull))completion failure:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, NSError * _Nonnull))failure;
         [Export("generateGIFWithBeginTime:duration:progress:completion:failure:")]
-        void GenerateGIFWithBeginTime(double beginTime, double duration, Action<SJBaseVideoPlayer, float> progressBlock, Action<SJBaseVideoPlayer, UIImage, UIImage, NSURL> completion, Action<SJBaseVideoPlayer, NSError> failure);
+        void GenerateGIFWithBeginTime(double beginTime, double duration, Action<SJBaseVideoPlayer, float> progressBlock, Action<SJBaseVideoPlayer, UIImage, UIImage, NSUrl> completion, Action<SJBaseVideoPlayer, NSError> failure);
 
         // -(void)cancelGenerateGIFOperation;
         [Export("cancelGenerateGIFOperation")]
@@ -3496,7 +3496,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)sj_exportWithStartTime:(NSTimeInterval)secs0 duration:(NSTimeInterval)secs1 toFile:(NSURL * _Nonnull)fileURL presetName:(NSString * _Nullable)presetName progress:(void (^ _Nullable)(AVAsset * _Nonnull, float))progressBlock success:(void (^ _Nullable)(AVAsset * _Nonnull, AVAsset * _Nullable, NSURL * _Nullable, UIImage * _Nullable))successBlock failure:(void (^ _Nullable)(AVAsset * _Nonnull, NSError * _Nullable))failureBlock;
         [Export("sj_exportWithStartTime:duration:toFile:presetName:progress:success:failure:")]
-        void Sj_exportWithStartTime(double secs0, double secs1, NSUrl fileURL, string presetName, Action<AVAsset, float> progressBlock, Action<AVAsset, AVAsset, NSURL, UIImage> successBlock, Action<AVAsset, NSError> failureBlock);
+        void Sj_exportWithStartTime(double secs0, double secs1, NSUrl fileURL, string presetName, Action<AVAsset, float> progressBlock, Action<AVAsset, AVAsset, NSUrl, UIImage> successBlock, Action<AVAsset, NSError> failureBlock);
 
         // -(void)sj_cancelExportOperation;
         [Export("sj_cancelExportOperation")]

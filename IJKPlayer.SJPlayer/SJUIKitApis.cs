@@ -83,7 +83,7 @@ namespace IJKPlayer.SJPlayer
     delegate SJUTAttributesProtocol SJUTParagraphSpacingAttribute(nfloat arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTAlignmentAttribute)(NSTextAlignment);
-    delegate SJUTAttributesProtocol SJUTAlignmentAttribute(NSTextAlignment arg0);
+    delegate SJUTAttributesProtocol SJUTAlignmentAttribute(UITextAlignment arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTFirstLineHeadIndentAttribute)(CGFloat);
     delegate SJUTAttributesProtocol SJUTFirstLineHeadIndentAttribute(nfloat arg0);
@@ -95,7 +95,7 @@ namespace IJKPlayer.SJPlayer
     delegate SJUTAttributesProtocol SJUTTailIndentAttribute(nfloat arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTLineBreakModeAttribute)(NSLineBreakMode);
-    delegate SJUTAttributesProtocol SJUTLineBreakModeAttribute(NSLineBreakMode arg0);
+    delegate SJUTAttributesProtocol SJUTLineBreakModeAttribute(UILineBreakMode arg0);
 
     // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTMinimumLineHeightAttribute)(CGFloat);
     delegate SJUTAttributesProtocol SJUTMinimumLineHeightAttribute(nfloat arg0);
@@ -579,7 +579,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) NSLineBreakMode lineBreakMode;
         [Export("lineBreakMode", ArgumentSemantic.Assign)]
-        NSLineBreakMode LineBreakMode { get; set; }
+        UILineBreakMode LineBreakMode { get; set; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(SJAttributesRecorder * _Nonnull) propertyDidChangeExeBlock;
         [NullAllowed, Export("propertyDidChangeExeBlock", ArgumentSemantic.Copy)]
@@ -838,11 +838,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSTextAlignment) alignment;
         [Export("alignment", ArgumentSemantic.Copy)]
-        Func<NSTextAlignment, SJAttributesRangeOperator> Alignment { get; }
+        Func<UITextAlignment, SJAttributesRangeOperator> Alignment { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSLineBreakMode) lineBreakMode;
         [Export("lineBreakMode", ArgumentSemantic.Copy)]
-        Func<NSLineBreakMode, SJAttributesRangeOperator> LineBreakMode { get; }
+        Func<UILineBreakMode, SJAttributesRangeOperator> LineBreakMode { get; }
     }
 
     // @interface SJUTStroke : NSObject <SJUTStroke>
@@ -1187,7 +1187,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(CFRunLoopRef _Nonnull, CFRunLoopMode _Nonnull) update;
         [Export("update", ArgumentSemantic.Copy)]
-        unsafe Func<CFRunLoop, CoreFoundation.CFRunLoopMode*, SJRunLoopTaskQueue> Update { get; }
+        unsafe Func<CFRunLoop, NSString, SJRunLoopTaskQueue> Update { get; }
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(SJRunLoopTaskHandler _Nonnull) enqueue;
         [Export("enqueue", ArgumentSemantic.Copy)]
@@ -1304,7 +1304,7 @@ namespace IJKPlayer.SJPlayer
 
     // @interface SJSQLiteTableInfo : NSObject
     [BaseType(typeof(NSObject))]
-    interface SJSQLiteTableInfo
+    interface SJSQLiteTableInfo : ObjCRuntime.INativeObject
     {
         // +(instancetype _Nullable)tableInfoWithClass:(Class<SJSQLiteTableModelProtocol> _Nonnull)cls;
         [Static]
@@ -1416,7 +1416,7 @@ namespace IJKPlayer.SJPlayer
 */
     [Protocol]
     [BaseType(typeof(NSObject))]
-    interface SJSQLiteTableModelProtocol
+    interface SJSQLiteTableModelProtocol : ObjCRuntime.INativeObject
     {
         // @required +(NSString * _Nullable)sql_primaryKey;
         [Static, Abstract]
