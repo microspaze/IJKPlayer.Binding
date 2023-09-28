@@ -264,13 +264,13 @@ namespace IJKPlayer.SJPlayer
         SJUTDefaultTabIntervalAttribute DefaultTabInterval { get; }
 
         // @required @property (readonly, copy, nonatomic) API_AVAILABLE(ios(9.0)) SJUTAllowsDefaultTighteningForTruncationAttribute allowsDefaultTighteningForTruncation __attribute__((availability(ios, introduced=9.0)));
-        [iOS(9, 0)]
+        //[iOS(9, 0)]
         [Abstract]
         [Export("allowsDefaultTighteningForTruncation", ArgumentSemantic.Copy)]
         SJUTAllowsDefaultTighteningForTruncationAttribute AllowsDefaultTighteningForTruncation { get; }
 
         // @required @property (readonly, copy, nonatomic) API_AVAILABLE(ios(9.0)) SJUTLineBreakStrategyAttribute lineBreakStrategy __attribute__((availability(ios, introduced=9.0)));
-        [iOS(9, 0)]
+        //[iOS(9, 0)]
         [Abstract]
         [Export("lineBreakStrategy", ArgumentSemantic.Copy)]
         SJUTLineBreakStrategyAttribute LineBreakStrategy { get; }

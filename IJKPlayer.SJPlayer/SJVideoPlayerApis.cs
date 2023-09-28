@@ -274,13 +274,13 @@ namespace IJKPlayer.SJPlayer
         UIImage Placeholder { get; set; }
 
         // @required @property (nonatomic, strong) API_AVAILABLE(ios(14.0)) UIImage * pictureInPictureItemStartImage __attribute__((availability(ios, introduced=14.0)));
-        [iOS(14, 0)]
+        //[iOS(14, 0)]
         [Abstract]
         [Export("pictureInPictureItemStartImage", ArgumentSemantic.Strong)]
         UIImage PictureInPictureItemStartImage { get; set; }
 
         // @required @property (nonatomic, strong) API_AVAILABLE(ios(14.0)) UIImage * pictureInPictureItemStopImage __attribute__((availability(ios, introduced=14.0)));
-        [iOS(14, 0)]
+        //[iOS(14, 0)]
         [Abstract]
         [Export("pictureInPictureItemStopImage", ArgumentSemantic.Strong)]
         UIImage PictureInPictureItemStopImage { get; set; }
@@ -1756,7 +1756,7 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */
-    [iOS(11, 0)]
+    //[iOS(11, 0)]
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJFullscreenModeStatusBar
@@ -1834,7 +1834,7 @@ namespace IJKPlayer.SJPlayer
         nint SJEdgeControlLayerTopItem_Title { get; }
 
         // extern const SJEdgeControlButtonItemTag SJEdgeControlLayerTopItem_PictureInPicture __attribute__((availability(ios, introduced=14.0)));
-        [iOS(14, 0)]
+        //[iOS(14, 0)]
         [Field("SJEdgeControlLayerTopItem_PictureInPicture", "__Internal")]
         nint SJEdgeControlLayerTopItem_PictureInPicture { get; }
 
@@ -1912,7 +1912,7 @@ namespace IJKPlayer.SJPlayer
         SJSpeedupPlaybackPopupView SpeedupPlaybackPopupView { get; set; }
 
         // @property (nonatomic) BOOL automaticallyShowsPictureInPictureItem __attribute__((availability(ios, introduced=14.0)));
-        [iOS(14, 0)]
+        //[iOS(14, 0)]
         [Export("automaticallyShowsPictureInPictureItem")]
         bool AutomaticallyShowsPictureInPictureItem { get; set; }
 
@@ -1941,12 +1941,12 @@ namespace IJKPlayer.SJPlayer
         nfloat BottomProgressIndicatorHeight { get; set; }
 
         // @property (nonatomic, strong, null_resettable) NS_AVAILABLE_IOS(11.0) UIView<SJFullscreenModeStatusBar> * customStatusBar __attribute__((availability(ios, introduced=11.0)));
-        [iOS(11, 0)]
+        //[iOS(11, 0)]
         [NullAllowed, Export("customStatusBar", ArgumentSemantic.Strong)]
         SJFullscreenModeStatusBar CustomStatusBar { get; set; }
 
         // @property (copy, nonatomic, null_resettable) NS_AVAILABLE_IOS(11.0) BOOL (^)(SJEdgeControlLayer * _Nonnull) shouldShowsCustomStatusBar __attribute__((availability(ios, introduced=11.0)));
-        [iOS(11, 0)]
+        //[iOS(11, 0)]
         [NullAllowed, Export("shouldShowsCustomStatusBar", ArgumentSemantic.Copy)]
         Func<SJEdgeControlLayer, bool> ShouldShowsCustomStatusBar { get; set; }
 

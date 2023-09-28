@@ -209,8 +209,8 @@ namespace IJKPlayer.SJPlayer
         All = (URLAssetWillChange | PlaybackEvents | ApplicationEvents)
     }
 
-    //[Introduced(PlatformName.iOS, 0xd, 0x0, message: "deprecated!")]
-    //[Deprecated(PlatformName.iOS, 0x10, 0x0, message: "deprecated!")]
+    //[Introduced(PlatformName.iOS, 13, 0, message: "deprecated!")]
+    //[Deprecated(PlatformName.iOS, 16, 0, message: "deprecated!")]
     [Flags]
     [Native]
     public enum SJSafeAreaInsetsMask
