@@ -3790,7 +3790,7 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const NSNotificationName _Nonnull SJMediaPlayerPlaybackTypeDidChangeNotification;
         [Field("SJMediaPlayerPlaybackTypeDidChangeNotification", "__Internal")]
-        NSString SJMediaPlayerPlaybackTypeDidChangeNotification();
+        NSString SJMediaPlayerPlaybackTypeDidChangeNotification { get; }
     }
 
     // @interface SJSwitchDefinitionExtended (SJMediaPlaybackController)
@@ -3977,11 +3977,11 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const NSInteger SJPlayerViewTag;
         [Field("SJPlayerViewTag", "__Internal")]
-        nint SJPlayerViewTag();
+        nint SJPlayerViewTag { get; }
 
         // extern const NSInteger SJPresentViewTag;
         [Field("SJPresentViewTag", "__Internal")]
-        nint SJPresentViewTag();
+        nint SJPresentViewTag { get; }
     }
 
     // @interface SJPlayerZIndexes : NSObject
@@ -4033,115 +4033,115 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const NSNotificationName _Nonnull SJVideoPlayerAssetStatusDidChangeNotification;
         [Field("SJVideoPlayerAssetStatusDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerAssetStatusDidChangeNotification();
+        NSString SJVideoPlayerAssetStatusDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerDefinitionSwitchStatusDidChangeNotification;
         [Field("SJVideoPlayerDefinitionSwitchStatusDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerDefinitionSwitchStatusDidChangeNotification();
+        NSString SJVideoPlayerDefinitionSwitchStatusDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerURLAssetWillChangeNotification;
         [Field("SJVideoPlayerURLAssetWillChangeNotification", "__Internal")]
-        NSString SJVideoPlayerURLAssetWillChangeNotification();
+        NSString SJVideoPlayerURLAssetWillChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerURLAssetDidChangeNotification;
         [Field("SJVideoPlayerURLAssetDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerURLAssetDidChangeNotification();
+        NSString SJVideoPlayerURLAssetDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerApplicationDidEnterBackgroundNotification;
         [Field("SJVideoPlayerApplicationDidEnterBackgroundNotification", "__Internal")]
-        NSString SJVideoPlayerApplicationDidEnterBackgroundNotification();
+        NSString SJVideoPlayerApplicationDidEnterBackgroundNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerApplicationWillEnterForegroundNotification;
         [Field("SJVideoPlayerApplicationWillEnterForegroundNotification", "__Internal")]
-        NSString SJVideoPlayerApplicationWillEnterForegroundNotification();
+        NSString SJVideoPlayerApplicationWillEnterForegroundNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerApplicationWillTerminateNotification;
         [Field("SJVideoPlayerApplicationWillTerminateNotification", "__Internal")]
-        NSString SJVideoPlayerApplicationWillTerminateNotification();
+        NSString SJVideoPlayerApplicationWillTerminateNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackControllerWillDeallocateNotification;
         [Field("SJVideoPlayerPlaybackControllerWillDeallocateNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackControllerWillDeallocateNotification();
+        NSString SJVideoPlayerPlaybackControllerWillDeallocateNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackTimeControlStatusDidChangeNotification;
         [Field("SJVideoPlayerPlaybackTimeControlStatusDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackTimeControlStatusDidChangeNotification();
+        NSString SJVideoPlayerPlaybackTimeControlStatusDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPictureInPictureStatusDidChangeNotification;
         [Field("SJVideoPlayerPictureInPictureStatusDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerPictureInPictureStatusDidChangeNotification();
+        NSString SJVideoPlayerPictureInPictureStatusDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackDidFinishNotification;
         [Field("SJVideoPlayerPlaybackDidFinishNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackDidFinishNotification();
+        NSString SJVideoPlayerPlaybackDidFinishNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackDidReplayNotification;
         [Field("SJVideoPlayerPlaybackDidReplayNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackDidReplayNotification();
+        NSString SJVideoPlayerPlaybackDidReplayNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackWillStopNotification;
         [Field("SJVideoPlayerPlaybackWillStopNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackWillStopNotification();
+        NSString SJVideoPlayerPlaybackWillStopNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackDidStopNotification;
         [Field("SJVideoPlayerPlaybackDidStopNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackDidStopNotification();
+        NSString SJVideoPlayerPlaybackDidStopNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackWillRefreshNotification;
         [Field("SJVideoPlayerPlaybackWillRefreshNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackWillRefreshNotification();
+        NSString SJVideoPlayerPlaybackWillRefreshNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackDidRefreshNotification;
         [Field("SJVideoPlayerPlaybackDidRefreshNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackDidRefreshNotification();
+        NSString SJVideoPlayerPlaybackDidRefreshNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackWillSeekNotification;
         [Field("SJVideoPlayerPlaybackWillSeekNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackWillSeekNotification();
+        NSString SJVideoPlayerPlaybackWillSeekNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackDidSeekNotification;
         [Field("SJVideoPlayerPlaybackDidSeekNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackDidSeekNotification();
+        NSString SJVideoPlayerPlaybackDidSeekNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerCurrentTimeDidChangeNotification;
         [Field("SJVideoPlayerCurrentTimeDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerCurrentTimeDidChangeNotification();
+        NSString SJVideoPlayerCurrentTimeDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerDurationDidChangeNotification;
         [Field("SJVideoPlayerDurationDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerDurationDidChangeNotification();
+        NSString SJVideoPlayerDurationDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlayableDurationDidChangeNotification;
         [Field("SJVideoPlayerPlayableDurationDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerPlayableDurationDidChangeNotification();
+        NSString SJVideoPlayerPlayableDurationDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPresentationSizeDidChangeNotification;
         [Field("SJVideoPlayerPresentationSizeDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerPresentationSizeDidChangeNotification();
+        NSString SJVideoPlayerPresentationSizeDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerPlaybackTypeDidChangeNotification;
         [Field("SJVideoPlayerPlaybackTypeDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerPlaybackTypeDidChangeNotification();
+        NSString SJVideoPlayerPlaybackTypeDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerRateDidChangeNotification;
         [Field("SJVideoPlayerRateDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerRateDidChangeNotification();
+        NSString SJVideoPlayerRateDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerMutedDidChangeNotification;
         [Field("SJVideoPlayerMutedDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerMutedDidChangeNotification();
+        NSString SJVideoPlayerMutedDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerVolumeDidChangeNotification;
         [Field("SJVideoPlayerVolumeDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerVolumeDidChangeNotification();
+        NSString SJVideoPlayerVolumeDidChangeNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJVideoPlayerScreenLockStateDidChangeNotification;
         [Field("SJVideoPlayerScreenLockStateDidChangeNotification", "__Internal")]
-        NSString SJVideoPlayerScreenLockStateDidChangeNotification();
+        NSString SJVideoPlayerScreenLockStateDidChangeNotification { get; }
 
         // extern NSString *const _Nonnull SJVideoPlayerNotificationUserInfoKeySeekTime;
         [Field("SJVideoPlayerNotificationUserInfoKeySeekTime", "__Internal")]
-        NSString SJVideoPlayerNotificationUserInfoKeySeekTime();
+        NSString SJVideoPlayerNotificationUserInfoKeySeekTime { get; }
     }
 
     // @interface SJBaseVideoPlayerExtended (NSString)

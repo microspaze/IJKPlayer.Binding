@@ -990,7 +990,7 @@ namespace IJKPlayer.SJPlayer
     {
         // extern SJControlLayerIdentifier SJControlLayer_Uninitialized;
         [Field("SJControlLayer_Uninitialized", "__Internal")]
-        nint SJControlLayer_Uninitialized();
+        nint SJControlLayer_Uninitialized { get; }
     }
 
     // @protocol SJControlLayerSwitcher <NSObject>
