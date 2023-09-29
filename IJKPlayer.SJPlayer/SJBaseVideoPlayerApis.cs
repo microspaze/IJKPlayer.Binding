@@ -2460,7 +2460,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(void)layoutWatermarkInRect:(CGRect)rect videoPresentationSize:(CGSize)vSize videoGravity:(SJVideoGravity)videoGravity;
         [Abstract]
         [Export("layoutWatermarkInRect:videoPresentationSize:videoGravity:")]
-        void VideoPresentationSize(CGRect rect, CGSize vSize, string videoGravity);
+        void LayoutWatermarkInRect(CGRect rect, CGSize vSize, string videoGravity);
     }
 
     // @interface SJBaseVideoPlayer : NSObject
@@ -3880,9 +3880,13 @@ namespace IJKPlayer.SJPlayer
     [BaseType(typeof(NSObject))]
     interface SJMediaPlaybackController : SJVideoPlayerPlaybackController
     {
+        // @required @property (nonatomic, strong) id<SJMediaModelProtocol> _Nullable media;
+        [NullAllowed, Export("media", ArgumentSemantic.Strong)]
+        SJMediaModelProtocol Media { get; set; }
+
         // @property (nonatomic, strong) SJVideoPlayerURLAsset * _Nullable media;
         [NullAllowed, Export("media", ArgumentSemantic.Strong)]
-        SJVideoPlayerURLAsset Media { get; set; }
+        SJVideoPlayerURLAsset MediaAsset { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJMediaPlayer> _Nullable currentPlayer;
         [NullAllowed, Export("currentPlayer", ArgumentSemantic.Strong)]
@@ -4861,28 +4865,28 @@ namespace IJKPlayer.SJPlayer
     interface SJDeviceVolumeAndBrightnessTargetViewContext : ISJDeviceVolumeAndBrightnessTargetViewContext
     {
         // @property (nonatomic) BOOL isFullscreen;
-        [Export("isFullscreen")]
-        bool IsFullscreen { get; set; }
+        //[Export("isFullscreen")]
+        //bool IsFullscreen { get; set; }
 
         // @property (nonatomic) BOOL isFitOnScreen;
-        [Export("isFitOnScreen")]
-        bool IsFitOnScreen { get; set; }
+        //[Export("isFitOnScreen")]
+        //bool IsFitOnScreen { get; set; }
 
         // @property (nonatomic) BOOL isPlayOnScrollView;
-        [Export("isPlayOnScrollView")]
-        bool IsPlayOnScrollView { get; set; }
+        //[Export("isPlayOnScrollView")]
+        //bool IsPlayOnScrollView { get; set; }
 
         // @property (nonatomic) BOOL isScrollAppeared;
-        [Export("isScrollAppeared")]
-        bool IsScrollAppeared { get; set; }
+        //[Export("isScrollAppeared")]
+        //bool IsScrollAppeared { get; set; }
 
         // @property (nonatomic) BOOL isFloatingMode;
-        [Export("isFloatingMode")]
-        bool IsFloatingMode { get; set; }
+        //[Export("isFloatingMode")]
+        //bool IsFloatingMode { get; set; }
 
         // @property (nonatomic) BOOL isPictureInPictureMode;
-        [Export("isPictureInPictureMode")]
-        bool IsPictureInPictureMode { get; set; }
+        //[Export("isPictureInPictureMode")]
+        //bool IsPictureInPictureMode { get; set; }
     }
 
     // @protocol SJViewControllerManager <NSObject>
@@ -5915,6 +5919,10 @@ namespace IJKPlayer.SJPlayer
         // @property (getter = isLockedScreen, nonatomic) BOOL lockedScreen;
         [Export("lockedScreen")]
         bool LockedScreen { [Bind("isLockedScreen")] get; set; }
+
+        // @required -(void)pushViewController:(UIViewController * _Nonnull)viewController animated:(BOOL)animated;
+        [Export("pushViewController:animated:")]
+        void PushViewController(UIViewController viewController, bool animated);
     }
 
     // @interface SJWatermarkView : UIImageView <SJWatermarkView>
