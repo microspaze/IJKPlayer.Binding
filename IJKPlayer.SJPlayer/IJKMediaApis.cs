@@ -37,7 +37,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(BOOL)isPlaying;
         [Abstract]
         [Export("isPlaying")]
-        bool IsPlaying { get; }
+        bool IsPlaying();
 
         // @required -(void)shutdown;
         [Abstract]
@@ -52,7 +52,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) UIView * view;
         [Abstract]
         [Export("view")]
-        UIView View { get; }
+        UIView View();
 
         // @required @property (nonatomic) NSTimeInterval currentPlaybackTime;
         [Abstract]
@@ -62,57 +62,57 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) NSTimeInterval duration;
         [Abstract]
         [Export("duration")]
-        double Duration { get; }
+        double Duration();
 
         // @required @property (readonly, nonatomic) NSTimeInterval playableDuration;
         [Abstract]
         [Export("playableDuration")]
-        double PlayableDuration { get; }
+        double PlayableDuration();
 
         // @required @property (readonly, nonatomic) NSInteger bufferingProgress;
         [Abstract]
         [Export("bufferingProgress")]
-        nint BufferingProgress { get; }
+        nint BufferingProgress();
 
         // @required @property (readonly, nonatomic) BOOL isPreparedToPlay;
         [Abstract]
         [Export("isPreparedToPlay")]
-        bool IsPreparedToPlay { get; }
+        bool IsPreparedToPlay();
 
         // @required @property (readonly, nonatomic) IJKMPMoviePlaybackState playbackState;
         [Abstract]
         [Export("playbackState")]
-        IJKMPMoviePlaybackState PlaybackState { get; }
+        IJKMPMoviePlaybackState PlaybackState();
 
         // @required @property (readonly, nonatomic) IJKMPMovieLoadState loadState;
         [Abstract]
         [Export("loadState")]
-        IJKMPMovieLoadState LoadState { get; }
+        IJKMPMovieLoadState LoadState();
 
         // @required @property (readonly, nonatomic) int isSeekBuffering;
         [Abstract]
         [Export("isSeekBuffering")]
-        int IsSeekBuffering { get; }
+        int IsSeekBuffering();
 
         // @required @property (readonly, nonatomic) int isAudioSync;
         [Abstract]
         [Export("isAudioSync")]
-        int IsAudioSync { get; }
+        int IsAudioSync();
 
         // @required @property (readonly, nonatomic) int isVideoSync;
         [Abstract]
         [Export("isVideoSync")]
-        int IsVideoSync { get; }
+        int IsVideoSync();
 
         // @required @property (readonly, nonatomic) int64_t numberOfBytesTransferred;
         [Abstract]
         [Export("numberOfBytesTransferred")]
-        long NumberOfBytesTransferred { get; }
+        long NumberOfBytesTransferred();
 
         // @required @property (readonly, nonatomic) CGSize naturalSize;
         [Abstract]
         [Export("naturalSize")]
-        CGSize NaturalSize { get; }
+        CGSize NaturalSize();
 
         // @required @property (nonatomic) IJKMPMovieScalingMode scalingMode;
         [Abstract]
@@ -137,7 +137,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) BOOL airPlayMediaActive;
         [Abstract]
         [Export("airPlayMediaActive")]
-        bool AirPlayMediaActive { get; }
+        bool AirPlayMediaActive();
 
         // @required @property (nonatomic) float playbackRate;
         [Abstract]
@@ -152,7 +152,7 @@ namespace IJKPlayer.SJPlayer
         // @required -(UIImage *)thumbnailImageAtCurrentTime;
         [Abstract]
         [Export("thumbnailImageAtCurrentTime")]
-        UIImage ThumbnailImageAtCurrentTime { get; }
+        UIImage ThumbnailImageAtCurrentTime();
     }
 
     [Static]
@@ -262,15 +262,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) IJKMediaEvent event;
         [Export("event")]
-        IJKMediaEvent Event { get; }
+        IJKMediaEvent Event();
 
         // @property (readonly, nonatomic) int segmentIndex;
         [Export("segmentIndex")]
-        int SegmentIndex { get; }
+        int SegmentIndex();
 
         // @property (readonly, nonatomic) int retryCounter;
         [Export("retryCounter")]
-        int RetryCounter { get; }
+        int RetryCounter();
 
         // @property (retain, nonatomic) NSString * url;
         [Export("url", ArgumentSemantic.Retain)]
@@ -343,7 +343,7 @@ namespace IJKPlayer.SJPlayer
         // +(IJKFFOptions *)optionsByDefault;
         [Static]
         [Export("optionsByDefault")]
-        IJKFFOptions OptionsByDefault { get; }
+        IJKFFOptions OptionsByDefault();
 
         // -(void)applyTo:(struct IjkMediaPlayer *)mediaPlayer;
         //todo
@@ -413,39 +413,39 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) int64_t duration;
         [Export("duration")]
-        long Duration { get; }
+        long Duration();
 
         // @property (readonly, nonatomic) int64_t bitrate;
         [Export("bitrate")]
-        long Bitrate { get; }
+        long Bitrate();
 
         // @property (readonly, nonatomic) float fps;
         [Export("fps")]
-        float Fps { get; }
+        float Fps();
 
         // @property (readonly, nonatomic) int width;
         [Export("width")]
-        int Width { get; }
+        int Width();
 
         // @property (readonly, nonatomic) int height;
         [Export("height")]
-        int Height { get; }
+        int Height();
 
         // @property (readonly, nonatomic) NSString * vcodec;
         [Export("vcodec")]
-        string Vcodec { get; }
+        string Vcodec();
 
         // @property (readonly, nonatomic) NSString * acodec;
         [Export("acodec")]
-        string Acodec { get; }
+        string Acodec();
 
         // @property (readonly, nonatomic) int sampleRate;
         [Export("sampleRate")]
-        int SampleRate { get; }
+        int SampleRate();
 
         // @property (readonly, nonatomic) int64_t channelLayout;
         [Export("channelLayout")]
-        long ChannelLayout { get; }
+        long ChannelLayout();
 
         // @property (nonatomic) NSString * vdecoder;
         [Export("vdecoder")]
@@ -534,12 +534,12 @@ namespace IJKPlayer.SJPlayer
         // @required -(UIImage *)snapshot;
         [Abstract]
         [Export("snapshot")]
-        UIImage Snapshot { get; }
+        UIImage Snapshot();
 
         // @required @property (readonly, nonatomic) CGFloat fps;
         [Abstract]
         [Export("fps")]
-        nfloat Fps { get; }
+        nfloat Fps();
 
         // @required @property (nonatomic) CGFloat scaleFactor;
         [Abstract]
@@ -595,7 +595,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(BOOL)isPlaying;
         [Export("isPlaying")]
-        new bool IsPlaying { get; }
+        new bool IsPlaying();
 
         // -(void)shutdown;
         [Export("shutdown")]
@@ -607,7 +607,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) UIView * view;
         [Export("view")]
-        new UIView View { get; }
+        new UIView View();
 
         // @required @property (nonatomic) NSTimeInterval currentPlaybackTime;
         [Export("currentPlaybackTime")]
@@ -615,47 +615,47 @@ namespace IJKPlayer.SJPlayer
 
         // @required @property (readonly, nonatomic) NSTimeInterval duration;
         [Export("duration")]
-        new double Duration { get; }
+        new double Duration();
 
         // @required @property (readonly, nonatomic) NSTimeInterval playableDuration;
         [Export("playableDuration")]
-        new double PlayableDuration { get; }
+        new double PlayableDuration();
 
         // @required @property (readonly, nonatomic) NSInteger bufferingProgress;
         [Export("bufferingProgress")]
-        new nint BufferingProgress { get; }
+        new nint BufferingProgress();
 
         // @required @property (readonly, nonatomic) BOOL isPreparedToPlay;
         [Export("isPreparedToPlay")]
-        new bool IsPreparedToPlay { get; }
+        new bool IsPreparedToPlay();
 
         // @required @property (readonly, nonatomic) IJKMPMoviePlaybackState playbackState;
         [Export("playbackState")]
-        new IJKMPMoviePlaybackState PlaybackState { get; }
+        new IJKMPMoviePlaybackState PlaybackState();
 
         // @required @property (readonly, nonatomic) IJKMPMovieLoadState loadState;
         [Export("loadState")]
-        new IJKMPMovieLoadState LoadState { get; }
+        new IJKMPMovieLoadState LoadState();
 
         // @required @property (readonly, nonatomic) int isSeekBuffering;
         [Export("isSeekBuffering")]
-        new int IsSeekBuffering { get; }
+        new int IsSeekBuffering();
 
         // @required @property (readonly, nonatomic) int isAudioSync;
         [Export("isAudioSync")]
-        new int IsAudioSync { get; }
+        new int IsAudioSync();
 
         // @required @property (readonly, nonatomic) int isVideoSync;
         [Export("isVideoSync")]
-        new int IsVideoSync { get; }
+        new int IsVideoSync();
 
         // @required @property (readonly, nonatomic) int64_t numberOfBytesTransferred;
         [Export("numberOfBytesTransferred")]
-        new long NumberOfBytesTransferred { get; }
+        new long NumberOfBytesTransferred();
 
         // @required @property (readonly, nonatomic) CGSize naturalSize;
         [Export("naturalSize")]
-        new CGSize NaturalSize { get; }
+        new CGSize NaturalSize();
 
         // @required @property (nonatomic) IJKMPMovieScalingMode scalingMode;
         [Export("scalingMode", ArgumentSemantic.Assign)]
@@ -675,7 +675,7 @@ namespace IJKPlayer.SJPlayer
 
         // @required @property (readonly, nonatomic) BOOL airPlayMediaActive;
         [Export("airPlayMediaActive")]
-        new bool AirPlayMediaActive { get; }
+        new bool AirPlayMediaActive();
 
         // @required @property (nonatomic) float playbackRate;
         [Export("playbackRate")]
@@ -687,19 +687,19 @@ namespace IJKPlayer.SJPlayer
 
         // @required -(UIImage *)thumbnailImageAtCurrentTime;
         [Export("thumbnailImageAtCurrentTime")]
-        new UIImage ThumbnailImageAtCurrentTime { get; }
+        new UIImage ThumbnailImageAtCurrentTime();
 
         // -(int64_t)trafficStatistic;
         [Export("trafficStatistic")]
-        long TrafficStatistic { get; }
+        long TrafficStatistic();
 
         // -(float)dropFrameRate;
         [Export("dropFrameRate")]
-        float DropFrameRate { get; }
+        float DropFrameRate();
 
         // -(BOOL)isVideoToolboxOpen;
         [Export("isVideoToolboxOpen")]
-        bool IsVideoToolboxOpen { get; }
+        bool IsVideoToolboxOpen();
 
         // -(void)setHudValue:(NSString *)value forKey:(NSString *)key;
         [Export("setHudValue:forKey:")]
@@ -727,11 +727,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) CGFloat fpsInMeta;
         [Export("fpsInMeta")]
-        nfloat FpsInMeta { get; }
+        nfloat FpsInMeta();
 
         // @property (readonly, nonatomic) CGFloat fpsAtOutput;
         [Export("fpsAtOutput")]
-        nfloat FpsAtOutput { get; }
+        nfloat FpsAtOutput();
 
         // @property (nonatomic) BOOL shouldShowHudView;
         [Export("shouldShowHudView")]
@@ -818,7 +818,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) IJKFFMonitor * monitor;
         [Export("monitor")]
-        IJKFFMonitor Monitor { get; }
+        IJKFFMonitor Monitor();
     }
 
     // @interface IJKAVMoviePlayerController : NSObject <IJKMediaPlayback>
@@ -851,7 +851,7 @@ namespace IJKPlayer.SJPlayer
 
         // -(BOOL)isPlaying;
         [Export("isPlaying")]
-        new bool IsPlaying { get; }
+        new bool IsPlaying();
 
         // -(void)shutdown;
         [Export("shutdown")]
@@ -863,7 +863,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) UIView * view;
         [Export("view")]
-        new UIView View { get; }
+        new UIView View();
 
         // @required @property (nonatomic) NSTimeInterval currentPlaybackTime;
         [Export("currentPlaybackTime")]
@@ -871,47 +871,47 @@ namespace IJKPlayer.SJPlayer
 
         // @required @property (readonly, nonatomic) NSTimeInterval duration;
         [Export("duration")]
-        new double Duration { get; }
+        new double Duration();
 
         // @required @property (readonly, nonatomic) NSTimeInterval playableDuration;
         [Export("playableDuration")]
-        new double PlayableDuration { get; }
+        new double PlayableDuration();
 
         // @required @property (readonly, nonatomic) NSInteger bufferingProgress;
         [Export("bufferingProgress")]
-        new nint BufferingProgress { get; }
+        new nint BufferingProgress();
 
         // @required @property (readonly, nonatomic) BOOL isPreparedToPlay;
         [Export("isPreparedToPlay")]
-        new bool IsPreparedToPlay { get; }
+        new bool IsPreparedToPlay();
 
         // @required @property (readonly, nonatomic) IJKMPMoviePlaybackState playbackState;
         [Export("playbackState")]
-        new IJKMPMoviePlaybackState PlaybackState { get; }
+        new IJKMPMoviePlaybackState PlaybackState();
 
         // @required @property (readonly, nonatomic) IJKMPMovieLoadState loadState;
         [Export("loadState")]
-        new IJKMPMovieLoadState LoadState { get; }
+        new IJKMPMovieLoadState LoadState();
 
         // @required @property (readonly, nonatomic) int isSeekBuffering;
         [Export("isSeekBuffering")]
-        new int IsSeekBuffering { get; }
+        new int IsSeekBuffering();
 
         // @required @property (readonly, nonatomic) int isAudioSync;
         [Export("isAudioSync")]
-        new int IsAudioSync { get; }
+        new int IsAudioSync();
 
         // @required @property (readonly, nonatomic) int isVideoSync;
         [Export("isVideoSync")]
-        new int IsVideoSync { get; }
+        new int IsVideoSync();
 
         // @required @property (readonly, nonatomic) int64_t numberOfBytesTransferred;
         [Export("numberOfBytesTransferred")]
-        new long NumberOfBytesTransferred { get; }
+        new long NumberOfBytesTransferred();
 
         // @required @property (readonly, nonatomic) CGSize naturalSize;
         [Export("naturalSize")]
-        new CGSize NaturalSize { get; }
+        new CGSize NaturalSize();
 
         // @required @property (nonatomic) IJKMPMovieScalingMode scalingMode;
         [Export("scalingMode", ArgumentSemantic.Assign)]
@@ -931,7 +931,7 @@ namespace IJKPlayer.SJPlayer
 
         // @required @property (readonly, nonatomic) BOOL airPlayMediaActive;
         [Export("airPlayMediaActive")]
-        new bool AirPlayMediaActive { get; }
+        new bool AirPlayMediaActive();
 
         // @required @property (nonatomic) float playbackRate;
         [Export("playbackRate")]
@@ -943,7 +943,7 @@ namespace IJKPlayer.SJPlayer
 
         // @required -(UIImage *)thumbnailImageAtCurrentTime;
         [Export("thumbnailImageAtCurrentTime")]
-        new UIImage ThumbnailImageAtCurrentTime { get; }
+        new UIImage ThumbnailImageAtCurrentTime();
 
         // +(id)getInstance:(NSString *)aUrl;
         [Static]
@@ -958,7 +958,7 @@ namespace IJKPlayer.SJPlayer
         // +(IJKMediaModule *)sharedModule;
         [Static]
         [Export("sharedModule")]
-        IJKMediaModule SharedModule { get; }
+        IJKMediaModule SharedModule();
 
         // @property (getter = isAppIdleTimerDisabled, atomic) BOOL appIdleTimerDisabled;
         [Export("appIdleTimerDisabled")]

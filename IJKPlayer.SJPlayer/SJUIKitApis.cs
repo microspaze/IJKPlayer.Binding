@@ -24,32 +24,32 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) append;
         [Abstract]
         [Export("append", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTAttributesProtocol> Append { get; }
+        Func<NSString, SJUTAttributesProtocol> Append();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(__attribute__((noescape)) SJUTAppendImageHandler _Nonnull) appendImage;
         [Abstract]
         [Export("appendImage", ArgumentSemantic.Copy)]
-        Func<SJUTAppendImageHandler, SJUTAttributesProtocol> AppendImage { get; }
+        Func<SJUTAppendImageHandler, SJUTAttributesProtocol> AppendImage();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull) appendText;
         [Abstract]
         [Export("appendText", ArgumentSemantic.Copy)]
-        Func<NSAttributedString, SJUTAttributesProtocol> AppendText { get; }
+        Func<NSAttributedString, SJUTAttributesProtocol> AppendText();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSRange) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Func<NSRange, SJUTAttributesProtocol> Update { get; }
+        Func<NSRange, SJUTAttributesProtocol> Update();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) regex;
         [Abstract]
         [Export("regex", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTRegexHandlerProtocol> Regex { get; }
+        Func<NSString, SJUTRegexHandlerProtocol> Regex();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRangeHandlerProtocol>  _Nonnull (^ _Nonnull)(NSRange) range;
         [Abstract]
         [Export("range", ArgumentSemantic.Copy)]
-        Func<NSRange, SJUTRangeHandlerProtocol> Range { get; }
+        Func<NSRange, SJUTRangeHandlerProtocol> Range();
     }
     
     // common argument actions
@@ -158,139 +158,139 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) SJUTFontAttribute _Nonnull font;
         [Abstract]
         [Export("font", ArgumentSemantic.Copy)]
-        SJUTFontAttribute Font { get; }
+        SJUTFontAttribute Font();
 
         // @required @property (readonly, copy, nonatomic) SJUTColorAttribute _Nonnull textColor;
         [Abstract]
         [Export("textColor", ArgumentSemantic.Copy)]
-        SJUTColorAttribute TextColor { get; }
+        SJUTColorAttribute TextColor();
 
         // @required @property (readonly, copy, nonatomic) SJUTColorAttribute _Nonnull backgroundColor;
         [Abstract]
         [Export("backgroundColor", ArgumentSemantic.Copy)]
-        SJUTColorAttribute BackgroundColor { get; }
+        SJUTColorAttribute BackgroundColor();
 
         // @required @property (readonly, copy, nonatomic) SJUTKernAttribute _Nonnull kern;
         [Abstract]
         [Export("kern", ArgumentSemantic.Copy)]
-        SJUTKernAttribute Kern { get; }
+        SJUTKernAttribute Kern();
 
         // @required @property (readonly, copy, nonatomic) SJUTShadowAttribute _Nonnull shadow;
         [Abstract]
         [Export("shadow", ArgumentSemantic.Copy)]
-        SJUTShadowAttribute Shadow { get; }
+        SJUTShadowAttribute Shadow();
 
         // @required @property (readonly, copy, nonatomic) SJUTStrokeAttribute _Nonnull stroke;
         [Abstract]
         [Export("stroke", ArgumentSemantic.Copy)]
-        SJUTStrokeAttribute Stroke { get; }
+        SJUTStrokeAttribute Stroke();
 
         // @required @property (readonly, copy, nonatomic) SJUTDecorationAttribute _Nonnull underLine;
         [Abstract]
         [Export("underLine", ArgumentSemantic.Copy)]
-        SJUTDecorationAttribute UnderLine { get; }
+        SJUTDecorationAttribute UnderLine();
 
         // @required @property (readonly, copy, nonatomic) SJUTDecorationAttribute _Nonnull strikethrough;
         [Abstract]
         [Export("strikethrough", ArgumentSemantic.Copy)]
-        SJUTDecorationAttribute Strikethrough { get; }
+        SJUTDecorationAttribute Strikethrough();
 
         // @required @property (readonly, copy, nonatomic) SJUTBaseLineOffsetAttribute _Nonnull baseLineOffset;
         [Abstract]
         [Export("baseLineOffset", ArgumentSemantic.Copy)]
-        SJUTBaseLineOffsetAttribute BaseLineOffset { get; }
+        SJUTBaseLineOffsetAttribute BaseLineOffset();
 
         // @required @property (readonly, copy, nonatomic) SJUTLineSpacingAttribute _Nonnull lineSpacing;
         [Abstract]
         [Export("lineSpacing", ArgumentSemantic.Copy)]
-        SJUTLineSpacingAttribute LineSpacing { get; }
+        SJUTLineSpacingAttribute LineSpacing();
 
         // @required @property (readonly, copy, nonatomic) SJUTParagraphSpacingAttribute _Nonnull paragraphSpacing;
         [Abstract]
         [Export("paragraphSpacing", ArgumentSemantic.Copy)]
-        SJUTParagraphSpacingAttribute ParagraphSpacing { get; }
+        SJUTParagraphSpacingAttribute ParagraphSpacing();
 
         // @required @property (readonly, copy, nonatomic) SJUTAlignmentAttribute _Nonnull alignment;
         [Abstract]
         [Export("alignment", ArgumentSemantic.Copy)]
-        SJUTAlignmentAttribute Alignment { get; }
+        SJUTAlignmentAttribute Alignment();
 
         // @required @property (readonly, copy, nonatomic) SJUTFirstLineHeadIndentAttribute _Nonnull firstLineHeadIndent;
         [Abstract]
         [Export("firstLineHeadIndent", ArgumentSemantic.Copy)]
-        SJUTFirstLineHeadIndentAttribute FirstLineHeadIndent { get; }
+        SJUTFirstLineHeadIndentAttribute FirstLineHeadIndent();
 
         // @required @property (readonly, copy, nonatomic) SJUTHeadIndentAttribute _Nonnull headIndent;
         [Abstract]
         [Export("headIndent", ArgumentSemantic.Copy)]
-        SJUTHeadIndentAttribute HeadIndent { get; }
+        SJUTHeadIndentAttribute HeadIndent();
 
         // @required @property (readonly, copy, nonatomic) SJUTTailIndentAttribute _Nonnull tailIndent;
         [Abstract]
         [Export("tailIndent", ArgumentSemantic.Copy)]
-        SJUTTailIndentAttribute TailIndent { get; }
+        SJUTTailIndentAttribute TailIndent();
 
         // @required @property (readonly, copy, nonatomic) SJUTLineBreakModeAttribute _Nonnull lineBreakMode;
         [Abstract]
         [Export("lineBreakMode", ArgumentSemantic.Copy)]
-        SJUTLineBreakModeAttribute LineBreakMode { get; }
+        SJUTLineBreakModeAttribute LineBreakMode();
 
         // @required @property (readonly, copy, nonatomic) SJUTMinimumLineHeightAttribute _Nonnull minimumLineHeight;
         [Abstract]
         [Export("minimumLineHeight", ArgumentSemantic.Copy)]
-        SJUTMinimumLineHeightAttribute MinimumLineHeight { get; }
+        SJUTMinimumLineHeightAttribute MinimumLineHeight();
 
         // @required @property (readonly, copy, nonatomic) SJUTMaximumLineHeightAttribute _Nonnull maximumLineHeight;
         [Abstract]
         [Export("maximumLineHeight", ArgumentSemantic.Copy)]
-        SJUTMaximumLineHeightAttribute MaximumLineHeight { get; }
+        SJUTMaximumLineHeightAttribute MaximumLineHeight();
 
         // @required @property (readonly, copy, nonatomic) SJUTBaseWritingDirectionAttribute _Nonnull baseWritingDirection;
         [Abstract]
         [Export("baseWritingDirection", ArgumentSemantic.Copy)]
-        SJUTBaseWritingDirectionAttribute BaseWritingDirection { get; }
+        SJUTBaseWritingDirectionAttribute BaseWritingDirection();
 
         // @required @property (readonly, copy, nonatomic) SJUTLineHeightMultipleAttribute _Nonnull lineHeightMultiple;
         [Abstract]
         [Export("lineHeightMultiple", ArgumentSemantic.Copy)]
-        SJUTLineHeightMultipleAttribute LineHeightMultiple { get; }
+        SJUTLineHeightMultipleAttribute LineHeightMultiple();
 
         // @required @property (readonly, copy, nonatomic) SJUTParagraphSpacingBeforeAttribute _Nonnull paragraphSpacingBefore;
         [Abstract]
         [Export("paragraphSpacingBefore", ArgumentSemantic.Copy)]
-        SJUTParagraphSpacingBeforeAttribute ParagraphSpacingBefore { get; }
+        SJUTParagraphSpacingBeforeAttribute ParagraphSpacingBefore();
 
         // @required @property (readonly, copy, nonatomic) SJUTHyphenationFactorAttribute _Nonnull hyphenationFactor;
         [Abstract]
         [Export("hyphenationFactor", ArgumentSemantic.Copy)]
-        SJUTHyphenationFactorAttribute HyphenationFactor { get; }
+        SJUTHyphenationFactorAttribute HyphenationFactor();
 
         // @required @property (readonly, copy, nonatomic) SJUTTabStopsAttribute _Nonnull tabStops;
         [Abstract]
         [Export("tabStops", ArgumentSemantic.Copy)]
-        SJUTTabStopsAttribute TabStops { get; }
+        SJUTTabStopsAttribute TabStops();
 
         // @required @property (readonly, copy, nonatomic) SJUTDefaultTabIntervalAttribute _Nonnull defaultTabInterval;
         [Abstract]
         [Export("defaultTabInterval", ArgumentSemantic.Copy)]
-        SJUTDefaultTabIntervalAttribute DefaultTabInterval { get; }
+        SJUTDefaultTabIntervalAttribute DefaultTabInterval();
 
         // @required @property (readonly, copy, nonatomic) API_AVAILABLE(ios(9.0)) SJUTAllowsDefaultTighteningForTruncationAttribute allowsDefaultTighteningForTruncation __attribute__((availability(ios, introduced=9.0)));
         //[iOS(9, 0)]
         [Abstract]
         [Export("allowsDefaultTighteningForTruncation", ArgumentSemantic.Copy)]
-        SJUTAllowsDefaultTighteningForTruncationAttribute AllowsDefaultTighteningForTruncation { get; }
+        SJUTAllowsDefaultTighteningForTruncationAttribute AllowsDefaultTighteningForTruncation();
 
         // @required @property (readonly, copy, nonatomic) API_AVAILABLE(ios(9.0)) SJUTLineBreakStrategyAttribute lineBreakStrategy __attribute__((availability(ios, introduced=9.0)));
         //[iOS(9, 0)]
         [Abstract]
         [Export("lineBreakStrategy", ArgumentSemantic.Copy)]
-        SJUTLineBreakStrategyAttribute LineBreakStrategy { get; }
+        SJUTLineBreakStrategyAttribute LineBreakStrategy();
 
         // @required @property (readonly, copy, nonatomic) SJUTSetAttribute _Nonnull set;
         [Abstract]
         [Export("set", ArgumentSemantic.Copy)]
-        SJUTSetAttribute Set { get; }
+        SJUTSetAttribute Set();
     }
 
     // @protocol SJUTRangeHandlerProtocol
@@ -309,17 +309,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUTAttributesProtocol> _Nonnull)) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<SJUTAttributesProtocolArgumentAction> Update { get; }
+        Action<SJUTAttributesProtocolArgumentAction> Update();
 
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUIKitTextMakerProtocol> _Nonnull)) replaceWithText;
         [Abstract]
         [Export("replaceWithText", ArgumentSemantic.Copy)]
-        Action<SJUIKitTextMakerProtocolArgumentAction> ReplaceWithText { get; }
+        Action<SJUIKitTextMakerProtocolArgumentAction> ReplaceWithText();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) replaceWithString;
         [Abstract]
         [Export("replaceWithString", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTAttributesProtocol> ReplaceWithString { get; }
+        Func<NSString, SJUTAttributesProtocol> ReplaceWithString();
     }
 
     // @protocol SJUTRegexHandlerProtocol <SJUTRangeHandlerProtocol>
@@ -338,17 +338,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(NSMutableAttributedString * _Nonnull, NSTextCheckingResult * _Nonnull)) handler;
         [Abstract]
         [Export("handler", ArgumentSemantic.Copy)]
-        Action<NSMutableAttributedStringNSTextCheckingResultArgumentsAction> Handler { get; }
+        Action<NSMutableAttributedStringNSTextCheckingResultArgumentsAction> Handler();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSRegularExpressionOptions) regularExpressionOptions;
         [Abstract]
         [Export("regularExpressionOptions", ArgumentSemantic.Copy)]
-        Func<NSRegularExpressionOptions, SJUTRegexHandlerProtocol> RegularExpressionOptions { get; }
+        Func<NSRegularExpressionOptions, SJUTRegexHandlerProtocol> RegularExpressionOptions();
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSMatchingOptions) matchingOptions;
         [Abstract]
         [Export("matchingOptions", ArgumentSemantic.Copy)]
-        Func<NSMatchingOptions, SJUTRegexHandlerProtocol> MatchingOptions { get; }
+        Func<NSMatchingOptions, SJUTRegexHandlerProtocol> MatchingOptions();
     }
 
     // @protocol SJUTStroke
@@ -442,7 +442,7 @@ namespace IJKPlayer.SJPlayer
         // -(CGSize)sj_textSize;
         [Export("sj_textSize")]
         //[Verify(MethodToProperty)]
-        CGSize Sj_textSize { get; }
+        CGSize Sj_textSize();
 
         // -(CGSize)sj_textSizeForRange:(NSRange)range;
         [Export("sj_textSizeForRange:")]
@@ -617,16 +617,16 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic) NSRange range;
         [Export("range")]
-        NSRange Range { get; }
+        NSRange Range();
 
         // @property (readonly, nonatomic) NSMutableAttributedString * _Nonnull workInProcess;
         [Export("workInProcess")]
-        NSMutableAttributedString WorkInProcess { get; }
+        NSMutableAttributedString WorkInProcess();
 
         // -(NSMutableAttributedString * _Nonnull)endTask;
         [Export("endTask")]
         //[Verify(MethodToProperty)]
-        NSMutableAttributedString EndTask { get; }
+        NSMutableAttributedString EndTask();
 
         // -(NSMutableAttributedString * _Nonnull)endTaskAndComplete:(void (^ _Nonnull)(SJAttributeWorker * _Nonnull))block;
         [Export("endTaskAndComplete:")]
@@ -642,15 +642,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSRange, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) rangeEdit;
         [Export("rangeEdit", ArgumentSemantic.Copy)]
-        Func<NSRange, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> RangeEdit { get; }
+        Func<NSRange, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> RangeEdit();
 
         // @property (readonly, copy, nonatomic) NSAttributedString * _Nonnull (^ _Nonnull)(NSRange) subAttrStr;
         [Export("subAttrStr", ArgumentSemantic.Copy)]
-        Func<NSRange, NSAttributedString> SubAttrStr { get; }
+        Func<NSRange, NSAttributedString> SubAttrStr();
 
         // @property (readonly, nonatomic) NSInteger length;
         [Export("length")]
-        nint Length { get; }
+        nint Length();
     }
 
     // @interface Regexp (SJAttributeWorker)
@@ -664,19 +664,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) regexp;
         [Export("regexp", ArgumentSemantic.Copy)]
-        Func<NSString, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> Regexp { get; }
+        Func<NSString, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> Regexp();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(NSArray<NSValue *> * _Nonnull), BOOL) regexp_r;
         [Export("regexp_r", ArgumentSemantic.Copy)]
-        Func<NSString, NSArrayNSValueArgumentAction, bool, SJAttributeWorker> Regexp_r { get; }
+        Func<NSString, NSArrayNSValueArgumentAction, bool, SJAttributeWorker> Regexp_r();
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, id _Nonnull, ...) regexp_replace;
         [Export("regexp_replace", ArgumentSemantic.Copy)]
-        Action<NSString, NSObject, IntPtr> Regexp_replace { get; }
+        Action<NSString, NSObject, IntPtr> Regexp_replace();
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, SJAttributeRegexpInsertPosition, id _Nonnull, ...) regexp_insert;
         [Export("regexp_insert", ArgumentSemantic.Copy)]
-        Action<NSString, SJAttributeRegexpInsertPosition, NSObject, IntPtr> Regexp_insert { get; }
+        Action<NSString, SJAttributeRegexpInsertPosition, NSObject, IntPtr> Regexp_insert();
     }
 
     // @interface Size (SJAttributeWorker)
@@ -686,19 +686,19 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(void) size;
         [Export("size", ArgumentSemantic.Copy)]
-        Func<CGSize> Size { get; }
+        Func<CGSize> Size();
 
         // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(NSRange) sizeByRange;
         [Export("sizeByRange", ArgumentSemantic.Copy)]
-        Func<NSRange, CGSize> SizeByRange { get; }
+        Func<NSRange, CGSize> SizeByRange();
 
         // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(double) sizeByWidth;
         [Export("sizeByWidth", ArgumentSemantic.Copy)]
-        Func<double, CGSize> SizeByWidth { get; }
+        Func<double, CGSize> SizeByWidth();
 
         // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(double) sizeByHeight;
         [Export("sizeByHeight", ArgumentSemantic.Copy)]
-        Func<double, CGSize> SizeByHeight { get; }
+        Func<double, CGSize> SizeByHeight();
     }
 
     // @interface Insert (SJAttributeWorker)
@@ -708,35 +708,35 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(id _Nonnull, ...) append;
         [Export("append", ArgumentSemantic.Copy)]
-        Func<NSObject, IntPtr, SJAttributesRangeOperator> Append { get; }
+        Func<NSObject, IntPtr, SJAttributesRangeOperator> Append();
 
         // @property (readonly, nonatomic) NSRange lastInsertedRange;
         [Export("lastInsertedRange")]
-        NSRange LastInsertedRange { get; }
+        NSRange LastInsertedRange();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) lastInserted;
         [Export("lastInserted", ArgumentSemantic.Copy)]
-        Func<SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> LastInserted { get; }
+        Func<SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> LastInserted();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedStringKey _Nonnull, id _Nonnull, NSRange) add;
         [Export("add", ArgumentSemantic.Copy)]
-        Func<NSString, NSObject, NSRange, SJAttributeWorker> Add { get; }
+        Func<NSString, NSObject, NSRange, SJAttributeWorker> Add();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, NSInteger) insertText;
         [Export("insertText", ArgumentSemantic.Copy)]
-        Func<NSString, nint, SJAttributeWorker> InsertText { get; }
+        Func<NSString, nint, SJAttributeWorker> InsertText();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(UIImage * _Nonnull, NSInteger, CGPoint, CGSize) insertImage;
         [Export("insertImage", ArgumentSemantic.Copy)]
-        Func<UIImage, nint, CGPoint, CGSize, SJAttributeWorker> InsertImage { get; }
+        Func<UIImage, nint, CGPoint, CGSize, SJAttributeWorker> InsertImage();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull, NSInteger) insertAttrStr;
         [Export("insertAttrStr", ArgumentSemantic.Copy)]
-        Func<NSAttributedString, nint, SJAttributeWorker> InsertAttrStr { get; }
+        Func<NSAttributedString, nint, SJAttributeWorker> InsertAttrStr();
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(id _Nonnull, NSInteger, ...) insert;
         [Export("insert", ArgumentSemantic.Copy)]
-        Func<NSObject, nint, IntPtr, SJAttributeWorker> Insert { get; }
+        Func<NSObject, nint, IntPtr, SJAttributeWorker> Insert();
     }
 
     // @interface Replace (SJAttributeWorker)
@@ -746,7 +746,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange, id _Nonnull, ...) replace;
         [Export("replace", ArgumentSemantic.Copy)]
-        Action<NSRange, NSObject, IntPtr> Replace { get; }
+        Action<NSRange, NSObject, IntPtr> Replace();
     }
 
     // @interface Delete (SJAttributeWorker)
@@ -756,15 +756,15 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange) removeText;
         [Export("removeText", ArgumentSemantic.Copy)]
-        Action<NSRange> RemoveText { get; }
+        Action<NSRange> RemoveText();
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSAttributedStringKey _Nonnull, NSRange) removeAttribute;
         [Export("removeAttribute", ArgumentSemantic.Copy)]
-        Action<NSString, NSRange> RemoveAttribute { get; }
+        Action<NSString, NSRange> RemoveAttribute();
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange) removeAttributes;
         [Export("removeAttributes", ArgumentSemantic.Copy)]
-        Action<NSRange> RemoveAttributes { get; }
+        Action<NSRange> RemoveAttributes();
     }
 
     // @interface Property (SJAttributesRangeOperator)
@@ -774,87 +774,87 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIFont * _Nonnull) font;
         [Export("font", ArgumentSemantic.Copy)]
-        Func<UIFont, SJAttributesRangeOperator> Font { get; }
+        Func<UIFont, SJAttributesRangeOperator> Font();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIColor * _Nonnull) textColor;
         [Export("textColor", ArgumentSemantic.Copy)]
-        Func<UIColor, SJAttributesRangeOperator> TextColor { get; }
+        Func<UIColor, SJAttributesRangeOperator> TextColor();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) expansion;
         [Export("expansion", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> Expansion { get; }
+        Func<double, SJAttributesRangeOperator> Expansion();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(CGSize, CGFloat, UIColor * _Nonnull) shadow;
         [Export("shadow", ArgumentSemantic.Copy)]
-        Func<CGSize, nfloat, UIColor, SJAttributesRangeOperator> Shadow { get; }
+        Func<CGSize, nfloat, UIColor, SJAttributesRangeOperator> Shadow();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIColor * _Nonnull) backgroundColor;
         [Export("backgroundColor", ArgumentSemantic.Copy)]
-        Func<UIColor, SJAttributesRangeOperator> BackgroundColor { get; }
+        Func<UIColor, SJAttributesRangeOperator> BackgroundColor();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSUnderlineStyle, UIColor * _Nonnull) underLine;
         [Export("underLine", ArgumentSemantic.Copy)]
-        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> UnderLine { get; }
+        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> UnderLine();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSUnderlineStyle, UIColor * _Nonnull) strikethrough;
         [Export("strikethrough", ArgumentSemantic.Copy)]
-        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> Strikethrough { get; }
+        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> Strikethrough();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIColor * _Nonnull, double) stroke;
         [Export("stroke", ArgumentSemantic.Copy)]
-        Func<UIColor, double, SJAttributesRangeOperator> Stroke { get; }
+        Func<UIColor, double, SJAttributesRangeOperator> Stroke();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) obliqueness;
         [Export("obliqueness", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> Obliqueness { get; }
+        Func<double, SJAttributesRangeOperator> Obliqueness();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) letterSpacing;
         [Export("letterSpacing", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> LetterSpacing { get; }
+        Func<double, SJAttributesRangeOperator> LetterSpacing();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) offset;
         [Export("offset", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> Offset { get; }
+        Func<double, SJAttributesRangeOperator> Offset();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(void) isLink;
         [Export("isLink", ArgumentSemantic.Copy)]
-        Func<SJAttributesRangeOperator> IsLink { get; }
+        Func<SJAttributesRangeOperator> IsLink();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSParagraphStyle * _Nonnull) paragraphStyle;
         [Export("paragraphStyle", ArgumentSemantic.Copy)]
-        Func<NSParagraphStyle, SJAttributesRangeOperator> ParagraphStyle { get; }
+        Func<NSParagraphStyle, SJAttributesRangeOperator> ParagraphStyle();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) lineSpacing;
         [Export("lineSpacing", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> LineSpacing { get; }
+        Func<double, SJAttributesRangeOperator> LineSpacing();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) paragraphSpacing;
         [Export("paragraphSpacing", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> ParagraphSpacing { get; }
+        Func<double, SJAttributesRangeOperator> ParagraphSpacing();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) paragraphSpacingBefore;
         [Export("paragraphSpacingBefore", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> ParagraphSpacingBefore { get; }
+        Func<double, SJAttributesRangeOperator> ParagraphSpacingBefore();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) firstLineHeadIndent;
         [Export("firstLineHeadIndent", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> FirstLineHeadIndent { get; }
+        Func<double, SJAttributesRangeOperator> FirstLineHeadIndent();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) headIndent;
         [Export("headIndent", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> HeadIndent { get; }
+        Func<double, SJAttributesRangeOperator> HeadIndent();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) tailIndent;
         [Export("tailIndent", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> TailIndent { get; }
+        Func<double, SJAttributesRangeOperator> TailIndent();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSTextAlignment) alignment;
         [Export("alignment", ArgumentSemantic.Copy)]
-        Func<UITextAlignment, SJAttributesRangeOperator> Alignment { get; }
+        Func<UITextAlignment, SJAttributesRangeOperator> Alignment();
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSLineBreakMode) lineBreakMode;
         [Export("lineBreakMode", ArgumentSemantic.Copy)]
-        Func<UILineBreakMode, SJAttributesRangeOperator> LineBreakMode { get; }
+        Func<UILineBreakMode, SJAttributesRangeOperator> LineBreakMode();
     }
 
     // @interface SJUTStroke : NSObject <SJUTStroke>
@@ -928,7 +928,7 @@ namespace IJKPlayer.SJPlayer
         // -(NSDictionary<NSAttributedStringKey,id> * _Nonnull)textAttributes;
         [Export("textAttributes")]
         //[Verify(MethodToProperty)]
-        NSDictionary<NSString, NSObject> TextAttributes { get; }
+        NSDictionary<NSString, NSObject> TextAttributes();
 
         // -(NSParagraphStyle * _Nonnull)paragraphAttributesForStyle:(NSParagraphStyle * _Nullable)style;
         [Export("paragraphAttributesForStyle:")]
@@ -937,7 +937,7 @@ namespace IJKPlayer.SJPlayer
         // -(NSDictionary<NSAttributedStringKey,id> * _Nonnull)customAttributes;
         [Export("customAttributes")]
         //[Verify(MethodToProperty)]
-        NSDictionary<NSString, NSObject> CustomAttributes { get; }
+        NSDictionary<NSString, NSObject> CustomAttributes();
 
         // -(void)setValuesForCommonRecorder:(SJUTRecorder * _Nonnull)common;
         [Export("setValuesForCommonRecorder:")]
@@ -954,7 +954,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) SJUTRecorder * _Nonnull recorder;
         [Export("recorder", ArgumentSemantic.Strong)]
-        SJUTRecorder Recorder { get; }
+        SJUTRecorder Recorder();
     }
 
     // @interface SJUIKitTextMaker : SJUTAttributes <SJUIKitTextMakerProtocol>
@@ -964,7 +964,7 @@ namespace IJKPlayer.SJPlayer
         // -(NSMutableAttributedString * _Nonnull)install;
         [Export("install")]
         //[Verify(MethodToProperty)]
-        NSMutableAttributedString Install { get; }
+        NSMutableAttributedString Install();
     }
 
     // @interface SJUTRangeHandler : NSObject <SJUTRangeHandlerProtocol>
@@ -977,7 +977,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJUTRangeRecorder * _Nonnull recorder;
         [Export("recorder", ArgumentSemantic.Strong)]
-        SJUTRangeRecorder Recorder { get; }
+        SJUTRangeRecorder Recorder();
     }
 
     // @interface SJUTRangeRecorder : NSObject
@@ -1011,7 +1011,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJUTRegexRecorder * _Nonnull recorder;
         [Export("recorder", ArgumentSemantic.Strong)]
-        SJUTRegexRecorder Recorder { get; }
+        SJUTRegexRecorder Recorder();
     }
 
     // @interface SJUTRegexRecorder : NSObject
@@ -1122,7 +1122,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJPresentationPriority priority;
         [Abstract]
         [Export("priority")]
-        SJPresentationPriority Priority { get; }
+        SJPresentationPriority Priority();
 
         // @required -(void)showInSourceView:(UIView * _Nonnull)source dismissedCallback:(void (^ _Nonnull)(void))callback;
         [Abstract]
@@ -1141,15 +1141,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger size;
         [Export("size")]
-        nint Size { get; }
+        nint Size();
 
         // @property (readonly, nonatomic, strong) ObjectType _Nullable firstObject;
         [NullAllowed, Export("firstObject", ArgumentSemantic.Strong)]
-        NSObject FirstObject { get; }
+        NSObject FirstObject();
 
         // @property (readonly, nonatomic, strong) ObjectType _Nullable lastObject;
         [NullAllowed, Export("lastObject", ArgumentSemantic.Strong)]
-        NSObject LastObject { get; }
+        NSObject LastObject();
 
         // -(void)enqueue:(ObjectType _Nonnull)obj;
         [Export("enqueue:")]
@@ -1158,7 +1158,7 @@ namespace IJKPlayer.SJPlayer
         // -(ObjectType _Nullable)dequeue;
         [NullAllowed, Export("dequeue")]
         //[Verify(MethodToProperty)]
-        NSObject Dequeue { get; }
+        NSObject Dequeue();
 
         // -(void)empty;
         [Export("empty")]
@@ -1181,49 +1181,49 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) SJRunLoopTaskQueue * _Nonnull (^ _Nonnull)(NSString * _Nonnull) queue;
         [Static]
         [Export("queue", ArgumentSemantic.Copy)]
-        Func<NSString, SJRunLoopTaskQueue> Queue { get; }
+        Func<NSString, SJRunLoopTaskQueue> Queue();
 
         // @property (readonly, copy, nonatomic, class) SJRunLoopTaskQueue * _Nonnull main;
         [Static]
         [Export("main", ArgumentSemantic.Copy)]
-        SJRunLoopTaskQueue Main { get; }
+        SJRunLoopTaskQueue Main();
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(NSString * _Nonnull) destroy;
         [Static]
         [Export("destroy", ArgumentSemantic.Copy)]
-        Action<NSString> Destroy { get; }
+        Action<NSString> Destroy();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(NSUInteger) delay;
         [Export("delay", ArgumentSemantic.Copy)]
-        Func<nuint, SJRunLoopTaskQueue> Delay { get; }
+        Func<nuint, SJRunLoopTaskQueue> Delay();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(CFRunLoopRef _Nonnull, CFRunLoopMode _Nonnull) update;
         [Export("update", ArgumentSemantic.Copy)]
-        unsafe Func<CFRunLoop, NSString, SJRunLoopTaskQueue> Update { get; }
+        unsafe Func<CFRunLoop, NSString, SJRunLoopTaskQueue> Update();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(SJRunLoopTaskHandler _Nonnull) enqueue;
         [Export("enqueue", ArgumentSemantic.Copy)]
-        Func<SJRunLoopTaskHandler, SJRunLoopTaskQueue> Enqueue { get; }
+        Func<SJRunLoopTaskHandler, SJRunLoopTaskQueue> Enqueue();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(void) dequeue;
         [Export("dequeue", ArgumentSemantic.Copy)]
-        Func<SJRunLoopTaskQueue> Dequeue { get; }
+        Func<SJRunLoopTaskQueue> Dequeue();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(void) empty;
         [Export("empty", ArgumentSemantic.Copy)]
-        Func<SJRunLoopTaskQueue> Empty { get; }
+        Func<SJRunLoopTaskQueue> Empty();
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(void) destroy;
         //[Export("destroy", ArgumentSemantic.Copy)]
-        //Action Destroy { get; }
+        //Action Destroy();
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull name;
         [Export("name", ArgumentSemantic.Strong)]
-        string Name { get; }
+        string Name();
 
         // @property (readonly, nonatomic) NSInteger count;
         [Export("count")]
-        nint Count { get; }
+        nint Count();
     }
 
     // typedef void (^SJTaskHandler)();
@@ -1236,45 +1236,45 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) SJTaskQueue * _Nonnull (^ _Nonnull)(NSString * _Nonnull) queue;
         [Static]
         [Export("queue", ArgumentSemantic.Copy)]
-        Func<NSString, SJTaskQueue> Queue { get; }
+        Func<NSString, SJTaskQueue> Queue();
 
         // @property (readonly, copy, nonatomic, class) SJTaskQueue * _Nonnull main;
         [Static]
         [Export("main", ArgumentSemantic.Copy)]
-        SJTaskQueue Main { get; }
+        SJTaskQueue Main();
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(NSString * _Nonnull) destroy;
         [Static]
         [Export("destroy", ArgumentSemantic.Copy)]
-        Action<NSString> Destroy { get; }
+        Action<NSString> Destroy();
 
         // @property (readonly, copy, nonatomic) SJTaskQueue * _Nullable (^ _Nonnull)(NSTimeInterval) delay;
         [Export("delay", ArgumentSemantic.Copy)]
-        Func<double, SJTaskQueue> Delay { get; }
+        Func<double, SJTaskQueue> Delay();
 
         // @property (readonly, copy, nonatomic) SJTaskQueue * _Nullable (^ _Nonnull)(SJTaskHandler _Nonnull) enqueue;
         [Export("enqueue", ArgumentSemantic.Copy)]
-        Func<SJTaskHandler, SJTaskQueue> Enqueue { get; }
+        Func<SJTaskHandler, SJTaskQueue> Enqueue();
 
         // @property (readonly, copy, nonatomic) SJTaskQueue * _Nullable (^ _Nonnull)(void) dequeue;
         [Export("dequeue", ArgumentSemantic.Copy)]
-        Func<SJTaskQueue> Dequeue { get; }
+        Func<SJTaskQueue> Dequeue();
 
         // @property (readonly, copy, nonatomic) SJTaskQueue * _Nullable (^ _Nonnull)(void) empty;
         [Export("empty", ArgumentSemantic.Copy)]
-        Func<SJTaskQueue> Empty { get; }
+        Func<SJTaskQueue> Empty();
 
         // @property (readonly, copy, nonatomic) void (^ _Nonnull)(void) destroy;
         //[Export("destroy", ArgumentSemantic.Copy)]
-        //Action Destroy { get; }
+        //Action Destroy();
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull name;
         [Export("name", ArgumentSemantic.Strong)]
-        string Name { get; }
+        string Name();
 
         // @property (readonly, nonatomic) NSInteger count;
         [Export("count")]
-        nint Count { get; }
+        nint Count();
     }
 
     // @interface SJSQLiteColumnInfo : NSObject <NSCopying>
@@ -1326,27 +1326,27 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) Class _Nonnull cls;
         [Export("cls")]
-        Class Cls { get; }
+        Class Cls();
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull name;
         [Export("name")]
-        string Name { get; }
+        string Name();
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull primaryKey;
         [Export("primaryKey")]
-        string PrimaryKey { get; }
+        string PrimaryKey();
 
         // @property (readonly, copy, nonatomic) NSArray<SJSQLiteColumnInfo *> * _Nullable columns;
         [NullAllowed, Export("columns", ArgumentSemantic.Copy)]
-        SJSQLiteColumnInfo[] Columns { get; }
+        SJSQLiteColumnInfo[] Columns();
 
         // @property (readonly, copy, nonatomic) NSDictionary<SJSQLiteColumnInfo *,SJSQLiteTableInfo *> * _Nullable columnAssociatedTableInfos;
         [NullAllowed, Export("columnAssociatedTableInfos", ArgumentSemantic.Copy)]
-        NSDictionary<SJSQLiteColumnInfo, SJSQLiteTableInfo> ColumnAssociatedTableInfos { get; }
+        NSDictionary<SJSQLiteColumnInfo, SJSQLiteTableInfo> ColumnAssociatedTableInfos();
 
         // @property (readonly, copy, nonatomic) NSSet<Class> * _Nonnull allClasses;
         [Export("allClasses", ArgumentSemantic.Copy)]
-        NSSet<Class> AllClasses { get; }
+        NSSet<Class> AllClasses();
 
         // -(SJSQLiteColumnInfo * _Nullable)columnInfoForProperty:(NSString * _Nonnull)key;
         [Export("columnInfoForProperty:")]
@@ -1366,7 +1366,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) SJSQLiteTableInfo * _Nullable associatedTableInfo;
         [NullAllowed, Export("associatedTableInfo", ArgumentSemantic.Strong)]
-        SJSQLiteTableInfo AssociatedTableInfo { get; }
+        SJSQLiteTableInfo AssociatedTableInfo();
     }
 
     // @interface SJSQLiteObjectInfo : NSObject
@@ -1381,19 +1381,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id _Nonnull obj;
         [Export("obj", ArgumentSemantic.Strong)]
-        NSObject Obj { get; }
+        NSObject Obj();
 
         // @property (readonly, nonatomic, strong) SJSQLiteTableInfo * _Nonnull table;
         [Export("table", ArgumentSemantic.Strong)]
-        SJSQLiteTableInfo Table { get; }
+        SJSQLiteTableInfo Table();
 
         // @property (readonly, nonatomic, strong) SJSQLiteColumnInfo * _Nonnull primaryKeyColumnInfo;
         [Export("primaryKeyColumnInfo", ArgumentSemantic.Strong)]
-        SJSQLiteColumnInfo PrimaryKeyColumnInfo { get; }
+        SJSQLiteColumnInfo PrimaryKeyColumnInfo();
 
         // @property (readonly, copy, nonatomic) NSArray<SJSQLiteColumnInfo *> * _Nullable autoincrementColumns;
         [NullAllowed, Export("autoincrementColumns", ArgumentSemantic.Copy)]
-        SJSQLiteColumnInfo[] AutoincrementColumns { get; }
+        SJSQLiteColumnInfo[] AutoincrementColumns();
     }
 
     // @interface SJSQLiteObjectInfoExtended (SJSQLiteColumnInfo)
@@ -1403,7 +1403,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) NSArray<SJSQLiteObjectInfo *> * _Nullable associatedObjectInfos;
         [NullAllowed, Export("associatedObjectInfos", ArgumentSemantic.Strong)]
-        SJSQLiteObjectInfo[] AssociatedObjectInfos { get; }
+        SJSQLiteObjectInfo[] AssociatedObjectInfos();
     }
 
     // @interface SJSQLite3CoreExtended (NSMutableString)
@@ -1434,55 +1434,55 @@ namespace IJKPlayer.SJPlayer
         [Static, Abstract]
         [NullAllowed, Export("sql_primaryKey")]
         //[Verify(MethodToProperty)]
-        string Sql_primaryKey { get; }
+        string Sql_primaryKey();
 
         // @optional +(NSArray<NSString *> * _Nullable)sql_autoincrementlist;
         [Static]
         [NullAllowed, Export("sql_autoincrementlist")]
         //[Verify(MethodToProperty)]
-        string[] Sql_autoincrementlist { get; }
+        string[] Sql_autoincrementlist();
 
         // @optional +(NSDictionary<NSString *,Class> * _Nullable)sql_arrayPropertyGenericClass;
         [Static]
         [NullAllowed, Export("sql_arrayPropertyGenericClass")]
         //[Verify(MethodToProperty)]
-        NSDictionary<NSString, Class> Sql_arrayPropertyGenericClass { get; }
+        NSDictionary<NSString, Class> Sql_arrayPropertyGenericClass();
 
         // @optional +(NSDictionary<NSString *,NSString *> * _Nullable)sql_customKeyMapper;
         [Static]
         [NullAllowed, Export("sql_customKeyMapper")]
         //[Verify(MethodToProperty)]
-        NSDictionary<NSString, NSString> Sql_customKeyMapper { get; }
+        NSDictionary<NSString, NSString> Sql_customKeyMapper();
 
         // @optional +(NSArray<NSString *> * _Nullable)sql_uniquelist;
         [Static]
         [NullAllowed, Export("sql_uniquelist")]
         //[Verify(MethodToProperty)]
-        string[] Sql_uniquelist { get; }
+        string[] Sql_uniquelist();
 
         // @optional +(NSArray<NSString *> * _Nullable)sql_whitelist;
         [Static]
         [NullAllowed, Export("sql_whitelist")]
         //[Verify(MethodToProperty)]
-        string[] Sql_whitelist { get; }
+        string[] Sql_whitelist();
 
         // @optional +(NSArray<NSString *> * _Nullable)sql_blacklist;
         [Static]
         [NullAllowed, Export("sql_blacklist")]
         //[Verify(MethodToProperty)]
-        string[] Sql_blacklist { get; }
+        string[] Sql_blacklist();
 
         // @optional +(NSArray<NSString *> * _Nullable)sql_notnulllist;
         [Static]
         [NullAllowed, Export("sql_notnulllist")]
         //[Verify(MethodToProperty)]
-        string[] Sql_notnulllist { get; }
+        string[] Sql_notnulllist();
 
         // @optional +(NSString * _Nullable)sql_tableName;
         [Static]
         [NullAllowed, Export("sql_tableName")]
         //[Verify(MethodToProperty)]
-        string Sql_tableName { get; }
+        string Sql_tableName();
     }
 
     // @interface SJSQLite3 : NSObject
@@ -1751,7 +1751,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull condition;
         [Export("condition")]
-        string Condition { get; }
+        string Condition();
     }
 
     // @interface SJSQLite3ColumnOrder : NSObject
@@ -1766,7 +1766,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull order;
         [Export("order")]
-        string Order { get; }
+        string Order();
     }
 
     // @interface QueryObjectsExtended (SJSQLite3)
@@ -1873,7 +1873,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) NSArray<NSString *> * _Nonnull objc_sysProperties;
         [Export("objc_sysProperties", ArgumentSemantic.Strong)]
-        string[] Objc_sysProperties { get; }
+        string[] Objc_sysProperties();
 
         // @property (nonatomic, strong) NSString * _Nullable sql_primaryKey;
         [NullAllowed, Export("sql_primaryKey", ArgumentSemantic.Strong)]
