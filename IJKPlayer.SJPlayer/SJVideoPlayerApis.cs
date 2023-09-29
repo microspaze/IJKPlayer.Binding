@@ -773,22 +773,6 @@ namespace IJKPlayer.SJPlayer
     [BaseType(typeof(SJVideoPlayerURLAsset))]
     interface SJVideoPlayerURLAsset_SJControlAdd
     {
-        // -(instancetype _Nullable)initWithTitle:(NSString * _Nonnull)title URL:(NSURL * _Nonnull)URL playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithTitle:URL:playModel:")]
-        NativeHandle Constructor(string title, NSUrl URL, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithTitle:(NSString * _Nonnull)title URL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithTitle:URL:startPosition:playModel:")]
-        NativeHandle Constructor(string title, NSUrl URL, double startPosition, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAttributedTitle:(NSAttributedString * _Nonnull)title URL:(NSURL * _Nonnull)URL playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAttributedTitle:URL:playModel:")]
-        NativeHandle Constructor(NSAttributedString title, NSUrl URL, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAttributedTitle:(NSAttributedString * _Nonnull)title URL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAttributedTitle:URL:startPosition:playModel:")]
-        NativeHandle Constructor(NSAttributedString title, NSUrl URL, double startPosition, SJPlayModel playModel);
-
         // @property (copy, nonatomic) NSString * _Nullable title;
         [Export("title")]
         string? GetTitle();

@@ -1524,6 +1524,66 @@ namespace IJKPlayer.SJPlayer
     [DisableDefaultCtor]
     interface SJVideoPlayerURLAsset : SJMediaModelProtocol
     {
+        // -(instancetype _Nullable)initWithAVAsset:(__kindof AVAsset * _Nonnull)asset;
+        [Export("initWithAVAsset:")]
+        NativeHandle Constructor(AVAsset asset);
+
+        // -(instancetype _Nullable)initWithAVAsset:(__kindof AVAsset * _Nonnull)asset playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAVAsset:playModel:")]
+        NativeHandle Constructor(AVAsset asset, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAVAsset:(__kindof AVAsset * _Nonnull)asset startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAVAsset:startPosition:playModel:")]
+        NativeHandle Constructor(AVAsset asset, double startPosition, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAVPlayerItem:(AVPlayerItem * _Nonnull)playerItem;
+        [Export("initWithAVPlayerItem:")]
+        NativeHandle Constructor(AVPlayerItem playerItem);
+
+        // -(instancetype _Nullable)initWithAVPlayerItem:(AVPlayerItem * _Nonnull)playerItem playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAVPlayerItem:playModel:")]
+        NativeHandle Constructor(AVPlayerItem playerItem, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAVPlayerItem:(AVPlayerItem * _Nonnull)playerItem startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAVPlayerItem:startPosition:playModel:")]
+        NativeHandle Constructor(AVPlayerItem playerItem, double startPosition, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAVPlayer:(AVPlayer * _Nonnull)player;
+        [Export("initWithAVPlayer:")]
+        NativeHandle Constructor(AVPlayer player);
+
+        // -(instancetype _Nullable)initWithAVPlayer:(AVPlayer * _Nonnull)player playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAVPlayer:playModel:")]
+        NativeHandle Constructor(AVPlayer player, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAVPlayer:(AVPlayer * _Nonnull)player startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAVPlayer:startPosition:playModel:")]
+        NativeHandle Constructor(AVPlayer player, double startPosition, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithOtherAsset:(SJVideoPlayerURLAsset * _Nonnull)otherAsset playModel:(__kindof SJPlayModel * _Nullable)playModel;
+        [Export("initWithOtherAsset:playModel:")]
+        NativeHandle Constructor(SJVideoPlayerURLAsset otherAsset, SJPlayModel playModel);
+
+
+
+        // -(instancetype _Nullable)initWithTitle:(NSString * _Nonnull)title URL:(NSURL * _Nonnull)URL playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithTitle:URL:playModel:")]
+        NativeHandle Constructor(string title, NSUrl URL, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithTitle:(NSString * _Nonnull)title URL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithTitle:URL:startPosition:playModel:")]
+        NativeHandle Constructor(string title, NSUrl URL, double startPosition, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAttributedTitle:(NSAttributedString * _Nonnull)title URL:(NSURL * _Nonnull)URL playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAttributedTitle:URL:playModel:")]
+        NativeHandle Constructor(NSAttributedString title, NSUrl URL, SJPlayModel playModel);
+
+        // -(instancetype _Nullable)initWithAttributedTitle:(NSAttributedString * _Nonnull)title URL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
+        [Export("initWithAttributedTitle:URL:startPosition:playModel:")]
+        NativeHandle Constructor(NSAttributedString title, NSUrl URL, double startPosition, SJPlayModel playModel);
+
+
+
         // -(instancetype _Nullable)initWithURL:(NSURL * _Nonnull)URL startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
         [Export("initWithURL:startPosition:playModel:")]
         NativeHandle Constructor(NSUrl URL, double startPosition, SJPlayModel playModel);
@@ -1587,42 +1647,6 @@ namespace IJKPlayer.SJPlayer
     [BaseType(typeof(SJVideoPlayerURLAsset))]
     interface SJVideoPlayerURLAsset_SJAVMediaPlaybackAdd
     {
-        // -(instancetype _Nullable)initWithAVAsset:(__kindof AVAsset * _Nonnull)asset;
-        [Export("initWithAVAsset:")]
-        NativeHandle Constructor(AVAsset asset);
-
-        // -(instancetype _Nullable)initWithAVAsset:(__kindof AVAsset * _Nonnull)asset playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAVAsset:playModel:")]
-        NativeHandle Constructor(AVAsset asset, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAVAsset:(__kindof AVAsset * _Nonnull)asset startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAVAsset:startPosition:playModel:")]
-        NativeHandle Constructor(AVAsset asset, double startPosition, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAVPlayerItem:(AVPlayerItem * _Nonnull)playerItem;
-        [Export("initWithAVPlayerItem:")]
-        NativeHandle Constructor(AVPlayerItem playerItem);
-
-        // -(instancetype _Nullable)initWithAVPlayerItem:(AVPlayerItem * _Nonnull)playerItem playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAVPlayerItem:playModel:")]
-        NativeHandle Constructor(AVPlayerItem playerItem, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAVPlayerItem:(AVPlayerItem * _Nonnull)playerItem startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAVPlayerItem:startPosition:playModel:")]
-        NativeHandle Constructor(AVPlayerItem playerItem, double startPosition, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAVPlayer:(AVPlayer * _Nonnull)player;
-        [Export("initWithAVPlayer:")]
-        NativeHandle Constructor(AVPlayer player);
-
-        // -(instancetype _Nullable)initWithAVPlayer:(AVPlayer * _Nonnull)player playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAVPlayer:playModel:")]
-        NativeHandle Constructor(AVPlayer player, SJPlayModel playModel);
-
-        // -(instancetype _Nullable)initWithAVPlayer:(AVPlayer * _Nonnull)player startPosition:(NSTimeInterval)startPosition playModel:(__kindof SJPlayModel * _Nonnull)playModel;
-        [Export("initWithAVPlayer:startPosition:playModel:")]
-        NativeHandle Constructor(AVPlayer player, double startPosition, SJPlayModel playModel);
-
         // @property (nonatomic, strong) __kindof AVAsset * _Nullable avAsset;
         [Export("avAsset")]
         AVAsset? GetAvAsset();
@@ -1643,10 +1667,6 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setavPlayer:")]
         void SetAvPlayer(AVPlayer? avPlayer);
-
-        // -(instancetype _Nullable)initWithOtherAsset:(SJVideoPlayerURLAsset * _Nonnull)otherAsset playModel:(__kindof SJPlayModel * _Nullable)playModel;
-        [Export("initWithOtherAsset:playModel:")]
-        NativeHandle Constructor(SJVideoPlayerURLAsset otherAsset, SJPlayModel playModel);
 
         // @property (readonly, nonatomic, strong) SJVideoPlayerURLAsset * _Nullable original;
         [NullAllowed, Export("original", ArgumentSemantic.Strong)]
