@@ -2548,11 +2548,102 @@ namespace IJKPlayer.SJPlayer
     // @interface Playback (SJBaseVideoPlayer) <SJVideoPlayerPlaybackControllerDelegate>
     [Category]
     [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Playback : SJVideoPlayerPlaybackControllerDelegate
+    interface SJBaseVideoPlayer_Playback //: SJVideoPlayerPlaybackControllerDelegate
     {
+        //SJVideoPlayerPlaybackControllerDelegate
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller assetStatusDidChange:(SJAssetStatus)status;
+        [Export("playbackController:assetStatusDidChange:")]
+        void PlaybackControllerAssetStatusDidChange(SJVideoPlayerPlaybackController controller, SJAssetStatus status);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller timeControlStatusDidChange:(SJPlaybackTimeControlStatus)status;
+        [Export("playbackController:timeControlStatusDidChange:")]
+        void PlaybackControllerTimeControlStatusDidChange(SJVideoPlayerPlaybackController controller, SJPlaybackTimeControlStatus status);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller volumeDidChange:(float)volume;
+        [Export("playbackController:volumeDidChange:")]
+        void PlaybackControllerVolumeDidChange(SJVideoPlayerPlaybackController controller, float volume);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller rateDidChange:(float)rate;
+        [Export("playbackController:rateDidChange:")]
+        void PlaybackControllerRateDidChange(SJVideoPlayerPlaybackController controller, float rate);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller mutedDidChange:(BOOL)isMuted;
+        [Export("playbackController:mutedDidChange:")]
+        void PlaybackControllerMutedDidChange(SJVideoPlayerPlaybackController controller, bool isMuted);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller playbackDidFinish:(SJFinishedReason _Nonnull)reason;
+        [Export("playbackController:playbackDidFinish:")]
+        void PlaybackControllerPlaybackDidFinish(SJVideoPlayerPlaybackController controller, string reason);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller durationDidChange:(NSTimeInterval)duration;
+        [Export("playbackController:durationDidChange:")]
+        void PlaybackControllerDurationDidChange(SJVideoPlayerPlaybackController controller, double duration);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller currentTimeDidChange:(NSTimeInterval)currentTime;
+        [Export("playbackController:currentTimeDidChange:")]
+        void PlaybackControllerCurrentTimeDidChange(SJVideoPlayerPlaybackController controller, double currentTime);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller presentationSizeDidChange:(CGSize)presentationSize;
+        [Export("playbackController:presentationSizeDidChange:")]
+        void PlaybackControllerPresentationSizeDidChange(SJVideoPlayerPlaybackController controller, CGSize presentationSize);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller playbackTypeDidChange:(SJPlaybackType)playbackType;
+        [Export("playbackController:playbackTypeDidChange:")]
+        void PlaybackControllerPlaybackTypeDidChange(SJVideoPlayerPlaybackController controller, SJPlaybackType playbackType);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller playableDurationDidChange:(NSTimeInterval)playableDuration;
+        [Export("playbackController:playableDurationDidChange:")]
+        void PlaybackControllerPlayableDurationDidChange(SJVideoPlayerPlaybackController controller, double playableDuration);
+
+        // @optional -(void)playbackControllerIsReadyForDisplay:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
+        [Export("playbackControllerIsReadyForDisplay:")]
+        void PlaybackControllerIsReadyForDisplay(SJVideoPlayerPlaybackController controller);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller switchingDefinitionStatusDidChange:(SJDefinitionSwitchStatus)status media:(id<SJMediaModelProtocol> _Nonnull)media;
+        [Export("playbackController:switchingDefinitionStatusDidChange:media:")]
+        void PlaybackControllerSwitchingDefinitionStatusDidChange(SJVideoPlayerPlaybackController controller, SJDefinitionSwitchStatus status, SJMediaModelProtocol media);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller didReplay:(id<SJMediaModelProtocol> _Nonnull)media;
+        [Export("playbackController:didReplay:")]
+        void PlaybackControllerDidReplay(SJVideoPlayerPlaybackController controller, SJMediaModelProtocol media);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller pictureInPictureStatusDidChange:(SJPictureInPictureStatus)status __attribute__((availability(ios, introduced=14.0)));
+        //[iOS(14, 0)]
+        [Export("playbackController:pictureInPictureStatusDidChange:")]
+        void PlaybackControllerPictureInPictureStatusDidChange(SJVideoPlayerPlaybackController controller, SJPictureInPictureStatus status);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller willSeekToTime:(CMTime)time;
+        [Export("playbackController:willSeekToTime:")]
+        void PlaybackControllerWillSeekToTime(SJVideoPlayerPlaybackController controller, CMTime time);
+
+        // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller didSeekToTime:(CMTime)time;
+        [Export("playbackController:didSeekToTime:")]
+        void PlaybackControllerDidSeekToTime(SJVideoPlayerPlaybackController controller, CMTime time);
+
+        // @optional -(void)applicationWillEnterForegroundWithPlaybackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
+        [Export("applicationWillEnterForegroundWithPlaybackController:")]
+        void ApplicationWillEnterForegroundWithPlaybackController(SJVideoPlayerPlaybackController controller);
+
+        // @optional -(void)applicationDidBecomeActiveWithPlaybackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
+        [Export("applicationDidBecomeActiveWithPlaybackController:")]
+        void ApplicationDidBecomeActiveWithPlaybackController(SJVideoPlayerPlaybackController controller);
+
+        // @optional -(void)applicationWillResignActiveWithPlaybackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
+        [Export("applicationWillResignActiveWithPlaybackController:")]
+        void ApplicationWillResignActiveWithPlaybackController(SJVideoPlayerPlaybackController controller);
+
+        // @optional -(void)applicationDidEnterBackgroundWithPlaybackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller;
+        [Export("applicationDidEnterBackgroundWithPlaybackController:")]
+        void ApplicationDidEnterBackgroundWithPlaybackController(SJVideoPlayerPlaybackController controller);
+        //SJVideoPlayerPlaybackControllerDelegate
+
+
         // @property (nonatomic, strong, null_resettable) __kindof id<SJVideoPlayerPlaybackController> _Null_unspecified playbackController;
-        [NullAllowed, Export("playbackController", ArgumentSemantic.Strong)]
-        SJVideoPlayerPlaybackController PlaybackController { get; set; }
+        [Export("playbackController")]
+        SJVideoPlayerPlaybackController? GetPlaybackController();
+
+        [Export("setplaybackController:")]
+        void SetPlaybackController(SJVideoPlayerPlaybackController? playbackController);
 
         // @property (readonly, nonatomic, strong) SJPlaybackObservation * _Nonnull playbackObserver;
         [Export("playbackObserver", ArgumentSemantic.Strong)]
@@ -2766,8 +2857,11 @@ namespace IJKPlayer.SJPlayer
     interface SJBaseVideoPlayer_DeviceVolumeAndBrightness
     {
         // @property (nonatomic, strong, null_resettable) id<SJDeviceVolumeAndBrightnessController> _Null_unspecified deviceVolumeAndBrightnessController;
-        [NullAllowed, Export("deviceVolumeAndBrightnessController", ArgumentSemantic.Strong)]
-        SJDeviceVolumeAndBrightnessController DeviceVolumeAndBrightnessController { get; set; }
+        [Export("deviceVolumeAndBrightnessController")]
+        SJDeviceVolumeAndBrightnessController? GetDeviceVolumeAndBrightnessController();
+
+        [Export("setdeviceVolumeAndBrightnessController:")]
+        void SetDeviceVolumeAndBrightnessController(SJDeviceVolumeAndBrightnessController? brightnessController);
 
         // @property (readonly, nonatomic, strong) id<SJDeviceVolumeAndBrightnessControllerObserver> _Nonnull deviceVolumeAndBrightnessObserver;
         [Export("deviceVolumeAndBrightnessObserver", ArgumentSemantic.Strong)]
@@ -3009,8 +3103,11 @@ namespace IJKPlayer.SJPlayer
         SJRotationManagerObserver RotationObserver();
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) shouldTriggerRotation;
-        [NullAllowed, Export("shouldTriggerRotation", ArgumentSemantic.Copy)]
-        Func<SJBaseVideoPlayer, bool> ShouldTriggerRotation { get; set; }
+        [Export("shouldTriggerRotation")]
+        Func<SJBaseVideoPlayer, bool>? GetShouldTriggerRotation();
+
+        [Export("setshouldTriggerRotation:")]
+        void SetShouldTriggerRotation(Func<SJBaseVideoPlayer, bool>? func);
 
         // @property (nonatomic) BOOL allowsRotationInFitOnScreen;
         [Export("allowsRotationInFitOnScreen")]
@@ -3436,8 +3533,63 @@ namespace IJKPlayer.SJPlayer
     // @interface SJSQLite3Extended (SJPlaybackRecord) <SJSQLiteTableModelProtocol>
     [Category]
     [BaseType(typeof(SJPlaybackRecord))]
-    interface SJPlaybackRecord_SJSQLite3Extended : SJSQLiteTableModelProtocol
+    interface SJPlaybackRecord_SJSQLite3Extended //: SJSQLiteTableModelProtocol
     {
+        //SJSQLiteTableModelProtocol
+        // @required +(NSString * _Nullable)sql_primaryKey;
+        [Static, Abstract]
+        [NullAllowed, Export("sql_primaryKey")]
+        //[Verify(MethodToProperty)]
+        string Sql_primaryKey();
+
+        // @optional +(NSArray<NSString *> * _Nullable)sql_autoincrementlist;
+        [Static]
+        [NullAllowed, Export("sql_autoincrementlist")]
+        //[Verify(MethodToProperty)]
+        string[] Sql_autoincrementlist();
+
+        // @optional +(NSDictionary<NSString *,Class> * _Nullable)sql_arrayPropertyGenericClass;
+        [Static]
+        [NullAllowed, Export("sql_arrayPropertyGenericClass")]
+        //[Verify(MethodToProperty)]
+        NSDictionary<NSString, Class> Sql_arrayPropertyGenericClass();
+
+        // @optional +(NSDictionary<NSString *,NSString *> * _Nullable)sql_customKeyMapper;
+        [Static]
+        [NullAllowed, Export("sql_customKeyMapper")]
+        //[Verify(MethodToProperty)]
+        NSDictionary<NSString, NSString> Sql_customKeyMapper();
+
+        // @optional +(NSArray<NSString *> * _Nullable)sql_uniquelist;
+        [Static]
+        [NullAllowed, Export("sql_uniquelist")]
+        //[Verify(MethodToProperty)]
+        string[] Sql_uniquelist();
+
+        // @optional +(NSArray<NSString *> * _Nullable)sql_whitelist;
+        [Static]
+        [NullAllowed, Export("sql_whitelist")]
+        //[Verify(MethodToProperty)]
+        string[] Sql_whitelist();
+
+        // @optional +(NSArray<NSString *> * _Nullable)sql_blacklist;
+        [Static]
+        [NullAllowed, Export("sql_blacklist")]
+        //[Verify(MethodToProperty)]
+        string[] Sql_blacklist();
+
+        // @optional +(NSArray<NSString *> * _Nullable)sql_notnulllist;
+        [Static]
+        [NullAllowed, Export("sql_notnulllist")]
+        //[Verify(MethodToProperty)]
+        string[] Sql_notnulllist();
+
+        // @optional +(NSString * _Nullable)sql_tableName;
+        [Static]
+        [NullAllowed, Export("sql_tableName")]
+        //[Verify(MethodToProperty)]
+        string Sql_tableName();
+        //SJSQLiteTableModelProtocol
     }
 
     //[Static]
@@ -4138,8 +4290,27 @@ namespace IJKPlayer.SJPlayer
     // @interface SJAVMediaPlaybackAdd (SJAVMediaPlaybackController) <SJMediaPlaybackExportController, SJMediaPlaybackScreenshotController>
     [Category]
     [BaseType(typeof(SJAVMediaPlaybackController))]
-    interface SJAVMediaPlaybackController_SJAVMediaPlaybackAdd : ISJMediaPlaybackExportController, ISJMediaPlaybackScreenshotController
+    interface SJAVMediaPlaybackController_SJAVMediaPlaybackAdd //: ISJMediaPlaybackExportController, ISJMediaPlaybackScreenshotController
     {
+        // @required -(void)exportWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration presetName:(NSString * _Nullable)presetName progress:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, float))progress completion:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSURL * _Nullable, UIImage * _Nullable))completion failure:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSError * _Nullable))failure;
+        [Export("exportWithBeginTime:duration:presetName:progress:completion:failure:")]
+        void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJVideoPlayerPlaybackController, float> progress, Action<SJVideoPlayerPlaybackController, NSUrl, UIImage> completion, Action<SJVideoPlayerPlaybackController, NSError> failure);
+
+        // @required -(void)generateGIFWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration maximumSize:(CGSize)maximumSize interval:(float)interval gifSavePath:(NSURL * _Nonnull)gifSavePath progress:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, float))progressBlock completion:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, UIImage * _Nonnull, UIImage * _Nonnull))completion failure:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSError * _Nonnull))failure;
+        [Export("generateGIFWithBeginTime:duration:maximumSize:interval:gifSavePath:progress:completion:failure:")]
+        void GenerateGIFWithBeginTime(double beginTime, double duration, CGSize maximumSize, float interval, NSUrl gifSavePath, Action<SJVideoPlayerPlaybackController, float> progressBlock, Action<SJVideoPlayerPlaybackController, UIImage, UIImage> completion, Action<SJVideoPlayerPlaybackController, NSError> failure);
+
+        // @required -(void)cancelExportOperation;
+        [Export("cancelExportOperation")]
+        void CancelExportOperation();
+
+        // @required -(void)cancelGenerateGIFOperation;
+        [Export("cancelGenerateGIFOperation")]
+        void CancelGenerateGIFOperation();
+
+        // @required -(void)screenshotWithTime:(NSTimeInterval)time size:(CGSize)size completion:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, UIImage * _Nullable, NSError * _Nullable))block;
+        [Export("screenshotWithTime:size:completion:")]
+        void Size(double time, CGSize size, Action<SJVideoPlayerPlaybackController, UIImage, NSError> block);
     }
 
     //[Static]
@@ -5452,8 +5623,16 @@ namespace IJKPlayer.SJPlayer
     // @interface Internal (SJRotationManager) <SJRotationFullscreenViewControllerDelegate>
     [Category]
     [BaseType(typeof(SJRotationManager))]
-    interface SJRotationManager_Internal : SJRotationFullscreenViewControllerDelegate
+    interface SJRotationManager_Internal //: SJRotationFullscreenViewControllerDelegate
     {
+        // @required -(UIStatusBarStyle)preferredStatusBarStyleForRotationFullscreenViewController:(SJRotationFullscreenViewController * _Nonnull)viewController;
+        [Export("preferredStatusBarStyleForRotationFullscreenViewController:")]
+        UIStatusBarStyle PreferredStatusBarStyleForRotationFullscreenViewController(SJRotationFullscreenViewController viewController);
+
+        // @required -(BOOL)prefersStatusBarHiddenForRotationFullscreenViewController:(SJRotationFullscreenViewController * _Nonnull)viewController;
+        [Export("prefersStatusBarHiddenForRotationFullscreenViewController:")]
+        bool PrefersStatusBarHiddenForRotationFullscreenViewController(SJRotationFullscreenViewController viewController);
+
         // -(UIInterfaceOrientationMask)supportedInterfaceOrientationsForWindow:(UIWindow * _Nullable)window;
         [Export("supportedInterfaceOrientationsForWindow:")]
         UIInterfaceOrientationMask SupportedInterfaceOrientationsForWindow(UIWindow window);
