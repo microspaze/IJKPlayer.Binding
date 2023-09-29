@@ -2054,7 +2054,7 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const SJEdgeControlButtonItemTag SJNotReachableControlLayerTopItem_Back;
         [Field("SJNotReachableControlLayerTopItem_Back", "__Internal")]
-        nint SJNotReachableControlLayerTopItem_Back();
+        nint SJNotReachableControlLayerTopItem_Back { get; }
     }
 
     // @interface SJNotReachableControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -2131,7 +2131,7 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const SJEdgeControlButtonItemTag SJSmallViewControlLayerTopItem_Close;
         [Field("SJSmallViewControlLayerTopItem_Close", "__Internal")]
-        nint SJSmallViewControlLayerTopItem_Close();
+        nint SJSmallViewControlLayerTopItem_Close { get; }
     }
 
     // @interface SJSmallViewControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -3033,10 +3033,10 @@ namespace IJKPlayer.SJPlayer
     {
         // extern double SJVideoPlayerVersionNumber;
         [Field("SJVideoPlayerVersionNumber", "__Internal")]
-        double SJVideoPlayerVersionNumber();
+        double SJVideoPlayerVersionNumber { get; }
 
         // extern const unsigned char[] SJVideoPlayerVersionString;
         [Field("SJVideoPlayerVersionString", "__Internal")]
-        NSString SJVideoPlayerVersionString();
+        NSString SJVideoPlayerVersionString { get; }
     }
 }

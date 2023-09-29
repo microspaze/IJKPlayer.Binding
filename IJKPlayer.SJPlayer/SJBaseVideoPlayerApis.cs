@@ -5067,11 +5067,11 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const NSNotificationName _Nonnull SJRotationManagerRotationNotification;
         [Field("SJRotationManagerRotationNotification", "__Internal")]
-        NSString SJRotationManagerRotationNotification();
+        NSString SJRotationManagerRotationNotification { get; }
 
         // extern const NSNotificationName _Nonnull SJRotationManagerTransitionNotification;
         [Field("SJRotationManagerTransitionNotification", "__Internal")]
-        NSString SJRotationManagerTransitionNotification();
+        NSString SJRotationManagerTransitionNotification { get; }
     }
 
     // @interface SJRotationFullscreenNavigationController : UINavigationController
@@ -5776,7 +5776,7 @@ namespace IJKPlayer.SJPlayer
     {
         // extern const NSErrorDomain _Nonnull SJIJKMediaPlayerErrorDomain;
         [Field("SJIJKMediaPlayerErrorDomain", "__Internal")]
-        NSString SJIJKMediaPlayerErrorDomain();
+        NSString SJIJKMediaPlayerErrorDomain { get; }
     }
 
     // @interface SJIJKMediaPlayer : NSObject <SJMediaPlayer>
@@ -5863,10 +5863,10 @@ namespace IJKPlayer.SJPlayer
     {
         // extern double SJBaseVideoPlayerVersionNumber;
         [Field("SJBaseVideoPlayerVersionNumber", "__Internal")]
-        double SJBaseVideoPlayerVersionNumber();
+        double SJBaseVideoPlayerVersionNumber { get; }
 
         // extern const unsigned char[] SJBaseVideoPlayerVersionString;
         [Field("SJBaseVideoPlayerVersionString", "__Internal")]
-        NSString SJBaseVideoPlayerVersionString();
+        NSString SJBaseVideoPlayerVersionString { get; }
     }
 }
