@@ -5,10 +5,7 @@ using ObjCRuntime;
 //using static IJKPlayer.SJPlayer.SJUIKit;
 
 namespace IJKPlayer.SJPlayer
-{
-    // common argument actions
-    delegate void SJAttributeWorkerArgumentAction(SJAttributeWorker arg0);
-    
+{    
     [Native]
     public enum SJUTVerticalAlignment : ulong
     {

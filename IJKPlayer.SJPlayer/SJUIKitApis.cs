@@ -62,7 +62,8 @@ namespace IJKPlayer.SJPlayer
     delegate void SJUTAttributesProtocolArgumentAction(SJUTAttributesProtocol arg0);
     delegate void NSMutableAttributedStringNSTextCheckingResultArgumentsAction(NSMutableAttributedString arg0, NSTextCheckingResult arg1);
     delegate void SJAttributesRangeOperatorArgumentAction(SJAttributesRangeOperator arg0);
-    
+    delegate void SJAttributeWorkerArgumentAction(SJAttributeWorker arg0);
+
     // typedef void (^SJUTAppendImageHandler)(id<SJUTImageAttachment> _Nonnull);
     delegate void SJUTAppendImageHandler(SJUTImageAttachment arg0);
 
