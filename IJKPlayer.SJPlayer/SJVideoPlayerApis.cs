@@ -1000,7 +1000,7 @@ namespace IJKPlayer.SJPlayer
     interface ISJControlLayerSwitcher
     {
         // @required -(instancetype _Nonnull)initWithPlayer:(SJBaseVideoPlayer * _Nonnull)player;
-        [Abstract]
+        //[Abstract]
         [Export("initWithPlayer:")]
         NativeHandle Constructor(SJBaseVideoPlayer player);
 

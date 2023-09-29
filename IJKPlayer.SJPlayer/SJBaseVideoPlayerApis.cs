@@ -1212,7 +1212,7 @@ namespace IJKPlayer.SJPlayer
     interface ISJFlipTransitionManager
     {
         // @required -(instancetype _Nonnull)initWithTarget:(UIView * _Nonnull)target;
-        [Abstract]
+        //[Abstract]
         [Export("initWithTarget:")]
         NativeHandle Constructor(UIView target);
 
@@ -2246,7 +2246,7 @@ namespace IJKPlayer.SJPlayer
     interface ISJDanmakuPopupController
     {
         // @required -(instancetype _Nonnull)initWithNumberOfTracks:(NSUInteger)numberOfTracks;
-        [Abstract]
+        //[Abstract]
         [Export("initWithNumberOfTracks:")]
         NativeHandle Constructor(nuint numberOfTracks);
 
@@ -2328,12 +2328,12 @@ namespace IJKPlayer.SJPlayer
     interface ISJDanmakuItem
     {
         // @required -(instancetype _Nonnull)initWithContent:(NSAttributedString * _Nonnull)content;
-        [Abstract]
+        //[Abstract]
         [Export("initWithContent:")]
         NativeHandle Constructor(NSAttributedString content);
 
         // @required -(instancetype _Nonnull)initWithCustomView:(__kindof UIView * _Nonnull)customView;
-        [Abstract]
+        //[Abstract]
         [Export("initWithCustomView:")]
         NativeHandle Constructor(UIView customView);
 
