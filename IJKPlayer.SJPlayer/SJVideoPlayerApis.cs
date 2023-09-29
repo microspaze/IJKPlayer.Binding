@@ -2167,10 +2167,10 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) NSString * _Nullable definition_lastName;
         [Export("definition_lastName")]
-        string? GetDefinitionLastName()
-        
+        string? GetDefinitionLastName();
+
         [Export("setdefinition_lastName:")]
-        void SetDefinitionLastName(string? lastName)
+        void SetDefinitionLastName(string? lastName);
     }
 
     // @interface SJVideoDefinitionSwitchingControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -2534,10 +2534,10 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) SJViewDisappearAnimation sjv_disappearDirection;
         [Export("sjv_disappearDirection")]
-        SJViewDisappearAnimation? GetSjv_disappearDirection();
+        SJViewDisappearAnimation GetSjv_disappearDirection();
         
         [Export("setsjv_disappearDirection:")]
-        void SetSjv_disappearDirection(SJViewDisappearAnimation? disappearAnimation);
+        void SetSjv_disappearDirection(SJViewDisappearAnimation disappearAnimation);
 
         // @property (readonly, nonatomic) BOOL sjv_disappeared;
         [Export("sjv_disappeared")]
