@@ -33,7 +33,7 @@ namespace IJKPlayer.SJPlayer
     interface ISJFitOnScreenManager
     {
         // @required -(instancetype _Nonnull)initWithTarget:(UIView * _Nonnull)target targetSuperview:(UIView * _Nonnull)superview;
-        [Abstract]
+        //[Abstract]
         [Export("initWithTarget:targetSuperview:")]
         NativeHandle Constructor(UIView target, UIView superview);
 
@@ -2179,12 +2179,12 @@ namespace IJKPlayer.SJPlayer
     interface ISJSubtitleItem
     {
         // @required -(instancetype _Nonnull)initWithContent:(NSAttributedString * _Nonnull)content range:(SJTimeRange)range;
-        [Abstract]
+        //[Abstract]
         [Export("initWithContent:range:")]
         NativeHandle Constructor(NSAttributedString content, SJTimeRange range);
 
         // @required -(instancetype _Nonnull)initWithContent:(NSAttributedString * _Nonnull)content start:(NSTimeInterval)start end:(NSTimeInterval)end;
-        [Abstract]
+        //[Abstract]
         [Export("initWithContent:start:end:")]
         NativeHandle Constructor(NSAttributedString content, double start, double end);
 
@@ -2514,8 +2514,11 @@ namespace IJKPlayer.SJPlayer
     interface SJBaseVideoPlayer_VideoFlipTransition
     {
         // @property (nonatomic, strong, null_resettable) id<SJFlipTransitionManager> _Null_unspecified flipTransitionManager;
-        [NullAllowed, Export("flipTransitionManager", ArgumentSemantic.Strong)]
-        SJFlipTransitionManager FlipTransitionManager { get; set; }
+        [Export("flipTransitionManager")]
+        SJFlipTransitionManager? GetFlipTransitionManager();
+
+        [Export("setflipTransitionManager:")]
+        void SetFlipTransitionManager(SJFlipTransitionManager? flipTransitionManager);
 
         // @property (readonly, nonatomic, strong) id<SJFlipTransitionManagerObserver> _Nonnull flipTransitionObserver;
         [Export("flipTransitionObserver", ArgumentSemantic.Strong)]
@@ -3063,8 +3066,11 @@ namespace IJKPlayer.SJPlayer
     interface SJBaseVideoPlayer_Watermark
     {
         // @property (nonatomic, strong) UIView<SJWatermarkView> * _Nullable watermarkView;
-        [NullAllowed, Export("watermarkView", ArgumentSemantic.Strong)]
-        SJWatermarkView WatermarkView { get; set; }
+        [Export("watermarkView")]
+        SJWatermarkView? GetWatermarkView();
+
+        [Export("setwatermarkView:")]
+        void SetWatermarkView(SJWatermarkView? watermarkView);
 
         // -(void)updateWatermarkViewLayout;
         [Export("updateWatermarkViewLayout")]
@@ -3231,20 +3237,20 @@ namespace IJKPlayer.SJPlayer
         NativeHandle Constructor(nint mediaId, string mediaType, nint userId);
 
         // @property (nonatomic) NSInteger mediaId;
-        [Export("mediaId")]
-        nint MediaId { get; set; }
+        //[Export("mediaId")]
+        //nint MediaId { get; set; }
 
         // @property (nonatomic) NSInteger userId;
-        [Export("userId")]
-        nint UserId { get; set; }
+        //[Export("userId")]
+        //nint UserId { get; set; }
 
         // @property (nonatomic) NSTimeInterval position;
-        [Export("position")]
-        double Position { get; set; }
+        //[Export("position")]
+        //double Position { get; set; }
 
         // @property (nonatomic) SJMediaType _Nonnull mediaType;
-        [Export("mediaType")]
-        string MediaType { get; set; }
+        //[Export("mediaType")]
+        //string MediaType { get; set; }
     }
 
     // @interface SJPrivate (SJPlaybackRecord)
@@ -4640,8 +4646,11 @@ namespace IJKPlayer.SJPlayer
     interface SJPlayerView_Internal
     {
         // @property (nonatomic, strong) UIView * _Nullable presentView;
-        [NullAllowed, Export("presentView", ArgumentSemantic.Strong)]
-        UIView PresentView { get; set; }
+        [Export("presentView")]
+        UIView? GetPresentView();
+
+        [Export("setpresentView:")]
+        void SetPresentView(UIView? view);
     }
 
     // @interface SJScrollViewPlayModel : SJPlayModel

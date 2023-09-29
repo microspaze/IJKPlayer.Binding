@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using CoreAnimation;
 using CoreGraphics;
 using CoreMedia;
@@ -2336,15 +2337,24 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL showsMoreItem;
         [Export("showsMoreItem")]
-        bool ShowsMoreItem { get; set; }
+        bool GetShowsMoreItem();
+
+        [Export("showsMoreItem")]
+        void SetShowsMoreItem(bool showsMoreItem);
 
         // @property (getter = isEnabledClips, nonatomic) BOOL enabledClips;
         [Export("enabledClips")]
-        bool EnabledClips { [Bind("isEnabledClips")] get; set; }
+        bool GetEnabledClips();
+
+        [Export("setenabledClips:")]
+        void SetEnabledClips(bool enableClips);
 
         // @property (nonatomic, strong, null_resettable) SJVideoPlayerClipsConfig * _Null_unspecified clipsConfig;
-        [NullAllowed, Export("clipsConfig", ArgumentSemantic.Strong)]
-        SJVideoPlayerClipsConfig ClipsConfig { get; set; }
+        [Export("clipsConfig")]
+        SJVideoPlayerClipsConfig? GetClipsConfig();
+
+        [Export("setclipsConfig:")]
+        void GetClipsConfig(SJVideoPlayerClipsConfig? clipsConfig);
     }
 
     // @interface SJExtendedControlLayerSwitcher (SJVideoPlayer)
@@ -2650,15 +2660,24 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL showsBorder;
         [Export("showsBorder")]
-        bool ShowsBorder { get; set; }
+        bool GetShowsBorder();
+
+        [Export("setshowsBorder:")]
+        void SetShowsBorder(bool showsBorder);
 
         // @property (nonatomic, strong, null_resettable) UIColor * _Null_unspecified borderColor;
-        [NullAllowed, Export("borderColor", ArgumentSemantic.Strong)]
-        UIColor BorderColor { get; set; }
+        [Export("borderColor")]
+        UIColor? GetBorderColor();
+
+        [Export("setborderColor:")]
+        void SetBorderColor(UIColor? color);
 
         // @property (nonatomic) CGFloat borderWidth;
         [Export("borderWidth")]
-        nfloat BorderWidth { get; set; }
+        nfloat GetBorderWidth();
+
+        [Export("setborderWidth:")]
+        void SetBorderWidth(nfloat borderWidth);
     }
 
     // @interface Buffer (SJProgressSlider)
@@ -2889,40 +2908,40 @@ namespace IJKPlayer.SJPlayer
     interface SJVideoPlayerClipsGeneratedResult : SJVideoPlayerClipsResult
     {
         // @property (nonatomic) SJVideoPlayerClipsOperation operation;
-        [Export("operation", ArgumentSemantic.Assign)]
-        SJVideoPlayerClipsOperation Operation { get; set; }
+        //[Export("operation", ArgumentSemantic.Assign)]
+        //SJVideoPlayerClipsOperation Operation { get; set; }
 
         // @property (nonatomic) SJClipsExportState exportState;
-        [Export("exportState", ArgumentSemantic.Assign)]
-        SJClipsExportState ExportState { get; set; }
+        //[Export("exportState", ArgumentSemantic.Assign)]
+        //SJClipsExportState ExportState { get; set; }
 
         // @property (nonatomic) float exportProgress;
         [Export("exportProgress")]
         float ExportProgress { get; set; }
 
         // @property (nonatomic) SJClipsResultUploadState uploadState;
-        [Export("uploadState", ArgumentSemantic.Assign)]
-        SJClipsResultUploadState UploadState { get; set; }
+        //[Export("uploadState", ArgumentSemantic.Assign)]
+        //SJClipsResultUploadState UploadState { get; set; }
 
         // @property (nonatomic) float uploadProgress;
         [Export("uploadProgress")]
         float UploadProgress { get; set; }
 
         // @property (nonatomic, strong) UIImage * _Nullable thumbnailImage;
-        [NullAllowed, Export("thumbnailImage", ArgumentSemantic.Strong)]
-        UIImage ThumbnailImage { get; set; }
+        //[NullAllowed, Export("thumbnailImage", ArgumentSemantic.Strong)]
+        //UIImage ThumbnailImage { get; set; }
 
         // @property (nonatomic, strong) UIImage * _Nullable image;
-        [NullAllowed, Export("image", ArgumentSemantic.Strong)]
-        UIImage Image { get; set; }
+        //[NullAllowed, Export("image", ArgumentSemantic.Strong)]
+        //UIImage Image { get; set; }
 
         // @property (nonatomic, strong) NSURL * _Nullable fileURL;
-        [NullAllowed, Export("fileURL", ArgumentSemantic.Strong)]
-        NSUrl FileURL { get; set; }
+        //[NullAllowed, Export("fileURL", ArgumentSemantic.Strong)]
+        //NSUrl FileURL { get; set; }
 
         // @property (nonatomic, strong) SJVideoPlayerURLAsset * _Nullable currentPlayAsset;
-        [NullAllowed, Export("currentPlayAsset", ArgumentSemantic.Strong)]
-        SJVideoPlayerURLAsset CurrentPlayAsset { get; set; }
+        //[NullAllowed, Export("currentPlayAsset", ArgumentSemantic.Strong)]
+        //SJVideoPlayerURLAsset CurrentPlayAsset { get; set; }
 
         // -(NSData * _Nullable)data;
         [NullAllowed, Export("data")]

@@ -659,8 +659,11 @@ namespace IJKPlayer.SJPlayer
     interface SJAttributeWorker_Regexp
     {
         // @property (readwrite, nonatomic) NSRegularExpressionOptions regexpOptions;
-        [Export("regexpOptions", ArgumentSemantic.Assign)]
-        NSRegularExpressionOptions RegexpOptions { get; set; }
+        [Export("regexpOptions")]
+        NSRegularExpressionOptions GetRegexpOptions();
+
+        [Export("setregexpOptions:")]
+        void SetRegexpOptions(NSRegularExpressionOptions options);
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) regexp;
         [Export("regexp", ArgumentSemantic.Copy)]
@@ -1064,11 +1067,11 @@ namespace IJKPlayer.SJPlayer
 
         // -(void)sj_addObserver:(NSObject * _Nonnull)observer forKeyPath:(NSString * _Nonnull)keyPath context:(void * _Nullable)context;
         [Export("sj_addObserver:forKeyPath:context:")]
-        unsafe void Sj_addObserver(NSObject observer, string keyPath, void* context);
+        unsafe void Sj_addObserver(NSObject observer, string keyPath, NSObject context);
 
         // -(void)sj_addObserver:(NSObject * _Nonnull)observer forKeyPath:(NSString * _Nonnull)keyPath options:(NSKeyValueObservingOptions)options context:(void * _Nullable)context;
         [Export("sj_addObserver:forKeyPath:options:context:")]
-        unsafe void Sj_addObserver(NSObject observer, string keyPath, NSKeyValueObservingOptions options, void* context);
+        unsafe void Sj_addObserver(NSObject observer, string keyPath, NSKeyValueObservingOptions options, NSObject context);
     }
 
     // @interface SJNotificationHelper (NSObject)
