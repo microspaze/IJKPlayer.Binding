@@ -17,7 +17,8 @@ namespace IJKPlayer.SJPlayer
       protocol, then [Model] is redundant and will generate code that will never
       be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJUIKitTextMakerProtocol : SJUTAttributesProtocol
     {
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) append;
@@ -150,8 +151,9 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
-    [Protocol]
+    */
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJUTAttributesProtocol
     {
         // @required @property (readonly, copy, nonatomic) SJUTFontAttribute _Nonnull font;
@@ -301,8 +303,9 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
-    [Protocol]
+    */
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJUTRangeHandlerProtocol
     {
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUTAttributesProtocol> _Nonnull)) update;
@@ -330,8 +333,9 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
-    [Protocol]
+    */
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJUTRegexHandlerProtocol : SJUTRangeHandlerProtocol
     {
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(NSMutableAttributedString * _Nonnull, NSTextCheckingResult * _Nonnull)) handler;
@@ -359,7 +363,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
+    */
     [Protocol]
     interface ISJUTStroke
     {
@@ -383,7 +387,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
+    */
     [Protocol]
     interface ISJUTDecoration
     {
@@ -407,7 +411,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
+    */
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJUTImageAttachment
@@ -1116,7 +1120,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
+    */
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJPresentViewProtocol
@@ -1427,7 +1431,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-#1#
+    */
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJSQLiteTableModelProtocol : ObjCRuntime.INativeObject

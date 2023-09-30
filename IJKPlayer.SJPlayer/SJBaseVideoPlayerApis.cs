@@ -782,7 +782,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJMediaModelProtocol
     {
         // @required @property (nonatomic, strong) NSURL * _Nullable mediaURL;
@@ -1881,7 +1882,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJSmallViewFloatingControllerObserverProtocol
     {
         // @required @property (readonly, nonatomic, weak) id<SJSmallViewFloatingController> _Nullable controller;
