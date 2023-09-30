@@ -4,8 +4,7 @@ using Foundation;
 using ObjCRuntime;
 
 namespace IJKPlayer.SJPlayer
-{    
-    /*
+{
     [Native]
     public enum SJUTVerticalAlignment : ulong
     {
@@ -202,5 +201,4 @@ namespace IJKPlayer.SJPlayer
         LessThan,
         GreaterThan
     }
-    */
 }

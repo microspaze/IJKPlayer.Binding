@@ -7,7 +7,6 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
-    /*
     // @protocol IJKMediaPlayback <NSObject>
     partial interface IIJKMediaPlayback { }
 
@@ -969,6 +968,5 @@ namespace IJKPlayer.SJPlayer
         [Export("mediaModuleIdleTimerDisabled")]
         bool MediaModuleIdleTimerDisabled { [Bind("isMediaModuleIdleTimerDisabled")] get; set; }
     }
-    */
 }
 

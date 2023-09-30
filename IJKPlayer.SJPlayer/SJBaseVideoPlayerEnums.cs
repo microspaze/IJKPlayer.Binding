@@ -6,7 +6,6 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
-    /*
     [Native]
     public enum SJOrientation :  ulong
     {
@@ -250,5 +249,4 @@ namespace IJKPlayer.SJPlayer
         Inactive,
         Background
     }
-    */
 }

@@ -7,7 +7,6 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
-    /*
     // @protocol SJUIKitTextMakerProtocol <SJUTAttributesProtocol>
     /*
       Check whether adding [Model] to this declaration is appropriate.
@@ -17,7 +16,7 @@ namespace IJKPlayer.SJPlayer
       the generated interface. If consumers are not supposed to implement this
       protocol, then [Model] is redundant and will generate code that will never
       be used.
-    #1#
+    */
     [Protocol]
     interface SJUIKitTextMakerProtocol : SJUTAttributesProtocol
     {
@@ -1927,5 +1926,4 @@ namespace IJKPlayer.SJPlayer
         [Field("SJUIKitVersionString", "__Internal")]
         NSString SJUIKitVersionString { get; }
     }
-    */
 }

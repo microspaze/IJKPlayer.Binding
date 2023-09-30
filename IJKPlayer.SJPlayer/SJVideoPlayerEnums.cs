@@ -5,7 +5,6 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
-    /*
     [Native]
     public enum SJClipsStatus : ulong
     {
@@ -176,5 +175,4 @@ namespace IJKPlayer.SJPlayer
     {
         SJClipsSaveResultToAlbumFailedReasonAuthDenied
     }
-    */
 }
