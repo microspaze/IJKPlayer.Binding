@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using Foundation;
+using CoreMedia;
 using CoreVideo;
 using ObjCRuntime;
 

@@ -2,7 +2,6 @@ using System;
 using System.Runtime.InteropServices;
 using ObjCRuntime;
 using UIKit;
-//using static IJKPlayer.SJPlayer.SJVideoPlayer;
 
 namespace IJKPlayer.SJPlayer
 {
