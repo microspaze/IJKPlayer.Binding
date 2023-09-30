@@ -5,13 +5,11 @@ using CoreGraphics;
 using CoreMedia;
 using Foundation;
 using ObjCRuntime;
-//using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
-//using static IJKPlayer.SJPlayer.SJVideoPlayer;
 using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
-    // common argument actions
+    /*// common argument actions
     delegate void SJVideoPlayerConfigurationsArgumentAction(SJVideoPlayerConfigurations arg0);
     delegate void SJVideoPlayerLocalizedStringsArgumentAction(SJVideoPlayerLocalizedStrings arg0);
     delegate void SJVideoPlayerControlLayerResourcesArgumentAction(SJVideoPlayerControlLayerResources arg0);
@@ -26,7 +24,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     interface SJControlLayer : SJVideoPlayerControlLayerDataSource, SJVideoPlayerControlLayerDelegate, SJControlLayerRestartProtocol, SJControlLayerExitProtocol
     {
@@ -41,7 +39,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJControlLayerRestartProtocol
@@ -66,7 +64,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJControlLayerExitProtocol
@@ -270,7 +268,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJVideoPlayerControlLayerResources
@@ -607,7 +605,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJVideoPlayerLocalizedStrings
@@ -797,7 +795,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJVideoPlayerClipsParameters
@@ -837,7 +835,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJVideoPlayerClipsResult
@@ -893,7 +891,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJVideoPlayerClipsResultUpload
@@ -993,7 +991,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     [DisableDefaultCtor]
@@ -1097,7 +1095,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJControlLayerSwitcherObserver
@@ -1595,7 +1593,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJDraggingProgressPopupView
@@ -1640,7 +1638,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJDraggingObservation
@@ -1675,7 +1673,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJLoadingView
@@ -1715,7 +1713,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJScrollingTextMarqueeView
@@ -1755,7 +1753,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     //[iOS(11, 0)]
     [Protocol]
     [BaseType(typeof(NSObject))]
@@ -1791,7 +1789,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJSpeedupPlaybackPopupView
@@ -2901,7 +2899,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJClipsSaveResultFailed
@@ -2927,7 +2925,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJClipsSaveResultToAlbumHandler
@@ -3099,4 +3097,5 @@ namespace IJKPlayer.SJPlayer
         [Field("SJVideoPlayerVersionString", "__Internal")]
         NSString SJVideoPlayerVersionString { get; }
     }
+    */
 }

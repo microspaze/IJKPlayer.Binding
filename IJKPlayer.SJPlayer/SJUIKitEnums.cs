@@ -2,10 +2,10 @@ using System;
 using System.Runtime.InteropServices;
 using Foundation;
 using ObjCRuntime;
-//using static IJKPlayer.SJPlayer.SJUIKit;
 
 namespace IJKPlayer.SJPlayer
 {    
+    /*
     [Native]
     public enum SJUTVerticalAlignment : ulong
     {
@@ -202,4 +202,5 @@ namespace IJKPlayer.SJPlayer
         LessThan,
         GreaterThan
     }
+    */
 }

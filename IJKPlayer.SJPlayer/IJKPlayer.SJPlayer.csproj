@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
     <ObjcBindingApiDefinition Include="IJKMediaApis.cs" />
     <ObjcBindingCoreSource Include="IJKMediaEnums.cs" />
     <ObjcBindingApiDefinition Include="SJUIKitApis.cs" />

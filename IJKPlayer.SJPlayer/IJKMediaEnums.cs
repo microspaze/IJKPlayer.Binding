@@ -5,6 +5,7 @@ using ObjCRuntime;
 
 namespace IJKPlayer.SJPlayer
 {
+    /*
     [Native]
     public enum IJKMPMovieScalingMode : long
     {
@@ -135,5 +136,6 @@ namespace IJKPlayer.SJPlayer
     //    [DllImport("__Internal")]
     //    static extern unsafe void IJKFFIOStatCompleteRegister(Action<sbyte, long, long, long, long> cb);
     //}
+    */
 }
 

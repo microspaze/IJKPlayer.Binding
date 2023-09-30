@@ -3,21 +3,21 @@ using CoreFoundation;
 using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
-//using static IJKPlayer.SJPlayer.SJUIKit;
 using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
+    /*
     // @protocol SJUIKitTextMakerProtocol <SJUTAttributesProtocol>
     /*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/
+      Check whether adding [Model] to this declaration is appropriate.
+      [Model] is used to generate a C# class that implements this protocol,
+      and might be useful for protocols that consumers are supposed to implement,
+      since consumers can subclass the generated class instead of implementing
+      the generated interface. If consumers are not supposed to implement this
+      protocol, then [Model] is redundant and will generate code that will never
+      be used.
+    #1#
     [Protocol]
     interface SJUIKitTextMakerProtocol : SJUTAttributesProtocol
     {
@@ -151,7 +151,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     interface SJUTAttributesProtocol
     {
@@ -302,7 +302,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     interface SJUTRangeHandlerProtocol
     {
@@ -331,7 +331,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     interface SJUTRegexHandlerProtocol : SJUTRangeHandlerProtocol
     {
@@ -360,7 +360,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     interface ISJUTStroke
     {
@@ -384,7 +384,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     interface ISJUTDecoration
     {
@@ -408,7 +408,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface ISJUTImageAttachment
@@ -1117,7 +1117,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJPresentViewProtocol
@@ -1428,7 +1428,7 @@ namespace IJKPlayer.SJPlayer
   the generated interface. If consumers are not supposed to implement this
   protocol, then [Model] is redundant and will generate code that will never
   be used.
-*/
+#1#
     [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJSQLiteTableModelProtocol : ObjCRuntime.INativeObject
@@ -1927,4 +1927,5 @@ namespace IJKPlayer.SJPlayer
         [Field("SJUIKitVersionString", "__Internal")]
         NSString SJUIKitVersionString { get; }
     }
+    */
 }

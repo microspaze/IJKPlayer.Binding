@@ -3,10 +3,10 @@ using System.Runtime.InteropServices;
 using CoreMedia;
 using ObjCRuntime;
 using UIKit;
-//using static IJKPlayer.SJPlayer.SJBaseVideoPlayer;
 
 namespace IJKPlayer.SJPlayer
 {
+    /*
     [Native]
     public enum SJOrientation :  ulong
     {
@@ -250,4 +250,5 @@ namespace IJKPlayer.SJPlayer
         Inactive,
         Background
     }
+    */
 }
