@@ -1056,9 +1056,6 @@ namespace IJKPlayer.SJPlayer
     // typedef void (^SJDeallockCallbackTask)(id _Nonnull);
     delegate void SJDeallockCallbackTask(NSObject arg0);
 
-    // typedef void (^SJKVOObservedChangeHandler)(id _Nonnull, NSDictionary<NSKeyValueChangeKey,id> * _Nullable);
-    delegate void SJKVOObservedChangeHandler(NSObject arg0, NSDictionary<NSString, NSObject> arg1);
-
     // @interface SJKVOHelper (NSObject)
     [Category]
     [BaseType(typeof(NSObject))]
@@ -1204,8 +1201,8 @@ namespace IJKPlayer.SJPlayer
         Func<nuint, SJRunLoopTaskQueue> Delay();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(CFRunLoopRef _Nonnull, CFRunLoopMode _Nonnull) update;
-        [Export("update", ArgumentSemantic.Copy)]
-        unsafe Func<CFRunLoop, NSString, SJRunLoopTaskQueue> Update();
+        //[Export("update", ArgumentSemantic.Copy)]
+        //unsafe Func<CFRunLoop, CFRunLoopMode, SJRunLoopTaskQueue> Update();
 
         // @property (readonly, copy, nonatomic) SJRunLoopTaskQueue * _Nullable (^ _Nonnull)(SJRunLoopTaskHandler _Nonnull) enqueue;
         [Export("enqueue", ArgumentSemantic.Copy)]

@@ -5,6 +5,9 @@ using ObjCRuntime;
 
 namespace IJKPlayer.SJPlayer
 {
+    // typedef void (^SJKVOObservedChangeHandler)(id _Nonnull, NSDictionary<NSKeyValueChangeKey,id> * _Nullable);
+    delegate void SJKVOObservedChangeHandler(NSObject arg0, NSDictionary<NSString, NSObject> arg1);
+
     [Native]
     public enum SJUTVerticalAlignment : ulong
     {

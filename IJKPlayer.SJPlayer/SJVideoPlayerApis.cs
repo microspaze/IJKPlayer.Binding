@@ -14,7 +14,7 @@ namespace IJKPlayer.SJPlayer
     delegate void SJVideoPlayerLocalizedStringsArgumentAction(SJVideoPlayerLocalizedStrings arg0);
     delegate void SJVideoPlayerControlLayerResourcesArgumentAction(SJVideoPlayerControlLayerResources arg0);
     delegate void SJEdgeControlButtonItemActionArgumentAction(SJEdgeControlButtonItemAction arg0);
-    
+
     // @protocol SJControlLayer <SJVideoPlayerControlLayerDataSource, SJVideoPlayerControlLayerDelegate, SJControlLayerRestartProtocol, SJControlLayerExitProtocol>
     /*
   Check whether adding [Model] to this declaration is appropriate.
@@ -25,7 +25,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJControlLayer : SJVideoPlayerControlLayerDataSource, SJVideoPlayerControlLayerDelegate, SJControlLayerRestartProtocol, SJControlLayerExitProtocol
     {
     }

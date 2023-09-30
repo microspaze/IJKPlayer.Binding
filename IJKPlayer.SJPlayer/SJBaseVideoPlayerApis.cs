@@ -890,6 +890,7 @@ namespace IJKPlayer.SJPlayer
 
     // @protocol SJVideoPlayerControlLayerDelegate <SJPlaybackInfoDelegate, SJRotationControlDelegate, SJGestureControllerDelegate, SJNetworkStatusControlDelegate, SJVolumeBrightnessRateControlDelegate, SJLockScreenStateControlDelegate, SJAppActivityControlDelegate, SJFitOnScreenControlDelegate, SJSwitchVideoDefinitionControlDelegate, SJPlaybackControlDelegate>
     [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJVideoPlayerControlLayerDelegate : SJPlaybackInfoDelegate, SJRotationControlDelegate, SJGestureControllerDelegate, SJNetworkStatusControlDelegate, SJVolumeBrightnessRateControlDelegate, SJLockScreenStateControlDelegate, SJAppActivityControlDelegate, SJFitOnScreenControlDelegate, SJSwitchVideoDefinitionControlDelegate, SJPlaybackControlDelegate
     {
         // @optional -(void)controlLayerNeedAppear:(__kindof SJBaseVideoPlayer *)videoPlayer;
@@ -1116,7 +1117,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJControlLayerAppearManager
     {
         // @required -(id<SJControlLayerAppearManagerObserver> _Nonnull)getObserver;
@@ -1186,7 +1188,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJControlLayerAppearManagerObserver
     {
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJControlLayerAppearManager> _Nonnull) onAppearChanged;
@@ -1427,7 +1430,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJPlayModelPlayerSuperview
     {
     }
@@ -1783,7 +1787,8 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol]
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
     interface SJDeviceVolumeAndBrightnessControllerObserver
     {
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJDeviceVolumeAndBrightnessController> _Nonnull, float) volumeDidChangeExeBlock;
@@ -3745,13 +3750,13 @@ namespace IJKPlayer.SJPlayer
         [NullAllowed, Export("playerSuperviewSelector", ArgumentSemantic.Assign)]
         Selector PlayerSuperviewSelector { get; set; }
 
-        [Wrap("WeakAutoplayDelegate")]
-        [NullAllowed]
-        SJPlayerAutoplayDelegate AutoplayDelegate();
+        //[Wrap("WeakAutoplayDelegate")]
+        //[NullAllowed]
+        //SJPlayerAutoplayDelegate AutoplayDelegate();
 
         // @property (readonly, nonatomic, weak) id<SJPlayerAutoplayDelegate> _Nullable autoplayDelegate;
         [NullAllowed, Export("autoplayDelegate", ArgumentSemantic.Weak)]
-        NSObject WeakAutoplayDelegate();
+        SJPlayerAutoplayDelegate WeakAutoplayDelegate();
 
         // @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
         [Export("scrollDirection", ArgumentSemantic.Assign)]
