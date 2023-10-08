@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <NativeReference Include="Masonry.framework">
+    <NativeReference Include="Libs/Masonry.framework">
       <Kind>Framework</Kind>
       <Frameworks></Frameworks>
       <LinkerFlags></LinkerFlags>
@@ -29,7 +29,7 @@
       <IsCxx>False</IsCxx>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="YYModel.framework">
+    <NativeReference Include="Libs/YYModel.framework">
       <Kind>Framework</Kind>
       <Frameworks></Frameworks>
       <LinkerFlags></LinkerFlags>
@@ -39,7 +39,7 @@
       <IsCxx>False</IsCxx>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="SJUIKit.framework">
+    <NativeReference Include="Libs/SJUIKit.framework">
       <Kind>Framework</Kind>
       <Frameworks></Frameworks>
       <LinkerFlags></LinkerFlags>
@@ -49,7 +49,7 @@
       <IsCxx>False</IsCxx>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="SJBaseVideoPlayer.framework">
+    <NativeReference Include="Libs/SJBaseVideoPlayer.framework">
       <Kind>Framework</Kind>
       <Frameworks></Frameworks>
       <LinkerFlags></LinkerFlags>
@@ -59,7 +59,7 @@
       <IsCxx>False</IsCxx>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="SJVideoPlayer.framework">
+    <NativeReference Include="Libs/SJVideoPlayer.framework">
       <Kind>Framework</Kind>
       <Frameworks></Frameworks>
       <LinkerFlags></LinkerFlags>
@@ -69,7 +69,7 @@
       <IsCxx>False</IsCxx>
       <SmartLink>False</SmartLink>
     </NativeReference>
-    <NativeReference Include="IJKMediaFramework.framework">
+    <NativeReference Include="Libs/IJKMediaFramework.framework">
       <Kind>Framework</Kind>
       <ForceLoad>True</ForceLoad>
       <SmartLink>False</SmartLink>
