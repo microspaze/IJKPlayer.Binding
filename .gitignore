@@ -3,6 +3,7 @@
 
 # Xcode
 build/
+IJKMediaFramework.framework/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
