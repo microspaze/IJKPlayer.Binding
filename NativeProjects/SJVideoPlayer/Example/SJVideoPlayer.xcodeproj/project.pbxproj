@@ -1675,6 +1675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SJVideoPlayer/SJVideoPlayer-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1702,6 +1703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SMBMHSCYNR;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SJVideoPlayer/SJVideoPlayer-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
