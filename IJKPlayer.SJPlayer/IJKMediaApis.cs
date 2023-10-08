@@ -341,9 +341,8 @@ namespace IJKPlayer.SJPlayer
     interface IJKFFOptions
     {
         // +(IJKFFOptions *)optionsByDefault;
-        [Static]
-        [Export("optionsByDefault")]
-        IJKFFOptions OptionsByDefault();
+        [Static] [Export("optionsByDefault")]
+        IJKFFOptions OptionsByDefault { get; }
 
         // -(void)applyTo:(struct IjkMediaPlayer *)mediaPlayer;
         //todo

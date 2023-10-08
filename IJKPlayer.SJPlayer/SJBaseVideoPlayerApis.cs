@@ -1457,9 +1457,8 @@ namespace IJKPlayer.SJPlayer
     interface SJPlayModel_SJDeprecated
     {
         // +(instancetype _Nonnull)UIViewPlayModel __attribute__((deprecated("use `SJPlayModel.alloc.init`!")));
-        [Static]
-        [Export("UIViewPlayModel")]
-        SJPlayModel UIViewPlayModel();
+        [Static] [Export("UIViewPlayModel")]
+        SJPlayModel UIViewPlayModel { get; }
 
         // +(instancetype _Nonnull)UITableViewCellPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag atIndexPath:(NSIndexPath * _Nonnull)indexPath tableView:(UITableView * _Nonnull)tableView __attribute__((deprecated("use `playModelWithTableView:indexPath`!")));
         [Static]
@@ -2476,12 +2475,12 @@ namespace IJKPlayer.SJPlayer
         [Static]
         [Export("version")]
         //[Verify(MethodToProperty)]
-        string Version();
+        string Version { get; }
 
         // +(instancetype _Nonnull)player;
         [Static]
         [Export("player")]
-        SJBaseVideoPlayer Player();
+        SJBaseVideoPlayer Player { get; }
 
         // @property (nonatomic) SJVideoGravity _Nonnull videoGravity;
         [Export("videoGravity")]
@@ -2489,7 +2488,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) __kindof UIView * _Nonnull view;
         [Export("view", ArgumentSemantic.Strong)]
-        UIView View();
+        UIView View { get; }
 
         [Wrap("WeakControlLayerDataSource")]
         [NullAllowed]
@@ -2506,13 +2505,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic, weak) id<SJVideoPlayerControlLayerDelegate> _Nullable controlLayerDelegate;
         [NullAllowed, Export("controlLayerDelegate", ArgumentSemantic.Weak)]
         NSObject WeakControlLayerDelegate { get; set; }
-    }
+    //}
 
     // @interface AudioSession (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_AudioSession
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_AudioSession
+    //{
         // @property (getter = isAudioSessionControlEnabled, nonatomic) BOOL audioSessionControlEnabled;
         [Export("audioSessionControlEnabled")]
         bool GetAudioSessionControlEnabled();
@@ -2527,13 +2526,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)setActiveOptions:(AVAudioSessionSetActiveOptions)options;
         [Export("setActiveOptions:")]
         void SetActiveOptions(AVAudioSessionSetActiveOptions options);
-    }
+    //}
 
     // @interface Placeholder (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Placeholder
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Placeholder
+    //{
         // @property (readonly, nonatomic, strong) UIView<SJVideoPlayerPresentView> * _Nonnull presentView;
         [Export("presentView", ArgumentSemantic.Strong)]
         SJVideoPlayerPresentView PresentView();
@@ -2551,13 +2550,13 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setdelayInSecondsForHiddenPlaceholderImageView:")]
         void SetDelayInSecondsForHiddenPlaceholderImageView(double delayInSecondsForHiddenPlaceholderImageView);
-    }
+    //}
 
     // @interface VideoFlipTransition (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_VideoFlipTransition
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_VideoFlipTransition
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJFlipTransitionManager> _Null_unspecified flipTransitionManager;
         [Export("flipTransitionManager")]
         SJFlipTransitionManager? GetFlipTransitionManager();
@@ -2568,13 +2567,13 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, nonatomic, strong) id<SJFlipTransitionManagerObserver> _Nonnull flipTransitionObserver;
         [Export("flipTransitionObserver", ArgumentSemantic.Strong)]
         SJFlipTransitionManagerObserver FlipTransitionObserver();
-    }
+    //}
 
     // @interface Playback (SJBaseVideoPlayer) <SJVideoPlayerPlaybackControllerDelegate>
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Playback //: SJVideoPlayerPlaybackControllerDelegate
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Playback //: SJVideoPlayerPlaybackControllerDelegate
+    //{
         //SJVideoPlayerPlaybackControllerDelegate
         // @optional -(void)playbackController:(id<SJVideoPlayerPlaybackController> _Nonnull)controller assetStatusDidChange:(SJAssetStatus)status;
         [Export("playbackController:assetStatusDidChange:")]
@@ -2664,11 +2663,11 @@ namespace IJKPlayer.SJPlayer
 
 
         // @property (nonatomic, strong, null_resettable) __kindof id<SJVideoPlayerPlaybackController> _Null_unspecified playbackController;
+        //[Export("playbackController")]
+        //SJVideoPlayerPlaybackController? PlaybackController { get; set; }
+        
         [Export("playbackController")]
-        SJVideoPlayerPlaybackController? GetPlaybackController();
-
-        [Export("setplaybackController:")]
-        void SetPlaybackController(SJVideoPlayerPlaybackController? playbackController);
+        SJIJKMediaPlaybackController? IJKPlaybackController { get; set; }
 
         // @property (readonly, nonatomic, strong) SJPlaybackObservation * _Nonnull playbackObserver;
         [Export("playbackObserver", ArgumentSemantic.Strong)]
@@ -2676,10 +2675,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic, strong) SJVideoPlayerURLAsset * _Nullable URLAsset;
         [Export("URLAsset")]
-        SJVideoPlayerURLAsset? GetURLAsset();
-        
-        [Export("setURLAsset:")]
-        void SetURLAsset(SJVideoPlayerURLAsset? urlAsset);
+        SJVideoPlayerURLAsset? URLAsset { get; set; }
 
         // @property (readonly, nonatomic) SJAssetStatus assetStatus;
         [Export("assetStatus")]
@@ -2874,13 +2870,13 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, nonatomic, strong) NSError * _Nullable error;
         [NullAllowed, Export("error", ArgumentSemantic.Strong)]
         NSError Error();
-    }
+    //}
 
     // @interface DeviceVolumeAndBrightness (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_DeviceVolumeAndBrightness
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_DeviceVolumeAndBrightness
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJDeviceVolumeAndBrightnessController> _Null_unspecified deviceVolumeAndBrightnessController;
         [Export("deviceVolumeAndBrightnessController")]
         SJDeviceVolumeAndBrightnessController? GetDeviceVolumeAndBrightnessController();
@@ -2906,13 +2902,13 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setdisableVolumeSetting:")]
         void SetDisableVolumeSetting(bool disableVolumeSetting);
-    }
+    //}
 
     // @interface Life (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Life
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Life
+    //{
         // -(void)vc_viewDidAppear;
         [Export("vc_viewDidAppear")]
         void Vc_viewDidAppear();
@@ -2949,13 +2945,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)needHiddenStatusBar;
         [Export("needHiddenStatusBar")]
         void NeedHiddenStatusBar();
-    }
+    //}
 
     // @interface Network (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Network
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Network
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJReachability> _Null_unspecified reachability;
         [Export("reachability")]
         SJReachability? GetReachability();
@@ -2966,13 +2962,13 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, nonatomic, strong) id<SJReachabilityObserver> _Nonnull reachabilityObserver;
         [Export("reachabilityObserver", ArgumentSemantic.Strong)]
         SJReachabilityObserver ReachabilityObserver();
-    }
+    //}
 
     // @interface Popup (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Popup
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Popup
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJTextPopupController> _Null_unspecified textPopupController;
         [Export("textPopupController")]
         SJTextPopupController? GetTextPopupController();
@@ -2986,13 +2982,13 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setpromptingPopupController:")]
         void SetPromptingPopupController(SJPromptingPopupController? popupController);
-    }
+    //}
 
     // @interface Gesture (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Gesture
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Gesture
+    //{
         // @property (readonly, nonatomic, strong) id<SJGestureController> _Nonnull gestureController;
         [Export("gestureController", ArgumentSemantic.Strong)]
         SJGestureController GestureController();
@@ -3024,13 +3020,13 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setoffsetFactorForHorizontalPanGesture:")]
         void SetOffsetFactorForHorizontalPanGesture(nfloat offsetFactorForHorizontalPanGesture);
-    }
+    //}
 
     // @interface ControlLayer (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_ControlLayer
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_ControlLayer
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJControlLayerAppearManager> _Null_unspecified controlLayerAppearManager;
         [Export("controlLayerAppearManager")]
         SJControlLayerAppearManager? GetControlLayerAppearManager();
@@ -3070,13 +3066,13 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setpausedToKeepAppearState:")]
         void SetPausedToKeepAppearState(bool pausedToKeepAppearState);
-    }
+    //}
 
     // @interface FitOnScreen (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_FitOnScreen
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_FitOnScreen
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJFitOnScreenManager> _Null_unspecified fitOnScreenManager;
         [Export("fitOnScreenManager")]
         SJFitOnScreenManager? GetFitOnScreenManager();
@@ -3109,13 +3105,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)setFitOnScreen:(BOOL)fitOnScreen animated:(BOOL)animated completionHandler:(void (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull))completionHandler;
         [Export("setFitOnScreen:animated:completionHandler:")]
         void SetFitOnScreen(bool fitOnScreen, bool animated, Action<SJBaseVideoPlayer> completionHandler);
-    }
+    //}
 
     // @interface Rotation (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Rotation
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Rotation
+    //{
         // @property (nonatomic, strong) id<SJRotationManager> _Nullable rotationManager;
         [Export("rotationManager")]
         SJRotationManager? GetRotationManager();
@@ -3171,13 +3167,13 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, nonatomic) UIInterfaceOrientation currentOrientation;
         [Export("currentOrientation")]
         UIInterfaceOrientation CurrentOrientation();
-    }
+    //}
 
     // @interface Screenshot (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Screenshot
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Screenshot
+    //{
         // @property (copy, nonatomic) void (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) presentationSizeDidChangeExeBlock;
         [Export("presentationSizeDidChangeExeBlock")]
         Action<SJBaseVideoPlayer>? GetPresentationSizeDidChangeExeBlock();
@@ -3201,13 +3197,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)screenshotWithTime:(NSTimeInterval)time size:(CGSize)size completion:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, UIImage * _Nullable, NSError * _Nullable))block;
         [Export("screenshotWithTime:size:completion:")]
         void ScreenshotWithTime(double time, CGSize size, Action<SJBaseVideoPlayer, UIImage, NSError> block);
-    }
+    //}
 
     // @interface Export (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Export
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Export
+    //{
         // -(void)exportWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration presetName:(NSString * _Nullable)presetName progress:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, float))progressBlock completion:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, NSURL * _Nonnull, UIImage * _Nonnull))completion failure:(void (^ _Nonnull)(__kindof SJBaseVideoPlayer * _Nonnull, NSError * _Nonnull))failure;
         [Export("exportWithBeginTime:duration:presetName:progress:completion:failure:")]
         void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJBaseVideoPlayer, float> progressBlock, Action<SJBaseVideoPlayer, NSUrl, UIImage> completion, Action<SJBaseVideoPlayer, NSError> failure);
@@ -3223,13 +3219,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)cancelGenerateGIFOperation;
         [Export("cancelGenerateGIFOperation")]
         void CancelGenerateGIFOperation();
-    }
+    //}
 
     // @interface ScrollView (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_ScrollView
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_ScrollView
+    //{
         // -(void)refreshAppearStateForPlayerView;
         [Export("refreshAppearStateForPlayerView")]
         void RefreshAppearStateForPlayerView();
@@ -3290,13 +3286,13 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setplayerViewWillDisappearExeBlock:")]
         void SetPlayerViewWillDisappearExeBlock(SJBaseVideoPlayerArgumentAction? action);
-    }
+    //}
 
     // @interface Subtitle (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Subtitle
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Subtitle
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJSubtitlePopupController> _Null_unspecified subtitlePopupController;
         [Export("subtitlePopupController")]
         SJSubtitlePopupController? GetSubtitlePopupController();
@@ -3317,26 +3313,26 @@ namespace IJKPlayer.SJPlayer
         
         [Export("setsubtitleHorizontalMinMargin:")]
         void SetSubtitleHorizontalMinMargin(nfloat horizontalMinMargin);
-    }
+    //}
 
     // @interface Danmaku (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Danmaku
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Danmaku
+    //{
         // @property (nonatomic, strong, null_resettable) id<SJDanmakuPopupController> _Null_unspecified danmakuPopupController;
         [Export("danmakuPopupController")]
         SJDanmakuPopupController? GetDanmakuPopupController();
         
         [Export("setdanmakuPopupController:")]
         void SetDanmakuPopupController(SJDanmakuPopupController? popupController);
-    }
+    //}
 
     // @interface Watermark (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Watermark
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Watermark
+    //{
         // @property (nonatomic, strong) UIView<SJWatermarkView> * _Nullable watermarkView;
         [Export("watermarkView")]
         SJWatermarkView? GetWatermarkView();
@@ -3347,13 +3343,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)updateWatermarkViewLayout;
         [Export("updateWatermarkViewLayout")]
         void UpdateWatermarkViewLayout();
-    }
+    //}
 
     // @interface Deprecated (SJBaseVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJBaseVideoPlayer))]
-    interface SJBaseVideoPlayer_Deprecated
-    {
+    //[Category]
+    //[BaseType(typeof(SJBaseVideoPlayer))]
+    //interface SJBaseVideoPlayer_Deprecated
+    //{
         // -(void)playWithURL:(NSURL * _Nonnull)URL;
         [Export("playWithURL:")]
         void PlayWithURL(NSUrl URL);
@@ -3890,8 +3886,8 @@ namespace IJKPlayer.SJPlayer
         SJMediaModelProtocol Media { get; set; }
 
         // @property (nonatomic, strong) SJVideoPlayerURLAsset * _Nullable media;
-        [NullAllowed, Export("media", ArgumentSemantic.Strong)]
-        SJVideoPlayerURLAsset MediaAsset { get; set; }
+        //[NullAllowed, Export("media", ArgumentSemantic.Strong)]
+        //SJVideoPlayerURLAsset MediaAsset { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJMediaPlayer> _Nullable currentPlayer;
         [NullAllowed, Export("currentPlayer", ArgumentSemantic.Strong)]
@@ -5537,12 +5533,12 @@ namespace IJKPlayer.SJPlayer
         void Rotate();
 
         // -(void)rotate:(SJOrientation)orientation animated:(BOOL)animated;
-        [Export("rotate:animated:")]
-        void Rotate(SJOrientation orientation, bool animated);
+        //[Export("rotate:animated:")]
+        //void Rotate(SJOrientation orientation, bool animated);
 
         // -(void)rotate:(SJOrientation)orientation animated:(BOOL)animated completionHandler:(void (^ _Nullable)(id<SJRotationManager> _Nonnull))completionHandler;
-        [Export("rotate:animated:completionHandler:")]
-        void Rotate(SJOrientation orientation, bool animated, SJRotationManagerArgumentAction completionHandler);
+        //[Export("rotate:animated:completionHandler:")]
+        //void Rotate(SJOrientation orientation, bool animated, SJRotationManagerArgumentAction completionHandler);
 
         // @property (readonly, nonatomic) SJOrientation currentOrientation;
         [Export("currentOrientation")]
@@ -5588,9 +5584,9 @@ namespace IJKPlayer.SJPlayer
     interface SJRotationActionForwarder
     {
         // @required -(void)pushViewController:(UIViewController * _Nonnull)viewController animated:(BOOL)animated;
-        [Abstract]
-        [Export("pushViewController:animated:")]
-        void Animated(UIViewController viewController, bool animated);
+        //[Abstract]
+        //[Export("pushViewController:animated:")]
+        //void Animated(UIViewController viewController, bool animated);
 
         // @required -(UIStatusBarStyle)preferredStatusBarStyle;
         [Abstract]

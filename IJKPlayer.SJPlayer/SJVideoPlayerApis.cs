@@ -2231,50 +2231,50 @@ namespace IJKPlayer.SJPlayer
         // +(instancetype _Nonnull)player;
         [Static]
         [Export("player")]
-        SJVideoPlayer Player();
+        SJVideoPlayer Player { get; }
 
         // +(instancetype _Nonnull)lightweightPlayer;
         [Static]
         [Export("lightweightPlayer")]
-        SJVideoPlayer LightweightPlayer();
+        SJVideoPlayer LightweightPlayer { get; }
 
         // @property (readonly, nonatomic, strong) SJControlLayerSwitcher * _Nonnull switcher;
         [Export("switcher", ArgumentSemantic.Strong)]
-        SJControlLayerSwitcher Switcher();
+        SJControlLayerSwitcher Switcher { get; }
 
         // @property (readonly, nonatomic, strong) SJEdgeControlLayer * _Nonnull defaultEdgeControlLayer;
         [Export("defaultEdgeControlLayer", ArgumentSemantic.Strong)]
-        SJEdgeControlLayer DefaultEdgeControlLayer();
+        SJEdgeControlLayer DefaultEdgeControlLayer { get; }
 
         // @property (readonly, nonatomic, strong) SJNotReachableControlLayer * _Nonnull defaultNotReachableControlLayer;
         [Export("defaultNotReachableControlLayer", ArgumentSemantic.Strong)]
-        SJNotReachableControlLayer DefaultNotReachableControlLayer();
+        SJNotReachableControlLayer DefaultNotReachableControlLayer { get; }
 
         // @property (readonly, nonatomic, strong) SJClipsControlLayer * _Nonnull defaultClipsControlLayer;
         [Export("defaultClipsControlLayer", ArgumentSemantic.Strong)]
-        SJClipsControlLayer DefaultClipsControlLayer();
+        SJClipsControlLayer DefaultClipsControlLayer { get; }
 
         // @property (readonly, nonatomic, strong) SJMoreSettingControlLayer * _Nonnull defaultMoreSettingControlLayer;
         [Export("defaultMoreSettingControlLayer", ArgumentSemantic.Strong)]
-        SJMoreSettingControlLayer DefaultMoreSettingControlLayer();
+        SJMoreSettingControlLayer DefaultMoreSettingControlLayer { get; }
 
         // @property (readonly, nonatomic, strong) SJLoadFailedControlLayer * _Nonnull defaultLoadFailedControlLayer;
         [Export("defaultLoadFailedControlLayer", ArgumentSemantic.Strong)]
-        SJLoadFailedControlLayer DefaultLoadFailedControlLayer();
+        SJLoadFailedControlLayer DefaultLoadFailedControlLayer { get; }
 
         // @property (readonly, nonatomic, strong) SJSmallViewControlLayer * _Nonnull defaultSmallViewControlLayer;
         [Export("defaultSmallViewControlLayer", ArgumentSemantic.Strong)]
-        SJSmallViewControlLayer DefaultSmallViewControlLayer();
+        SJSmallViewControlLayer DefaultSmallViewControlLayer { get; }
 
         // @property (readonly, nonatomic, strong) SJVideoDefinitionSwitchingControlLayer * _Nonnull defaultVideoDefinitionSwitchingControlLayer;
         [Export("defaultVideoDefinitionSwitchingControlLayer", ArgumentSemantic.Strong)]
-        SJVideoDefinitionSwitchingControlLayer DefaultVideoDefinitionSwitchingControlLayer();
+        SJVideoDefinitionSwitchingControlLayer DefaultVideoDefinitionSwitchingControlLayer { get; }
 
         // +(NSString * _Nonnull)version;
         [Static]
         [Export("version")]
         //[Verify(MethodToProperty)]
-        string Version();
+        string Version { get; }
     }
 
     // @interface CommonSettings (SJVideoPlayer)

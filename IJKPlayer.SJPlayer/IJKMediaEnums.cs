@@ -101,7 +101,7 @@ namespace IJKPlayer.SJPlayer
 
         public int sar_den;
 
-        public unsafe CVPixelBuffer pixel_buffer;
+        //public unsafe CVPixelBuffer pixel_buffer;
     }
 
     public enum IJKLogLevel : long

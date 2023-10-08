@@ -157,7 +157,7 @@ namespace IJKPlayer.SJPlayer
         public double duration;
     }
 
-    static class SJBaseVideoPlayerCFunctions
+    /*static class SJBaseVideoPlayerCFunctions
     {
         // SJTimeRange SJMakeTimeRange (NSTimeInterval start, NSTimeInterval duration);
         [DllImport("__Internal")]
@@ -178,7 +178,7 @@ namespace IJKPlayer.SJPlayer
         [DllImport("__Internal")]
         //[Verify(PlatformInvoke)]
         static extern bool SJRotationIsSupportedOrientation(SJOrientation orientation, SJOrientationMask supportedOrientations);
-    }
+    }*/
 
     [Native]
     public enum SJPlayerEvent : ulong

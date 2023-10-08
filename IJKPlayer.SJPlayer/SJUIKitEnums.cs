@@ -22,7 +22,7 @@ namespace IJKPlayer.SJPlayer
         Right
     }
 
-    static class SJUIKitCFunctions
+    /*static class SJUIKitCFunctions
     {
         // extern NSMutableAttributedString * _Nonnull sj_makeAttributesString (void (^ _Nonnull)(SJAttributeWorker * _Nonnull) block);
         //[DllImport("__Internal")]
@@ -182,7 +182,7 @@ namespace IJKPlayer.SJPlayer
         [DllImport("__Internal")]
         //[Verify(PlatformInvoke)]
         static extern NSError sqlite3_error_invalid_parameter();
-    }
+    }*/
 
     [Native]
     public enum SJPresentationPriority : ulong

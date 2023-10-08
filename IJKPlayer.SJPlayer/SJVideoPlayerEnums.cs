@@ -59,7 +59,7 @@ namespace IJKPlayer.SJPlayer
         public nfloat rear;
     }
 
-    static class SJVideoPlayerCFunctions
+    /*static class SJVideoPlayerCFunctions
     {
         // SJEdgeInsets SJEdgeInsetsMake (CGFloat front, CGFloat rear);
         [DllImport("__Internal")]
@@ -120,7 +120,7 @@ namespace IJKPlayer.SJPlayer
         [DllImport("__Internal")]
         //[Verify(PlatformInvoke)]
         static extern void sj_view_makeDisappear(UIView[] views, bool animated);
-    }
+    }*/
 
     [Native]
     public enum SJButtonItemPlaceholderType : ulong
