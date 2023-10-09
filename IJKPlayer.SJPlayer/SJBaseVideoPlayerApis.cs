@@ -2708,10 +2708,8 @@ namespace IJKPlayer.SJPlayer
 
 
         // @property (nonatomic, strong, null_resettable) __kindof id<SJVideoPlayerPlaybackController> _Null_unspecified playbackController;
-        //[Export("playbackController")]
-        //SJVideoPlayerPlaybackController? PlaybackController { get; set; }
-        
         [Export("playbackController")]
+        //SJVideoPlayerPlaybackController? PlaybackController { get; set; }
         SJIJKMediaPlaybackController? IJKPlaybackController { get; set; }
 
         // @property (readonly, nonatomic, strong) SJPlaybackObservation * _Nonnull playbackObserver;
@@ -4410,7 +4408,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     // @interface SJAssetAdd (NSTimer)
-    //[Category]
+    [Category]
     [BaseType(typeof(NSTimer))]
     interface NSTimer_SJAssetAdd
     {
@@ -4426,7 +4424,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(NSTimer * _Nonnull) sj_usingBlock;
         [Export("sj_usingBlock")]
-        Action<NSTimer>? Sj_usingBlock { get; set; }
+        Action<NSTimer>? Sj_usingBlock(); //{ get; set; }
 
         // -(void)sj_fire;
         [Export("sj_fire")]
@@ -4434,7 +4432,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     // @interface SJDeprecated (NSTimer)
-    //[Category]
+    [Category]
     [BaseType(typeof(NSTimer))]
     interface NSTimer_SJDeprecated
     {
@@ -5577,13 +5575,13 @@ namespace IJKPlayer.SJPlayer
     // @interface SJRotationSafeAreaFixing (UIViewController)
     //[Introduced(PlatformName.iOS, 13, 0, message: "deprecated!")]
     //[Deprecated(PlatformName.iOS, 16, 0, message: "deprecated!")]
-    //[Category]
+    [Category]
     [BaseType(typeof(UIViewController))]
     interface UIViewController_SJRotationSafeAreaFixing
     {
         // @property (nonatomic) SJSafeAreaInsetsMask disabledAdjustSafeAreaInsetsMask;
         [Export("disabledAdjustSafeAreaInsetsMask")]
-        SJSafeAreaInsetsMask DisabledAdjustSafeAreaInsetsMask { get; set; }
+        SJSafeAreaInsetsMask DisabledAdjustSafeAreaInsetsMask(); //{ get; set; }
     }
 
     // @interface SJRotationFullscreenWindow : UIWindow
@@ -5865,7 +5863,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     // @interface SJBaseVideoPlayerExtended (UIView)
-    //[Category]
+    [Category]
     [BaseType(typeof(UIView))]
     interface UIView_SJBaseVideoPlayerExtended
     {
@@ -5893,23 +5891,23 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) CGFloat sj_x;
         [Export("sj_x")]
-        nfloat Sj_x { get; set; }
+        nfloat Sj_x(); //{ get; set; }
 
         // @property (nonatomic) CGFloat sj_y;
         [Export("sj_y")]
-        nfloat Sj_y { get; set; }
+        nfloat Sj_y(); //{ get; set; }
 
         // @property (nonatomic) CGFloat sj_w;
         [Export("sj_w")]
-        nfloat Sj_w { get; set; }
+        nfloat Sj_w(); //{ get; set; }
 
         // @property (nonatomic) CGFloat sj_h;
         [Export("sj_h")]
-        nfloat Sj_h { get; set; }
+        nfloat Sj_h(); //{ get; set; }
 
         // @property (nonatomic) CGSize sj_size;
         [Export("sj_size")]
-        CGSize Sj_size { get; set; }
+        CGSize Sj_size(); //{ get; set; }
     }
 
     // @interface SJBaseVideoPlayerExtended (NSObject)

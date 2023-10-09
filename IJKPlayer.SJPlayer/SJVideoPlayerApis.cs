@@ -1970,10 +1970,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic) BOOL showsMoreItem;
         [Export("showsMoreItem")]
-        bool GetShowsMoreItem();
-
-        [Export("showsMoreItem")]
-        void SetShowsMoreItem(bool showsMoreItem);
+        bool ShowsMoreItem { get; set; }
 
         // @property (getter = isEnabledClips, nonatomic) BOOL enabledClips;
         [Export("enabledClips")]
@@ -2457,13 +2454,13 @@ namespace IJKPlayer.SJPlayer
     }
 
     // @interface SJAnimationAdded (UIView)
-    //[Category]
+    [Category]
     [BaseType(typeof(UIView))]
     interface UIView_SJAnimationAdded
     {
         // @property (nonatomic) SJViewDisappearAnimation sjv_disappearDirection;
         [Export("sjv_disappearDirection")]
-        SJViewDisappearAnimation Sjv_disappearDirection { get; set; }
+        SJViewDisappearAnimation Sjv_disappearDirection(); //{ get; set; }
 
         // @property (readonly, nonatomic) BOOL sjv_disappeared;
         [Export("sjv_disappeared")]
