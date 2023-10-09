@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = PodIJKPlayer;
+			productName = PodIJKPlayer;
 		};
 /* End PBXAggregateTarget section */
 
@@ -1458,7 +1459,7 @@
 		716354CBD977D30972FDF4E94DC69BCB /* SDImageAssetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAssetManager.m; path = SDWebImage/Private/SDImageAssetManager.m; sourceTree = "<group>"; };
 		71A472DEB09156E93009FFDE5EBB858E /* SJViewControllerManagerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJViewControllerManagerDefines.h; sourceTree = "<group>"; };
 		7307EF3B1D4599DE60DA0B695D00D045 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		732DC0A9BF9F6E6C51080D5D42EE9D6C /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
+		732DC0A9BF9F6E6C51080D5D42EE9D6C /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		739B73369838F84906EECAC786C570D4 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/Core/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		739F3DB9D8F5BFF3D2A9E46B036DF0B5 /* SJAttributeWorker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJAttributeWorker.h; path = SJUIKit/AttributesFactory/Deprecated/SJAttributeWorker.h; sourceTree = "<group>"; };
 		73B53C363B58B32A75AF069DD2235770 /* SJFullscreenModeStatusBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJFullscreenModeStatusBar.m; sourceTree = "<group>"; };
@@ -1615,7 +1616,7 @@
 		9D4FE08C8B8315E58CD03EEF5CD17510 /* SJImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJImagePickerController.m; path = SJUIKit/Photo/SJImagePickerController.m; sourceTree = "<group>"; };
 		9D5E13FFD1E78C85430A4DC564440BDA /* SJIJKMediaPlaybackController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJIJKMediaPlaybackController.m; path = SJBaseVideoPlayer/IJKPlayer/SJIJKMediaPlaybackController.m; sourceTree = "<group>"; };
 		9D76702F1FFBAEA5F650A212AEBB8A06 /* SJUTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJUTUtils.h; path = SJUIKit/AttributesFactory/UIKitText/SJUTUtils.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E391DF10B25F862F953D16EF51F41DA /* HLSAssetTsContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HLSAssetTsContent.m; path = SJMediaCacheServer/Core/Asset/HLS/HLSAssetTsContent.m; sourceTree = "<group>"; };
 		9E5C8D27AA84F248E36A19BDAC4698F5 /* SJRotationFullscreenWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJRotationFullscreenWindow.h; sourceTree = "<group>"; };
 		9F2540261A13D00D2BF9A24CA5A31A6C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/Core/NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -1712,7 +1713,7 @@
 		BCB968D17A0010ED79FC76B0A4996EB5 /* SJUTUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJUTUtils.m; path = SJUIKit/AttributesFactory/UIKitText/SJUTUtils.m; sourceTree = "<group>"; };
 		BCDB3E2FF9A52821B64A7D62AA899330 /* SJFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJFullscreenPopGesture.h; path = SJFullscreenPopGesture/ObjC/SJFullscreenPopGesture.h; sourceTree = "<group>"; };
 		BD2814149BBBFBB34D7C4D9690993885 /* SJClipsSaveResultToAlbumHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJClipsSaveResultToAlbumHandler.m; sourceTree = "<group>"; };
-		BD4C6C010A343BC4ECFEC0448AEDB7D0 /* SJVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD4C6C010A343BC4ECFEC0448AEDB7D0 /* SJVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD536CFF4312AA2B9EAFB6F34C939489 /* SJEdgeControlButtonItemView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJEdgeControlButtonItemView.h; sourceTree = "<group>"; };
 		BD654F668B10D027DDE7A616165EF6C0 /* SJTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJTaskQueue.h; path = SJUIKit/Queues/SJTaskQueue.h; sourceTree = "<group>"; };
 		BD8241210ECFBC0E1D9E6E4F703FFD7E /* SJRotationFullscreenNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJRotationFullscreenNavigationController.h; sourceTree = "<group>"; };
@@ -1812,7 +1813,7 @@
 		D699035AF9CB991D27550AD49B36259D /* SJClipsButtonContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJClipsButtonContainerView.m; sourceTree = "<group>"; };
 		D6CCA2DB0BF307CBD90062DFD4BC1F4D /* SDImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOCoder.h; path = SDWebImage/Core/SDImageIOCoder.h; sourceTree = "<group>"; };
 		D6D464096E414050E2C99BDECD6596C3 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		D6D5F4582FEC5B6DF00579C6B2EE7574 /* SJBaseVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJBaseVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D6D5F4582FEC5B6DF00579C6B2EE7574 /* SJBaseVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJBaseVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D751C3F79C697237888A4BDEC5D72A67 /* FILEAssetContentProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FILEAssetContentProvider.m; path = SJMediaCacheServer/Core/Asset/FILE/Private/FILEAssetContentProvider.m; sourceTree = "<group>"; };
 		D7954A01FB12FDF8B49015DEE8AA5870 /* SJSmallViewControlLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJSmallViewControlLayer.m; sourceTree = "<group>"; };
 		D8220C9F65BB06C1087A13D3A210BEF7 /* SJEdgeControlButtonItemAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJEdgeControlButtonItemAdapter.m; sourceTree = "<group>"; };
@@ -1957,7 +1958,7 @@
 		FD6CFAD314CA644D2F927974479B8800 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		FD90358C985264F1312E90B903DE2610 /* SJClipsCommonViewLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJClipsCommonViewLayer.h; sourceTree = "<group>"; };
 		FDC7EC5059518F0CD5E3E6ADC9564D9C /* MCSPrefetcherManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MCSPrefetcherManager.h; path = SJMediaCacheServer/Core/Prefetch/MCSPrefetcherManager.h; sourceTree = "<group>"; };
-		FE55AD3A385020C02A7609C3391B6874 /* SJUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJUIKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FE55AD3A385020C02A7609C3391B6874 /* SJUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJUIKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE56068557E7BE5FFABA57621A535D4F /* SJVideoPlayerClipsGeneratedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJVideoPlayerClipsGeneratedResult.h; sourceTree = "<group>"; };
 		FE9F1BD7800D93370BC1E4B8AB69944C /* SJLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJLoadingView.h; sourceTree = "<group>"; };
 		FEAC06EA62776FF2FB7E16DE48E9E6F8 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -2297,7 +2298,6 @@
 				E798FD227B45C8F5DEBD65AD44AEE0FA /* Core */,
 				5BB09B75868F828D2F2AD0D226F13392 /* Support Files */,
 			);
-			name = SJRouter;
 			path = SJRouter;
 			sourceTree = "<group>";
 		};
@@ -2372,7 +2372,6 @@
 				05AD73998DEE95FA2083FACA2E43DBB7 /* GCDAsyncUdpSocket.m */,
 				2C243189EE892D1A5A934FB0A728A808 /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -2444,7 +2443,6 @@
 				7D17F8638BD624A9F678E2B341D0DD4B /* YYModel.h */,
 				43810A03FA3D7B730F9FBC7499F4A207 /* Support Files */,
 			);
-			name = YYModel;
 			path = YYModel;
 			sourceTree = "<group>";
 		};
@@ -2521,7 +2519,6 @@
 				EC83F95CA5987CAFEB4B0856C7005162 /* ObjC */,
 				DA0B5503542E0250A926095C7A65FD5C /* Support Files */,
 			);
-			name = SJFullscreenPopGesture;
 			path = SJFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
@@ -2748,7 +2745,6 @@
 				79C8F86F41423605ACC42CFEE8E7B9DA /* SJClipsVideoCountDownView.h */,
 				62E1C709F5FC9A6B682CDC19BB28EF4A /* SJClipsVideoCountDownView.m */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -2758,7 +2754,6 @@
 				DB45461802EAD5EFAAC9E38F6ACDEBDC /* SJControlLayerSwitcher.h */,
 				1EF81DABB54D6E1F60D3C5DECED5379E /* SJControlLayerSwitcher.m */,
 			);
-			name = Switcher;
 			path = Switcher;
 			sourceTree = "<group>";
 		};
@@ -3014,7 +3009,6 @@
 				522997150D27A55BDA57D59CF4B24A1D /* KTVCocoaHTTPServer */,
 				FF23154D1A01C8A7AC2D8FFB0CA906F1 /* Support Files */,
 			);
-			name = SJMediaCacheServer;
 			path = SJMediaCacheServer;
 			sourceTree = "<group>";
 		};
@@ -3145,7 +3139,6 @@
 				BB082A9BBE4A402A36C47D6A52F7895D /* Core */,
 				CDCECA235EF1B4AA42C4C772232AA7AE /* Support Files */,
 			);
-			name = PodIJKPlayer;
 			path = PodIJKPlayer;
 			sourceTree = "<group>";
 		};
@@ -3164,7 +3157,6 @@
 				C8AB088074800CFF9954FF75BDDAA6EC /* Model */,
 				6F4289A1E3BF841C006FAC3F95754356 /* View */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -3266,7 +3258,6 @@
 				8E94777655516BAD3274D254AB00B383 /* SJEdgeControlLayerAdapters.m */,
 				FF41B9CA8678FBAE72C8EA616F56DA1F /* Core */,
 			);
-			name = Adapters;
 			path = Adapters;
 			sourceTree = "<group>";
 		};
@@ -3307,7 +3298,6 @@
 				CEB2194EB563E9F1AADC696DFBEB6B7B /* SJVideoPlayerClipsParameters.h */,
 				96762AFE87258DBDF8F5DF193702F1D1 /* SJVideoPlayerClipsParameters.m */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -3362,7 +3352,6 @@
 				8112DD44FC3F0B61A9CB11EFC268F34E /* SJProgressSlider.h */,
 				7C8EA4FD75B1ED163B65479D320E482E /* SJProgressSlider.m */,
 			);
-			name = SJProgressSlider;
 			path = SJProgressSlider;
 			sourceTree = "<group>";
 		};
@@ -3446,7 +3435,6 @@
 				66DA6D6A28DD37969D1DD7DA545D3A9D /* SJClipsVideoRecordsControlLayer.h */,
 				5F3AC25C09BA48281E9B726FD5A27AB6 /* SJClipsVideoRecordsControlLayer.m */,
 			);
-			name = ControlLayer;
 			path = ControlLayer;
 			sourceTree = "<group>";
 		};
@@ -3653,7 +3641,6 @@
 				7C3C38BA5D68B5AAECA34F246DAAE8D0 /* ViewController+MASAdditions.m */,
 				55E62DE7B851C0C46AF7EE9B97901C7D /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -3767,7 +3754,6 @@
 				6EB4F44DF6D4B8038755AB0D3465EDA2 /* Resources */,
 				EC963CD3620F216329D2B8496A527671 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -3799,7 +3785,6 @@
 				7CFD6EA5EDEB90FA5D518E885CC8CF17 /* Core */,
 				B2F480F6258B0761B74A2507F3885B74 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -3831,7 +3816,6 @@
 				BD536CFF4312AA2B9EAFB6F34C939489 /* SJEdgeControlButtonItemView.h */,
 				3C0039648ECA4D394F5725ABE38CC588 /* SJEdgeControlButtonItemView.m */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -4436,6 +4420,7 @@
 				AFAF83CE88D9FCCECB64B892DCFCADA7 /* Sources */,
 				CCB6E60691DB58C9D2C0F26733F25C2E /* Frameworks */,
 				4522D50300D635138BEDBF5E60D39B53 /* Resources */,
+				B090CB452AD3D8DD00873B42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4490,6 +4475,7 @@
 				1BEAB28362AAB45341613710ECFC80B3 /* Sources */,
 				06822646AE6260A416A578740049C092 /* Frameworks */,
 				A6ED54EDD37D21340D7788443C0467D2 /* Resources */,
+				B090CB442AD3D8BC00873B42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4511,6 +4497,7 @@
 				6C4B4C4C29CE05DC6B1D5A68FD7CF92A /* Sources */,
 				4885FD77A468AEAE475D76BA0689868C /* Frameworks */,
 				F669673BB89E12A8C65CEFCE608B22CC /* Resources */,
+				B090CB412AD3D85700873B42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4559,6 +4546,7 @@
 				6DE3A6E158E9EE279223C9DC1857F57D /* Sources */,
 				8DC660C3D0E3CC4495DC7A20CA3BB146 /* Frameworks */,
 				A226D05CED66E066FF9F651015C0DC10 /* Resources */,
+				B090CB422AD3D87200873B42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4598,6 +4586,7 @@
 				9B969D871A47F480303FE75727A9BFB4 /* Sources */,
 				DA04CF0A187767346CACB3336377ACF9 /* Frameworks */,
 				FA51AA9CA3B2513110CB8EE7AA53D9EC /* Resources */,
+				B090CB432AD3D89100873B42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4816,6 +4805,94 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B090CB412AD3D85700873B42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"YYModel\"\nFRAMEWORK_NAME=\"YYModel\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
+		};
+		B090CB422AD3D87200873B42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"SJVideoPlayer\"\nFRAMEWORK_NAME=\"SJVideoPlayer\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
+		};
+		B090CB432AD3D89100873B42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"SJUIKit-68d28646\"\nFRAMEWORK_NAME=\"SJUIKit\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
+		};
+		B090CB442AD3D8BC00873B42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"SJBaseVideoPlayer\"\nFRAMEWORK_NAME=\"SJBaseVideoPlayer\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
+		};
+		B090CB452AD3D8DD00873B42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"Masonry\"\nFRAMEWORK_NAME=\"Masonry\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AF6E0E48231EF11BE388C7672D0F5F5 /* Sources */ = {
@@ -6160,6 +6237,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -6177,8 +6255,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -6321,6 +6398,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

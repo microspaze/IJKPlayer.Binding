@@ -11,10 +11,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Simulator' ">
     <CreatePackage>false</CreatePackage>
     <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Simulator' ">
     <CreatePackage>false</CreatePackage>
     <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Device' ">
     <CreatePackage>false</CreatePackage>
