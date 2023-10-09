@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34112.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJKPlayer.SJPlayer", "IJKPlayer.SJPlayer.csproj", "{6145A368-CEE9-4EE1-9E75-3AC0948404BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJKPlayer.SJPlayer", "IJKPlayer.SJPlayer\IJKPlayer.SJPlayer.csproj", "{6145A368-CEE9-4EE1-9E75-3AC0948404BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJKPlayer.SJPlayerSample", "..\IJKPlayer.SJPlayerSample\IJKPlayer.SJPlayerSample.csproj", "{AEC0C034-7070-4E6C-A649-2FCD19BB3052}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJKPlayer.SJPlayerSample", "IJKPlayer.SJPlayerSample\IJKPlayer.SJPlayerSample.csproj", "{AEC0C034-7070-4E6C-A649-2FCD19BB3052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
