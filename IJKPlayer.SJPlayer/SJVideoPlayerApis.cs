@@ -767,20 +767,6 @@ namespace IJKPlayer.SJPlayer
         string DefinitionSwitchFailedPrompt { get; set; }
     }
 
-    // @interface SJControlAdd (SJVideoPlayerURLAsset)
-    [Category]
-    [BaseType(typeof(SJVideoPlayerURLAsset))]
-    interface SJVideoPlayerURLAsset_SJControlAdd
-    {
-        // @property (copy, nonatomic) NSString * _Nullable title;
-        [Export("title")]
-        string? Title { get; set; }
-
-        // @property (copy, nonatomic) NSAttributedString * _Nullable attributedTitle;
-        [Export("attributedTitle")]
-        NSAttributedString? AttributedTitle { get; set; }
-    }
-
     // @protocol SJVideoPlayerClipsParameters <NSObject>
     /*
   Check whether adding [Model] to this declaration is appropriate.
@@ -1204,13 +1190,13 @@ namespace IJKPlayer.SJPlayer
         // -(void)performActions;
         [Export("performActions")]
         void PerformActions();
-    }
+    //}
 
     // @interface Placeholder (SJEdgeControlButtonItem)
-    [Category]
-    [BaseType(typeof(SJEdgeControlButtonItem))]
-    interface SJEdgeControlButtonItem_Placeholder
-    {
+    //[Category]
+    //[BaseType(typeof(SJEdgeControlButtonItem))]
+    //interface SJEdgeControlButtonItem_Placeholder
+    //{
         // +(instancetype _Nonnull)placeholderWithType:(SJButtonItemPlaceholderType)placeholderType tag:(SJEdgeControlButtonItemTag)tag;
         [Static]
         [Export("placeholderWithType:tag:")]
@@ -1228,13 +1214,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) CGFloat size;
         [Export("size")]
         nfloat Size { get; set; }
-    }
+    //}
 
     // @interface FrameLayout (SJEdgeControlButtonItem)
-    [Category]
-    [BaseType(typeof(SJEdgeControlButtonItem))]
-    interface SJEdgeControlButtonItem_FrameLayout
-    {
+    //[Category]
+    //[BaseType(typeof(SJEdgeControlButtonItem))]
+    //interface SJEdgeControlButtonItem_FrameLayout
+    //{
         // +(instancetype _Nonnull)frameLayoutWithCustomView:(__kindof UIView * _Nonnull)customView tag:(SJEdgeControlButtonItemTag)tag;
         [Static]
         [Export("frameLayoutWithCustomView:tag:")]
@@ -1243,13 +1229,13 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, nonatomic) BOOL isFrameLayout;
         [Export("isFrameLayout")]
         bool IsFrameLayout();
-    }
+    //}
 
     // @interface SJDeprecated (SJEdgeControlButtonItem)
-    [Category]
-    [BaseType(typeof(SJEdgeControlButtonItem))]
-    interface SJEdgeControlButtonItem_SJDeprecated
-    {
+    //[Category]
+    //[BaseType(typeof(SJEdgeControlButtonItem))]
+    //interface SJEdgeControlButtonItem_SJDeprecated
+    //{
         // -(void)addTarget:(id _Nonnull)target action:(SEL _Nonnull)action __attribute__((deprecated("use `addAction:`;")));
         [Export("addTarget:action:")]
         void AddTarget(NSObject target, Selector action);
@@ -1257,6 +1243,26 @@ namespace IJKPlayer.SJPlayer
         // -(void)performAction __attribute__((deprecated("use `performActions`;")));
         [Export("performAction")]
         void PerformAction();
+    //}
+
+    // @interface SJControlLayerExtended (SJEdgeControlButtonItem)
+    //[Category]
+    //[BaseType(typeof(SJEdgeControlButtonItem))]
+    //interface SJEdgeControlButtonItem_SJControlLayerExtended
+    //{
+        // @property (nonatomic) BOOL resetsAppearIntervalWhenPerformingItemAction;
+        [Export("resetsAppearIntervalWhenPerformingItemAction")]
+        bool ResetsAppearIntervalWhenPerformingItemAction { get; set; }
+    //}
+
+    // @interface SJInternal (SJEdgeControlButtonItem)
+    //[Category]
+    //[BaseType(typeof(SJEdgeControlButtonItem))]
+    //interface SJEdgeControlButtonItem_SJInternal
+    //{
+        // @property (getter = isInnerHidden, nonatomic) BOOL innerHidden;
+        [Export("innerHidden")]
+        bool InnerHidden { get; set; }
     }
 
     // @interface SJEdgeControlButtonItemAction : NSObject
@@ -1955,6 +1961,27 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic, weak) id<SJEdgeControlLayerDelegate> _Nullable delegate;
         [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
         NSObject WeakDelegate { get; set; }
+    //}
+
+    // @interface SJVideoPlayerExtended (SJEdgeControlLayer)
+    //[Category]
+    //[BaseType(typeof(SJEdgeControlLayer))]
+    //interface SJEdgeControlLayer_SJVideoPlayerExtended
+    //{
+        // @property (nonatomic) BOOL showsMoreItem;
+        [Export("showsMoreItem")]
+        bool GetShowsMoreItem();
+
+        [Export("showsMoreItem")]
+        void SetShowsMoreItem(bool showsMoreItem);
+
+        // @property (getter = isEnabledClips, nonatomic) BOOL enabledClips;
+        [Export("enabledClips")]
+        bool EnabledClips { get; set; }
+
+        // @property (nonatomic, strong, null_resettable) SJVideoPlayerClipsConfig * _Null_unspecified clipsConfig;
+        [Export("clipsConfig")]
+        SJVideoPlayerClipsConfig? ClipsConfig { get; set; }
     }
 
     // @protocol SJEdgeControlLayerDelegate <NSObject>
@@ -1966,16 +1993,6 @@ namespace IJKPlayer.SJPlayer
         [Abstract]
         [Export("backItemWasTappedForControlLayer:")]
         void BackItemWasTappedForControlLayer(SJControlLayer controlLayer);
-    }
-
-    // @interface SJControlLayerExtended (SJEdgeControlButtonItem)
-    [Category]
-    [BaseType(typeof(SJEdgeControlButtonItem))]
-    interface SJEdgeControlButtonItem_SJControlLayerExtended
-    {
-        // @property (nonatomic) BOOL resetsAppearIntervalWhenPerformingItemAction;
-        [Export("resetsAppearIntervalWhenPerformingItemAction")]
-        bool ResetsAppearIntervalWhenPerformingItemAction { get; set; }
     }
 
     // @interface SJClipsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -2124,20 +2141,6 @@ namespace IJKPlayer.SJPlayer
     {
     }
 
-    // @interface SJExtendedDefinition (SJVideoPlayerURLAsset)
-    [Category]
-    [BaseType(typeof(SJVideoPlayerURLAsset))]
-    interface SJVideoPlayerURLAsset_SJExtendedDefinition
-    {
-        // @property (copy, nonatomic) NSString * _Nullable definition_fullName;
-        [Export("definition_fullName")]
-        string? DefinitionFullName { get; set; }
-
-        // @property (copy, nonatomic) NSString * _Nullable definition_lastName;
-        [Export("definition_lastName")]
-        string? DefinitionLastName { get; set; }
-    }
-
     // @interface SJVideoDefinitionSwitchingControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
     [BaseType(typeof(SJEdgeControlLayerAdapters))]
     interface SJVideoDefinitionSwitchingControlLayer : SJControlLayer
@@ -2257,13 +2260,13 @@ namespace IJKPlayer.SJPlayer
         [Export("version")]
         //[Verify(MethodToProperty)]
         string Version { get; }
-    }
+    //}
 
     // @interface CommonSettings (SJVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJVideoPlayer))]
-    interface SJVideoPlayer_CommonSettings
-    {
+    //[Category]
+    //[BaseType(typeof(SJVideoPlayer))]
+    //interface SJVideoPlayer_CommonSettings
+    //{
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(id<SJVideoPlayerControlLayerResources> _Nonnull)) updateResources;
         [Static]
         [Export("updateResources", ArgumentSemantic.Copy)]
@@ -2283,13 +2286,13 @@ namespace IJKPlayer.SJPlayer
         [Static]
         [Export("update", ArgumentSemantic.Copy)]
         Action<SJVideoPlayerConfigurationsArgumentAction> Update();
-    }
+    //}
 
     // @interface SJExtendedVideoDefinitionSwitchingControlLayer (SJVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJVideoPlayer))]
-    interface SJVideoPlayer_SJExtendedVideoDefinitionSwitchingControlLayer
-    {
+    //[Category]
+    //[BaseType(typeof(SJVideoPlayer))]
+    //interface SJVideoPlayer_SJExtendedVideoDefinitionSwitchingControlLayer
+    //{
         // @property (copy, nonatomic) NSArray<SJVideoPlayerURLAsset *> * _Nullable definitionURLAssets;
         [Export("definitionURLAssets")]
         SJVideoPlayerURLAsset[]? DefinitionURLAssets { get; set; }
@@ -2297,13 +2300,13 @@ namespace IJKPlayer.SJPlayer
         // @property (getter = isDisabledDefinitionSwitchingPrompt, nonatomic) BOOL disabledDefinitionSwitchingPrompt;
         [Export("disabledDefinitionSwitchingPrompt")]
         bool DisabledDefinitionSwitchingPrompt { get; set; }
-    }
+    //}
 
     // @interface RotationOrFitOnScreen (SJVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJVideoPlayer))]
-    interface SJVideoPlayer_RotationOrFitOnScreen
-    {
+    //[Category]
+    //[BaseType(typeof(SJVideoPlayer))]
+    //interface SJVideoPlayer_RotationOrFitOnScreen
+    //{
         // @property (nonatomic) BOOL automaticallyPerformRotationOrFitOnScreen;
         [Export("automaticallyPerformRotationOrFitOnScreen")]
         bool AutomaticallyPerformRotationOrFitOnScreen { get; set; }
@@ -2311,34 +2314,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) BOOL needsFitOnScreenFirst;
         [Export("needsFitOnScreenFirst")]
         bool NeedsFitOnScreenFirst { get; set; }
-    }
-
-    // @interface SJVideoPlayerExtended (SJEdgeControlLayer)
-    [Category]
-    [BaseType(typeof(SJEdgeControlLayer))]
-    interface SJEdgeControlLayer_SJVideoPlayerExtended
-    {
-        // @property (nonatomic) BOOL showsMoreItem;
-        [Export("showsMoreItem")]
-        bool GetShowsMoreItem();
-
-        [Export("showsMoreItem")]
-        void SetShowsMoreItem(bool showsMoreItem);
-
-        // @property (getter = isEnabledClips, nonatomic) BOOL enabledClips;
-        [Export("enabledClips")]
-        bool EnabledClips { get; set; }
-
-        // @property (nonatomic, strong, null_resettable) SJVideoPlayerClipsConfig * _Null_unspecified clipsConfig;
-        [Export("clipsConfig")]
-        SJVideoPlayerClipsConfig? ClipsConfig { get; set; }
-    }
+    //}
 
     // @interface SJExtendedControlLayerSwitcher (SJVideoPlayer)
-    [Category]
-    [BaseType(typeof(SJVideoPlayer))]
-    interface SJVideoPlayer_SJExtendedControlLayerSwitcher
-    {
+    //[Category]
+    //[BaseType(typeof(SJVideoPlayer))]
+    //interface SJVideoPlayer_SJExtendedControlLayerSwitcher
+    //{
         // -(void)switchControlLayerForIdentifier:(SJControlLayerIdentifier)identifier;
         [Export("switchControlLayerForIdentifier:")]
         void SwitchControlLayerForIdentifier(nint identifier);
@@ -2475,7 +2457,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     // @interface SJAnimationAdded (UIView)
-    [Category]
+    //[Category]
     [BaseType(typeof(UIView))]
     interface UIView_SJAnimationAdded
     {
@@ -2494,16 +2476,6 @@ namespace IJKPlayer.SJPlayer
         // -(void)sjv_appear;
         [Export("sjv_appear")]
         void Sjv_appear();
-    }
-
-    // @interface SJInternal (SJEdgeControlButtonItem)
-    [Category]
-    [BaseType(typeof(SJEdgeControlButtonItem))]
-    interface SJEdgeControlButtonItem_SJInternal
-    {
-        // @property (getter = isInnerHidden, nonatomic) BOOL innerHidden;
-        [Export("innerHidden")]
-        bool InnerHidden { get; set; }
     }
 
     // @interface SJEdgeControlButtonItemView : UIControl
@@ -2614,13 +2586,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic, strong) UIColor * _Nonnull loadingColor;
         [Export("loadingColor", ArgumentSemantic.Strong)]
         UIColor LoadingColor { get; set; }
-    }
+    //}
 
     // @interface Prompt (SJProgressSlider)
-    [Category]
-    [BaseType(typeof(SJProgressSlider))]
-    interface SJProgressSlider_Prompt
-    {
+    //[Category]
+    //[BaseType(typeof(SJProgressSlider))]
+    //interface SJProgressSlider_Prompt
+    //{
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull promptLabel;
         [Export("promptLabel", ArgumentSemantic.Strong)]
         UILabel PromptLabel();
@@ -2628,13 +2600,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) CGFloat promptSpacing;
         [Export("promptSpacing")]
         nfloat PromptSpacing { get; set; }
-    }
+    //}
 
     // @interface Border (SJProgressSlider)
-    [Category]
-    [BaseType(typeof(SJProgressSlider))]
-    interface SJProgressSlider_Border
-    {
+    //[Category]
+    //[BaseType(typeof(SJProgressSlider))]
+    //interface SJProgressSlider_Border
+    //{
         // @property (nonatomic) BOOL showsBorder;
         [Export("showsBorder")]
         bool ShowsBorder { get; set; }
@@ -2646,13 +2618,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) CGFloat borderWidth;
         [Export("borderWidth")]
         nfloat BorderWidth { get; set; }
-    }
+    //}
 
     // @interface Buffer (SJProgressSlider)
-    [Category]
-    [BaseType(typeof(SJProgressSlider))]
-    interface SJProgressSlider_Buffer
-    {
+    //[Category]
+    //[BaseType(typeof(SJProgressSlider))]
+    //interface SJProgressSlider_Buffer
+    //{
         // @property (nonatomic) BOOL showsBufferProgress;
         [Export("showsBufferProgress")]
         bool ShowsBufferProgress { get; set; }
@@ -2664,13 +2636,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) CGFloat bufferProgress;
         [Export("bufferProgress")]
         nfloat BufferProgress { get; set; }
-    }
+    //}
 
     // @interface StopNode (SJProgressSlider)
-    [Category]
-    [BaseType(typeof(SJProgressSlider))]
-    interface SJProgressSlider_StopNode
-    {
+    //[Category]
+    //[BaseType(typeof(SJProgressSlider))]
+    //interface SJProgressSlider_StopNode
+    //{
         // @property (nonatomic) BOOL showsStopNode;
         [Export("showsStopNode")]
         bool ShowsStopNode { get; set; }

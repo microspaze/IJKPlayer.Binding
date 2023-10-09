@@ -1669,6 +1669,34 @@ namespace IJKPlayer.SJPlayer
         // @property (copy, nonatomic) NSArray<SJSubtitleItem *> * _Nullable subtitles;
         [Export("subtitles")]
         SJSubtitleItem[]? Subtitles { get; set; }
+    //}
+
+    // @interface SJControlAdd (SJVideoPlayerURLAsset)
+    //[Category]
+    //[BaseType(typeof(SJVideoPlayerURLAsset))]
+    //interface SJVideoPlayerURLAsset_SJControlAdd
+    //{
+        // @property (copy, nonatomic) NSString * _Nullable title;
+        [Export("title")]
+        string? Title { get; set; }
+
+        // @property (copy, nonatomic) NSAttributedString * _Nullable attributedTitle;
+        [Export("attributedTitle")]
+        NSAttributedString? AttributedTitle { get; set; }
+    //}
+
+    // @interface SJExtendedDefinition (SJVideoPlayerURLAsset)
+    //[Category]
+    //[BaseType(typeof(SJVideoPlayerURLAsset))]
+    //interface SJVideoPlayerURLAsset_SJExtendedDefinition
+    //{
+        // @property (copy, nonatomic) NSString * _Nullable definition_fullName;
+        [Export("definition_fullName")]
+        string? DefinitionFullName { get; set; }
+
+        // @property (copy, nonatomic) NSString * _Nullable definition_lastName;
+        [Export("definition_lastName")]
+        string? DefinitionLastName { get; set; }
     }
 
     // @protocol SJVideoPlayerURLAssetObserver <NSObject>
@@ -1945,16 +1973,16 @@ namespace IJKPlayer.SJPlayer
     //interface SJVideoDefinitionSwitchingInfo_Private
     //{
         // @property (nonatomic, weak) SJVideoPlayerURLAsset * _Nullable currentPlayingAsset;
-        [Export("currentPlayingAsset")]
-        SJVideoPlayerURLAsset? CurrentPlayingAsset { get; set; }
+        //[Export("currentPlayingAsset")]
+        //SJVideoPlayerURLAsset? CurrentPlayingAsset { get; set; }
 
         // @property (nonatomic, weak) SJVideoPlayerURLAsset * _Nullable switchingAsset;
-        [Export("switchingAsset")]
-        SJVideoPlayerURLAsset? SwitchingAsset { get; set; }
+        //[Export("switchingAsset")]
+        //SJVideoPlayerURLAsset? SwitchingAsset { get; set; }
 
         // @property (nonatomic) SJDefinitionSwitchStatus status;
-        [Export("status")]
-        SJDefinitionSwitchStatus Status { get; set; }
+        //[Export("status")]
+        //SJDefinitionSwitchStatus Status { get; set; }
     }
 
     // @interface SJVideoDefinitionSwitchingInfoObserver : NSObject
@@ -3415,12 +3443,12 @@ namespace IJKPlayer.SJPlayer
         nint Id { get; set; }
 
         // @property (nonatomic) NSTimeInterval createdTime;
-        [Export("createdTime")]
-        double CreatedTime { get; set; }
+        //[Export("createdTime")]
+        //double CreatedTime { get; set; }
 
         // @property (nonatomic) NSTimeInterval updatedTime;
-        [Export("updatedTime")]
-        double UpdatedTime { get; set; }
+        //[Export("updatedTime")]
+        //double UpdatedTime { get; set; }
     //}
 
     // @interface SJSQLite3Extended (SJPlaybackRecord) <SJSQLiteTableModelProtocol>
@@ -4849,8 +4877,8 @@ namespace IJKPlayer.SJPlayer
     //interface SJPlayerView_Internal
     //{
         // @property (nonatomic, strong) UIView * _Nullable presentView;
-        [Export("presentView")]
-        UIView? PresentView { get; set; }
+        //[Export("presentView")]
+        //UIView? PresentView { get; set; }
     }
 
     // @protocol SJPlayerViewDelegate <NSObject>
@@ -5436,8 +5464,8 @@ namespace IJKPlayer.SJPlayer
         bool PrefersStatusBarHiddenForRotationFullscreenViewController(SJRotationFullscreenViewController viewController);
 
         // -(UIInterfaceOrientationMask)supportedInterfaceOrientationsForWindow:(UIWindow * _Nullable)window;
-        [Export("supportedInterfaceOrientationsForWindow:")]
-        UIInterfaceOrientationMask SupportedInterfaceOrientationsForWindow(UIWindow window);
+        //[Export("supportedInterfaceOrientationsForWindow:")]
+        //UIInterfaceOrientationMask SupportedInterfaceOrientationsForWindow(UIWindow window);
 
         // -(__kindof SJRotationFullscreenViewController * _Nonnull)rotationFullscreenViewController;
         [Export("rotationFullscreenViewController")]
@@ -5475,8 +5503,8 @@ namespace IJKPlayer.SJPlayer
         SJOrientation DeviceOrientation();
 
         // @property (nonatomic) SJOrientation currentOrientation;
-        [Export("currentOrientation")]
-        SJOrientation CurrentOrientation { get; set; }
+        //[Export("currentOrientation")]
+        //SJOrientation CurrentOrientation { get; set; }
 
         // -(void)rotationBegin __attribute__((objc_requires_super));
         [Export("rotationBegin")]
