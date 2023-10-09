@@ -2135,7 +2135,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) UIImageView * _Nonnull placeholderImageView;
         [Abstract]
         [Export("placeholderImageView", ArgumentSemantic.Strong)]
-        UIImageView PlaceholderImageView();
+        UIImageView PlaceholderImageView { get; }
 
         // @required @property (readonly, getter = isPlaceholderImageViewHidden, nonatomic) BOOL placeholderImageViewHidden;
         [Abstract]
@@ -2535,21 +2535,15 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (readonly, nonatomic, strong) UIView<SJVideoPlayerPresentView> * _Nonnull presentView;
         [Export("presentView", ArgumentSemantic.Strong)]
-        SJVideoPlayerPresentView PresentView();
+        SJVideoPlayerPresentView PresentView { get; }
 
         // @property (nonatomic) BOOL automaticallyHidesPlaceholderImageView;
         [Export("automaticallyHidesPlaceholderImageView")]
-        bool GetAutomaticallyHidesPlaceholderImageView();
-        
-        [Export("setautomaticallyHidesPlaceholderImageView:")]
-        void SetAutomaticallyHidesPlaceholderImageView(bool automaticallyHidesPlaceholderImageView);
+        bool GetAutomaticallyHidesPlaceholderImageView { get; set; }
 
         // @property (nonatomic) NSTimeInterval delayInSecondsForHiddenPlaceholderImageView;
         [Export("delayInSecondsForHiddenPlaceholderImageView")]
-        double GetDelayInSecondsForHiddenPlaceholderImageView();
-        
-        [Export("setdelayInSecondsForHiddenPlaceholderImageView:")]
-        void SetDelayInSecondsForHiddenPlaceholderImageView(double delayInSecondsForHiddenPlaceholderImageView);
+        double GetDelayInSecondsForHiddenPlaceholderImageView { get; set; }
     //}
 
     // @interface VideoFlipTransition (SJBaseVideoPlayer)
@@ -2747,24 +2741,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (getter = isMuted, nonatomic) BOOL muted;
         [Export("muted")]
-        bool GetMuted();
-        
-        [Export("setmuted:")]
-        void SetMuted(bool muted);
+        bool Muted { get; set; }
 
         // @property (nonatomic) float playerVolume;
         [Export("playerVolume")]
-        float GetPlayerVolume();
-        
-        [Export("setplayerVolume:")]
-        void SetPlayerVolume(float playerVolume);
+        float PlayerVolume { get; set; }
 
         // @property (nonatomic) float rate;
         [Export("rate")]
-        float GetRate();
-        
-        [Export("setrate:")]
-        void SetRate(float rate);
+        float Rate { get; set; }
 
         // @property (readonly, nonatomic) NSTimeInterval currentTime;
         [Export("currentTime")]
@@ -2804,52 +2789,31 @@ namespace IJKPlayer.SJPlayer
 
         // @property (getter = isPausedInBackground, nonatomic) BOOL pausedInBackground;
         [Export("pausedInBackground")]
-        bool GetPausedInBackground();
-        
-        [Export("setpausedInBackground:")]
-        void SetPausedInBackground(bool pausedInBackground);
+        bool PausedInBackground { get; set; }
 
         // @property (nonatomic) BOOL autoplayWhenSetNewAsset;
         [Export("autoplayWhenSetNewAsset")]
-        bool GetAutoplayWhenSetNewAsset();
-        
-        [Export("setautoplayWhenSetNewAsset:")]
-        void SetAutoplayWhenSetNewAsset(bool autoplayWhenSetNewAsset);
+        bool AutoplayWhenSetNewAsset { get; set; }
 
         // @property (nonatomic) BOOL resumePlaybackWhenAppDidEnterForeground;
         [Export("resumePlaybackWhenAppDidEnterForeground")]
-        bool GetResumePlaybackWhenAppDidEnterForeground();
-        
-        [Export("setresumePlaybackWhenAppDidEnterForeground:")]
-        void SetResumePlaybackWhenAppDidEnterForeground(bool resumePlaybackWhenAppDidEnterForeground);
+        bool ResumePlaybackWhenAppDidEnterForeground { get; set; }
 
         // @property (nonatomic) BOOL resumePlaybackWhenPlayerHasFinishedSeeking;
         [Export("resumePlaybackWhenPlayerHasFinishedSeeking")]
-        bool GetResumePlaybackWhenPlayerHasFinishedSeeking();
-        
-        [Export("setresumePlaybackWhenPlayerHasFinishedSeeking:")]
-        void SetResumePlaybackWhenPlayerHasFinishedSeeking(bool resumePlaybackWhenPlayerHasFinishedSeeking);
+        bool ResumePlaybackWhenPlayerHasFinishedSeeking { get; set; }
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) canPlayAnAsset;
         [Export("canPlayAnAsset")]
-        Func<SJBaseVideoPlayer, bool>? GetCanPlayAnAsset();
-        
-        [Export("setcanPlayAnAsset:")]
-        void SetCanPlayAnAsset(Func<SJBaseVideoPlayer, bool>? canPlayAnAsset);
+        Func<SJBaseVideoPlayer, bool>? CanPlayAnAsset { get; set; }
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) canSeekToTime;
         [Export("canSeekToTime")]
-        Func<SJBaseVideoPlayer, bool>? GetCanSeekToTime();
-        
-        [Export("setcanSeekToTime:")]
-        void SetCanSeekToTime(Func<SJBaseVideoPlayer, bool>? canSeekToTime);
+        Func<SJBaseVideoPlayer, bool>? CanSeekToTime { get; set; }
 
         // @property (nonatomic) BOOL accurateSeeking;
         [Export("accurateSeeking")]
-        bool GetAccurateSeeking();
-        
-        [Export("setaccurateSeeking:")]
-        void SetAccurateSeeking(bool accurateSeeking);
+        bool AccurateSeeking { get; set; }
 
         // -(void)seekToTime:(NSTimeInterval)secs completionHandler:(void (^ _Nullable)(BOOL))completionHandler;
         [Export("seekToTime:completionHandler:")]

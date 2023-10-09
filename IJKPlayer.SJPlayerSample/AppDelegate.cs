@@ -38,6 +38,8 @@ public class AppDelegate : UIApplicationDelegate {
 		controller.Options = options;
         player.IJKPlaybackController = controller;
         player.URLAsset = urlAsset;
+		player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
+        player.Pause();
         UIView playerView = player.View;
         playerView.BackgroundColor = UIColor.Black;
 		playerView.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
