@@ -612,172 +612,13 @@ namespace IJKPlayer.SJPlayer
         // -(instancetype _Nonnull)initWithRecorder:(SJAttributesRecorder * _Nonnull)recorder target:(NSMutableAttributedString * _Nonnull)attrStr;
         [Export("initWithRecorder:target:")]
         NativeHandle Constructor(SJAttributesRecorder recorder, NSMutableAttributedString attrStr);
-    }
-
-    // @interface SJAttributeWorker : SJAttributesRangeOperator
-    [BaseType(typeof(SJAttributesRangeOperator))]
-    interface SJAttributeWorker
-    {
-        // @property (readonly, nonatomic) NSRange range;
-        [Export("range")]
-        NSRange Range();
-
-        // @property (readonly, nonatomic) NSMutableAttributedString * _Nonnull workInProcess;
-        [Export("workInProcess")]
-        NSMutableAttributedString WorkInProcess();
-
-        // -(NSMutableAttributedString * _Nonnull)endTask;
-        [Export("endTask")]
-        //[Verify(MethodToProperty)]
-        NSMutableAttributedString EndTask();
-
-        // -(NSMutableAttributedString * _Nonnull)endTaskAndComplete:(void (^ _Nonnull)(SJAttributeWorker * _Nonnull))block;
-        [Export("endTaskAndComplete:")]
-        NSMutableAttributedString EndTaskAndComplete(SJAttributeWorkerArgumentAction block);
-
-        // @property (nonatomic, strong, null_resettable) UIFont * _Null_unspecified defaultFont;
-        [NullAllowed, Export("defaultFont", ArgumentSemantic.Strong)]
-        UIFont DefaultFont { get; set; }
-
-        // @property (nonatomic, strong, null_resettable) UIColor * _Null_unspecified defaultTextColor;
-        [NullAllowed, Export("defaultTextColor", ArgumentSemantic.Strong)]
-        UIColor DefaultTextColor { get; set; }
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSRange, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) rangeEdit;
-        [Export("rangeEdit", ArgumentSemantic.Copy)]
-        Func<NSRange, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> RangeEdit();
-
-        // @property (readonly, copy, nonatomic) NSAttributedString * _Nonnull (^ _Nonnull)(NSRange) subAttrStr;
-        [Export("subAttrStr", ArgumentSemantic.Copy)]
-        Func<NSRange, NSAttributedString> SubAttrStr();
-
-        // @property (readonly, nonatomic) NSInteger length;
-        [Export("length")]
-        nint Length();
-    }
-
-    // @interface Regexp (SJAttributeWorker)
-    [Category]
-    [BaseType(typeof(SJAttributeWorker))]
-    interface SJAttributeWorker_Regexp
-    {
-        // @property (readwrite, nonatomic) NSRegularExpressionOptions regexpOptions;
-        [Export("regexpOptions")]
-        NSRegularExpressionOptions GetRegexpOptions();
-
-        [Export("setregexpOptions:")]
-        void SetRegexpOptions(NSRegularExpressionOptions options);
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) regexp;
-        [Export("regexp", ArgumentSemantic.Copy)]
-        Func<NSString, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> Regexp();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(NSArray<NSValue *> * _Nonnull), BOOL) regexp_r;
-        [Export("regexp_r", ArgumentSemantic.Copy)]
-        Func<NSString, NSArrayNSValueArgumentAction, bool, SJAttributeWorker> Regexp_r();
-
-        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, id _Nonnull, ...) regexp_replace;
-        [Export("regexp_replace", ArgumentSemantic.Copy)]
-        Action<NSString, NSObject, IntPtr> Regexp_replace();
-
-        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, SJAttributeRegexpInsertPosition, id _Nonnull, ...) regexp_insert;
-        [Export("regexp_insert", ArgumentSemantic.Copy)]
-        Action<NSString, SJAttributeRegexpInsertPosition, NSObject, IntPtr> Regexp_insert();
-    }
-
-    // @interface Size (SJAttributeWorker)
-    [Category]
-    [BaseType(typeof(SJAttributeWorker))]
-    interface SJAttributeWorker_Size
-    {
-        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(void) size;
-        [Export("size", ArgumentSemantic.Copy)]
-        Func<CGSize> Size();
-
-        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(NSRange) sizeByRange;
-        [Export("sizeByRange", ArgumentSemantic.Copy)]
-        Func<NSRange, CGSize> SizeByRange();
-
-        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(double) sizeByWidth;
-        [Export("sizeByWidth", ArgumentSemantic.Copy)]
-        Func<double, CGSize> SizeByWidth();
-
-        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(double) sizeByHeight;
-        [Export("sizeByHeight", ArgumentSemantic.Copy)]
-        Func<double, CGSize> SizeByHeight();
-    }
-
-    // @interface Insert (SJAttributeWorker)
-    [Category]
-    [BaseType(typeof(SJAttributeWorker))]
-    interface SJAttributeWorker_Insert
-    {
-        // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(id _Nonnull, ...) append;
-        [Export("append", ArgumentSemantic.Copy)]
-        Func<NSObject, IntPtr, SJAttributesRangeOperator> Append();
-
-        // @property (readonly, nonatomic) NSRange lastInsertedRange;
-        [Export("lastInsertedRange")]
-        NSRange LastInsertedRange();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) lastInserted;
-        [Export("lastInserted", ArgumentSemantic.Copy)]
-        Func<SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> LastInserted();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedStringKey _Nonnull, id _Nonnull, NSRange) add;
-        [Export("add", ArgumentSemantic.Copy)]
-        Func<NSString, NSObject, NSRange, SJAttributeWorker> Add();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, NSInteger) insertText;
-        [Export("insertText", ArgumentSemantic.Copy)]
-        Func<NSString, nint, SJAttributeWorker> InsertText();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(UIImage * _Nonnull, NSInteger, CGPoint, CGSize) insertImage;
-        [Export("insertImage", ArgumentSemantic.Copy)]
-        Func<UIImage, nint, CGPoint, CGSize, SJAttributeWorker> InsertImage();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull, NSInteger) insertAttrStr;
-        [Export("insertAttrStr", ArgumentSemantic.Copy)]
-        Func<NSAttributedString, nint, SJAttributeWorker> InsertAttrStr();
-
-        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(id _Nonnull, NSInteger, ...) insert;
-        [Export("insert", ArgumentSemantic.Copy)]
-        Func<NSObject, nint, IntPtr, SJAttributeWorker> Insert();
-    }
-
-    // @interface Replace (SJAttributeWorker)
-    [Category]
-    [BaseType(typeof(SJAttributeWorker))]
-    interface SJAttributeWorker_Replace
-    {
-        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange, id _Nonnull, ...) replace;
-        [Export("replace", ArgumentSemantic.Copy)]
-        Action<NSRange, NSObject, IntPtr> Replace();
-    }
-
-    // @interface Delete (SJAttributeWorker)
-    [Category]
-    [BaseType(typeof(SJAttributeWorker))]
-    interface SJAttributeWorker_Delete
-    {
-        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange) removeText;
-        [Export("removeText", ArgumentSemantic.Copy)]
-        Action<NSRange> RemoveText();
-
-        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSAttributedStringKey _Nonnull, NSRange) removeAttribute;
-        [Export("removeAttribute", ArgumentSemantic.Copy)]
-        Action<NSString, NSRange> RemoveAttribute();
-
-        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange) removeAttributes;
-        [Export("removeAttributes", ArgumentSemantic.Copy)]
-        Action<NSRange> RemoveAttributes();
-    }
-
+    //}
+    
     // @interface Property (SJAttributesRangeOperator)
-    [Category]
-    [BaseType(typeof(SJAttributesRangeOperator))]
-    interface SJAttributesRangeOperator_Property
-    {
+    //[Category]
+    //[BaseType(typeof(SJAttributesRangeOperator))]
+    //interface SJAttributesRangeOperator_Property
+    //{
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIFont * _Nonnull) font;
         [Export("font", ArgumentSemantic.Copy)]
         Func<UIFont, SJAttributesRangeOperator> Font();
@@ -861,6 +702,162 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSLineBreakMode) lineBreakMode;
         [Export("lineBreakMode", ArgumentSemantic.Copy)]
         Func<UILineBreakMode, SJAttributesRangeOperator> LineBreakMode();
+    }
+
+    // @interface SJAttributeWorker : SJAttributesRangeOperator
+    [BaseType(typeof(SJAttributesRangeOperator))]
+    interface SJAttributeWorker
+    {
+        // @property (readonly, nonatomic) NSRange range;
+        [Export("range")]
+        NSRange Range();
+
+        // @property (readonly, nonatomic) NSMutableAttributedString * _Nonnull workInProcess;
+        [Export("workInProcess")]
+        NSMutableAttributedString WorkInProcess();
+
+        // -(NSMutableAttributedString * _Nonnull)endTask;
+        [Export("endTask")]
+        //[Verify(MethodToProperty)]
+        NSMutableAttributedString EndTask();
+
+        // -(NSMutableAttributedString * _Nonnull)endTaskAndComplete:(void (^ _Nonnull)(SJAttributeWorker * _Nonnull))block;
+        [Export("endTaskAndComplete:")]
+        NSMutableAttributedString EndTaskAndComplete(SJAttributeWorkerArgumentAction block);
+
+        // @property (nonatomic, strong, null_resettable) UIFont * _Null_unspecified defaultFont;
+        [NullAllowed, Export("defaultFont", ArgumentSemantic.Strong)]
+        UIFont DefaultFont { get; set; }
+
+        // @property (nonatomic, strong, null_resettable) UIColor * _Null_unspecified defaultTextColor;
+        [NullAllowed, Export("defaultTextColor", ArgumentSemantic.Strong)]
+        UIColor DefaultTextColor { get; set; }
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSRange, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) rangeEdit;
+        [Export("rangeEdit", ArgumentSemantic.Copy)]
+        Func<NSRange, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> RangeEdit();
+
+        // @property (readonly, copy, nonatomic) NSAttributedString * _Nonnull (^ _Nonnull)(NSRange) subAttrStr;
+        [Export("subAttrStr", ArgumentSemantic.Copy)]
+        Func<NSRange, NSAttributedString> SubAttrStr();
+
+        // @property (readonly, nonatomic) NSInteger length;
+        [Export("length")]
+        nint Length();
+    //}
+
+    // @interface Regexp (SJAttributeWorker)
+    //[Category]
+    //[BaseType(typeof(SJAttributeWorker))]
+    //interface SJAttributeWorker_Regexp
+    //{
+        // @property (readwrite, nonatomic) NSRegularExpressionOptions regexpOptions;
+        [Export("regexpOptions")]
+        NSRegularExpressionOptions RegexpOptions { get; set }
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) regexp;
+        [Export("regexp", ArgumentSemantic.Copy)]
+        Func<NSString, SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> Regexp();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(NSArray<NSValue *> * _Nonnull), BOOL) regexp_r;
+        [Export("regexp_r", ArgumentSemantic.Copy)]
+        Func<NSString, NSArrayNSValueArgumentAction, bool, SJAttributeWorker> Regexp_r();
+
+        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, id _Nonnull, ...) regexp_replace;
+        [Export("regexp_replace", ArgumentSemantic.Copy)]
+        Action<NSString, NSObject, IntPtr> Regexp_replace();
+
+        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSString * _Nonnull, SJAttributeRegexpInsertPosition, id _Nonnull, ...) regexp_insert;
+        [Export("regexp_insert", ArgumentSemantic.Copy)]
+        Action<NSString, SJAttributeRegexpInsertPosition, NSObject, IntPtr> Regexp_insert();
+    //}
+
+    // @interface Size (SJAttributeWorker)
+    //[Category]
+    //[BaseType(typeof(SJAttributeWorker))]
+    //interface SJAttributeWorker_Size
+    //{
+        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(void) size;
+        [Export("size", ArgumentSemantic.Copy)]
+        Func<CGSize> Size();
+
+        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(NSRange) sizeByRange;
+        [Export("sizeByRange", ArgumentSemantic.Copy)]
+        Func<NSRange, CGSize> SizeByRange();
+
+        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(double) sizeByWidth;
+        [Export("sizeByWidth", ArgumentSemantic.Copy)]
+        Func<double, CGSize> SizeByWidth();
+
+        // @property (readonly, copy, nonatomic) CGSize (^ _Nonnull)(double) sizeByHeight;
+        [Export("sizeByHeight", ArgumentSemantic.Copy)]
+        Func<double, CGSize> SizeByHeight();
+    //}
+
+    // @interface Insert (SJAttributeWorker)
+    //[Category]
+    //[BaseType(typeof(SJAttributeWorker))]
+    //interface SJAttributeWorker_Insert
+    //{
+        // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(id _Nonnull, ...) append;
+        [Export("append", ArgumentSemantic.Copy)]
+        Func<NSObject, IntPtr, SJAttributesRangeOperator> Append();
+
+        // @property (readonly, nonatomic) NSRange lastInsertedRange;
+        [Export("lastInsertedRange")]
+        NSRange LastInsertedRange();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) lastInserted;
+        [Export("lastInserted", ArgumentSemantic.Copy)]
+        Func<SJAttributesRangeOperatorArgumentAction, SJAttributeWorker> LastInserted();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedStringKey _Nonnull, id _Nonnull, NSRange) add;
+        [Export("add", ArgumentSemantic.Copy)]
+        Func<NSString, NSObject, NSRange, SJAttributeWorker> Add();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, NSInteger) insertText;
+        [Export("insertText", ArgumentSemantic.Copy)]
+        Func<NSString, nint, SJAttributeWorker> InsertText();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(UIImage * _Nonnull, NSInteger, CGPoint, CGSize) insertImage;
+        [Export("insertImage", ArgumentSemantic.Copy)]
+        Func<UIImage, nint, CGPoint, CGSize, SJAttributeWorker> InsertImage();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull, NSInteger) insertAttrStr;
+        [Export("insertAttrStr", ArgumentSemantic.Copy)]
+        Func<NSAttributedString, nint, SJAttributeWorker> InsertAttrStr();
+
+        // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(id _Nonnull, NSInteger, ...) insert;
+        [Export("insert", ArgumentSemantic.Copy)]
+        Func<NSObject, nint, IntPtr, SJAttributeWorker> Insert();
+    //}
+
+    // @interface Replace (SJAttributeWorker)
+    //[Category]
+    //[BaseType(typeof(SJAttributeWorker))]
+    //interface SJAttributeWorker_Replace
+    //{
+        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange, id _Nonnull, ...) replace;
+        [Export("replace", ArgumentSemantic.Copy)]
+        Action<NSRange, NSObject, IntPtr> Replace();
+    //}
+
+    // @interface Delete (SJAttributeWorker)
+    //[Category]
+    //[BaseType(typeof(SJAttributeWorker))]
+    //interface SJAttributeWorker_Delete
+    //{
+        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange) removeText;
+        [Export("removeText", ArgumentSemantic.Copy)]
+        Action<NSRange> RemoveText();
+
+        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSAttributedStringKey _Nonnull, NSRange) removeAttribute;
+        [Export("removeAttribute", ArgumentSemantic.Copy)]
+        Action<NSString, NSRange> RemoveAttribute();
+
+        // @property (readonly, copy, nonatomic) void (^ _Nonnull)(NSRange) removeAttributes;
+        [Export("removeAttributes", ArgumentSemantic.Copy)]
+        Action<NSRange> RemoveAttributes();
     }
 
     // @interface SJUTStroke : NSObject <SJUTStroke>

@@ -26,37 +26,37 @@ public class AppDelegate : UIApplicationDelegate {
 
 		IJKFFOptions options = IJKFFOptions.OptionsByDefault;
 		options.SetPlayerOptionIntValue(-1, "probesize");
-        options.SetPlayerOptionIntValue(0, "packet-buffering");
-        options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
-        //options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
-        SJVideoPlayer player = new SJVideoPlayer();
+		options.SetPlayerOptionIntValue(0, "packet-buffering");
+		options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
+		//options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
+		SJVideoPlayer player = new SJVideoPlayer();
 		SJVideoPlayerURLAsset urlAsset = new SJVideoPlayerURLAsset(
 			"Video Title",
 			new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
-            SJPlayModel_SJDeprecated.UIViewPlayModel);
-        SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
+			SJPlayModel_SJDeprecated.UIViewPlayModel);
+		SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
 		controller.Options = options;
-        player.IJKPlaybackController = controller;
-        player.URLAsset = urlAsset;
+		player.IJKPlaybackController = controller;
+		player.URLAsset = urlAsset;
 		player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
-        player.Pause();
-        UIView playerView = player.View;
-        playerView.BackgroundColor = UIColor.Black;
+		player.Pause();
+		UIView playerView = player.View;
+		playerView.BackgroundColor = UIColor.Black;
 		playerView.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
-        vc.View!.AddSubview(playerView);
+		vc.View!.AddSubview(playerView);
 		
 		Window.RootViewController = vc;
 
-        // make the window visible
-        Window.MakeKeyAndVisible ();
+		// make the window visible
+		Window.MakeKeyAndVisible ();
 
 		return true;
 	}
 
-    public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations(UIApplication application, [Transient] UIWindow forWindow)
-    {
+	public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations(UIApplication application, [Transient] UIWindow forWindow)
+	{
 		//return base.GetSupportedInterfaceOrientations(application, forWindow);
 		return SJRotationManager.SupportedInterfaceOrientationsForWindow(forWindow);
-    }
+	}
 }
 
