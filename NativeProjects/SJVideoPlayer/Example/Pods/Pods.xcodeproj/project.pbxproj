@@ -15,7 +15,6 @@
 			dependencies = (
 			);
 			name = PodIJKPlayer;
-			productName = PodIJKPlayer;
 		};
 /* End PBXAggregateTarget section */
 
@@ -389,7 +388,7 @@
 		6F8167B21E555BF843319B94DB304C60 /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 700EC1B5C49FB819CFDB7DF132F918FC /* MultipartMessageHeader.m */; };
 		6FB1CFAB05878E5DA02EB6C800862EAA /* SJVideoPlayerClipsParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 96762AFE87258DBDF8F5DF193702F1D1 /* SJVideoPlayerClipsParameters.m */; };
 		70DD97015669961F55DDF049BC91EC81 /* UIButton+AsyncLoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47911359819FE0CDFFBC6CBCD5456F61 /* UIButton+AsyncLoadImage.m */; };
-		70EB9BB78CDB7ED44A3E85A2869FB30A /* SJUIKit-MJRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D17FF47CCEDD9415766D4415C8050C45 /* SJUIKit-MJRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70EB9BB78CDB7ED44A3E85A2869FB30A /* SJUIKit-98d45660-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D17FF47CCEDD9415766D4415C8050C45 /* SJUIKit-98d45660-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		714DDD3E457A848124E91B675B672CAE /* SDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AECE9E23CBD5E1042C1587BD18BA0228 /* SDWeakProxy.m */; };
 		715AB2C777F6FCAB5EE0C667A909B698 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = AEB4E59F7AF0CDA742C42539BDCA9596 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715AECF67AAEEB0C2C8C953D1589B756 /* SJPresentationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C0510FE20E47726B389023ECE0B36 /* SJPresentationQueue.m */; };
@@ -653,7 +652,7 @@
 		B973F1DF06A12D8F62A3BE4743438ED6 /* Pods-iPadDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 550C94EC9D98407EEAF78D30DB88758D /* Pods-iPadDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B97771669E36181B476293DBFECBC63B /* MCSPrefetcherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F0960D180099102D11A3A3022BFE93 /* MCSPrefetcherManager.m */; };
 		B97904A031DE3696AA0C292B4B4D205B /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F588BC787A0C365DF2400EC14576808A /* SDWebImage-dummy.m */; };
-		B9819CE66BC1D3568D1C50F2CB95C6C5 /* SJUIKit-MJRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F3D70A0841AF7C3DC0B1A9C0BB11E /* SJUIKit-MJRefresh-dummy.m */; };
+		B9819CE66BC1D3568D1C50F2CB95C6C5 /* SJUIKit-98d45660-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F3D70A0841AF7C3DC0B1A9C0BB11E /* SJUIKit-98d45660-dummy.m */; };
 		B9B50CDE40FD12B3DE6716A978AF4707 /* SJQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D658999CDE884480EDC1713E77FDE /* SJQueue.m */; };
 		BA7E677A1FE26F3BF30AD701D571587A /* SDImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F5503298C1E41FBE64908A7C743D65AD /* SDImageGIFCoder.m */; };
 		BB4FA7C970C8E56215E705080993239E /* SJAttributeWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF3D2E20EF8E7CED51BEF5CEF0CFA2 /* SJAttributeWorker.m */; };
@@ -1066,7 +1065,7 @@
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EF627DF8F333CD0DEF8046D659DC9477;
-			remoteInfo = "SJUIKit-MJRefresh";
+			remoteInfo = "SJUIKit-98d45660";
 		};
 		F7E9F044AA3C6945BC43943820BD0EA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1198,12 +1197,12 @@
 		20083ABD4F1742E36FC05E9C7FF8EE96 /* SJRotationManager_iOS_9_15.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJRotationManager_iOS_9_15.m; sourceTree = "<group>"; };
 		204F8A8739DB6725E72949662BB738E9 /* SJSQLite3ColumnOrder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJSQLite3ColumnOrder.m; path = SJUIKit/SQLite3/Core/SJSQLite3ColumnOrder.m; sourceTree = "<group>"; };
 		207B5655C3AACD33A1EA966C234439D8 /* UIView+SJBaseVideoPlayerExtended.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+SJBaseVideoPlayerExtended.h"; sourceTree = "<group>"; };
-		20A3D1BA2AE6FEE1E8E32EDC0E267D2A /* SJUIKit-MJRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SJUIKit-MJRefresh-Info.plist"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh-Info.plist"; sourceTree = "<group>"; };
+		20A3D1BA2AE6FEE1E8E32EDC0E267D2A /* SJUIKit-98d45660-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SJUIKit-98d45660-Info.plist"; path = "../SJUIKit-98d45660/SJUIKit-98d45660-Info.plist"; sourceTree = "<group>"; };
 		217085CC1C594E7B89D697782C8A9B95 /* MCSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MCSLogger.m; path = SJMediaCacheServer/Core/Common/MCSLogger.m; sourceTree = "<group>"; };
 		217121325065F128AEBBC200335EC00B /* HTTPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTPServer.m; path = SJMediaCacheServer/KTVCocoaHTTPServer/Classes/HTTPServer.m; sourceTree = "<group>"; };
 		21D088028AAA8DF2EC60D5D068784EA7 /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/Core/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		220C02B822FF5B4F9A46DFFC8E861C72 /* NSImage+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+Compatibility.h"; path = "SDWebImage/Core/NSImage+Compatibility.h"; sourceTree = "<group>"; };
-		2286F7AFE34FFADAA219BCCC36DAD0E8 /* SJUIKit-MJRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SJUIKit-MJRefresh.modulemap"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh.modulemap"; sourceTree = "<group>"; };
+		2286F7AFE34FFADAA219BCCC36DAD0E8 /* SJUIKit-98d45660.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SJUIKit-98d45660.modulemap"; path = "../SJUIKit-98d45660/SJUIKit-98d45660.modulemap"; sourceTree = "<group>"; };
 		22AE6BB4CBA69CD4AA037FF3410FB8E0 /* MJRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.debug.xcconfig; sourceTree = "<group>"; };
 		22AEDE51F14350D8298EA128BC045844 /* SJWatermarkView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJWatermarkView.m; sourceTree = "<group>"; };
 		22D00D478EA61F06F4E596BE5A6BA9C9 /* SJPlaybackObservation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJPlaybackObservation.h; sourceTree = "<group>"; };
@@ -1260,7 +1259,7 @@
 		366AC9C86E96BCBFDF604B7A9261D121 /* UIScrollView+SJRefreshAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SJRefreshAdd.h"; path = "SJUIKit/Refresh/UIScrollView+SJRefreshAdd.h"; sourceTree = "<group>"; };
 		366DF34FB9295B6B29E9B94B9C4BA9C8 /* SDImageIOAnimatedCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOAnimatedCoder.m; path = SDWebImage/Core/SDImageIOAnimatedCoder.m; sourceTree = "<group>"; };
 		3704506998227222DA0FB7D8CF41FDB0 /* UIColor+SJPageMenuBarExtended.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SJPageMenuBarExtended.h"; path = "SJUIKit/PageViewController/Core/UIColor+SJPageMenuBarExtended.h"; sourceTree = "<group>"; };
-		370F689058C869E81EEF7961E35B35E2 /* SJUIKit-MJRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJUIKit-MJRefresh.debug.xcconfig"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh.debug.xcconfig"; sourceTree = "<group>"; };
+		370F689058C869E81EEF7961E35B35E2 /* SJUIKit-98d45660.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJUIKit-98d45660.debug.xcconfig"; path = "../SJUIKit-98d45660/SJUIKit-98d45660.debug.xcconfig"; sourceTree = "<group>"; };
 		3773C86B55B6F64B01B6E67B831FDF1C /* SJSQLiteTableModelConstraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJSQLiteTableModelConstraints.h; path = SJUIKit/SQLite3/Core/SJSQLiteTableModelConstraints.h; sourceTree = "<group>"; };
 		37AA109F60146998197578E106586C39 /* SJSQLiteTableInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJSQLiteTableInfo.h; path = SJUIKit/SQLite3/Core/SJSQLiteTableInfo.h; sourceTree = "<group>"; };
 		37F8BA061B556CE7FACD086BE55C141C /* MCSConsts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MCSConsts.m; path = SJMediaCacheServer/Core/Common/MCSConsts.m; sourceTree = "<group>"; };
@@ -1283,7 +1282,7 @@
 		3E17CEC741C559960B0D2CEB88140463 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
 		3E3872BFAD069A692D6DACE8CD0D055D /* SJPageMenuBarInterfaces.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJPageMenuBarInterfaces.h; path = SJUIKit/PageViewController/Core/SJPageMenuBarInterfaces.h; sourceTree = "<group>"; };
 		3EBAF7FB6C9D60D1A2F0EDBB0071B6A4 /* FILEPrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FILEPrefetcher.h; path = SJMediaCacheServer/Core/Prefetch/FILEPrefetcher.h; sourceTree = "<group>"; };
-		3F1F3D70A0841AF7C3DC0B1A9C0BB11E /* SJUIKit-MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SJUIKit-MJRefresh-dummy.m"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh-dummy.m"; sourceTree = "<group>"; };
+		3F1F3D70A0841AF7C3DC0B1A9C0BB11E /* SJUIKit-98d45660-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SJUIKit-98d45660-dummy.m"; path = "../SJUIKit-98d45660/SJUIKit-98d45660-dummy.m"; sourceTree = "<group>"; };
 		3F2FF45598E739C07366E1E16908F77F /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackNormalFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		3F39D41D7939AD0C43967550179AFB82 /* MCSError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MCSError.h; path = SJMediaCacheServer/Core/Common/MCSError.h; sourceTree = "<group>"; };
 		3F3A69A56BDBF6197C77CD3EBEC94185 /* SJMediaCacheServer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJMediaCacheServer-umbrella.h"; sourceTree = "<group>"; };
@@ -1348,7 +1347,7 @@
 		5312B1B186CFDF53171414410EB114B1 /* SJSQLite3+QueryExtended.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJSQLite3+QueryExtended.h"; path = "SJUIKit/SQLite3/SJSQLite3+QueryExtended.h"; sourceTree = "<group>"; };
 		53389018FD6C036C1791F6E2D79AAB97 /* SJVideoPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SJVideoPlayer.modulemap; sourceTree = "<group>"; };
 		5356701E4C87951F5CF8D0033A84D982 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/Core/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		53C07C1363758D6124E3B0E20BBCDB82 /* SJUIKit-MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJUIKit-MJRefresh-prefix.pch"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh-prefix.pch"; sourceTree = "<group>"; };
+		53C07C1363758D6124E3B0E20BBCDB82 /* SJUIKit-98d45660-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJUIKit-98d45660-prefix.pch"; path = "../SJUIKit-98d45660/SJUIKit-98d45660-prefix.pch"; sourceTree = "<group>"; };
 		53D4A8CFF094A3B88D8E62AF6E60F539 /* SJUIKit-68d28646-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SJUIKit-68d28646-Info.plist"; sourceTree = "<group>"; };
 		53DDCD3B973CC073A3F72F9FF25314A3 /* HTTPLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPLogging.h; path = SJMediaCacheServer/KTVCocoaHTTPServer/Classes/HTTPLogging.h; sourceTree = "<group>"; };
 		54211928638768F3E1416C816B528376 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
@@ -1459,7 +1458,7 @@
 		716354CBD977D30972FDF4E94DC69BCB /* SDImageAssetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAssetManager.m; path = SDWebImage/Private/SDImageAssetManager.m; sourceTree = "<group>"; };
 		71A472DEB09156E93009FFDE5EBB858E /* SJViewControllerManagerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJViewControllerManagerDefines.h; sourceTree = "<group>"; };
 		7307EF3B1D4599DE60DA0B695D00D045 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		732DC0A9BF9F6E6C51080D5D42EE9D6C /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		732DC0A9BF9F6E6C51080D5D42EE9D6C /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
 		739B73369838F84906EECAC786C570D4 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/Core/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		739F3DB9D8F5BFF3D2A9E46B036DF0B5 /* SJAttributeWorker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJAttributeWorker.h; path = SJUIKit/AttributesFactory/Deprecated/SJAttributeWorker.h; sourceTree = "<group>"; };
 		73B53C363B58B32A75AF069DD2235770 /* SJFullscreenModeStatusBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJFullscreenModeStatusBar.m; sourceTree = "<group>"; };
@@ -1470,7 +1469,7 @@
 		74F9C7D4EB6474AC423E76F593EDBBC1 /* SDImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoderHelper.h; path = SDWebImage/Core/SDImageCoderHelper.h; sourceTree = "<group>"; };
 		750ECDE9FE2256E83C8BDE5CD236A9DD /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
 		75A9616063F3EB4FBAB8C33A7D27F75C /* SJTextPopupControllerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJTextPopupControllerDefines.h; sourceTree = "<group>"; };
-		75D0F88B702A9CC1590CFE9486BB9C10 /* SJUIKit-MJRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJUIKit-MJRefresh.release.xcconfig"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh.release.xcconfig"; sourceTree = "<group>"; };
+		75D0F88B702A9CC1590CFE9486BB9C10 /* SJUIKit-98d45660.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJUIKit-98d45660.release.xcconfig"; path = "../SJUIKit-98d45660/SJUIKit-98d45660.release.xcconfig"; sourceTree = "<group>"; };
 		7610A6EAF999061BE8185A59709D3EE9 /* SJRouteObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJRouteObject.h; path = SJRouter/Core/SJRouteObject.h; sourceTree = "<group>"; };
 		767A27D5E8C548E617AA32BACAC016C7 /* SJUTAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJUTAttributes.m; path = SJUIKit/AttributesFactory/UIKitText/SJUTAttributes.m; sourceTree = "<group>"; };
 		7718BCE1271BF85AB79D0C7277803BDC /* SJClipsButtonContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJClipsButtonContainerView.h; sourceTree = "<group>"; };
@@ -1616,7 +1615,7 @@
 		9D4FE08C8B8315E58CD03EEF5CD17510 /* SJImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJImagePickerController.m; path = SJUIKit/Photo/SJImagePickerController.m; sourceTree = "<group>"; };
 		9D5E13FFD1E78C85430A4DC564440BDA /* SJIJKMediaPlaybackController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJIJKMediaPlaybackController.m; path = SJBaseVideoPlayer/IJKPlayer/SJIJKMediaPlaybackController.m; sourceTree = "<group>"; };
 		9D76702F1FFBAEA5F650A212AEBB8A06 /* SJUTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJUTUtils.h; path = SJUIKit/AttributesFactory/UIKitText/SJUTUtils.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E391DF10B25F862F953D16EF51F41DA /* HLSAssetTsContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HLSAssetTsContent.m; path = SJMediaCacheServer/Core/Asset/HLS/HLSAssetTsContent.m; sourceTree = "<group>"; };
 		9E5C8D27AA84F248E36A19BDAC4698F5 /* SJRotationFullscreenWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJRotationFullscreenWindow.h; sourceTree = "<group>"; };
 		9F2540261A13D00D2BF9A24CA5A31A6C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/Core/NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -1713,7 +1712,7 @@
 		BCB968D17A0010ED79FC76B0A4996EB5 /* SJUTUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJUTUtils.m; path = SJUIKit/AttributesFactory/UIKitText/SJUTUtils.m; sourceTree = "<group>"; };
 		BCDB3E2FF9A52821B64A7D62AA899330 /* SJFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJFullscreenPopGesture.h; path = SJFullscreenPopGesture/ObjC/SJFullscreenPopGesture.h; sourceTree = "<group>"; };
 		BD2814149BBBFBB34D7C4D9690993885 /* SJClipsSaveResultToAlbumHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJClipsSaveResultToAlbumHandler.m; sourceTree = "<group>"; };
-		BD4C6C010A343BC4ECFEC0448AEDB7D0 /* SJVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD4C6C010A343BC4ECFEC0448AEDB7D0 /* SJVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD536CFF4312AA2B9EAFB6F34C939489 /* SJEdgeControlButtonItemView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJEdgeControlButtonItemView.h; sourceTree = "<group>"; };
 		BD654F668B10D027DDE7A616165EF6C0 /* SJTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJTaskQueue.h; path = SJUIKit/Queues/SJTaskQueue.h; sourceTree = "<group>"; };
 		BD8241210ECFBC0E1D9E6E4F703FFD7E /* SJRotationFullscreenNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJRotationFullscreenNavigationController.h; sourceTree = "<group>"; };
@@ -1762,7 +1761,7 @@
 		CA3901635A2ABD4BA0166575131C25D9 /* SJVideoPlayerPlaybackControllerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJVideoPlayerPlaybackControllerDefines.h; sourceTree = "<group>"; };
 		CA5AB3B5CBBBDDE4A8F1AF588079BAF3 /* YYModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYModel-umbrella.h"; sourceTree = "<group>"; };
 		CA95D44399DA80C1391F9EBAA51A5CFA /* SJAppearStateObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJAppearStateObserver.m; path = SJUIKit/Base/Core/SJAppearStateObserver.m; sourceTree = "<group>"; };
-		CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SJUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit-98d45660 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "SJUIKit-98d45660"; path = SJUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB250ABBE493BDABAF4DED174690CB5A /* YYModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YYModel-Info.plist"; sourceTree = "<group>"; };
 		CBD6AA3817D43C6E38A4C0535B701495 /* SJBaseVideoPlayer+TestLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJBaseVideoPlayer+TestLog.h"; path = "SJBaseVideoPlayer/SJBaseVideoPlayer+TestLog.h"; sourceTree = "<group>"; };
 		CBE4B003702B5E441B67A9DF8CAEDC91 /* SJTimerControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJTimerControl.m; sourceTree = "<group>"; };
@@ -1787,7 +1786,7 @@
 		D12056DB750F6A40237E4B04E12052BB /* HTTPErrorResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTPErrorResponse.m; path = SJMediaCacheServer/KTVCocoaHTTPServer/Classes/Responses/HTTPErrorResponse.m; sourceTree = "<group>"; };
 		D1447E361FC5424EEA0F591F2B5A4CD6 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		D16873C49820231B8EDEF8143E1ECA15 /* SDImageHEICCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageHEICCoder.h; path = SDWebImage/Core/SDImageHEICCoder.h; sourceTree = "<group>"; };
-		D17FF47CCEDD9415766D4415C8050C45 /* SJUIKit-MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJUIKit-MJRefresh-umbrella.h"; path = "../SJUIKit-MJRefresh/SJUIKit-MJRefresh-umbrella.h"; sourceTree = "<group>"; };
+		D17FF47CCEDD9415766D4415C8050C45 /* SJUIKit-98d45660-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJUIKit-98d45660-umbrella.h"; path = "../SJUIKit-98d45660/SJUIKit-98d45660-umbrella.h"; sourceTree = "<group>"; };
 		D1896C274C6BC755D17ED8BAEBD17242 /* SJUIKit-68d28646-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJUIKit-68d28646-umbrella.h"; sourceTree = "<group>"; };
 		D1C6619AE25739C3A6C724D7E70ACFF0 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		D1C894F523BCCD01CC74B77F822DD8C1 /* Pods-SJVideoPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJVideoPlayer_Example-dummy.m"; sourceTree = "<group>"; };
@@ -1813,7 +1812,7 @@
 		D699035AF9CB991D27550AD49B36259D /* SJClipsButtonContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJClipsButtonContainerView.m; sourceTree = "<group>"; };
 		D6CCA2DB0BF307CBD90062DFD4BC1F4D /* SDImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOCoder.h; path = SDWebImage/Core/SDImageIOCoder.h; sourceTree = "<group>"; };
 		D6D464096E414050E2C99BDECD6596C3 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		D6D5F4582FEC5B6DF00579C6B2EE7574 /* SJBaseVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJBaseVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D6D5F4582FEC5B6DF00579C6B2EE7574 /* SJBaseVideoPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJBaseVideoPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D751C3F79C697237888A4BDEC5D72A67 /* FILEAssetContentProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FILEAssetContentProvider.m; path = SJMediaCacheServer/Core/Asset/FILE/Private/FILEAssetContentProvider.m; sourceTree = "<group>"; };
 		D7954A01FB12FDF8B49015DEE8AA5870 /* SJSmallViewControlLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJSmallViewControlLayer.m; sourceTree = "<group>"; };
 		D8220C9F65BB06C1087A13D3A210BEF7 /* SJEdgeControlButtonItemAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJEdgeControlButtonItemAdapter.m; sourceTree = "<group>"; };
@@ -1958,7 +1957,7 @@
 		FD6CFAD314CA644D2F927974479B8800 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		FD90358C985264F1312E90B903DE2610 /* SJClipsCommonViewLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJClipsCommonViewLayer.h; sourceTree = "<group>"; };
 		FDC7EC5059518F0CD5E3E6ADC9564D9C /* MCSPrefetcherManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MCSPrefetcherManager.h; path = SJMediaCacheServer/Core/Prefetch/MCSPrefetcherManager.h; sourceTree = "<group>"; };
-		FE55AD3A385020C02A7609C3391B6874 /* SJUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJUIKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FE55AD3A385020C02A7609C3391B6874 /* SJUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJUIKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE56068557E7BE5FFABA57621A535D4F /* SJVideoPlayerClipsGeneratedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJVideoPlayerClipsGeneratedResult.h; sourceTree = "<group>"; };
 		FE9F1BD7800D93370BC1E4B8AB69944C /* SJLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJLoadingView.h; sourceTree = "<group>"; };
 		FEAC06EA62776FF2FB7E16DE48E9E6F8 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -2298,6 +2297,7 @@
 				E798FD227B45C8F5DEBD65AD44AEE0FA /* Core */,
 				5BB09B75868F828D2F2AD0D226F13392 /* Support Files */,
 			);
+			name = SJRouter;
 			path = SJRouter;
 			sourceTree = "<group>";
 		};
@@ -2372,6 +2372,7 @@
 				05AD73998DEE95FA2083FACA2E43DBB7 /* GCDAsyncUdpSocket.m */,
 				2C243189EE892D1A5A934FB0A728A808 /* Support Files */,
 			);
+			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -2443,6 +2444,7 @@
 				7D17F8638BD624A9F678E2B341D0DD4B /* YYModel.h */,
 				43810A03FA3D7B730F9FBC7499F4A207 /* Support Files */,
 			);
+			name = YYModel;
 			path = YYModel;
 			sourceTree = "<group>";
 		};
@@ -2519,6 +2521,7 @@
 				EC83F95CA5987CAFEB4B0856C7005162 /* ObjC */,
 				DA0B5503542E0250A926095C7A65FD5C /* Support Files */,
 			);
+			name = SJFullscreenPopGesture;
 			path = SJFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
@@ -2745,6 +2748,7 @@
 				79C8F86F41423605ACC42CFEE8E7B9DA /* SJClipsVideoCountDownView.h */,
 				62E1C709F5FC9A6B682CDC19BB28EF4A /* SJClipsVideoCountDownView.m */,
 			);
+			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -2754,6 +2758,7 @@
 				DB45461802EAD5EFAAC9E38F6ACDEBDC /* SJControlLayerSwitcher.h */,
 				1EF81DABB54D6E1F60D3C5DECED5379E /* SJControlLayerSwitcher.m */,
 			);
+			name = Switcher;
 			path = Switcher;
 			sourceTree = "<group>";
 		};
@@ -2993,7 +2998,7 @@
 				F7785B72FFA7AD5738D7E285153CEECD /* SJMediaCacheServer */,
 				D444CDB611C89A31497695905D2BA023 /* SJRouter */,
 				F14EC65F8CB3145E2587F51546C6DFF5 /* SJUIKit-68d28646 */,
-				CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit.framework */,
+				CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit-98d45660 */,
 				8D1EE56EBEDDF86D4EBA1BCB57070AA9 /* SJVideoPlayer */,
 				E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel */,
 			);
@@ -3009,6 +3014,7 @@
 				522997150D27A55BDA57D59CF4B24A1D /* KTVCocoaHTTPServer */,
 				FF23154D1A01C8A7AC2D8FFB0CA906F1 /* Support Files */,
 			);
+			name = SJMediaCacheServer;
 			path = SJMediaCacheServer;
 			sourceTree = "<group>";
 		};
@@ -3139,6 +3145,7 @@
 				BB082A9BBE4A402A36C47D6A52F7895D /* Core */,
 				CDCECA235EF1B4AA42C4C772232AA7AE /* Support Files */,
 			);
+			name = PodIJKPlayer;
 			path = PodIJKPlayer;
 			sourceTree = "<group>";
 		};
@@ -3157,6 +3164,7 @@
 				C8AB088074800CFF9954FF75BDDAA6EC /* Model */,
 				6F4289A1E3BF841C006FAC3F95754356 /* View */,
 			);
+			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -3258,6 +3266,7 @@
 				8E94777655516BAD3274D254AB00B383 /* SJEdgeControlLayerAdapters.m */,
 				FF41B9CA8678FBAE72C8EA616F56DA1F /* Core */,
 			);
+			name = Adapters;
 			path = Adapters;
 			sourceTree = "<group>";
 		};
@@ -3298,6 +3307,7 @@
 				CEB2194EB563E9F1AADC696DFBEB6B7B /* SJVideoPlayerClipsParameters.h */,
 				96762AFE87258DBDF8F5DF193702F1D1 /* SJVideoPlayerClipsParameters.m */,
 			);
+			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -3352,6 +3362,7 @@
 				8112DD44FC3F0B61A9CB11EFC268F34E /* SJProgressSlider.h */,
 				7C8EA4FD75B1ED163B65479D320E482E /* SJProgressSlider.m */,
 			);
+			name = SJProgressSlider;
 			path = SJProgressSlider;
 			sourceTree = "<group>";
 		};
@@ -3435,6 +3446,7 @@
 				66DA6D6A28DD37969D1DD7DA545D3A9D /* SJClipsVideoRecordsControlLayer.h */,
 				5F3AC25C09BA48281E9B726FD5A27AB6 /* SJClipsVideoRecordsControlLayer.m */,
 			);
+			name = ControlLayer;
 			path = ControlLayer;
 			sourceTree = "<group>";
 		};
@@ -3641,6 +3653,7 @@
 				7C3C38BA5D68B5AAECA34F246DAAE8D0 /* ViewController+MASAdditions.m */,
 				55E62DE7B851C0C46AF7EE9B97901C7D /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -3754,6 +3767,7 @@
 				6EB4F44DF6D4B8038755AB0D3465EDA2 /* Resources */,
 				EC963CD3620F216329D2B8496A527671 /* Support Files */,
 			);
+			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -3767,13 +3781,13 @@
 				D1896C274C6BC755D17ED8BAEBD17242 /* SJUIKit-68d28646-umbrella.h */,
 				B2CFFC1DA95D2D3798029F48718F4665 /* SJUIKit-68d28646.debug.xcconfig */,
 				46F908CF248D7695EA27B55A75FC62C2 /* SJUIKit-68d28646.release.xcconfig */,
-				2286F7AFE34FFADAA219BCCC36DAD0E8 /* SJUIKit-MJRefresh.modulemap */,
-				3F1F3D70A0841AF7C3DC0B1A9C0BB11E /* SJUIKit-MJRefresh-dummy.m */,
-				20A3D1BA2AE6FEE1E8E32EDC0E267D2A /* SJUIKit-MJRefresh-Info.plist */,
-				53C07C1363758D6124E3B0E20BBCDB82 /* SJUIKit-MJRefresh-prefix.pch */,
-				D17FF47CCEDD9415766D4415C8050C45 /* SJUIKit-MJRefresh-umbrella.h */,
-				370F689058C869E81EEF7961E35B35E2 /* SJUIKit-MJRefresh.debug.xcconfig */,
-				75D0F88B702A9CC1590CFE9486BB9C10 /* SJUIKit-MJRefresh.release.xcconfig */,
+				2286F7AFE34FFADAA219BCCC36DAD0E8 /* SJUIKit-98d45660.modulemap */,
+				3F1F3D70A0841AF7C3DC0B1A9C0BB11E /* SJUIKit-98d45660-dummy.m */,
+				20A3D1BA2AE6FEE1E8E32EDC0E267D2A /* SJUIKit-98d45660-Info.plist */,
+				53C07C1363758D6124E3B0E20BBCDB82 /* SJUIKit-98d45660-prefix.pch */,
+				D17FF47CCEDD9415766D4415C8050C45 /* SJUIKit-98d45660-umbrella.h */,
+				370F689058C869E81EEF7961E35B35E2 /* SJUIKit-98d45660.debug.xcconfig */,
+				75D0F88B702A9CC1590CFE9486BB9C10 /* SJUIKit-98d45660.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SJUIKit-68d28646";
@@ -3785,6 +3799,7 @@
 				7CFD6EA5EDEB90FA5D518E885CC8CF17 /* Core */,
 				B2F480F6258B0761B74A2507F3885B74 /* Support Files */,
 			);
+			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -3816,6 +3831,7 @@
 				BD536CFF4312AA2B9EAFB6F34C939489 /* SJEdgeControlButtonItemView.h */,
 				3C0039648ECA4D394F5725ABE38CC588 /* SJEdgeControlButtonItemView.m */,
 			);
+			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -3917,7 +3933,7 @@
 				0FCEC66A0D79F0303B6A87415C8BB035 /* SJStatusBarManager.h in Headers */,
 				0E4D7D7BE9DF350BFC661AA2E8BD4BC9 /* SJTaskQueue.h in Headers */,
 				5F62C5F71574A237CCA08E3207F70B79 /* SJUIKit.h in Headers */,
-				70EB9BB78CDB7ED44A3E85A2869FB30A /* SJUIKit-MJRefresh-umbrella.h in Headers */,
+				70EB9BB78CDB7ED44A3E85A2869FB30A /* SJUIKit-98d45660-umbrella.h in Headers */,
 				CE86A5477CAE1C925784216E15575282 /* SJUIKitAttributesDefines.h in Headers */,
 				1A3FE5BC15128CF618E2C4035BB2EC16 /* SJUIKitTextMaker.h in Headers */,
 				38687EB17326F5880B226E120A02C2AB /* SJUIMaker.h in Headers */,
@@ -4495,7 +4511,6 @@
 				6C4B4C4C29CE05DC6B1D5A68FD7CF92A /* Sources */,
 				4885FD77A468AEAE475D76BA0689868C /* Frameworks */,
 				F669673BB89E12A8C65CEFCE608B22CC /* Resources */,
-				B05D94882AD3A828009A3873 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4637,9 +4652,9 @@
 			productReference = 3BA75F6111352F2EF77F4DB1521E8B67 /* Pods-iPadDemo */;
 			productType = "com.apple.product-type.framework";
 		};
-		EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-MJRefresh */ = {
+		EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-98d45660 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit-MJRefresh" */;
+			buildConfigurationList = 45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit-98d45660" */;
 			buildPhases = (
 				662D004DE268D9C64FE8B897F91DB053 /* Headers */,
 				2BCD73A908AA53DF46CD0C70B89F3BED /* Sources */,
@@ -4652,9 +4667,9 @@
 				C7B85381DC5EB43B4457C0A9750F89E2 /* PBXTargetDependency */,
 				D02CCA7BA903FE82B4A647F31AB72699 /* PBXTargetDependency */,
 			);
-			name = "SJUIKit-MJRefresh";
+			name = "SJUIKit-98d45660";
 			productName = SJUIKit;
-			productReference = CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit.framework */;
+			productReference = CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit-98d45660 */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -4691,7 +4706,7 @@
 				53EA424E9D34B39228682599B5DABD60 /* SJMediaCacheServer */,
 				AC7ED7554C07C41E51C8BD5248179FED /* SJRouter */,
 				A2E0E2D60BE654B306C0ECB654A8212F /* SJUIKit-68d28646 */,
-				EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-MJRefresh */,
+				EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-98d45660 */,
 				9D30A64C17E5B9AF4D9239A2C2A7630F /* SJVideoPlayer */,
 				84B44807A12996D487A4A591A481D6A0 /* YYModel */,
 			);
@@ -4801,26 +4816,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B05D94882AD3A828009A3873 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"YYModel\"\nFRAMEWORK_NAME=\"YYModel\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AF6E0E48231EF11BE388C7672D0F5F5 /* Sources */ = {
@@ -4951,7 +4946,7 @@
 				A8650EAA654F4F3E2B80C8EC461D02B6 /* SJSQLiteTableModelConstraints.m in Sources */,
 				0457E13A146C3460EBE179AC318E0C16 /* SJStatusBarManager.m in Sources */,
 				2DD9B74A219A4199090B0B771B098438 /* SJTaskQueue.m in Sources */,
-				B9819CE66BC1D3568D1C50F2CB95C6C5 /* SJUIKit-MJRefresh-dummy.m in Sources */,
+				B9819CE66BC1D3568D1C50F2CB95C6C5 /* SJUIKit-98d45660-dummy.m in Sources */,
 				5555B17E5609896CD843397B3006FC52 /* SJUIKitTextMaker.m in Sources */,
 				8B181101D0937D5B2ACD5619C5A95E96 /* SJUIMaker.m in Sources */,
 				5C0967045703C02ED22BA0996F946409 /* SJUTAttributes.m in Sources */,
@@ -5463,8 +5458,8 @@
 		};
 		E6D3EF46BCC435B44B65FB8DD4CC6FE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "SJUIKit-MJRefresh";
-			target = EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-MJRefresh */;
+			name = "SJUIKit-98d45660";
+			target = EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-98d45660 */;
 			targetProxy = EF6F11A06678AC48F5AC738FF72D5980 /* PBXContainerItemProxy */;
 		};
 		EFE4D111DFB8D3AC316ABAEF21A6E296 /* PBXTargetDependency */ = {
@@ -5631,7 +5626,7 @@
 		};
 		26DF9301413F06D672181D3ADE0CD2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 370F689058C869E81EEF7961E35B35E2 /* SJUIKit-MJRefresh.debug.xcconfig */;
+			baseConfigurationReference = 370F689058C869E81EEF7961E35B35E2 /* SJUIKit-98d45660.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5643,12 +5638,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SJUIKit-MJRefresh/SJUIKit-MJRefresh-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SJUIKit-MJRefresh/SJUIKit-MJRefresh-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SJUIKit-98d45660/SJUIKit-98d45660-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SJUIKit-98d45660/SJUIKit-98d45660-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SJUIKit-MJRefresh/SJUIKit-MJRefresh.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SJUIKit-98d45660/SJUIKit-98d45660.modulemap";
 				PRODUCT_MODULE_NAME = SJUIKit;
 				PRODUCT_NAME = SJUIKit;
 				SDKROOT = iphoneos;
@@ -5731,7 +5726,7 @@
 		};
 		3A90F69CFA69C36017B2F505071D2925 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75D0F88B702A9CC1590CFE9486BB9C10 /* SJUIKit-MJRefresh.release.xcconfig */;
+			baseConfigurationReference = 75D0F88B702A9CC1590CFE9486BB9C10 /* SJUIKit-98d45660.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -5743,12 +5738,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SJUIKit-MJRefresh/SJUIKit-MJRefresh-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SJUIKit-MJRefresh/SJUIKit-MJRefresh-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SJUIKit-98d45660/SJUIKit-98d45660-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SJUIKit-98d45660/SJUIKit-98d45660-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SJUIKit-MJRefresh/SJUIKit-MJRefresh.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SJUIKit-98d45660/SJUIKit-98d45660.modulemap";
 				PRODUCT_MODULE_NAME = SJUIKit;
 				PRODUCT_NAME = SJUIKit;
 				SDKROOT = iphoneos;
@@ -6131,10 +6126,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					"$(inherited)",
-				);
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -6169,7 +6160,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -6185,10 +6175,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -6297,10 +6287,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					"$(inherited)",
-				);
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -6335,7 +6321,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -6596,7 +6581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit-MJRefresh" */ = {
+		45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit-98d45660" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26DF9301413F06D672181D3ADE0CD2BB /* Debug */,

@@ -1312,7 +1312,7 @@
 				"${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/SJMediaCacheServer/SJMediaCacheServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework",
-				"${BUILT_PRODUCTS_DIR}/SJUIKit-MJRefresh/SJUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SJUIKit-98d45660/SJUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
