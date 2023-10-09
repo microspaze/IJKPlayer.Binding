@@ -10,17 +10,37 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Simulator = Debug|Simulator
+		Debug|Device = Debug|Device
 		Release|Any CPU = Release|Any CPU
+		Release|Simulator = Release|Simulator
+		Release|Device = Release|Device
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Debug|Simulator.ActiveCfg = Debug|Simulator
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Debug|Simulator.Build.0 = Debug|Simulator
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Release|Simulator.ActiveCfg = Release|Simulator
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Release|Simulator.Build.0 = Release|Simulator
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Debug|Device.ActiveCfg = Debug|Device
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Debug|Device.Build.0 = Debug|Device
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Release|Device.ActiveCfg = Release|Device
+		{6145A368-CEE9-4EE1-9E75-3AC0948404BE}.Release|Device.Build.0 = Release|Device
 		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Debug|Simulator.ActiveCfg = Debug|Simulator
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Debug|Simulator.Build.0 = Debug|Simulator
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Release|Simulator.ActiveCfg = Release|Simulator
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Release|Simulator.Build.0 = Release|Simulator
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Debug|Device.ActiveCfg = Debug|Device
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Debug|Device.Build.0 = Debug|Device
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Release|Device.ActiveCfg = Release|Device
+		{AEC0C034-7070-4E6C-A649-2FCD19BB3052}.Release|Device.Build.0 = Release|Device
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
