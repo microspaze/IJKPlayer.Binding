@@ -4495,6 +4495,7 @@
 				6C4B4C4C29CE05DC6B1D5A68FD7CF92A /* Sources */,
 				4885FD77A468AEAE475D76BA0689868C /* Frameworks */,
 				F669673BB89E12A8C65CEFCE608B22CC /* Resources */,
+				B05D94882AD3A828009A3873 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -4636,9 +4637,9 @@
 			productReference = 3BA75F6111352F2EF77F4DB1521E8B67 /* Pods-iPadDemo */;
 			productType = "com.apple.product-type.framework";
 		};
-		EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit */ = {
+		EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-MJRefresh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit" */;
+			buildConfigurationList = 45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit-MJRefresh" */;
 			buildPhases = (
 				662D004DE268D9C64FE8B897F91DB053 /* Headers */,
 				2BCD73A908AA53DF46CD0C70B89F3BED /* Sources */,
@@ -4651,7 +4652,7 @@
 				C7B85381DC5EB43B4457C0A9750F89E2 /* PBXTargetDependency */,
 				D02CCA7BA903FE82B4A647F31AB72699 /* PBXTargetDependency */,
 			);
-			name = SJUIKit;
+			name = "SJUIKit-MJRefresh";
 			productName = SJUIKit;
 			productReference = CB18C8ACCF5E92C528AE5CF228B6BE98 /* SJUIKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -4690,7 +4691,7 @@
 				53EA424E9D34B39228682599B5DABD60 /* SJMediaCacheServer */,
 				AC7ED7554C07C41E51C8BD5248179FED /* SJRouter */,
 				A2E0E2D60BE654B306C0ECB654A8212F /* SJUIKit-68d28646 */,
-				EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit */,
+				EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-MJRefresh */,
 				9D30A64C17E5B9AF4D9239A2C2A7630F /* SJVideoPlayer */,
 				84B44807A12996D487A4A591A481D6A0 /* YYModel */,
 			);
@@ -4800,6 +4801,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B05D94882AD3A828009A3873 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#1. After then make a fresh directory directory \nTARGET_NAME=\"YYModel\"\nFRAMEWORK_NAME=\"YYModel\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# 2. Copy Device(arm64) Framework at fresh universal folder location \ncp -a \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#3. Copy Sim(x86_64) Frameworks's \"MyFramework.swiftmodule\" Folder Content & paste it at  Fat(x86_64 + arm64) Frameworks's  \"MyFramework.swiftmodule\" folder.\n\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# Step 5. Copy output at Project Directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Open Project Directory\n#open \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AF6E0E48231EF11BE388C7672D0F5F5 /* Sources */ = {
@@ -5443,7 +5464,7 @@
 		E6D3EF46BCC435B44B65FB8DD4CC6FE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SJUIKit-98d45660";
-			target = EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit */;
+			target = EF627DF8F333CD0DEF8046D659DC9477 /* SJUIKit-MJRefresh */;
 			targetProxy = EF6F11A06678AC48F5AC738FF72D5980 /* PBXContainerItemProxy */;
 		};
 		EFE4D111DFB8D3AC316ABAEF21A6E296 /* PBXTargetDependency */ = {
@@ -6575,7 +6596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit" */ = {
+		45F6B2B4402950DAF537CED9B57FD445 /* Build configuration list for PBXNativeTarget "SJUIKit-MJRefresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26DF9301413F06D672181D3ADE0CD2BB /* Debug */,
