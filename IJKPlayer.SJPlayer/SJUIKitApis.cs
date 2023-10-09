@@ -753,7 +753,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (readwrite, nonatomic) NSRegularExpressionOptions regexpOptions;
         [Export("regexpOptions")]
-        NSRegularExpressionOptions RegexpOptions { get; set }
+        NSRegularExpressionOptions RegexpOptions { get; set; }
 
         // @property (readonly, copy, nonatomic) SJAttributeWorker * _Nonnull (^ _Nonnull)(NSString * _Nonnull, void (^ _Nonnull)(SJAttributesRangeOperator * _Nonnull)) regexp;
         [Export("regexp", ArgumentSemantic.Copy)]

@@ -774,11 +774,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (copy, nonatomic) NSString * _Nullable title;
         [Export("title")]
-        string? Title { get; set }
+        string? Title { get; set; }
 
         // @property (copy, nonatomic) NSAttributedString * _Nullable attributedTitle;
         [Export("attributedTitle")]
-        NSAttributedString? AttributedTitle { get; set }
+        NSAttributedString? AttributedTitle { get; set; }
     }
 
     // @protocol SJVideoPlayerClipsParameters <NSObject>
@@ -1227,7 +1227,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) CGFloat size;
         [Export("size")]
-        nfloat Size { get; set }
+        nfloat Size { get; set; }
     }
 
     // @interface FrameLayout (SJEdgeControlButtonItem)
@@ -1975,7 +1975,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL resetsAppearIntervalWhenPerformingItemAction;
         [Export("resetsAppearIntervalWhenPerformingItemAction")]
-        bool ResetsAppearIntervalWhenPerformingItemAction { get; set }
+        bool ResetsAppearIntervalWhenPerformingItemAction { get; set; }
     }
 
     // @interface SJClipsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -2131,11 +2131,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (copy, nonatomic) NSString * _Nullable definition_fullName;
         [Export("definition_fullName")]
-        string? DefinitionFullName { get; set }
+        string? DefinitionFullName { get; set; }
 
         // @property (copy, nonatomic) NSString * _Nullable definition_lastName;
         [Export("definition_lastName")]
-        string? DefinitionLastName { get; set }
+        string? DefinitionLastName { get; set; }
     }
 
     // @interface SJVideoDefinitionSwitchingControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -2292,11 +2292,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (copy, nonatomic) NSArray<SJVideoPlayerURLAsset *> * _Nullable definitionURLAssets;
         [Export("definitionURLAssets")]
-        SJVideoPlayerURLAsset[]? DefinitionURLAssets { get; set }
+        SJVideoPlayerURLAsset[]? DefinitionURLAssets { get; set; }
 
         // @property (getter = isDisabledDefinitionSwitchingPrompt, nonatomic) BOOL disabledDefinitionSwitchingPrompt;
         [Export("disabledDefinitionSwitchingPrompt")]
-        bool DisabledDefinitionSwitchingPrompt { get; set }
+        bool DisabledDefinitionSwitchingPrompt { get; set; }
     }
 
     // @interface RotationOrFitOnScreen (SJVideoPlayer)
@@ -2306,11 +2306,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL automaticallyPerformRotationOrFitOnScreen;
         [Export("automaticallyPerformRotationOrFitOnScreen")]
-        bool AutomaticallyPerformRotationOrFitOnScreen { get; set }
+        bool AutomaticallyPerformRotationOrFitOnScreen { get; set; }
 
         // @property (nonatomic) BOOL needsFitOnScreenFirst;
         [Export("needsFitOnScreenFirst")]
-        bool NeedsFitOnScreenFirst { get; set }
+        bool NeedsFitOnScreenFirst { get; set; }
     }
 
     // @interface SJVideoPlayerExtended (SJEdgeControlLayer)
@@ -2327,11 +2327,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (getter = isEnabledClips, nonatomic) BOOL enabledClips;
         [Export("enabledClips")]
-        bool EnabledClips { get; set }
+        bool EnabledClips { get; set; }
 
         // @property (nonatomic, strong, null_resettable) SJVideoPlayerClipsConfig * _Null_unspecified clipsConfig;
         [Export("clipsConfig")]
-        SJVideoPlayerClipsConfig? ClipsConfig { get; set }
+        SJVideoPlayerClipsConfig? ClipsConfig { get; set; }
     }
 
     // @interface SJExtendedControlLayerSwitcher (SJVideoPlayer)
@@ -2481,7 +2481,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) SJViewDisappearAnimation sjv_disappearDirection;
         [Export("sjv_disappearDirection")]
-        SJViewDisappearAnimation Sjv_disappearDirection { get; set }
+        SJViewDisappearAnimation Sjv_disappearDirection { get; set; }
 
         // @property (readonly, nonatomic) BOOL sjv_disappeared;
         [Export("sjv_disappeared")]
@@ -2503,7 +2503,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (getter = isInnerHidden, nonatomic) BOOL innerHidden;
         [Export("innerHidden")]
-        bool InnerHidden { get; set }
+        bool InnerHidden { get; set; }
     }
 
     // @interface SJEdgeControlButtonItemView : UIControl
@@ -2627,7 +2627,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) CGFloat promptSpacing;
         [Export("promptSpacing")]
-        nfloat PromptSpacing { get; set }
+        nfloat PromptSpacing { get; set; }
     }
 
     // @interface Border (SJProgressSlider)
@@ -2637,15 +2637,15 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL showsBorder;
         [Export("showsBorder")]
-        bool ShowsBorder { get; set }
+        bool ShowsBorder { get; set; }
 
         // @property (nonatomic, strong, null_resettable) UIColor * _Null_unspecified borderColor;
         [Export("borderColor")]
-        UIColor? BorderColor { get; set }
+        UIColor? BorderColor { get; set; }
 
         // @property (nonatomic) CGFloat borderWidth;
         [Export("borderWidth")]
-        nfloat BorderWidth { get; set }
+        nfloat BorderWidth { get; set; }
     }
 
     // @interface Buffer (SJProgressSlider)
@@ -2655,15 +2655,15 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL showsBufferProgress;
         [Export("showsBufferProgress")]
-        bool ShowsBufferProgress { get; set }
+        bool ShowsBufferProgress { get; set; }
 
         // @property (nonatomic, strong, null_resettable) UIColor * _Null_unspecified bufferProgressColor;
         [Export("bufferProgressColor")]
-        UIColor? BufferProgressColor { get; set }
+        UIColor? BufferProgressColor { get; set; }
 
         // @property (nonatomic) CGFloat bufferProgress;
         [Export("bufferProgress")]
-        nfloat BufferProgress { get; set }
+        nfloat BufferProgress { get; set; }
     }
 
     // @interface StopNode (SJProgressSlider)
@@ -2673,15 +2673,15 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) BOOL showsStopNode;
         [Export("showsStopNode")]
-        bool ShowsStopNode { get; set }
+        bool ShowsStopNode { get; set; }
 
         // @property (nonatomic, strong, null_resettable) UIView * _Null_unspecified stopNodeView;
         [Export("stopNodeView")]
-        UIView? StopNodeView { get; set }
+        UIView? StopNodeView { get; set; }
 
         // @property (nonatomic) CGFloat stopNodeLocation;
         [Export("stopNodeLocation")]
-        nfloat StopNodeLocation { get; set }
+        nfloat StopNodeLocation { get; set; }
 
         // -(void)setStopNodeViewCornerRadius:(CGFloat)cornerRadius size:(CGSize)size;
         [Export("setStopNodeViewCornerRadius:size:")]

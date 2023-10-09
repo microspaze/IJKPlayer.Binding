@@ -1631,15 +1631,15 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong) __kindof AVAsset * _Nullable avAsset;
         [Export("avAsset")]
-        AVAsset? AvAsset { get; set }
+        AVAsset? AvAsset { get; set; }
 
         // @property (nonatomic, strong) AVPlayerItem * _Nullable avPlayerItem;
         [Export("avPlayerItem")]
-        AVPlayerItem? AvPlayerItem { get; set }
+        AVPlayerItem? AvPlayerItem { get; set; }
         
         // @property (nonatomic, strong) AVPlayer * _Nullable avPlayer;
         [Export("avPlayer")]
-        AVPlayer? AvPlayer { get; set }
+        AVPlayer? AvPlayer { get; set; }
 
         // @property (readonly, nonatomic, strong) SJVideoPlayerURLAsset * _Nullable original;
         [NullAllowed, Export("original", ArgumentSemantic.Strong)]
@@ -1658,7 +1658,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong) SJPlaybackRecord * _Nullable record;
         [Export("record")]
-        SJPlaybackRecord? Record { get; set }
+        SJPlaybackRecord? Record { get; set; }
     //}
 
     // @interface SJSubtitlesAdd (SJVideoPlayerURLAsset)
@@ -1668,7 +1668,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (copy, nonatomic) NSArray<SJSubtitleItem *> * _Nullable subtitles;
         [Export("subtitles")]
-        SJSubtitleItem[]? Subtitles { get; set }
+        SJSubtitleItem[]? Subtitles { get; set; }
     }
 
     // @protocol SJVideoPlayerURLAssetObserver <NSObject>
@@ -1946,15 +1946,15 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, weak) SJVideoPlayerURLAsset * _Nullable currentPlayingAsset;
         [Export("currentPlayingAsset")]
-        SJVideoPlayerURLAsset? CurrentPlayingAsset { get; set }
+        SJVideoPlayerURLAsset? CurrentPlayingAsset { get; set; }
 
         // @property (nonatomic, weak) SJVideoPlayerURLAsset * _Nullable switchingAsset;
         [Export("switchingAsset")]
-        SJVideoPlayerURLAsset? SwitchingAsset { get; set }
+        SJVideoPlayerURLAsset? SwitchingAsset { get; set; }
 
         // @property (nonatomic) SJDefinitionSwitchStatus status;
         [Export("status")]
-        SJDefinitionSwitchStatus Status { get; set }
+        SJDefinitionSwitchStatus Status { get; set; }
     }
 
     // @interface SJVideoDefinitionSwitchingInfoObserver : NSObject
@@ -2543,7 +2543,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (getter = isAudioSessionControlEnabled, nonatomic) BOOL audioSessionControlEnabled;
         [Export("audioSessionControlEnabled")]
-        bool AudioSessionControlEnabled { get; set }
+        bool AudioSessionControlEnabled { get; set; }
 
         // -(void)setCategory:(AVAudioSessionCategory _Nonnull)category withOptions:(AVAudioSessionCategoryOptions)options;
         [Export("setCategory:withOptions:")]
@@ -2579,7 +2579,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJFlipTransitionManager> _Null_unspecified flipTransitionManager;
         [Export("flipTransitionManager")]
-        SJFlipTransitionManager? FlipTransitionManager { get; set }
+        SJFlipTransitionManager? FlipTransitionManager { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJFlipTransitionManagerObserver> _Nonnull flipTransitionObserver;
         [Export("flipTransitionObserver", ArgumentSemantic.Strong)]
@@ -2866,7 +2866,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJDeviceVolumeAndBrightnessController> _Null_unspecified deviceVolumeAndBrightnessController;
         [Export("deviceVolumeAndBrightnessController")]
-        SJDeviceVolumeAndBrightnessController? DeviceVolumeAndBrightnessController { get; set }
+        SJDeviceVolumeAndBrightnessController? DeviceVolumeAndBrightnessController { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJDeviceVolumeAndBrightnessControllerObserver> _Nonnull deviceVolumeAndBrightnessObserver;
         [Export("deviceVolumeAndBrightnessObserver", ArgumentSemantic.Strong)]
@@ -2874,11 +2874,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) BOOL disableBrightnessSetting;
         [Export("disableBrightnessSetting")]
-        bool DisableBrightnessSetting { get; set }
+        bool DisableBrightnessSetting { get; set; }
 
         // @property (nonatomic) BOOL disableVolumeSetting;
         [Export("disableVolumeSetting")]
-        bool DisableVolumeSetting { get; set }
+        bool DisableVolumeSetting { get; set; }
     //}
 
     // @interface Life (SJBaseVideoPlayer)
@@ -2910,7 +2910,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) BOOL vc_isDisappeared;
         [Export("vc_isDisappeared")]
-        bool Vc_isDisappeared { get; set }
+        bool Vc_isDisappeared { get; set; }
 
         // -(void)needShowStatusBar;
         [Export("needShowStatusBar")]
@@ -2928,7 +2928,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJReachability> _Null_unspecified reachability;
         [Export("reachability")]
-        SJReachability? Reachability { get; set }
+        SJReachability? Reachability { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJReachabilityObserver> _Nonnull reachabilityObserver;
         [Export("reachabilityObserver", ArgumentSemantic.Strong)]
@@ -2942,11 +2942,11 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJTextPopupController> _Null_unspecified textPopupController;
         [Export("textPopupController")]
-        SJTextPopupController? TextPopupController { get; set }
+        SJTextPopupController? TextPopupController { get; set; }
 
         // @property (nonatomic, strong, null_resettable) id<SJPromptingPopupController> _Null_unspecified promptingPopupController;
         [Export("promptingPopupController")]
-        SJPromptingPopupController? PromptingPopupController { get; set }
+        SJPromptingPopupController? PromptingPopupController { get; set; }
     //}
 
     // @interface Gesture (SJBaseVideoPlayer)
@@ -2960,19 +2960,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull, SJPlayerGestureType, CGPoint) gestureRecognizerShouldTrigger;
         [Export("gestureRecognizerShouldTrigger")]
-        Func<SJBaseVideoPlayer, SJPlayerGestureType, CGPoint, bool>? GestureRecognizerShouldTrigger { get; set }
+        Func<SJBaseVideoPlayer, SJPlayerGestureType, CGPoint, bool>? GestureRecognizerShouldTrigger { get; set; }
 
         // @property (nonatomic) BOOL allowHorizontalTriggeringOfPanGesturesInCells;
         [Export("allowHorizontalTriggeringOfPanGesturesInCells")]
-        bool AllowHorizontalTriggeringOfPanGesturesInCells { get; set }
+        bool AllowHorizontalTriggeringOfPanGesturesInCells { get; set; }
 
         // @property (nonatomic) CGFloat rateWhenLongPressGestureTriggered;
         [Export("rateWhenLongPressGestureTriggered")]
-        nfloat RateWhenLongPressGestureTriggered { get; set }
+        nfloat RateWhenLongPressGestureTriggered { get; set; }
 
         // @property (nonatomic) CGFloat offsetFactorForHorizontalPanGesture;
         [Export("offsetFactorForHorizontalPanGesture")]
-        nfloat OffsetFactorForHorizontalPanGesture { get; set }
+        nfloat OffsetFactorForHorizontalPanGesture { get; set; }
     //}
 
     // @interface ControlLayer (SJBaseVideoPlayer)
@@ -2982,7 +2982,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJControlLayerAppearManager> _Null_unspecified controlLayerAppearManager;
         [Export("controlLayerAppearManager")]
-        SJControlLayerAppearManager? ControlLayerAppearManager { get; set }
+        SJControlLayerAppearManager? ControlLayerAppearManager { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJControlLayerAppearManagerObserver> _Nonnull controlLayerAppearObserver;
         [Export("controlLayerAppearObserver", ArgumentSemantic.Strong)]
@@ -2990,11 +2990,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (getter = isControlLayerAppeared, nonatomic) BOOL controlLayerAppeared;
         [Export("controlLayerAppeared")]
-        bool ControlLayerAppeared { get; set }
+        bool ControlLayerAppeared { get; set; }
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) canAutomaticallyDisappear;
         [Export("canAutomaticallyDisappear")]
-        Func<SJBaseVideoPlayer, bool>? CanAutomaticallyDisappear { get; set }
+        Func<SJBaseVideoPlayer, bool>? CanAutomaticallyDisappear { get; set; }
 
         // -(void)controlLayerNeedAppear;
         [Export("controlLayerNeedAppear")]
@@ -3006,7 +3006,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) BOOL pausedToKeepAppearState;
         [Export("pausedToKeepAppearState")]
-        bool PausedToKeepAppearState { get; set }
+        bool PausedToKeepAppearState { get; set; }
     //}
 
     // @interface FitOnScreen (SJBaseVideoPlayer)
@@ -3016,7 +3016,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJFitOnScreenManager> _Null_unspecified fitOnScreenManager;
         [Export("fitOnScreenManager")]
-        SJFitOnScreenManager? FitOnScreenManager { get; set }
+        SJFitOnScreenManager? FitOnScreenManager { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJFitOnScreenManagerObserver> _Nonnull fitOnScreenObserver;
         [Export("fitOnScreenObserver", ArgumentSemantic.Strong)]
@@ -3024,11 +3024,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (getter = isFitOnScreen, nonatomic) BOOL fitOnScreen;
         [Export("fitOnScreen")]
-        bool FitOnScreen { get; set }
+        bool FitOnScreen { get; set; }
 
         // @property (nonatomic) BOOL onlyFitOnScreen;
         [Export("onlyFitOnScreen")]
-        bool OnlyFitOnScreen { get; set }
+        bool OnlyFitOnScreen { get; set; }
 
         // -(void)setFitOnScreen:(BOOL)fitOnScreen animated:(BOOL)animated;
         [Export("setFitOnScreen:animated:")]
@@ -3046,7 +3046,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong) id<SJRotationManager> _Nullable rotationManager;
         [Export("rotationManager")]
-        SJRotationManager? RotationManager { get; set }
+        SJRotationManager? RotationManager { get; set; }
 
         // @property (readonly, nonatomic, strong) id<SJRotationManagerObserver> _Nonnull rotationObserver;
         [Export("rotationObserver", ArgumentSemantic.Strong)]
@@ -3054,11 +3054,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) shouldTriggerRotation;
         [Export("shouldTriggerRotation")]
-        Func<SJBaseVideoPlayer, bool>? ShouldTriggerRotation { get; set }
+        Func<SJBaseVideoPlayer, bool>? ShouldTriggerRotation { get; set; }
 
         // @property (nonatomic) BOOL allowsRotationInFitOnScreen;
         [Export("allowsRotationInFitOnScreen")]
-        bool AllowsRotationInFitOnScreen { get; set }
+        bool AllowsRotationInFitOnScreen { get; set; }
 
         // -(void)rotate;
         [Export("rotate")]
@@ -3082,7 +3082,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (getter = isLockedScreen, nonatomic) BOOL lockedScreen;
         [Export("lockedScreen")]
-        bool LockedScreen { get; set }
+        bool LockedScreen { get; set; }
 
         // @property (readonly, nonatomic) UIInterfaceOrientation currentOrientation;
         [Export("currentOrientation")]
@@ -3096,7 +3096,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (copy, nonatomic) void (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) presentationSizeDidChangeExeBlock;
         [Export("presentationSizeDidChangeExeBlock")]
-        Action<SJBaseVideoPlayer>? PresentationSizeDidChangeExeBlock { get; set }
+        Action<SJBaseVideoPlayer>? PresentationSizeDidChangeExeBlock { get; set; }
 
         // @property (readonly, nonatomic) CGSize videoPresentationSize;
         [Export("videoPresentationSize")]
@@ -3149,23 +3149,23 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic, strong, null_resettable) id<SJSmallViewFloatingController> _Null_unspecified smallViewFloatingController;
         [Export("smallViewFloatingController")]
-        SJSmallViewFloatingController? SmallViewFloatingController { get; set }
+        SJSmallViewFloatingController? SmallViewFloatingController { get; set; }
 
         // @property (getter = isHiddenFloatSmallViewWhenPlaybackFinished, nonatomic) BOOL hiddenFloatSmallViewWhenPlaybackFinished;
         [Export("hiddenFloatSmallViewWhenPlaybackFinished")]
-        bool HiddenFloatSmallViewWhenPlaybackFinished { get; set }
+        bool HiddenFloatSmallViewWhenPlaybackFinished { get; set; }
 
         // @property (nonatomic) BOOL pausedWhenScrollDisappeared;
         [Export("pausedWhenScrollDisappeared")]
-        bool PausedWhenScrollDisappeared { get; set }
+        bool PausedWhenScrollDisappeared { get; set; }
 
         // @property (nonatomic) BOOL resumePlaybackWhenScrollAppeared;
         [Export("resumePlaybackWhenScrollAppeared")]
-        bool ResumePlaybackWhenScrollAppeared { get; set }
+        bool ResumePlaybackWhenScrollAppeared { get; set; }
 
         // @property (nonatomic) BOOL hiddenViewWhenScrollDisappeared;
         [Export("hiddenViewWhenScrollDisappeared")]
-        bool HiddenViewWhenScrollDisappeared { get; set }
+        bool HiddenViewWhenScrollDisappeared { get; set; }
 
         // @property (readonly, nonatomic) BOOL isPlayOnScrollView;
         [Export("isPlayOnScrollView")]
@@ -3177,11 +3177,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) playerViewWillAppearExeBlock;
         [Export("playerViewWillAppearExeBlock")]
-        Action<SJBaseVideoPlayer>? PlayerViewWillAppearExeBlock { get; set }
+        Action<SJBaseVideoPlayer>? PlayerViewWillAppearExeBlock { get; set; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) playerViewWillDisappearExeBlock;
         [Export("playerViewWillDisappearExeBlock")]
-        Action<SJBaseVideoPlayer>? PlayerViewWillDisappearExeBlock { get; set }
+        Action<SJBaseVideoPlayer>? PlayerViewWillDisappearExeBlock { get; set; }
     //}
 
     // @interface Subtitle (SJBaseVideoPlayer)
@@ -3191,7 +3191,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJSubtitlePopupController> _Null_unspecified subtitlePopupController;
         [Export("subtitlePopupController")]
-        SJSubtitlePopupController? SubtitlePopupController { get; set }
+        SJSubtitlePopupController? SubtitlePopupController { get; set; }
 
         // @property (nonatomic) CGFloat subtitleBottomMargin;
         [Export("subtitleBottomMargin")]
@@ -3202,7 +3202,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) CGFloat subtitleHorizontalMinMargin;
         [Export("subtitleHorizontalMinMargin")]
-        nfloat SubtitleHorizontalMinMargin { get; set }
+        nfloat SubtitleHorizontalMinMargin { get; set; }
     //}
 
     // @interface Danmaku (SJBaseVideoPlayer)
@@ -3212,7 +3212,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong, null_resettable) id<SJDanmakuPopupController> _Null_unspecified danmakuPopupController;
         [Export("danmakuPopupController")]
-        SJDanmakuPopupController? DanmakuPopupController { get; set }
+        SJDanmakuPopupController? DanmakuPopupController { get; set; }
     //}
 
     // @interface Watermark (SJBaseVideoPlayer)
@@ -3222,7 +3222,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong) UIView<SJWatermarkView> * _Nullable watermarkView;
         [Export("watermarkView")]
-        SJWatermarkView? WatermarkView { get; set }
+        SJWatermarkView? WatermarkView { get; set; }
 
         // -(void)updateWatermarkViewLayout;
         [Export("updateWatermarkViewLayout")]
@@ -3240,7 +3240,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic, strong) NSURL * _Nullable assetURL;
         [Export("assetURL")]
-        NSUrl? AssetURL { get; set }
+        NSUrl? AssetURL { get; set; }
         
         // @property (readonly, nonatomic) BOOL isPlayedToEndTime __attribute__((deprecated("use `isPlaybackFinished`;")));
         [Export("isPlayedToEndTime")]
@@ -3412,15 +3412,15 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic) NSInteger id;
         [Export("id")]
-        nint Id { get; set }
+        nint Id { get; set; }
 
         // @property (nonatomic) NSTimeInterval createdTime;
         [Export("createdTime")]
-        double CreatedTime { get; set }
+        double CreatedTime { get; set; }
 
         // @property (nonatomic) NSTimeInterval updatedTime;
         [Export("updatedTime")]
-        double UpdatedTime { get; set }
+        double UpdatedTime { get; set; }
     //}
 
     // @interface SJSQLite3Extended (SJPlaybackRecord) <SJSQLiteTableModelProtocol>
@@ -4398,7 +4398,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (copy, nonatomic) void (^ _Nullable)(NSTimer * _Nonnull) sj_usingBlock;
         [Export("sj_usingBlock")]
-        Action<NSTimer>? Sj_usingBlock { get; set }
+        Action<NSTimer>? Sj_usingBlock { get; set; }
 
         // -(void)sj_fire;
         [Export("sj_fire")]
@@ -4850,7 +4850,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (nonatomic, strong) UIView * _Nullable presentView;
         [Export("presentView")]
-        UIView? PresentView { get; set }
+        UIView? PresentView { get; set; }
     }
 
     // @protocol SJPlayerViewDelegate <NSObject>
@@ -5468,7 +5468,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, getter = isForcedRotation, nonatomic) BOOL forcedRotation;
         [Export("forcedRotation")]
-        bool ForcedRotation { get; set }
+        bool ForcedRotation { get; set; }
 
         // @property (readonly, nonatomic) SJOrientation deviceOrientation;
         [Export("deviceOrientation")]
@@ -5476,7 +5476,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) SJOrientation currentOrientation;
         [Export("currentOrientation")]
-        SJOrientation CurrentOrientation { get; set }
+        SJOrientation CurrentOrientation { get; set; }
 
         // -(void)rotationBegin __attribute__((objc_requires_super));
         [Export("rotationBegin")]
@@ -5555,7 +5555,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (nonatomic) SJSafeAreaInsetsMask disabledAdjustSafeAreaInsetsMask;
         [Export("disabledAdjustSafeAreaInsetsMask")]
-        SJSafeAreaInsetsMask DisabledAdjustSafeAreaInsetsMask { get; set }
+        SJSafeAreaInsetsMask DisabledAdjustSafeAreaInsetsMask { get; set; }
     }
 
     // @interface SJRotationFullscreenWindow : UIWindow
@@ -5865,23 +5865,23 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) CGFloat sj_x;
         [Export("sj_x")]
-        nfloat Sj_x { get; set }
+        nfloat Sj_x { get; set; }
 
         // @property (nonatomic) CGFloat sj_y;
         [Export("sj_y")]
-        nfloat Sj_y { get; set }
+        nfloat Sj_y { get; set; }
 
         // @property (nonatomic) CGFloat sj_w;
         [Export("sj_w")]
-        nfloat Sj_w { get; set }
+        nfloat Sj_w { get; set; }
 
         // @property (nonatomic) CGFloat sj_h;
         [Export("sj_h")]
-        nfloat Sj_h { get; set }
+        nfloat Sj_h { get; set; }
 
         // @property (nonatomic) CGSize sj_size;
         [Export("sj_size")]
-        CGSize Sj_size { get; set }
+        CGSize Sj_size { get; set; }
     }
 
     // @interface SJBaseVideoPlayerExtended (NSObject)
