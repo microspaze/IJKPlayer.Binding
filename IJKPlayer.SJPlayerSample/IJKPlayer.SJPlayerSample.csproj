@@ -6,7 +6,7 @@
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     <Configurations>Debug;Release</Configurations>
-    <Platforms>Device;Simulator;AnyCPU</Platforms>
+    <Platforms>Simulator;Device;AnyCPU</Platforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Simulator' ">
     <CreatePackage>false</CreatePackage>
@@ -33,6 +33,8 @@
     <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IJKPlayer.SJPlayer\IJKPlayer.SJPlayer.csproj" />
+    <Reference Include="IJKPlayer.SJPlayer">
+      <HintPath>..\IJKPlayer.SJPlayer\bin\IJKPlayer.SJPlayer.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
