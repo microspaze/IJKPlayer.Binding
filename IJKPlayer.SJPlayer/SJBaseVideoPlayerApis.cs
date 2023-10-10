@@ -1926,22 +1926,22 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol, Model]
+    //[Protocol, Model]
     [BaseType(typeof(NSObject))]
     interface SJSmallViewFloatingControllerObserverProtocol
     {
         // @required @property (readonly, nonatomic, weak) id<SJSmallViewFloatingController> _Nullable controller;
-        [Abstract]
+        //[Abstract]
         [NullAllowed, Export("controller", ArgumentSemantic.Weak)]
         SJSmallViewFloatingController Controller { get; }
 
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJSmallViewFloatingController> _Nonnull) onAppearChanged;
-        [Abstract]
+        //[Abstract]
         [NullAllowed, Export("onAppearChanged", ArgumentSemantic.Copy)]
         Action<SJSmallViewFloatingController> OnAppearChanged { get; set; }
 
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJSmallViewFloatingController> _Nonnull) onEnabled;
-        [Abstract]
+        //[Abstract]
         [NullAllowed, Export("onEnabled", ArgumentSemantic.Copy)]
         Action<SJSmallViewFloatingController> OnEnabled { get; set; }
     }

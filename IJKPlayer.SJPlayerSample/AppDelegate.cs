@@ -67,6 +67,11 @@ public class AppDelegate : UIApplicationDelegate {
         {
             controller.Dismiss();
         };
+        var smallViewObserver = smallViewController.Observer();
+        smallViewObserver.OnAppearChanged = (controller) =>
+        {
+            Console.WriteLine($"Small view isAppeared: {controller.IsAppeared}");
+        };
         player.SmallViewFloatingController = smallViewController;
         player.SmallViewFloatingController.Enabled = true;
 
