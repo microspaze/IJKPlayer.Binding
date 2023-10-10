@@ -1418,46 +1418,16 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) NSUInteger superviewTag;
         [Export("superviewTag")]
         nuint SuperviewTag { get; set; }
-    }
-
-    // @protocol SJPlayModelPlayerSuperview
-    /*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-    */
-    [Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    interface SJPlayModelPlayerSuperview
-    {
-    }
-
-    // @protocol SJPlayModelNestedView
-    /*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-    */
-    [Protocol]
-    interface SJPlayModelNestedView
-    {
-    }
+    //}
 
     // @interface SJDeprecated (SJPlayModel)
-    [Category]
-    [BaseType(typeof(SJPlayModel))]
-    interface SJPlayModel_SJDeprecated
-    {
+    //[Category]
+    //[BaseType(typeof(SJPlayModel))]
+    //interface SJPlayModel_SJDeprecated
+    //{
         // +(instancetype _Nonnull)UIViewPlayModel __attribute__((deprecated("use `SJPlayModel.alloc.init`!")));
-        [Static] [Export("UIViewPlayModel")]
+        [Static]
+        [Export("UIViewPlayModel")]
         SJPlayModel UIViewPlayModel { get; }
 
         // +(instancetype _Nonnull)UITableViewCellPlayModelWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag atIndexPath:(NSIndexPath * _Nonnull)indexPath tableView:(UITableView * _Nonnull)tableView __attribute__((deprecated("use `playModelWithTableView:indexPath`!")));
@@ -1494,6 +1464,37 @@ namespace IJKPlayer.SJPlayer
         [Static]
         [Export("UICollectionViewNestedInUICollectionViewCellPlayModelWithPlayerSuperviewTag:atIndexPath:collectionViewTag:collectionViewAtIndexPath:rootCollectionView:")]
         SJPlayModel UICollectionViewNestedInUICollectionViewCellPlayModelWithPlayerSuperviewTag(nint playerSuperviewTag, NSIndexPath indexPath, nint collectionViewTag, NSIndexPath collectionViewAtIndexPath, UICollectionView rootCollectionView);
+    }
+
+    // @protocol SJPlayModelPlayerSuperview
+    /*
+  Check whether adding [Model] to this declaration is appropriate.
+  [Model] is used to generate a C# class that implements this protocol,
+  and might be useful for protocols that consumers are supposed to implement,
+  since consumers can subclass the generated class instead of implementing
+  the generated interface. If consumers are not supposed to implement this
+  protocol, then [Model] is redundant and will generate code that will never
+  be used.
+    */
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
+    interface SJPlayModelPlayerSuperview
+    {
+    }
+
+    // @protocol SJPlayModelNestedView
+    /*
+  Check whether adding [Model] to this declaration is appropriate.
+  [Model] is used to generate a C# class that implements this protocol,
+  and might be useful for protocols that consumers are supposed to implement,
+  since consumers can subclass the generated class instead of implementing
+  the generated interface. If consumers are not supposed to implement this
+  protocol, then [Model] is redundant and will generate code that will never
+  be used.
+    */
+    [Protocol]
+    interface SJPlayModelNestedView
+    {
     }
 
     // @protocol SJPlayerDefaultSelectors <NSObject>
@@ -2710,7 +2711,7 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic, strong, null_resettable) __kindof id<SJVideoPlayerPlaybackController> _Null_unspecified playbackController;
         [Export("playbackController")]
         //SJVideoPlayerPlaybackController? PlaybackController { get; set; }
-        SJIJKMediaPlaybackController? IJKPlaybackController { get; set; }
+        SJMediaPlaybackController? PlaybackController { get; set; }
 
         // @property (readonly, nonatomic, strong) SJPlaybackObservation * _Nonnull playbackObserver;
         [Export("playbackObserver", ArgumentSemantic.Strong)]
@@ -4181,6 +4182,7 @@ namespace IJKPlayer.SJPlayer
     }
 
     // @interface SJAVMediaPlaybackController : SJMediaPlaybackController
+    [Model]
     [BaseType(typeof(SJMediaPlaybackController))]
     interface SJAVMediaPlaybackController
     {
@@ -4195,13 +4197,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) BOOL accurateSeeking;
         [Export("accurateSeeking")]
         bool AccurateSeeking { get; set; }
-    }
+    //}
 
     // @interface SJAVMediaPlaybackAdd (SJAVMediaPlaybackController) <SJMediaPlaybackExportController, SJMediaPlaybackScreenshotController>
-    [Category]
-    [BaseType(typeof(SJAVMediaPlaybackController))]
-    interface SJAVMediaPlaybackController_SJAVMediaPlaybackAdd //: ISJMediaPlaybackExportController, ISJMediaPlaybackScreenshotController
-    {
+    //[Category]
+    //[BaseType(typeof(SJAVMediaPlaybackController))]
+    //interface SJAVMediaPlaybackController_SJAVMediaPlaybackAdd //: ISJMediaPlaybackExportController, ISJMediaPlaybackScreenshotController
+    //{
         // @required -(void)exportWithBeginTime:(NSTimeInterval)beginTime duration:(NSTimeInterval)duration presetName:(NSString * _Nullable)presetName progress:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, float))progress completion:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSURL * _Nullable, UIImage * _Nullable))completion failure:(void (^ _Nonnull)(id<SJVideoPlayerPlaybackController> _Nonnull, NSError * _Nullable))failure;
         [Export("exportWithBeginTime:duration:presetName:progress:completion:failure:")]
         void ExportWithBeginTime(double beginTime, double duration, string presetName, Action<SJVideoPlayerPlaybackController, float> progress, Action<SJVideoPlayerPlaybackController, NSUrl, UIImage> completion, Action<SJVideoPlayerPlaybackController, NSError> failure);
@@ -5560,16 +5562,16 @@ namespace IJKPlayer.SJPlayer
         //void Animated(UIViewController viewController, bool animated);
 
         // @required -(UIStatusBarStyle)preferredStatusBarStyle;
-        [Abstract]
-        [Export("preferredStatusBarStyle")]
+        //[Abstract]
+        //[Export("preferredStatusBarStyle")]
         //[Verify(MethodToProperty)]
-        UIStatusBarStyle PreferredStatusBarStyle();
+        //UIStatusBarStyle PreferredStatusBarStyle();
 
         // @required -(BOOL)prefersStatusBarHidden;
-        [Abstract]
-        [Export("prefersStatusBarHidden")]
+        //[Abstract]
+        //[Export("prefersStatusBarHidden")]
         //[Verify(MethodToProperty)]
-        bool PrefersStatusBarHidden();
+        //bool PrefersStatusBarHidden();
     }
 
     // @interface SJRotationSafeAreaFixing (UIViewController)

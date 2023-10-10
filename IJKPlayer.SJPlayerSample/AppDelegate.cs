@@ -24,26 +24,37 @@ public class AppDelegate : UIApplicationDelegate {
 			AutoresizingMask = UIViewAutoresizing.All,
 		});
 
-		IJKFFOptions options = IJKFFOptions.OptionsByDefault;
-		options.SetPlayerOptionIntValue(-1, "probesize");
-		options.SetPlayerOptionIntValue(0, "packet-buffering");
-		options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
-		//options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
 		SJVideoPlayer player = new SJVideoPlayer();
-		SJVideoPlayerURLAsset urlAsset = new SJVideoPlayerURLAsset(
-			"Video Title",
-			new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
-			SJPlayModel_SJDeprecated.UIViewPlayModel);
-		SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
-		controller.Options = options;
-		player.IJKPlaybackController = controller;
-		player.URLAsset = urlAsset;
-		player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
-		player.Pause();
-		UIView playerView = player.View;
-		playerView.BackgroundColor = UIColor.Black;
-		playerView.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
-		vc.View!.AddSubview(playerView);
+
+        var useIJK = false;
+		if (useIJK)
+		{
+			SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
+			IJKFFOptions options = IJKFFOptions.OptionsByDefault;
+			options.SetPlayerOptionIntValue(-1, "probesize");
+			options.SetPlayerOptionIntValue(0, "packet-buffering");
+			options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
+			//options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
+			controller.Options = options;
+			player.PlaybackController = controller;
+		}
+		else
+		{
+            //Use AVMedia for default, No need set PlaybackController
+            //SJAVMediaPlaybackController playbackController = new SJAVMediaPlaybackController();
+            //player.PlaybackController = playbackController;
+        }
+
+        SJVideoPlayerURLAsset urlAsset = new SJVideoPlayerURLAsset(
+            title: "Video Title",
+            URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
+            playModel: SJPlayModel.UIViewPlayModel);
+        player.URLAsset = urlAsset;
+        player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
+        player.View.BackgroundColor = UIColor.Black;
+        player.View.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
+        player.Pause();
+        vc.View!.AddSubview(player.View);
 		
 		Window.RootViewController = vc;
 
