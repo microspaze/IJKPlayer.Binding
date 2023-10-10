@@ -17,15 +17,7 @@ public class AppDelegate : UIApplicationDelegate {
 
 		// create a UIViewController with a single UILabel
 		var vc = new UIViewController();
-		vc.View!.AddSubview (new UILabel (Window!.Frame) {
-			BackgroundColor = UIColor.SystemBackground,
-			TextAlignment = UITextAlignment.Center,
-			Text = "Hello, iOS!",
-			AutoresizingMask = UIViewAutoresizing.All,
-		});
-
-		SJVideoPlayer player = new SJVideoPlayer();
-
+		var player = new SJVideoPlayer();
         var useIJK = false;
 		if (useIJK)
 		{
@@ -40,12 +32,21 @@ public class AppDelegate : UIApplicationDelegate {
 		}
 		else
 		{
-            //Use AVMedia for default, No need set PlaybackController
+            //Use AVMedia for default
+            #region 1. No need set PlaybackController
+            //The following code will cause NSInternalInconsistencyException: You must override playerWithMedia:completionHandler: in a subclass.
             //SJAVMediaPlaybackController playbackController = new SJAVMediaPlaybackController();
             //player.PlaybackController = playbackController;
+            #endregion
+
+            #region 2. iOS 14.0 support PictureInPicture
+			//Don't forget add Audio AirPlay and Picture in Picture in Info.plist's Application Background Modes
+            //You can use IsPictureInPictureSupported() to check if PIP is supported
+            Console.WriteLine(player.PlaybackController.IsPictureInPictureSupported());
+            #endregion
         }
 
-        SJVideoPlayerURLAsset urlAsset = new SJVideoPlayerURLAsset(
+        var urlAsset = new SJVideoPlayerURLAsset(
             title: "Video Title",
             URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
             playModel: SJPlayModel.UIViewPlayModel);
@@ -54,9 +55,17 @@ public class AppDelegate : UIApplicationDelegate {
         player.View.BackgroundColor = UIColor.Black;
         player.View.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
         player.Pause();
+
+        vc.View!.AddSubview(new UILabel(Window!.Frame)
+        {
+            BackgroundColor = UIColor.SystemBackground,
+            TextAlignment = UITextAlignment.Center,
+            Text = $"PIP Supported: {player.PlaybackController.IsPictureInPictureSupported()}",
+            AutoresizingMask = UIViewAutoresizing.All,
+        });
         vc.View!.AddSubview(player.View);
-		
-		Window.RootViewController = vc;
+
+        Window.RootViewController = vc;
 
 		// make the window visible
 		Window.MakeKeyAndVisible ();
