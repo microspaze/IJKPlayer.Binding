@@ -46,23 +46,59 @@ public class AppDelegate : UIApplicationDelegate {
             #endregion
         }
 
+        #region 3. Small View Floating 
+        var smallViewController = new SJSmallViewFloatingController();
+        smallViewController.LayoutPosition = SJSmallViewLayoutPosition.BottomRight;
+        smallViewController.LayoutInsets = new UIEdgeInsets(20, 12, 20, 12);
+        smallViewController.LayoutSize = new CGSize(260, 260 * 9 / 16.0);
+        smallViewController.FloatingViewShouldAppear = (controller) => { return true; };
+        smallViewController.OnSingleTapped = (controller) =>
+        {
+            if (player.IsPaused)
+            {
+                player.Play();
+            }
+            else
+            {
+                player.Pause();
+            }
+        };
+        smallViewController.OnDoubleTapped = (controller) =>
+        {
+            controller.Dismiss();
+        };
+        player.SmallViewFloatingController = smallViewController;
+        player.SmallViewFloatingController.Enabled = true;
+
+        var smallViewLabel = new UILabel(Window!.Frame)
+        {
+            BackgroundColor = UIColor.SystemBackground,
+            TextAlignment = UITextAlignment.Center,
+            Text = $"Small View",
+            AutoresizingMask = UIViewAutoresizing.All,
+        };
+        var tapGestureRecognizer = new UITapGestureRecognizer();
+        tapGestureRecognizer.AddTarget(() =>
+        {
+            //player.Pause();
+            player.SmallViewFloatingController.Show();
+        });
+        smallViewLabel.UserInteractionEnabled = true;
+        smallViewLabel.AddGestureRecognizer(tapGestureRecognizer);
+        vc.View!.AddSubview(smallViewLabel);
+
+        #endregion
+
         var urlAsset = new SJVideoPlayerURLAsset(
             title: "Video Title",
             URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
-            playModel: SJPlayModel.UIViewPlayModel);
+            playModel: new SJPlayModel());
         player.URLAsset = urlAsset;
         player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
         player.View.BackgroundColor = UIColor.Black;
         player.View.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
         player.Pause();
 
-        vc.View!.AddSubview(new UILabel(Window!.Frame)
-        {
-            BackgroundColor = UIColor.SystemBackground,
-            TextAlignment = UITextAlignment.Center,
-            Text = $"PIP Supported: {player.PlaybackController.IsPictureInPictureSupported()}",
-            AutoresizingMask = UIViewAutoresizing.All,
-        });
         vc.View!.AddSubview(player.View);
 
         Window.RootViewController = vc;
