@@ -24,32 +24,32 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) append;
         [Abstract]
         [Export("append", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTAttributesProtocol> Append();
+        Func<NSString, SJUTAttributesProtocol> Append { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(__attribute__((noescape)) SJUTAppendImageHandler _Nonnull) appendImage;
         [Abstract]
         [Export("appendImage", ArgumentSemantic.Copy)]
-        Func<SJUTAppendImageHandler, SJUTAttributesProtocol> AppendImage();
+        Func<SJUTAppendImageHandler, SJUTAttributesProtocol> AppendImage { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull) appendText;
         [Abstract]
         [Export("appendText", ArgumentSemantic.Copy)]
-        Func<NSAttributedString, SJUTAttributesProtocol> AppendText();
+        Func<NSAttributedString, SJUTAttributesProtocol> AppendText { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSRange) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Func<NSRange, SJUTAttributesProtocol> Update();
+        Func<NSRange, SJUTAttributesProtocol> Update { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) regex;
         [Abstract]
         [Export("regex", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTRegexHandlerProtocol> Regex();
+        Func<NSString, SJUTRegexHandlerProtocol> Regex { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRangeHandlerProtocol>  _Nonnull (^ _Nonnull)(NSRange) range;
         [Abstract]
         [Export("range", ArgumentSemantic.Copy)]
-        Func<NSRange, SJUTRangeHandlerProtocol> Range();
+        Func<NSRange, SJUTRangeHandlerProtocol> Range { get; }
     }
     
     // common argument actions
@@ -159,139 +159,139 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) SJUTFontAttribute _Nonnull font;
         [Abstract]
         [Export("font", ArgumentSemantic.Copy)]
-        SJUTFontAttribute Font();
+        SJUTFontAttribute Font { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTColorAttribute _Nonnull textColor;
         [Abstract]
         [Export("textColor", ArgumentSemantic.Copy)]
-        SJUTColorAttribute TextColor();
+        SJUTColorAttribute TextColor { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTColorAttribute _Nonnull backgroundColor;
         [Abstract]
         [Export("backgroundColor", ArgumentSemantic.Copy)]
-        SJUTColorAttribute BackgroundColor();
+        SJUTColorAttribute BackgroundColor { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTKernAttribute _Nonnull kern;
         [Abstract]
         [Export("kern", ArgumentSemantic.Copy)]
-        SJUTKernAttribute Kern();
+        SJUTKernAttribute Kern { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTShadowAttribute _Nonnull shadow;
         [Abstract]
         [Export("shadow", ArgumentSemantic.Copy)]
-        SJUTShadowAttribute Shadow();
+        SJUTShadowAttribute Shadow { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTStrokeAttribute _Nonnull stroke;
         [Abstract]
         [Export("stroke", ArgumentSemantic.Copy)]
-        SJUTStrokeAttribute Stroke();
+        SJUTStrokeAttribute Stroke { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTDecorationAttribute _Nonnull underLine;
         [Abstract]
         [Export("underLine", ArgumentSemantic.Copy)]
-        SJUTDecorationAttribute UnderLine();
+        SJUTDecorationAttribute UnderLine { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTDecorationAttribute _Nonnull strikethrough;
         [Abstract]
         [Export("strikethrough", ArgumentSemantic.Copy)]
-        SJUTDecorationAttribute Strikethrough();
+        SJUTDecorationAttribute Strikethrough { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTBaseLineOffsetAttribute _Nonnull baseLineOffset;
         [Abstract]
         [Export("baseLineOffset", ArgumentSemantic.Copy)]
-        SJUTBaseLineOffsetAttribute BaseLineOffset();
+        SJUTBaseLineOffsetAttribute BaseLineOffset { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTLineSpacingAttribute _Nonnull lineSpacing;
         [Abstract]
         [Export("lineSpacing", ArgumentSemantic.Copy)]
-        SJUTLineSpacingAttribute LineSpacing();
+        SJUTLineSpacingAttribute LineSpacing { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTParagraphSpacingAttribute _Nonnull paragraphSpacing;
         [Abstract]
         [Export("paragraphSpacing", ArgumentSemantic.Copy)]
-        SJUTParagraphSpacingAttribute ParagraphSpacing();
+        SJUTParagraphSpacingAttribute ParagraphSpacing { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTAlignmentAttribute _Nonnull alignment;
         [Abstract]
         [Export("alignment", ArgumentSemantic.Copy)]
-        SJUTAlignmentAttribute Alignment();
+        SJUTAlignmentAttribute Alignment { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTFirstLineHeadIndentAttribute _Nonnull firstLineHeadIndent;
         [Abstract]
         [Export("firstLineHeadIndent", ArgumentSemantic.Copy)]
-        SJUTFirstLineHeadIndentAttribute FirstLineHeadIndent();
+        SJUTFirstLineHeadIndentAttribute FirstLineHeadIndent { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTHeadIndentAttribute _Nonnull headIndent;
         [Abstract]
         [Export("headIndent", ArgumentSemantic.Copy)]
-        SJUTHeadIndentAttribute HeadIndent();
+        SJUTHeadIndentAttribute HeadIndent { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTTailIndentAttribute _Nonnull tailIndent;
         [Abstract]
         [Export("tailIndent", ArgumentSemantic.Copy)]
-        SJUTTailIndentAttribute TailIndent();
+        SJUTTailIndentAttribute TailIndent { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTLineBreakModeAttribute _Nonnull lineBreakMode;
         [Abstract]
         [Export("lineBreakMode", ArgumentSemantic.Copy)]
-        SJUTLineBreakModeAttribute LineBreakMode();
+        SJUTLineBreakModeAttribute LineBreakMode { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTMinimumLineHeightAttribute _Nonnull minimumLineHeight;
         [Abstract]
         [Export("minimumLineHeight", ArgumentSemantic.Copy)]
-        SJUTMinimumLineHeightAttribute MinimumLineHeight();
+        SJUTMinimumLineHeightAttribute MinimumLineHeight { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTMaximumLineHeightAttribute _Nonnull maximumLineHeight;
         [Abstract]
         [Export("maximumLineHeight", ArgumentSemantic.Copy)]
-        SJUTMaximumLineHeightAttribute MaximumLineHeight();
+        SJUTMaximumLineHeightAttribute MaximumLineHeight { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTBaseWritingDirectionAttribute _Nonnull baseWritingDirection;
         [Abstract]
         [Export("baseWritingDirection", ArgumentSemantic.Copy)]
-        SJUTBaseWritingDirectionAttribute BaseWritingDirection();
+        SJUTBaseWritingDirectionAttribute BaseWritingDirection { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTLineHeightMultipleAttribute _Nonnull lineHeightMultiple;
         [Abstract]
         [Export("lineHeightMultiple", ArgumentSemantic.Copy)]
-        SJUTLineHeightMultipleAttribute LineHeightMultiple();
+        SJUTLineHeightMultipleAttribute LineHeightMultiple { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTParagraphSpacingBeforeAttribute _Nonnull paragraphSpacingBefore;
         [Abstract]
         [Export("paragraphSpacingBefore", ArgumentSemantic.Copy)]
-        SJUTParagraphSpacingBeforeAttribute ParagraphSpacingBefore();
+        SJUTParagraphSpacingBeforeAttribute ParagraphSpacingBefore { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTHyphenationFactorAttribute _Nonnull hyphenationFactor;
         [Abstract]
         [Export("hyphenationFactor", ArgumentSemantic.Copy)]
-        SJUTHyphenationFactorAttribute HyphenationFactor();
+        SJUTHyphenationFactorAttribute HyphenationFactor { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTTabStopsAttribute _Nonnull tabStops;
         [Abstract]
         [Export("tabStops", ArgumentSemantic.Copy)]
-        SJUTTabStopsAttribute TabStops();
+        SJUTTabStopsAttribute TabStops { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTDefaultTabIntervalAttribute _Nonnull defaultTabInterval;
         [Abstract]
         [Export("defaultTabInterval", ArgumentSemantic.Copy)]
-        SJUTDefaultTabIntervalAttribute DefaultTabInterval();
+        SJUTDefaultTabIntervalAttribute DefaultTabInterval { get; }
 
         // @required @property (readonly, copy, nonatomic) API_AVAILABLE(ios(9.0)) SJUTAllowsDefaultTighteningForTruncationAttribute allowsDefaultTighteningForTruncation __attribute__((availability(ios, introduced=9.0)));
         //[iOS(9, 0)]
         [Abstract]
         [Export("allowsDefaultTighteningForTruncation", ArgumentSemantic.Copy)]
-        SJUTAllowsDefaultTighteningForTruncationAttribute AllowsDefaultTighteningForTruncation();
+        SJUTAllowsDefaultTighteningForTruncationAttribute AllowsDefaultTighteningForTruncation { get; }
 
         // @required @property (readonly, copy, nonatomic) API_AVAILABLE(ios(9.0)) SJUTLineBreakStrategyAttribute lineBreakStrategy __attribute__((availability(ios, introduced=9.0)));
         //[iOS(9, 0)]
         [Abstract]
         [Export("lineBreakStrategy", ArgumentSemantic.Copy)]
-        SJUTLineBreakStrategyAttribute LineBreakStrategy();
+        SJUTLineBreakStrategyAttribute LineBreakStrategy { get; }
 
         // @required @property (readonly, copy, nonatomic) SJUTSetAttribute _Nonnull set;
         [Abstract]
         [Export("set", ArgumentSemantic.Copy)]
-        SJUTSetAttribute Set();
+        SJUTSetAttribute Set { get; }
     }
 
     // @protocol SJUTRangeHandlerProtocol
@@ -311,17 +311,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUTAttributesProtocol> _Nonnull)) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<SJUTAttributesProtocolArgumentAction> Update();
+        Action<SJUTAttributesProtocolArgumentAction> Update { get; }
 
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUIKitTextMakerProtocol> _Nonnull)) replaceWithText;
         [Abstract]
         [Export("replaceWithText", ArgumentSemantic.Copy)]
-        Action<SJUIKitTextMakerProtocolArgumentAction> ReplaceWithText();
+        Action<SJUIKitTextMakerProtocolArgumentAction> ReplaceWithText { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) replaceWithString;
         [Abstract]
         [Export("replaceWithString", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTAttributesProtocol> ReplaceWithString();
+        Func<NSString, SJUTAttributesProtocol> ReplaceWithString { get; }
     }
 
     // @protocol SJUTRegexHandlerProtocol <SJUTRangeHandlerProtocol>
@@ -341,17 +341,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(NSMutableAttributedString * _Nonnull, NSTextCheckingResult * _Nonnull)) handler;
         [Abstract]
         [Export("handler", ArgumentSemantic.Copy)]
-        Action<NSMutableAttributedStringNSTextCheckingResultArgumentsAction> Handler();
+        Action<NSMutableAttributedStringNSTextCheckingResultArgumentsAction> Handler { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSRegularExpressionOptions) regularExpressionOptions;
         [Abstract]
         [Export("regularExpressionOptions", ArgumentSemantic.Copy)]
-        Func<NSRegularExpressionOptions, SJUTRegexHandlerProtocol> RegularExpressionOptions();
+        Func<NSRegularExpressionOptions, SJUTRegexHandlerProtocol> RegularExpressionOptions { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSMatchingOptions) matchingOptions;
         [Abstract]
         [Export("matchingOptions", ArgumentSemantic.Copy)]
-        Func<NSMatchingOptions, SJUTRegexHandlerProtocol> MatchingOptions();
+        Func<NSMatchingOptions, SJUTRegexHandlerProtocol> MatchingOptions { get; }
     }
 
     // @protocol SJUTStroke
@@ -621,87 +621,87 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIFont * _Nonnull) font;
         [Export("font", ArgumentSemantic.Copy)]
-        Func<UIFont, SJAttributesRangeOperator> Font();
+        Func<UIFont, SJAttributesRangeOperator> Font { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIColor * _Nonnull) textColor;
         [Export("textColor", ArgumentSemantic.Copy)]
-        Func<UIColor, SJAttributesRangeOperator> TextColor();
+        Func<UIColor, SJAttributesRangeOperator> TextColor { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) expansion;
         [Export("expansion", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> Expansion();
+        Func<double, SJAttributesRangeOperator> Expansion { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(CGSize, CGFloat, UIColor * _Nonnull) shadow;
         [Export("shadow", ArgumentSemantic.Copy)]
-        Func<CGSize, nfloat, UIColor, SJAttributesRangeOperator> Shadow();
+        Func<CGSize, nfloat, UIColor, SJAttributesRangeOperator> Shadow { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIColor * _Nonnull) backgroundColor;
         [Export("backgroundColor", ArgumentSemantic.Copy)]
-        Func<UIColor, SJAttributesRangeOperator> BackgroundColor();
+        Func<UIColor, SJAttributesRangeOperator> BackgroundColor { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSUnderlineStyle, UIColor * _Nonnull) underLine;
         [Export("underLine", ArgumentSemantic.Copy)]
-        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> UnderLine();
+        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> UnderLine { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSUnderlineStyle, UIColor * _Nonnull) strikethrough;
         [Export("strikethrough", ArgumentSemantic.Copy)]
-        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> Strikethrough();
+        Func<NSUnderlineStyle, UIColor, SJAttributesRangeOperator> Strikethrough { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(UIColor * _Nonnull, double) stroke;
         [Export("stroke", ArgumentSemantic.Copy)]
-        Func<UIColor, double, SJAttributesRangeOperator> Stroke();
+        Func<UIColor, double, SJAttributesRangeOperator> Stroke { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) obliqueness;
         [Export("obliqueness", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> Obliqueness();
+        Func<double, SJAttributesRangeOperator> Obliqueness { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) letterSpacing;
         [Export("letterSpacing", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> LetterSpacing();
+        Func<double, SJAttributesRangeOperator> LetterSpacing { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) offset;
         [Export("offset", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> Offset();
+        Func<double, SJAttributesRangeOperator> Offset { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(void) isLink;
         [Export("isLink", ArgumentSemantic.Copy)]
-        Func<SJAttributesRangeOperator> IsLink();
+        Func<SJAttributesRangeOperator> IsLink { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSParagraphStyle * _Nonnull) paragraphStyle;
         [Export("paragraphStyle", ArgumentSemantic.Copy)]
-        Func<NSParagraphStyle, SJAttributesRangeOperator> ParagraphStyle();
+        Func<NSParagraphStyle, SJAttributesRangeOperator> ParagraphStyle { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) lineSpacing;
         [Export("lineSpacing", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> LineSpacing();
+        Func<double, SJAttributesRangeOperator> LineSpacing { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) paragraphSpacing;
         [Export("paragraphSpacing", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> ParagraphSpacing();
+        Func<double, SJAttributesRangeOperator> ParagraphSpacing { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) paragraphSpacingBefore;
         [Export("paragraphSpacingBefore", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> ParagraphSpacingBefore();
+        Func<double, SJAttributesRangeOperator> ParagraphSpacingBefore { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) firstLineHeadIndent;
         [Export("firstLineHeadIndent", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> FirstLineHeadIndent();
+        Func<double, SJAttributesRangeOperator> FirstLineHeadIndent { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) headIndent;
         [Export("headIndent", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> HeadIndent();
+        Func<double, SJAttributesRangeOperator> HeadIndent { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(double) tailIndent;
         [Export("tailIndent", ArgumentSemantic.Copy)]
-        Func<double, SJAttributesRangeOperator> TailIndent();
+        Func<double, SJAttributesRangeOperator> TailIndent { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSTextAlignment) alignment;
         [Export("alignment", ArgumentSemantic.Copy)]
-        Func<UITextAlignment, SJAttributesRangeOperator> Alignment();
+        Func<UITextAlignment, SJAttributesRangeOperator> Alignment { get; }
 
         // @property (readonly, copy, nonatomic) SJAttributesRangeOperator * _Nonnull (^ _Nonnull)(NSLineBreakMode) lineBreakMode;
         [Export("lineBreakMode", ArgumentSemantic.Copy)]
-        Func<UILineBreakMode, SJAttributesRangeOperator> LineBreakMode();
+        Func<UILineBreakMode, SJAttributesRangeOperator> LineBreakMode { get; }
     }
 
     // @interface SJAttributeWorker : SJAttributesRangeOperator

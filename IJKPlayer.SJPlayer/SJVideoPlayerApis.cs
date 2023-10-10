@@ -48,7 +48,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) BOOL restarted;
         [Abstract]
         [Export("restarted")]
-        bool Restarted();
+        bool Restarted { get; }
 
         // @required -(void)restartControlLayer;
         [Abstract]
@@ -245,7 +245,7 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(SJVideoPlayerConfigurations * _Nonnull)) update;
         [Static]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<SJVideoPlayerConfigurationsArgumentAction> Update();
+        Action<SJVideoPlayerConfigurationsArgumentAction> Update { get; }
 
         // @property (nonatomic, strong, null_resettable) id<SJVideoPlayerLocalizedStrings> _Null_unspecified localizedStrings;
         [NullAllowed, Export("localizedStrings", ArgumentSemantic.Strong)]
@@ -784,12 +784,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJVideoPlayerClipsOperation operation;
         [Abstract]
         [Export("operation")]
-        SJVideoPlayerClipsOperation Operation();
+        SJVideoPlayerClipsOperation Operation { get; }
 
         // @required @property (readonly, nonatomic) CMTimeRange range;
         [Abstract]
         [Export("range")]
-        CMTimeRange Range();
+        CMTimeRange Range { get; }
 
         // @required @property (nonatomic) BOOL resultNeedUpload;
         [Abstract]
@@ -824,37 +824,37 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJVideoPlayerClipsOperation operation;
         [Abstract]
         [Export("operation")]
-        SJVideoPlayerClipsOperation Operation();
+        SJVideoPlayerClipsOperation Operation { get; }
 
         // @required @property (readonly, nonatomic) SJClipsExportState exportState;
         [Abstract]
         [Export("exportState")]
-        SJClipsExportState ExportState();
+        SJClipsExportState ExportState { get; }
 
         // @required @property (readonly, nonatomic) SJClipsResultUploadState uploadState;
         [Abstract]
         [Export("uploadState")]
-        SJClipsResultUploadState UploadState();
+        SJClipsResultUploadState UploadState { get; }
 
         // @required @property (readonly, nonatomic, strong) UIImage * _Nullable thumbnailImage;
         [Abstract]
         [NullAllowed, Export("thumbnailImage", ArgumentSemantic.Strong)]
-        UIImage ThumbnailImage();
+        UIImage ThumbnailImage { get; }
 
         // @required @property (readonly, nonatomic, strong) UIImage * _Nullable image;
         [Abstract]
         [NullAllowed, Export("image", ArgumentSemantic.Strong)]
-        UIImage Image();
+        UIImage Image { get; }
 
         // @required @property (readonly, nonatomic, strong) NSURL * _Nullable fileURL;
         [Abstract]
         [NullAllowed, Export("fileURL", ArgumentSemantic.Strong)]
-        NSUrl FileURL();
+        NSUrl FileURL { get; }
 
         // @required @property (readonly, nonatomic, strong) SJVideoPlayerURLAsset * _Nullable currentPlayAsset;
         [Abstract]
         [NullAllowed, Export("currentPlayAsset", ArgumentSemantic.Strong)]
-        SJVideoPlayerURLAsset CurrentPlayAsset();
+        SJVideoPlayerURLAsset CurrentPlayAsset { get; }
 
         // @required -(NSData * _Nullable)data;
         [Abstract]
@@ -1038,12 +1038,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJControlLayerIdentifier previousIdentifier;
         [Abstract]
         [Export("previousIdentifier")]
-        nint PreviousIdentifier();
+        nint PreviousIdentifier { get; }
 
         // @required @property (readonly, nonatomic) SJControlLayerIdentifier currentIdentifier;
         [Abstract]
         [Export("currentIdentifier")]
-        nint CurrentIdentifier();
+        nint CurrentIdentifier { get; }
     }
 
     // @interface SJControlLayerSwitcher : NSObject <SJControlLayerSwitcher>
@@ -1173,7 +1173,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSArray<SJEdgeControlButtonItemAction *> * _Nullable actions;
         [NullAllowed, Export("actions")]
-        SJEdgeControlButtonItemAction[] Actions();
+        SJEdgeControlButtonItemAction[] Actions { get; }
 
         // -(void)addAction:(SJEdgeControlButtonItemAction * _Nonnull)action;
         [Export("addAction:")]
@@ -1209,7 +1209,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) SJButtonItemPlaceholderType placeholderType;
         [Export("placeholderType")]
-        SJButtonItemPlaceholderType PlaceholderType();
+        SJButtonItemPlaceholderType PlaceholderType { get; }
 
         // @property (nonatomic) CGFloat size;
         [Export("size")]
@@ -1228,7 +1228,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) BOOL isFrameLayout;
         [Export("isFrameLayout")]
-        bool IsFrameLayout();
+        bool IsFrameLayout { get; }
     //}
 
     // @interface SJDeprecated (SJEdgeControlButtonItem)
@@ -1289,15 +1289,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) id _Nullable target;
         [NullAllowed, Export("target", ArgumentSemantic.Weak)]
-        NSObject Target();
+        NSObject Target { get; }
 
         // @property (readonly, nonatomic) SEL _Nullable action;
         [NullAllowed, Export("action")]
-        Selector Action();
+        Selector Action { get; }
 
         // @property (readonly, copy, nonatomic) void (^ _Nullable)(SJEdgeControlButtonItemAction * _Nonnull) handler;
         [NullAllowed, Export("handler", ArgumentSemantic.Copy)]
-        Action<SJEdgeControlButtonItemAction> Handler();
+        Action<SJEdgeControlButtonItemAction> Handler { get; }
     }
 
     // @interface SJEdgeControlButtonItemAdapterLayout : NSObject
@@ -1310,7 +1310,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) CGSize intrinsicContentSize;
         [Export("intrinsicContentSize")]
-        CGSize IntrinsicContentSize();
+        CGSize IntrinsicContentSize { get; }
 
         // @property (nonatomic) SJAdapterLayoutType layoutType;
         [Export("layoutType", ArgumentSemantic.Assign)]
@@ -1486,15 +1486,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger numberOfItems;
         [Export("numberOfItems")]
-        nint NumberOfItems();
+        nint NumberOfItems { get; }
 
         // @property (readonly, nonatomic, strong) SJEdgeControlButtonItemAdapter * _Nonnull view;
         [Export("view", ArgumentSemantic.Strong)]
-        SJEdgeControlButtonItemAdapter View();
+        SJEdgeControlButtonItemAdapter View { get; }
 
         // @property (readonly, nonatomic) NSInteger itemCount;
         [Export("itemCount")]
-        nint ItemCount();
+        nint ItemCount { get; }
     }
 
     // @interface SJEdgeControlLayerAdapters : UIView
@@ -1503,31 +1503,31 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) SJEdgeControlButtonItemAdapter * _Nonnull topAdapter;
         [Export("topAdapter", ArgumentSemantic.Strong)]
-        SJEdgeControlButtonItemAdapter TopAdapter();
+        SJEdgeControlButtonItemAdapter TopAdapter { get; }
 
         // @property (readonly, nonatomic, strong) SJEdgeControlButtonItemAdapter * _Nonnull leftAdapter;
         [Export("leftAdapter", ArgumentSemantic.Strong)]
-        SJEdgeControlButtonItemAdapter LeftAdapter();
+        SJEdgeControlButtonItemAdapter LeftAdapter { get; }
 
         // @property (readonly, nonatomic, strong) SJEdgeControlButtonItemAdapter * _Nonnull bottomAdapter;
         [Export("bottomAdapter", ArgumentSemantic.Strong)]
-        SJEdgeControlButtonItemAdapter BottomAdapter();
+        SJEdgeControlButtonItemAdapter BottomAdapter { get; }
 
         // @property (readonly, nonatomic, strong) SJEdgeControlButtonItemAdapter * _Nonnull rightAdapter;
         [Export("rightAdapter", ArgumentSemantic.Strong)]
-        SJEdgeControlButtonItemAdapter RightAdapter();
+        SJEdgeControlButtonItemAdapter RightAdapter { get; }
 
         // @property (readonly, nonatomic, strong) SJEdgeControlButtonItemAdapter * _Nonnull centerAdapter;
         [Export("centerAdapter", ArgumentSemantic.Strong)]
-        SJEdgeControlButtonItemAdapter CenterAdapter();
+        SJEdgeControlButtonItemAdapter CenterAdapter { get; }
 
         // @property (readonly, nonatomic, strong) SJVideoPlayerControlMaskView * _Nonnull topContainerView;
         [Export("topContainerView", ArgumentSemantic.Strong)]
-        SJVideoPlayerControlMaskView TopContainerView();
+        SJVideoPlayerControlMaskView TopContainerView { get; }
 
         // @property (readonly, nonatomic, strong) SJVideoPlayerControlMaskView * _Nonnull bottomContainerView;
         [Export("bottomContainerView", ArgumentSemantic.Strong)]
-        SJVideoPlayerControlMaskView BottomContainerView();
+        SJVideoPlayerControlMaskView BottomContainerView { get; }
 
         // @property (readonly, nonatomic, strong) UIView * _Nonnull leftContainerView;
         [Export("leftContainerView", ArgumentSemantic.Strong)]
@@ -1535,11 +1535,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIView * _Nonnull rightContainerView;
         [Export("rightContainerView", ArgumentSemantic.Strong)]
-        UIView RightContainerView();
+        UIView RightContainerView { get; }
 
         // @property (readonly, nonatomic, strong) UIView * _Nonnull centerContainerView;
         [Export("centerContainerView", ArgumentSemantic.Strong)]
-        UIView CenterContainerView();
+        UIView CenterContainerView { get; }
 
         // @property (nonatomic) BOOL autoAdjustTopSpacing;
         [Export("autoAdjustTopSpacing")]
@@ -1619,7 +1619,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isPreviewImageHidden, nonatomic) BOOL previewImageHidden;
         [Abstract]
         [Export("previewImageHidden")]
-        bool PreviewImageHidden { [Bind("isPreviewImageHidden")] get; }
+        bool PreviewImageHidden { get; }
 
         // @required @property (nonatomic, strong) UIImage * _Nullable previewImage;
         [Abstract]
@@ -1679,7 +1679,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isAnimating, nonatomic) BOOL animating;
         [Abstract]
         [Export("animating")]
-        bool Animating { [Bind("isAnimating")] get; }
+        bool Animating { get; }
 
         // @required @property (nonatomic) BOOL showsNetworkSpeed;
         [Abstract]
@@ -1729,17 +1729,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isScrolling, nonatomic) BOOL scrolling;
         [Abstract]
         [Export("scrolling")]
-        bool Scrolling { [Bind("isScrolling")] get; }
+        bool Scrolling { get; }
 
         // @required @property (getter = isScrollEnabled, nonatomic) BOOL scrollEnabled;
         [Abstract]
         [Export("scrollEnabled")]
-        bool ScrollEnabled { [Bind("isScrollEnabled")] get; set; }
+        bool ScrollEnabled { get; set; }
 
         // @required @property (getter = isCentered, nonatomic) BOOL centered;
         [Abstract]
         [Export("centered")]
-        bool Centered { [Bind("isCentered")] get; set; }
+        bool Centered { get; set; }
     }
 
     // @protocol SJFullscreenModeStatusBar <NSObject>
@@ -1800,7 +1800,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isAnimating, nonatomic) BOOL animating;
         [Abstract]
         [Export("animating")]
-        bool Animating { [Bind("isAnimating")] get; }
+        bool Animating { get; }
 
         // @required -(void)show;
         [Abstract]
@@ -1897,7 +1897,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJDraggingObservation> _Nonnull draggingObserver;
         [Export("draggingObserver", ArgumentSemantic.Strong)]
-        SJDraggingObservation DraggingObserver();
+        SJDraggingObservation DraggingObserver { get; }
 
         // @property (nonatomic, strong, null_resettable) __kindof UIView<SJScrollingTextMarqueeView> * _Null_unspecified titleView;
         [NullAllowed, Export("titleView", ArgumentSemantic.Strong)]
@@ -2069,11 +2069,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull promptLabel;
         [Export("promptLabel", ArgumentSemantic.Strong)]
-        UILabel PromptLabel();
+        UILabel PromptLabel { get; }
 
         // @property (readonly, nonatomic, strong) SJButtonContainerView * _Nonnull reloadView;
         [Export("reloadView", ArgumentSemantic.Strong)]
-        SJButtonContainerView ReloadView();
+        SJButtonContainerView ReloadView { get; }
 
         // @property (nonatomic) BOOL hiddenBackButtonWhenOrientationIsPortrait;
         [Export("hiddenBackButtonWhenOrientationIsPortrait")]
@@ -2098,7 +2098,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIButton * _Nonnull button;
         [Export("button", ArgumentSemantic.Strong)]
-        UIButton Button();
+        UIButton Button { get; }
     }
 
     // @protocol SJNotReachableControlLayerDelegate <NSObject>
@@ -2188,22 +2188,22 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, nonatomic, class) NSBundle * _Nonnull preferredLanguageBundle;
         [Static]
         [Export("preferredLanguageBundle")]
-        NSBundle PreferredLanguageBundle();
+        NSBundle PreferredLanguageBundle { get; }
 
         // @property (readonly, nonatomic, class) NSBundle * _Nonnull enBundle;
         [Static]
         [Export("enBundle")]
-        NSBundle EnBundle();
+        NSBundle EnBundle { get; }
 
         // @property (readonly, nonatomic, class) NSBundle * _Nonnull zhHansBundle;
         [Static]
         [Export("zhHansBundle")]
-        NSBundle ZhHansBundle();
+        NSBundle ZhHansBundle { get; }
 
         // @property (readonly, nonatomic, class) NSBundle * _Nonnull zhHantBundle;
         [Static]
         [Export("zhHantBundle")]
-        NSBundle ZhHantBundle();
+        NSBundle ZhHantBundle { get; }
     }
 
     // @interface SJVideoPlayer : SJBaseVideoPlayer
@@ -2267,22 +2267,22 @@ namespace IJKPlayer.SJPlayer
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(id<SJVideoPlayerControlLayerResources> _Nonnull)) updateResources;
         [Static]
         [Export("updateResources", ArgumentSemantic.Copy)]
-        Action<SJVideoPlayerControlLayerResourcesArgumentAction> UpdateResources();
+        Action<SJVideoPlayerControlLayerResourcesArgumentAction> UpdateResources { get; }
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(id<SJVideoPlayerLocalizedStrings> _Nonnull)) updateLocalizedStrings;
         [Static]
         [Export("updateLocalizedStrings", ArgumentSemantic.Copy)]
-        Action<SJVideoPlayerLocalizedStringsArgumentAction> UpdateLocalizedStrings();
+        Action<SJVideoPlayerLocalizedStringsArgumentAction> UpdateLocalizedStrings { get; }
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(NSBundle * _Nonnull) setLocalizedStrings;
         [Static]
         [Export("setLocalizedStrings", ArgumentSemantic.Copy)]
-        Action<NSBundle> SetLocalizedStrings();
+        Action<NSBundle> SetLocalizedStrings { get; }
 
         // @property (readonly, copy, nonatomic, class) void (^ _Nonnull)(void (^ _Nonnull)(SJVideoPlayerConfigurations * _Nonnull)) update;
         [Static]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<SJVideoPlayerConfigurationsArgumentAction> Update();
+        Action<SJVideoPlayerConfigurationsArgumentAction> Update { get; }
     //}
 
     // @interface SJExtendedVideoDefinitionSwitchingControlLayer (SJVideoPlayer)
@@ -2350,7 +2350,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, getter = isPreviewImageHidden, nonatomic) BOOL previewImageHidden;
         [Export("previewImageHidden")]
-        bool PreviewImageHidden { [Bind("isPreviewImageHidden")] get; }
+        bool PreviewImageHidden { get; }
 
         // @property (nonatomic, strong) UIImage * _Nullable previewImage;
         [NullAllowed, Export("previewImage", ArgumentSemantic.Strong)]
@@ -2400,7 +2400,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, getter = isAnimating, nonatomic) BOOL animating;
         [Export("animating")]
-        bool Animating { [Bind("isAnimating")] get; }
+        bool Animating { get; }
 
         // @property (nonatomic) BOOL showsNetworkSpeed;
         [Export("showsNetworkSpeed")]
@@ -2433,7 +2433,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, getter = isScrolling, nonatomic) BOOL scrolling;
         [Export("scrolling")]
-        bool Scrolling { [Bind("isScrolling")] get; }
+        bool Scrolling { get; }
 
         // @property (getter = isScrollEnabled, nonatomic) BOOL scrollEnabled;
         [Export("scrollEnabled")]
@@ -2510,15 +2510,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIImageView * _Nonnull trackImageView;
         [Export("trackImageView", ArgumentSemantic.Strong)]
-        UIImageView TrackImageView();
+        UIImageView TrackImageView { get; }
 
         // @property (readonly, nonatomic, strong) UIImageView * _Nonnull traceImageView;
         [Export("traceImageView", ArgumentSemantic.Strong)]
-        UIImageView TraceImageView();
+        UIImageView TraceImageView { get; }
 
         // @property (readonly, nonatomic, strong) UIImageView * _Nonnull thumbImageView;
         [Export("thumbImageView", ArgumentSemantic.Strong)]
-        UIImageView ThumbImageView();
+        UIImageView ThumbImageView { get; }
 
         // -(void)setThumbCornerRadius:(CGFloat)thumbCornerRadius size:(CGSize)size;
         [Export("setThumbCornerRadius:size:")]
@@ -2558,11 +2558,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIPanGestureRecognizer * _Nonnull pan;
         [Export("pan", ArgumentSemantic.Strong)]
-        UIPanGestureRecognizer Pan();
+        UIPanGestureRecognizer Pan { get; }
 
         // @property (readonly, nonatomic, strong) UITapGestureRecognizer * _Nonnull tap;
         [Export("tap", ArgumentSemantic.Strong)]
-        UITapGestureRecognizer Tap();
+        UITapGestureRecognizer Tap { get; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(SJProgressSlider * _Nonnull, CGFloat) tappedExeBlock;
         [NullAllowed, Export("tappedExeBlock", ArgumentSemantic.Copy)]
@@ -2570,7 +2570,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, assign, nonatomic) BOOL isDragging;
         [Export("isDragging")]
-        bool IsDragging();
+        bool IsDragging { get; }
 
         // -(void)cancelDragging;
         [Export("cancelDragging")]
@@ -2592,7 +2592,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull promptLabel;
         [Export("promptLabel", ArgumentSemantic.Strong)]
-        UILabel PromptLabel();
+        UILabel PromptLabel { get; }
 
         // @property (nonatomic) CGFloat promptSpacing;
         [Export("promptSpacing")]
@@ -2693,15 +2693,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIView * leftContainerView;
         [Export("leftContainerView", ArgumentSemantic.Strong)]
-        UIView LeftContainerView();
+        UIView LeftContainerView { get; }
 
         // @property (readonly, nonatomic, strong) SJProgressSlider * slider;
         [Export("slider", ArgumentSemantic.Strong)]
-        SJProgressSlider Slider();
+        SJProgressSlider Slider { get; }
 
         // @property (readonly, nonatomic, strong) UIView * rightContainerView;
         [Export("rightContainerView", ArgumentSemantic.Strong)]
-        UIView RightContainerView();
+        UIView RightContainerView { get; }
     }
 
     // @interface SJButtonProgressSlider : SJCommonProgressSlider
@@ -2710,11 +2710,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) UIButton * _Nonnull leftBtn;
         [Export("leftBtn", ArgumentSemantic.Strong)]
-        UIButton LeftBtn();
+        UIButton LeftBtn { get; }
 
         // @property (readonly, nonatomic, strong) UIButton * _Nonnull rightBtn;
         [Export("rightBtn", ArgumentSemantic.Strong)]
-        UIButton RightBtn();
+        UIButton RightBtn { get; }
 
         // @property (nonatomic, strong) NSString * _Nullable leftText;
         [NullAllowed, Export("leftText", ArgumentSemantic.Strong)]
@@ -2739,7 +2739,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic) SJClipsStatus status;
         [Export("status")]
-        SJClipsStatus Status();
+        SJClipsStatus Status { get; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(SJClipsGIFRecordsControlLayer * _Nonnull) statusDidChangeExeBlock;
         [NullAllowed, Export("statusDidChangeExeBlock", ArgumentSemantic.Copy)]
@@ -2747,7 +2747,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) CMTimeRange range;
         [Export("range")]
-        CMTimeRange Range();
+        CMTimeRange Range { get; }
     }
 
     // @interface SJClipsResultsControlLayer : SJEdgeControlLayerAdapters <SJControlLayer>
@@ -2777,7 +2777,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic) SJClipsStatus status;
         [Export("status")]
-        SJClipsStatus Status();
+        SJClipsStatus Status { get; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(SJClipsVideoRecordsControlLayer * _Nonnull) statusDidChangeExeBlock;
         [NullAllowed, Export("statusDidChangeExeBlock", ArgumentSemantic.Copy)]
@@ -2785,7 +2785,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) CMTimeRange range;
         [Export("range")]
-        CMTimeRange Range();
+        CMTimeRange Range { get; }
     }
 
     // @protocol SJClipsSaveResultFailed <NSObject>
@@ -2805,7 +2805,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJClipsSaveResultToAlbumFailedReason reason;
         [Abstract]
         [Export("reason")]
-        SJClipsSaveResultToAlbumFailedReason Reason();
+        SJClipsSaveResultToAlbumFailedReason Reason { get; }
 
         // @required -(NSString * _Nonnull)toString;
         [Abstract]
@@ -2927,7 +2927,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJClipsBackButton * _Nonnull button;
         [Export("button", ArgumentSemantic.Strong)]
-        SJClipsBackButton Button();
+        SJClipsBackButton Button { get; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(SJClipsButtonContainerView * _Nonnull) clickedBackButtonExeBlock;
         [NullAllowed, Export("clickedBackButtonExeBlock", ArgumentSemantic.Copy)]
@@ -2946,11 +2946,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull timeLabel;
         [Export("timeLabel", ArgumentSemantic.Strong)]
-        UILabel TimeLabel();
+        UILabel TimeLabel { get; }
 
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull promptLabel;
         [Export("promptLabel", ArgumentSemantic.Strong)]
-        UILabel PromptLabel();
+        UILabel PromptLabel { get; }
     }
 
     // @interface SJClipsResultShareItemsContainerView : UIView
@@ -2972,15 +2972,15 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull timeLabel;
         [Export("timeLabel", ArgumentSemantic.Strong)]
-        UILabel TimeLabel();
+        UILabel TimeLabel { get; }
 
         // @property (readonly, nonatomic, strong) UILabel * _Nonnull promptLabel;
         [Export("promptLabel", ArgumentSemantic.Strong)]
-        UILabel PromptLabel();
+        UILabel PromptLabel { get; }
 
         // @property (readonly, nonatomic, strong) SJProgressSlider * _Nonnull progressSlider;
         [Export("progressSlider", ArgumentSemantic.Strong)]
-        SJProgressSlider ProgressSlider();
+        SJProgressSlider ProgressSlider { get; }
     }
 
     //[Static]

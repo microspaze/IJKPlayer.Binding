@@ -46,7 +46,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isTransitioning, nonatomic) BOOL transitioning;
         [Abstract]
         [Export("transitioning")]
-        bool Transitioning { [Bind("isTransitioning")] get; }
+        bool Transitioning { get; }
 
         // @required @property (nonatomic) NSTimeInterval duration;
         [Abstract]
@@ -71,7 +71,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) UIView * _Nonnull superviewInFitOnScreen;
         [Abstract]
         [Export("superviewInFitOnScreen", ArgumentSemantic.Strong)]
-        UIView SuperviewInFitOnScreen();
+        UIView SuperviewInFitOnScreen { get; }
     }
 
     // @protocol SJFitOnScreenManagerObserver <NSObject>
@@ -152,22 +152,22 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJOrientation currentOrientation;
         [Abstract]
         [Export("currentOrientation")]
-        SJOrientation CurrentOrientation();
+        SJOrientation CurrentOrientation { get; }
 
         // @required @property (readonly, nonatomic) BOOL isFullscreen;
         [Abstract]
         [Export("isFullscreen")]
-        bool IsFullscreen();
+        bool IsFullscreen { get; }
 
         // @required @property (readonly, getter = isRotating, nonatomic) BOOL rotating;
         [Abstract]
         [Export("rotating")]
-        bool Rotating { [Bind("isRotating")] get; }
+        bool Rotating { get; }
 
         // @required @property (readonly, getter = isTransitioning, nonatomic) BOOL transitioning;
         [Abstract]
         [Export("transitioning")]
-        bool Transitioning { [Bind("isTransitioning")] get; }
+        bool Transitioning { get; }
 
         // @required @property (nonatomic, weak) UIView * _Nullable superview;
         [Abstract]
@@ -243,12 +243,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJNetworkStatus networkStatus;
         [Abstract]
         [Export("networkStatus")]
-        SJNetworkStatus NetworkStatus();
+        SJNetworkStatus NetworkStatus { get; }
 
         // @required @property (readonly, nonatomic, strong) NSString * _Nonnull networkSpeedStr;
         [Abstract]
         [Export("networkSpeedStr", ArgumentSemantic.Strong)]
-        string NetworkSpeedStr();
+        string NetworkSpeedStr { get; }
 
         // @required -(void)startRefresh;
         [Abstract]
@@ -355,7 +355,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJPictureInPictureStatus status;
         [Abstract]
         [Export("status")]
-        SJPictureInPictureStatus Status();
+        SJPictureInPictureStatus Status { get; }
 
         // @required -(void)startPictureInPicture;
         [Abstract]
@@ -412,7 +412,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) NSError * _Nullable error;
         [Abstract]
         [NullAllowed, Export("error", ArgumentSemantic.Strong)]
-        NSError Error();
+        NSError Error { get; }
 
         [Wrap("WeakDelegate"), Abstract]
         [NullAllowed]
@@ -426,12 +426,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJPlaybackType playbackType;
         [Abstract]
         [Export("playbackType")]
-        SJPlaybackType PlaybackType();
+        SJPlaybackType PlaybackType { get; }
 
         // @required @property (readonly, nonatomic, strong) __kindof UIView * _Nonnull playerView;
         [Abstract]
         [Export("playerView", ArgumentSemantic.Strong)]
-        UIView PlayerView();
+        UIView PlayerView { get; }
 
         // @required @property (nonatomic, strong) id<SJMediaModelProtocol> _Nullable media;
         [Abstract]
@@ -446,47 +446,47 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJAssetStatus assetStatus;
         [Abstract]
         [Export("assetStatus")]
-        SJAssetStatus AssetStatus();
+        SJAssetStatus AssetStatus { get; }
 
         // @required @property (readonly, nonatomic) SJPlaybackTimeControlStatus timeControlStatus;
         [Abstract]
         [Export("timeControlStatus")]
-        SJPlaybackTimeControlStatus TimeControlStatus();
+        SJPlaybackTimeControlStatus TimeControlStatus { get; }
 
         // @required @property (readonly, nonatomic) SJWaitingReason _Nullable reasonForWaitingToPlay;
         [Abstract]
         [NullAllowed, Export("reasonForWaitingToPlay")]
-        string ReasonForWaitingToPlay();
+        string ReasonForWaitingToPlay { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval currentTime;
         [Abstract]
         [Export("currentTime")]
-        double CurrentTime();
+        double CurrentTime { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval duration;
         [Abstract]
         [Export("duration")]
-        double Duration();
+        double Duration { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval playableDuration;
         [Abstract]
         [Export("playableDuration")]
-        double PlayableDuration();
+        double PlayableDuration { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval durationWatched;
         [Abstract]
         [Export("durationWatched")]
-        double DurationWatched();
+        double DurationWatched { get; }
 
         // @required @property (readonly, nonatomic) CGSize presentationSize;
         [Abstract]
         [Export("presentationSize")]
-        CGSize PresentationSize();
+        CGSize PresentationSize { get; }
 
         // @required @property (readonly, getter = isReadyForDisplay, nonatomic) BOOL readyForDisplay;
         [Abstract]
         [Export("readyForDisplay")]
-        bool ReadyForDisplay { [Bind("isReadyForDisplay")] get; }
+        bool ReadyForDisplay { get; }
 
         // @required @property (nonatomic) float volume;
         [Abstract]
@@ -506,22 +506,22 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) BOOL isPlayed;
         [Abstract]
         [Export("isPlayed")]
-        bool IsPlayed();
+        bool IsPlayed { get; }
 
         // @required @property (readonly, getter = isReplayed, nonatomic) BOOL replayed;
         [Abstract]
         [Export("replayed")]
-        bool Replayed { [Bind("isReplayed")] get; }
+        bool Replayed { get; }
 
         // @required @property (readonly, nonatomic) BOOL isPlaybackFinished;
         [Abstract]
         [Export("isPlaybackFinished")]
-        bool IsPlaybackFinished();
+        bool IsPlaybackFinished { get; }
 
         // @required @property (readonly, nonatomic) SJFinishedReason _Nullable finishedReason;
         [Abstract]
         [NullAllowed, Export("finishedReason")]
-        string FinishedReason();
+        string FinishedReason { get; }
 
         // @required -(void)prepareToPlay;
         [Abstract]
@@ -602,7 +602,7 @@ namespace IJKPlayer.SJPlayer
         //[iOS(14, 0)]
         [Abstract]
         [Export("pictureInPictureStatus")]
-        SJPictureInPictureStatus PictureInPictureStatus();
+        SJPictureInPictureStatus PictureInPictureStatus { get; }
 
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJVideoPlayerPlaybackController> _Nonnull, void (^ _Nonnull)(BOOL)) restoreUserInterfaceForPictureInPictureStop;
         [Abstract]
@@ -864,12 +864,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) SJPanGestureMovingDirection movingDirection;
         [Abstract]
         [Export("movingDirection")]
-        SJPanGestureMovingDirection MovingDirection();
+        SJPanGestureMovingDirection MovingDirection { get; }
 
         // @required @property (readonly, nonatomic) SJPanGestureTriggeredPosition triggeredPosition;
         [Abstract]
         [Export("triggeredPosition")]
-        SJPanGestureTriggeredPosition TriggeredPosition();
+        SJPanGestureTriggeredPosition TriggeredPosition { get; }
     }
 
     // @protocol SJVideoPlayerControlLayerDataSource <NSObject>
@@ -1140,7 +1140,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) BOOL isAppeared;
         [Abstract]
         [Export("isAppeared")]
-        bool IsAppeared();
+        bool IsAppeared { get; }
 
         // @required -(void)switchAppearState;
         [Abstract]
@@ -1227,7 +1227,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isTransitioning, nonatomic) BOOL transitioning;
         [Abstract]
         [Export("transitioning")]
-        bool Transitioning { [Bind("isTransitioning")] get; }
+        bool Transitioning { get; }
 
         // @required @property (nonatomic) NSTimeInterval duration;
         [Abstract]
@@ -1513,12 +1513,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) id _Nonnull playerSuperview;
         [Abstract]
         [Export("playerSuperview")]
-        NSObject PlayerSuperview();
+        NSObject PlayerSuperview { get; }
 
         // @required @property (readonly, nonatomic) id _Nonnull collectionView;
         [Abstract]
         [Export("collectionView")]
-        NSObject CollectionView();
+        NSObject CollectionView { get; }
     }
 
     // @interface SJVideoPlayerURLAsset : NSObject <SJMediaModelProtocol>
@@ -1643,7 +1643,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJVideoPlayerURLAsset * _Nullable original;
         [NullAllowed, Export("original", ArgumentSemantic.Strong)]
-        SJVideoPlayerURLAsset Original();
+        SJVideoPlayerURLAsset Original { get; }
 
         // -(SJVideoPlayerURLAsset * _Nullable)originAsset __attribute__((deprecated("ues `original`")));
         [NullAllowed, Export("originAsset")]
@@ -1787,32 +1787,32 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) BOOL isFullscreen;
         [Abstract]
         [Export("isFullscreen")]
-        bool IsFullscreen();
+        bool IsFullscreen { get; }
 
         // @required @property (readonly, nonatomic) BOOL isFitOnScreen;
         [Abstract]
         [Export("isFitOnScreen")]
-        bool IsFitOnScreen();
+        bool IsFitOnScreen { get; }
 
         // @required @property (readonly, nonatomic) BOOL isPlayOnScrollView;
         [Abstract]
         [Export("isPlayOnScrollView")]
-        bool IsPlayOnScrollView();
+        bool IsPlayOnScrollView { get; }
 
         // @required @property (readonly, nonatomic) BOOL isScrollAppeared;
         [Abstract]
         [Export("isScrollAppeared")]
-        bool IsScrollAppeared();
+        bool IsScrollAppeared { get; }
 
         // @required @property (readonly, nonatomic) BOOL isFloatingMode;
         [Abstract]
         [Export("isFloatingMode")]
-        bool IsFloatingMode();
+        bool IsFloatingMode { get; }
 
         // @required @property (readonly, nonatomic) BOOL isPictureInPictureMode;
         [Abstract]
         [Export("isPictureInPictureMode")]
-        bool IsPictureInPictureMode();
+        bool IsPictureInPictureMode { get; }
     }
 
     // @protocol SJDeviceVolumeAndBrightnessControllerObserver
@@ -1867,7 +1867,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) BOOL isAppeared;
         [Abstract]
         [Export("isAppeared")]
-        bool IsAppeared();
+        bool IsAppeared { get; }
 
         // @required -(void)show;
         [Abstract]
@@ -1902,7 +1902,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) __kindof UIView * _Nonnull floatingView;
         [Abstract]
         [Export("floatingView", ArgumentSemantic.Strong)]
-        UIView FloatingView();
+        UIView FloatingView { get; }
 
         // @required @property (nonatomic, weak) UIView * _Nullable target;
         [Abstract]
@@ -1932,7 +1932,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, weak) id<SJSmallViewFloatingController> _Nullable controller;
         [Abstract]
         [NullAllowed, Export("controller", ArgumentSemantic.Weak)]
-        SJSmallViewFloatingController Controller();
+        SJSmallViewFloatingController Controller { get; }
 
         // @required @property (copy, nonatomic) void (^ _Nullable)(id<SJSmallViewFloatingController> _Nonnull) onAppearChanged;
         [Abstract]
@@ -1956,15 +1956,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) SJVideoPlayerURLAsset * _Nullable currentPlayingAsset;
         [NullAllowed, Export("currentPlayingAsset", ArgumentSemantic.Weak)]
-        SJVideoPlayerURLAsset CurrentPlayingAsset();
+        SJVideoPlayerURLAsset CurrentPlayingAsset { get; }
 
         // @property (readonly, nonatomic, weak) SJVideoPlayerURLAsset * _Nullable switchingAsset;
         [NullAllowed, Export("switchingAsset", ArgumentSemantic.Weak)]
-        SJVideoPlayerURLAsset SwitchingAsset();
+        SJVideoPlayerURLAsset SwitchingAsset { get; }
 
         // @property (readonly, nonatomic) SJDefinitionSwitchStatus status;
         [Export("status")]
-        SJDefinitionSwitchStatus Status();
+        SJDefinitionSwitchStatus Status { get; }
     //}
     
     // @interface Private (SJVideoDefinitionSwitchingInfo)
@@ -2066,7 +2066,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) __kindof NSArray<UIView *> * _Nullable displayingViews;
         [Abstract]
         [NullAllowed, Export("displayingViews", ArgumentSemantic.Copy)]
-        UIView[] DisplayingViews();
+        UIView[] DisplayingViews { get; }
 
         // @required @property (nonatomic) BOOL automaticallyAdjustsLeftInset;
         [Abstract]
@@ -2168,7 +2168,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) __kindof SJBaseVideoPlayer * _Nullable player;
         [NullAllowed, Export("player", ArgumentSemantic.Weak)]
-        SJBaseVideoPlayer Player();
+        SJBaseVideoPlayer Player { get; }
 
         // @property (copy, nonatomic) __deprecated_msg("use `playbackDidFinishExeBlock`") void (^)(__kindof SJBaseVideoPlayer * _Nonnull) didPlayToEndTimeExeBlock __attribute__((deprecated("use `playbackDidFinishExeBlock`")));
         [Export("didPlayToEndTimeExeBlock", ArgumentSemantic.Copy)]
@@ -2197,7 +2197,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isPlaceholderImageViewHidden, nonatomic) BOOL placeholderImageViewHidden;
         [Abstract]
         [Export("placeholderImageViewHidden")]
-        bool PlaceholderImageViewHidden { [Bind("isPlaceholderImageViewHidden")] get; }
+        bool PlaceholderImageViewHidden { get; }
 
         // @required @property (nonatomic) UIViewContentMode placeholderImageViewContentMode;
         [Abstract]
@@ -2247,7 +2247,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) UIView * _Nonnull view;
         [Abstract]
         [Export("view", ArgumentSemantic.Strong)]
-        UIView View();
+        UIView View { get; }
 
         // @required @property (nonatomic) NSTimeInterval currentTime;
         [Abstract]
@@ -2283,12 +2283,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) NSAttributedString * _Nonnull content;
         [Abstract]
         [Export("content", ArgumentSemantic.Copy)]
-        NSAttributedString Content();
+        NSAttributedString Content { get; }
 
         // @required @property (readonly, nonatomic) SJTimeRange range;
         [Abstract]
         [Export("range")]
-        SJTimeRange Range();
+        SJTimeRange Range { get; }
     }
 
     // @protocol SJDanmakuPopupController <NSObject>
@@ -2339,7 +2339,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isPaused, nonatomic) BOOL paused;
         [Abstract]
         [Export("paused")]
-        bool Paused { [Bind("isPaused")] get; }
+        bool Paused { get; }
 
         // @required -(void)pause;
         [Abstract]
@@ -2354,7 +2354,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) __kindof UIView * _Nonnull view;
         [Abstract]
         [Export("view", ArgumentSemantic.Strong)]
-        UIView View();
+        UIView View { get; }
 
         // @required -(id<SJDanmakuPopupControllerObserver> _Nonnull)getObserver;
         [Abstract]
@@ -2365,7 +2365,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) NSInteger queueSize;
         [Abstract]
         [Export("queueSize")]
-        nint QueueSize();
+        nint QueueSize { get; }
 
         // @required @property (nonatomic) NSInteger numberOfTracks;
         [Abstract]
@@ -2401,12 +2401,12 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, copy, nonatomic) NSAttributedString * _Nullable content;
         [Abstract]
         [NullAllowed, Export("content", ArgumentSemantic.Copy)]
-        NSAttributedString Content();
+        NSAttributedString Content { get; }
 
         // @required @property (readonly, nonatomic, strong) __kindof UIView * _Nullable customView;
         [Abstract]
         [NullAllowed, Export("customView", ArgumentSemantic.Strong)]
-        UIView CustomView();
+        UIView CustomView { get; }
     }
 
     // @protocol SJDanmakuPopupControllerObserver <NSObject>
@@ -2611,7 +2611,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJFlipTransitionManagerObserver> _Nonnull flipTransitionObserver;
         [Export("flipTransitionObserver", ArgumentSemantic.Strong)]
-        SJFlipTransitionManagerObserver FlipTransitionObserver();
+        SJFlipTransitionManagerObserver FlipTransitionObserver { get; }
     //}
 
     // @interface Playback (SJBaseVideoPlayer) <SJVideoPlayerPlaybackControllerDelegate>
@@ -2714,7 +2714,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJPlaybackObservation * _Nonnull playbackObserver;
         [Export("playbackObserver", ArgumentSemantic.Strong)]
-        SJPlaybackObservation PlaybackObserver();
+        SJPlaybackObservation PlaybackObserver { get; }
 
         // @property (nonatomic, strong) SJVideoPlayerURLAsset * _Nullable URLAsset;
         [Export("URLAsset")]
@@ -2722,47 +2722,47 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) SJAssetStatus assetStatus;
         [Export("assetStatus")]
-        SJAssetStatus AssetStatus();
+        SJAssetStatus AssetStatus { get; }
 
         // @property (readonly, nonatomic) SJPlaybackTimeControlStatus timeControlStatus;
         [Export("timeControlStatus")]
-        SJPlaybackTimeControlStatus TimeControlStatus();
+        SJPlaybackTimeControlStatus TimeControlStatus { get; }
 
         // @property (readonly, nonatomic) SJWaitingReason _Nullable reasonForWaitingToPlay;
         [NullAllowed, Export("reasonForWaitingToPlay")]
-        string ReasonForWaitingToPlay();
+        string ReasonForWaitingToPlay { get; }
 
         // @property (readonly, nonatomic) BOOL isPaused;
         [Export("isPaused")]
-        bool IsPaused();
+        bool IsPaused { get; }
 
         // @property (readonly, nonatomic) BOOL isPlaying;
         [Export("isPlaying")]
-        bool IsPlaying();
+        bool IsPlaying { get; }
 
         // @property (readonly, nonatomic) BOOL isBuffering;
         [Export("isBuffering")]
-        bool IsBuffering();
+        bool IsBuffering { get; }
 
         // @property (readonly, nonatomic) BOOL isEvaluating;
         [Export("isEvaluating")]
-        bool IsEvaluating();
+        bool IsEvaluating { get; }
 
         // @property (readonly, nonatomic) BOOL isNoAssetToPlay;
         [Export("isNoAssetToPlay")]
-        bool IsNoAssetToPlay();
+        bool IsNoAssetToPlay { get; }
 
         // @property (readonly, nonatomic) BOOL isPlaybackFailed;
         [Export("isPlaybackFailed")]
-        bool IsPlaybackFailed();
+        bool IsPlaybackFailed { get; }
 
         // @property (readonly, nonatomic) BOOL isPlaybackFinished;
         [Export("isPlaybackFinished")]
-        bool IsPlaybackFinished();
+        bool IsPlaybackFinished { get; }
 
         // @property (readonly, nonatomic) SJFinishedReason _Nullable finishedReason;
         [NullAllowed, Export("finishedReason")]
-        string FinishedReason();
+        string FinishedReason { get; }
 
         // -(void)play;
         [Export("play")]
@@ -2802,35 +2802,35 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSTimeInterval currentTime;
         [Export("currentTime")]
-        double CurrentTime();
+        double CurrentTime { get; }
 
         // @property (readonly, nonatomic) NSTimeInterval duration;
         [Export("duration")]
-        double Duration();
+        double Duration { get; }
 
         // @property (readonly, nonatomic) NSTimeInterval playableDuration;
         [Export("playableDuration")]
-        double PlayableDuration();
+        double PlayableDuration { get; }
 
         // @property (readonly, nonatomic) NSTimeInterval durationWatched;
         [Export("durationWatched")]
-        double DurationWatched();
+        double DurationWatched { get; }
 
         // @property (readonly, nonatomic) BOOL isUserPaused;
         [Export("isUserPaused")]
-        bool IsUserPaused();
+        bool IsUserPaused { get; }
 
         // @property (readonly, nonatomic) BOOL isPlayed;
         [Export("isPlayed")]
-        bool IsPlayed();
+        bool IsPlayed { get; }
 
         // @property (readonly, nonatomic) BOOL isReplayed;
         [Export("isReplayed")]
-        bool IsReplayed();
+        bool IsReplayed { get; }
 
         // @property (readonly, nonatomic) SJPlaybackType playbackType;
         [Export("playbackType")]
-        SJPlaybackType PlaybackType();
+        SJPlaybackType PlaybackType { get; }
 
         // -(NSString * _Nonnull)stringForSeconds:(NSInteger)secs;
         [Export("stringForSeconds:")]
@@ -2878,11 +2878,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJVideoDefinitionSwitchingInfo * _Nonnull definitionSwitchingInfo;
         [Export("definitionSwitchingInfo", ArgumentSemantic.Strong)]
-        SJVideoDefinitionSwitchingInfo DefinitionSwitchingInfo();
+        SJVideoDefinitionSwitchingInfo DefinitionSwitchingInfo { get; }
 
         // @property (readonly, nonatomic, strong) NSError * _Nullable error;
         [NullAllowed, Export("error", ArgumentSemantic.Strong)]
-        NSError Error();
+        NSError Error { get; }
     //}
 
     // @interface DeviceVolumeAndBrightness (SJBaseVideoPlayer)
@@ -2896,7 +2896,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJDeviceVolumeAndBrightnessControllerObserver> _Nonnull deviceVolumeAndBrightnessObserver;
         [Export("deviceVolumeAndBrightnessObserver", ArgumentSemantic.Strong)]
-        SJDeviceVolumeAndBrightnessControllerObserver DeviceVolumeAndBrightnessObserver();
+        SJDeviceVolumeAndBrightnessControllerObserver DeviceVolumeAndBrightnessObserver { get; }
 
         // @property (nonatomic) BOOL disableBrightnessSetting;
         [Export("disableBrightnessSetting")]
@@ -2958,7 +2958,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJReachabilityObserver> _Nonnull reachabilityObserver;
         [Export("reachabilityObserver", ArgumentSemantic.Strong)]
-        SJReachabilityObserver ReachabilityObserver();
+        SJReachabilityObserver ReachabilityObserver { get; }
     //}
 
     // @interface Popup (SJBaseVideoPlayer)
@@ -2982,7 +2982,7 @@ namespace IJKPlayer.SJPlayer
     //{
         // @property (readonly, nonatomic, strong) id<SJGestureController> _Nonnull gestureController;
         [Export("gestureController", ArgumentSemantic.Strong)]
-        SJGestureController GestureController();
+        SJGestureController GestureController { get; }
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull, SJPlayerGestureType, CGPoint) gestureRecognizerShouldTrigger;
         [Export("gestureRecognizerShouldTrigger")]
@@ -3012,7 +3012,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJControlLayerAppearManagerObserver> _Nonnull controlLayerAppearObserver;
         [Export("controlLayerAppearObserver", ArgumentSemantic.Strong)]
-        SJControlLayerAppearManagerObserver ControlLayerAppearObserver();
+        SJControlLayerAppearManagerObserver ControlLayerAppearObserver { get; }
 
         // @property (getter = isControlLayerAppeared, nonatomic) BOOL controlLayerAppeared;
         [Export("controlLayerAppeared")]
@@ -3046,7 +3046,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJFitOnScreenManagerObserver> _Nonnull fitOnScreenObserver;
         [Export("fitOnScreenObserver", ArgumentSemantic.Strong)]
-        SJFitOnScreenManagerObserver FitOnScreenObserver();
+        SJFitOnScreenManagerObserver FitOnScreenObserver { get; }
 
         // @property (getter = isFitOnScreen, nonatomic) BOOL fitOnScreen;
         [Export("fitOnScreen")]
@@ -3076,7 +3076,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJRotationManagerObserver> _Nonnull rotationObserver;
         [Export("rotationObserver", ArgumentSemantic.Strong)]
-        SJRotationManagerObserver RotationObserver();
+        SJRotationManagerObserver RotationObserver { get; }
 
         // @property (copy, nonatomic) BOOL (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) shouldTriggerRotation;
         [Export("shouldTriggerRotation")]
@@ -3100,11 +3100,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) BOOL isRotating;
         [Export("isRotating")]
-        bool IsRotating();
+        bool IsRotating { get; }
 
         // @property (readonly, nonatomic) BOOL isFullscreen;
         [Export("isFullscreen")]
-        bool IsFullscreen();
+        bool IsFullscreen { get; }
 
         // @property (getter = isLockedScreen, nonatomic) BOOL lockedScreen;
         [Export("lockedScreen")]
@@ -3112,7 +3112,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) UIInterfaceOrientation currentOrientation;
         [Export("currentOrientation")]
-        UIInterfaceOrientation CurrentOrientation();
+        UIInterfaceOrientation CurrentOrientation { get; }
     //}
 
     // @interface Screenshot (SJBaseVideoPlayer)
@@ -3126,7 +3126,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) CGSize videoPresentationSize;
         [Export("videoPresentationSize")]
-        CGSize VideoPresentationSize();
+        CGSize VideoPresentationSize { get; }
 
         // -(UIImage * _Nullable)screenshot;
         [NullAllowed, Export("screenshot")]
@@ -3195,11 +3195,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) BOOL isPlayOnScrollView;
         [Export("isPlayOnScrollView")]
-        bool IsPlayOnScrollView();
+        bool IsPlayOnScrollView { get; }
 
         // @property (readonly, nonatomic) BOOL isScrollAppeared;
         [Export("isScrollAppeared")]
-        bool IsScrollAppeared();
+        bool IsScrollAppeared { get; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(__kindof SJBaseVideoPlayer * _Nonnull) playerViewWillAppearExeBlock;
         [Export("playerViewWillAppearExeBlock")]
@@ -3270,7 +3270,7 @@ namespace IJKPlayer.SJPlayer
         
         // @property (readonly, nonatomic) BOOL isPlayedToEndTime __attribute__((deprecated("use `isPlaybackFinished`;")));
         [Export("isPlayedToEndTime")]
-        bool IsPlayedToEndTime();
+        bool IsPlayedToEndTime { get; }
     }
 
     //[Static]
@@ -3378,32 +3378,32 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) NSInteger mediaId;
         [Abstract]
         [Export("mediaId")]
-        nint MediaId();
+        nint MediaId { get; }
 
         // @required @property (readonly, nonatomic) NSInteger userId;
         [Abstract]
         [Export("userId")]
-        nint UserId();
+        nint UserId { get; }
 
         // @required @property (readonly, nonatomic) SJMediaType _Nonnull mediaType;
         [Abstract]
         [Export("mediaType")]
-        string MediaType();
+        string MediaType { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval position;
         [Abstract]
         [Export("position")]
-        double Position();
+        double Position { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval createdTime;
         [Abstract]
         [Export("createdTime")]
-        double CreatedTime();
+        double CreatedTime { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval updatedTime;
         [Abstract]
         [Export("updatedTime")]
-        double UpdatedTime();
+        double UpdatedTime { get; }
     }
 
     // @interface SJPlaybackRecord : NSObject <SJPlaybackRecord>
@@ -3637,7 +3637,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) id<SJPlayerAutoplayDelegate> _Nullable autoplayDelegate;
         [NullAllowed, Export("autoplayDelegate", ArgumentSemantic.Weak)]
-        SJPlayerAutoplayDelegate WeakAutoplayDelegate();
+        SJPlayerAutoplayDelegate WeakAutoplayDelegate { get; }
 
         // @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
         [Export("scrollDirection", ArgumentSemantic.Assign)]
@@ -3646,24 +3646,13 @@ namespace IJKPlayer.SJPlayer
         // @property (nonatomic) UIEdgeInsets playableAreaInsets;
         [Export("playableAreaInsets", ArgumentSemantic.Assign)]
         UIEdgeInsets PlayableAreaInsets { get; set; }
-    }
-
-    // @protocol SJPlayerAutoplayDelegate <NSObject>
-    [Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    interface SJPlayerAutoplayDelegate
-    {
-        // @required -(void)sj_playerNeedPlayNewAssetAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-        [Abstract]
-        [Export("sj_playerNeedPlayNewAssetAtIndexPath:")]
-        void Sj_playerNeedPlayNewAssetAtIndexPath(NSIndexPath indexPath);
-    }
+    //}
 
     // @interface SJDeprecated (SJPlayerAutoplayConfig)
-    [Category]
-    [BaseType(typeof(SJPlayerAutoplayConfig))]
-    interface SJPlayerAutoplayConfig_SJDeprecated
-    {
+    //[Category]
+    //[BaseType(typeof(SJPlayerAutoplayConfig))]
+    //interface SJPlayerAutoplayConfig_SJDeprecated
+    //{
         // +(instancetype _Nonnull)configWithAutoplayDelegate:(id<SJPlayerAutoplayDelegate> _Nonnull)autoplayDelegate __attribute__((deprecated("use `configWithPlayerSuperviewSelector:autoplayDelegate:`;")));
         [Static]
         [Export("configWithAutoplayDelegate:")]
@@ -3676,7 +3665,18 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag __attribute__((deprecated("use `config.scrollViewSelector`")));
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
+    }
+
+    // @protocol SJPlayerAutoplayDelegate <NSObject>
+    [Protocol, Model]
+    [BaseType(typeof(NSObject))]
+    interface SJPlayerAutoplayDelegate
+    {
+        // @required -(void)sj_playerNeedPlayNewAssetAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+        [Abstract]
+        [Export("sj_playerNeedPlayNewAssetAtIndexPath:")]
+        void Sj_playerNeedPlayNewAssetAtIndexPath(NSIndexPath indexPath);
     }
 
     // @interface ListViewAutoplaySJAdd (UIScrollView)
@@ -3776,11 +3776,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) id<SJMediaPlayer> _Nullable currentPlayer;
         [NullAllowed, Export("currentPlayer", ArgumentSemantic.Strong)]
-        SJMediaPlayer CurrentPlayer();
+        SJMediaPlayer CurrentPlayer { get; }
 
         // @property (readonly, nonatomic, strong) __kindof UIView<SJMediaPlayerView> * _Nullable currentPlayerView;
         [NullAllowed, Export("currentPlayerView", ArgumentSemantic.Strong)]
-        SJMediaPlayerView CurrentPlayerView();
+        SJMediaPlayerView CurrentPlayerView { get; }
 
         // -(void)playerWithMedia:(SJVideoPlayerURLAsset * _Nonnull)media completionHandler:(void (^ _Nonnull)(id<SJMediaPlayer> _Nullable))completionHandler;
         [Export("playerWithMedia:completionHandler:")]
@@ -3882,7 +3882,7 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isReadyForDisplay, nonatomic) BOOL readyForDisplay;
         [Abstract]
         [Export("readyForDisplay")]
-        bool ReadyForDisplay { [Bind("isReadyForDisplay")] get; }
+        bool ReadyForDisplay { get; }
     }
 
     // @protocol SJMediaPlayer <NSObject>
@@ -3903,52 +3903,52 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic, strong) NSError * _Nullable error;
         [Abstract]
         [NullAllowed, Export("error", ArgumentSemantic.Strong)]
-        NSError Error();
+        NSError Error { get; }
 
         // @required @property (readonly, nonatomic) SJWaitingReason _Nullable reasonForWaitingToPlay;
         [Abstract]
         [NullAllowed, Export("reasonForWaitingToPlay")]
-        string ReasonForWaitingToPlay();
+        string ReasonForWaitingToPlay { get; }
 
         // @required @property (readonly, nonatomic) SJPlaybackTimeControlStatus timeControlStatus;
         [Abstract]
         [Export("timeControlStatus")]
-        SJPlaybackTimeControlStatus TimeControlStatus();
+        SJPlaybackTimeControlStatus TimeControlStatus { get; }
 
         // @required @property (readonly, nonatomic) SJAssetStatus assetStatus;
         [Abstract]
         [Export("assetStatus")]
-        SJAssetStatus AssetStatus();
+        SJAssetStatus AssetStatus { get; }
 
         // @required @property (readonly, nonatomic) SJSeekingInfo seekingInfo;
         [Abstract]
         [Export("seekingInfo")]
-        SJSeekingInfo SeekingInfo();
+        SJSeekingInfo SeekingInfo { get; }
 
         // @required @property (readonly, nonatomic) CGSize presentationSize;
         [Abstract]
         [Export("presentationSize")]
-        CGSize PresentationSize();
+        CGSize PresentationSize { get; }
 
         // @required @property (readonly, nonatomic) BOOL isReplayed;
         [Abstract]
         [Export("isReplayed")]
-        bool IsReplayed();
+        bool IsReplayed { get; }
 
         // @required @property (readonly, nonatomic) BOOL isPlayed;
         [Abstract]
         [Export("isPlayed")]
-        bool IsPlayed();
+        bool IsPlayed { get; }
 
         // @required @property (readonly, nonatomic) BOOL isPlaybackFinished;
         [Abstract]
         [Export("isPlaybackFinished")]
-        bool IsPlaybackFinished();
+        bool IsPlaybackFinished { get; }
 
         // @required @property (readonly, nonatomic) SJFinishedReason _Nullable finishedReason;
         [Abstract]
         [NullAllowed, Export("finishedReason")]
-        string FinishedReason();
+        string FinishedReason { get; }
 
         // @required @property (nonatomic) NSTimeInterval trialEndPosition;
         [Abstract]
@@ -3978,17 +3978,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, nonatomic) NSTimeInterval currentTime;
         [Abstract]
         [Export("currentTime")]
-        double CurrentTime();
+        double CurrentTime { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval duration;
         [Abstract]
         [Export("duration")]
-        double Duration();
+        double Duration { get; }
 
         // @required @property (readonly, nonatomic) NSTimeInterval playableDuration;
         [Abstract]
         [Export("playableDuration")]
-        double PlayableDuration();
+        double PlayableDuration { get; }
 
         // @required -(void)play;
         [Abstract]
@@ -4051,11 +4051,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) AVPlayer * _Nonnull avPlayer;
         [Export("avPlayer", ArgumentSemantic.Strong)]
-        AVPlayer AvPlayer();
+        AVPlayer AvPlayer { get; }
 
         // @property (readonly, nonatomic) SJPlaybackType playbackType;
         [Export("playbackType")]
-        SJPlaybackType PlaybackType();
+        SJPlaybackType PlaybackType { get; }
 
         // @property (nonatomic) NSTimeInterval minBufferedDuration;
         [Export("minBufferedDuration")]
@@ -4076,7 +4076,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) AVPlayerLayer * _Nonnull layer;
         [Export("layer", ArgumentSemantic.Strong)]
-        AVPlayerLayer Layer();
+        AVPlayerLayer Layer { get; }
 
         // -(void)setScreenshot:(UIImage * _Nullable)image;
         [Export("setScreenshot:")]
@@ -4125,19 +4125,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) SJPictureInPictureStatus status;
         [Export("status")]
-        SJPictureInPictureStatus Status();
+        SJPictureInPictureStatus Status { get; }
 
         // @property (readonly, nonatomic) BOOL wantsPictureInPictureStart;
         [Export("wantsPictureInPictureStart")]
-        bool WantsPictureInPictureStart();
+        bool WantsPictureInPictureStart { get; }
 
         // @property (readonly, getter = isAvailable, nonatomic) BOOL available;
         [Export("available")]
-        bool Available { [Bind("isAvailable")] get; }
+        bool Available { get; }
 
         // @property (readonly, getter = isEnabled, nonatomic) BOOL enabled;
         [Export("enabled")]
-        bool Enabled { [Bind("isEnabled")] get; }
+        bool Enabled { get; }
 
         // -(void)startPictureInPicture;
         [Export("startPictureInPicture")]
@@ -4186,11 +4186,11 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) SJAVMediaPlayer * _Nullable currentPlayer;
         [NullAllowed, Export("currentPlayer", ArgumentSemantic.Strong)]
-        SJAVMediaPlayer CurrentPlayer();
+        SJAVMediaPlayer CurrentPlayer { get; }
 
         // @property (readonly, nonatomic, strong) SJAVMediaPlayerLayerView * _Nullable currentPlayerView;
         [NullAllowed, Export("currentPlayerView", ArgumentSemantic.Strong)]
-        SJAVMediaPlayerLayerView CurrentPlayerView();
+        SJAVMediaPlayerLayerView CurrentPlayerView { get; }
 
         // @property (nonatomic) BOOL accurateSeeking;
         [Export("accurateSeeking")]
@@ -4467,11 +4467,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) NSAttributedString * _Nullable content;
         [NullAllowed, Export("content", ArgumentSemantic.Copy)]
-        NSAttributedString Content();
+        NSAttributedString Content { get; }
 
         // @property (readonly, nonatomic, strong) __kindof UIView * _Nullable customView;
         [NullAllowed, Export("customView", ArgumentSemantic.Strong)]
-        UIView CustomView();
+        UIView CustomView { get; }
     }
 
     // @interface SJDanmakuPopupController : NSObject <SJDanmakuPopupController>
@@ -4489,7 +4489,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJDanmakuTrackConfiguration * _Nonnull trackConfiguration;
         [Export("trackConfiguration", ArgumentSemantic.Strong)]
-        SJDanmakuTrackConfiguration TrackConfiguration();
+        SJDanmakuTrackConfiguration TrackConfiguration { get; }
 
         // -(void)reloadTrackConfiguration;
         [Export("reloadTrackConfiguration")]
@@ -4517,7 +4517,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, getter = isPaused, nonatomic) BOOL paused;
         [Export("paused")]
-        bool Paused { [Bind("isPaused")] get; }
+        bool Paused { get; }
 
         // -(void)pause;
         [Export("pause")]
@@ -4534,11 +4534,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) __kindof UIView * _Nonnull view;
         [Export("view", ArgumentSemantic.Strong)]
-        UIView View();
+        UIView View { get; }
 
         // @property (readonly, nonatomic) NSInteger queueSize;
         [Export("queueSize")]
-        nint QueueSize();
+        nint QueueSize { get; }
     }
 
     // @interface SJDanmakuTrackConfiguration : NSObject
@@ -4603,7 +4603,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIView * _Nonnull sysVolumeView;
         [Export("sysVolumeView", ArgumentSemantic.Strong)]
-        UIView SysVolumeView();
+        UIView SysVolumeView { get; }
 
         // @property (nonatomic) float volume;
         [Export("volume")]
@@ -4789,17 +4789,17 @@ namespace IJKPlayer.SJPlayer
         // @required @property (readonly, getter = isViewDisappeared, nonatomic) BOOL viewDisappeared;
         [Abstract]
         [Export("viewDisappeared")]
-        bool ViewDisappeared { [Bind("isViewDisappeared")] get; }
+        bool ViewDisappeared { get; }
 
         // @required @property (readonly, nonatomic) UIStatusBarStyle preferredStatusBarStyle;
         [Abstract]
         [Export("preferredStatusBarStyle")]
-        UIStatusBarStyle PreferredStatusBarStyle();
+        UIStatusBarStyle PreferredStatusBarStyle { get; }
 
         // @required @property (readonly, nonatomic) BOOL prefersStatusBarHidden;
         [Abstract]
         [Export("prefersStatusBarHidden")]
-        bool PrefersStatusBarHidden();
+        bool PrefersStatusBarHidden { get; }
 
         // @required -(void)viewDidAppear;
         [Abstract]
@@ -4858,7 +4858,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic, strong) UIView * _Nullable presentView;
         [NullAllowed, Export("presentView", ArgumentSemantic.Strong)]
-        UIView PresentView();
+        UIView PresentView { get; }
 
         [Wrap("WeakDelegate")]
         [NullAllowed]
@@ -4906,7 +4906,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UIScrollView * _Nullable scrollView;
         [NullAllowed, Export("scrollView", ArgumentSemantic.Weak)]
-        UIScrollView ScrollView();
+        UIScrollView ScrollView { get; }
     }
 
     // @interface SJTableViewCellPlayModel : SJPlayModel
@@ -4919,11 +4919,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
     }
 
     // @interface SJTableViewTableHeaderViewPlayModel : SJPlayModel
@@ -4936,11 +4936,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // @property (readonly, nonatomic, weak) UIView * _Nullable tableHeaderView;
         [NullAllowed, Export("tableHeaderView", ArgumentSemantic.Weak)]
-        UIView TableHeaderView();
+        UIView TableHeaderView { get; }
     }
 
     // @interface SJTableViewTableFooterViewPlayModel : SJPlayModel
@@ -4953,11 +4953,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // @property (readonly, nonatomic, weak) UIView * _Nullable tableFooterView;
         [NullAllowed, Export("tableFooterView", ArgumentSemantic.Weak)]
-        UIView TableFooterView();
+        UIView TableFooterView { get; }
     }
 
     // @interface SJTableViewSectionHeaderViewPlayModel : SJPlayModel
@@ -4970,11 +4970,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // @property (readonly, nonatomic) NSInteger section;
         [Export("section")]
-        nint Section();
+        nint Section { get; }
     }
 
     // @interface SJTableViewSectionFooterViewPlayModel : SJPlayModel
@@ -4987,11 +4987,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // @property (readonly, nonatomic) NSInteger section;
         [Export("section")]
-        nint Section();
+        nint Section { get; }
     }
 
     // @interface SJCollectionViewCellPlayModel : SJPlayModel
@@ -5004,11 +5004,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UICollectionView * _Nullable collectionView;
         [NullAllowed, Export("collectionView", ArgumentSemantic.Weak)]
-        UICollectionView CollectionView();
+        UICollectionView CollectionView { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
     }
 
     // @interface SJCollectionViewSectionHeaderViewPlayModel : SJPlayModel
@@ -5021,11 +5021,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UICollectionView * _Nullable collectionView;
         [NullAllowed, Export("collectionView", ArgumentSemantic.Weak)]
-        UICollectionView CollectionView();
+        UICollectionView CollectionView { get; }
 
         // @property (readonly, nonatomic) NSInteger section;
         [Export("section")]
-        nint Section();
+        nint Section { get; }
     }
 
     // @interface SJCollectionViewSectionFooterViewPlayModel : SJPlayModel
@@ -5038,11 +5038,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UICollectionView * _Nullable collectionView;
         [NullAllowed, Export("collectionView", ArgumentSemantic.Weak)]
-        UICollectionView CollectionView();
+        UICollectionView CollectionView { get; }
 
         // @property (readonly, nonatomic) NSInteger section;
         [Export("section")]
-        nint Section();
+        nint Section { get; }
     }
 
     // @interface SJUITableViewCellPlayModel : SJPlayModel
@@ -5055,15 +5055,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag;
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // -(instancetype _Nonnull)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag atIndexPath:(NSIndexPath * _Nonnull)indexPath tableView:(UITableView * _Nonnull)tableView;
         [Export("initWithPlayerSuperviewTag:atIndexPath:tableView:")]
@@ -5080,15 +5080,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag;
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
 
         // @property (readonly, nonatomic, weak) UICollectionView * _Nullable collectionView;
         [NullAllowed, Export("collectionView", ArgumentSemantic.Weak)]
-        UICollectionView CollectionView();
+        UICollectionView CollectionView { get; }
 
         // -(instancetype _Nonnull)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag atIndexPath:(NSIndexPath * _Nonnull)indexPath collectionView:(UICollectionView * _Nonnull)collectionView;
         [Export("initWithPlayerSuperviewTag:atIndexPath:collectionView:")]
@@ -5105,11 +5105,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, weak) UIView * _Nullable playerSuperview;
         [NullAllowed, Export("playerSuperview", ArgumentSemantic.Weak)]
-        UIView PlayerSuperview();
+        UIView PlayerSuperview { get; }
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
     }
 
     // @interface SJUICollectionViewNestedInUITableViewHeaderViewPlayModel : SJPlayModel
@@ -5122,19 +5122,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag;
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
 
         // @property (readonly, nonatomic, weak) UICollectionView * _Nullable collectionView;
         [NullAllowed, Export("collectionView", ArgumentSemantic.Weak)]
-        UICollectionView CollectionView();
+        UICollectionView CollectionView { get; }
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // -(instancetype _Nonnull)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag atIndexPath:(NSIndexPath * _Nonnull)indexPath collectionView:(UICollectionView * _Nonnull)collectionView tableView:(UITableView * _Nonnull)tableView;
         [Export("initWithPlayerSuperviewTag:atIndexPath:collectionView:tableView:")]
@@ -5151,23 +5151,23 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag;
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
 
         // @property (readonly, nonatomic) NSInteger collectionViewTag;
         [Export("collectionViewTag")]
-        nint CollectionViewTag();
+        nint CollectionViewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull collectionViewAtIndexPath;
         [Export("collectionViewAtIndexPath", ArgumentSemantic.Strong)]
-        NSIndexPath CollectionViewAtIndexPath();
+        NSIndexPath CollectionViewAtIndexPath { get; }
 
         // @property (readonly, nonatomic, weak) UITableView * _Nullable tableView;
         [NullAllowed, Export("tableView", ArgumentSemantic.Weak)]
-        UITableView TableView();
+        UITableView TableView { get; }
 
         // -(instancetype _Nonnull)initWithPlayerSuperviewTag:(NSInteger)playerSuperviewTag atIndexPath:(NSIndexPath * _Nonnull)indexPath collectionViewTag:(NSInteger)collectionViewTag collectionViewAtIndexPath:(NSIndexPath * _Nonnull)collectionViewAtIndexPath tableView:(UITableView * _Nonnull)tableView;
         [Export("initWithPlayerSuperviewTag:atIndexPath:collectionViewTag:collectionViewAtIndexPath:tableView:")]
@@ -5189,23 +5189,23 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag;
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull indexPath;
         [Export("indexPath", ArgumentSemantic.Strong)]
-        NSIndexPath IndexPath();
+        NSIndexPath IndexPath { get; }
 
         // @property (readonly, nonatomic) NSInteger collectionViewTag;
         [Export("collectionViewTag")]
-        nint CollectionViewTag();
+        nint CollectionViewTag { get; }
 
         // @property (readonly, nonatomic, strong) NSIndexPath * _Nonnull collectionViewAtIndexPath;
         [Export("collectionViewAtIndexPath", ArgumentSemantic.Strong)]
-        NSIndexPath CollectionViewAtIndexPath();
+        NSIndexPath CollectionViewAtIndexPath { get; }
 
         // @property (readonly, nonatomic, weak) UICollectionView * _Nullable rootCollectionView;
         [NullAllowed, Export("rootCollectionView", ArgumentSemantic.Weak)]
-        UICollectionView RootCollectionView();
+        UICollectionView RootCollectionView { get; }
 
         // -(UICollectionView * _Nonnull)collectionView;
         [Export("collectionView")]
@@ -5223,19 +5223,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) NSInteger playerSuperviewTag;
         [Export("playerSuperviewTag")]
-        nint PlayerSuperviewTag();
+        nint PlayerSuperviewTag { get; }
 
         // @property (readonly, nonatomic) NSInteger inSection;
         [Export("inSection")]
-        nint InSection();
+        nint InSection { get; }
 
         // @property (readonly, nonatomic) BOOL isHeader;
         [Export("isHeader")]
-        bool IsHeader();
+        bool IsHeader { get; }
 
         // @property (readonly, nonatomic, strong) UITableView * _Nonnull tableView;
         [Export("tableView", ArgumentSemantic.Strong)]
-        UITableView TableView();
+        UITableView TableView { get; }
     }
 
     // @protocol SJPlayModelPropertiesObserverDelegate <NSObject>
@@ -5278,19 +5278,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) BOOL isAppeared;
         [Export("isAppeared")]
-        bool IsAppeared();
+        bool IsAppeared { get; }
 
         // @property (readonly, nonatomic) BOOL isTouched;
         [Export("isTouched")]
-        bool IsTouched();
+        bool IsTouched { get; }
 
         // @property (readonly, nonatomic) BOOL isPlayInScrollView;
         [Export("isPlayInScrollView")]
-        bool IsPlayInScrollView();
+        bool IsPlayInScrollView { get; }
 
         // @property (readonly, nonatomic) BOOL isScrolling;
         [Export("isScrolling")]
-        bool IsScrolling();
+        bool IsScrolling { get; }
 
         // -(void)refreshAppearState;
         [Export("refreshAppearState")]
@@ -5421,19 +5421,19 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) SJOrientation currentOrientation;
         [Export("currentOrientation")]
-        SJOrientation CurrentOrientation();
+        SJOrientation CurrentOrientation { get; }
 
         // @property (readonly, nonatomic) BOOL isFullscreen;
         [Export("isFullscreen")]
-        bool IsFullscreen();
+        bool IsFullscreen { get; }
 
         // @property (readonly, getter = isRotating, nonatomic) BOOL rotating;
         [Export("rotating")]
-        bool Rotating { [Bind("isRotating")] get; }
+        bool Rotating { get; }
 
         // @property (readonly, getter = isTransitioning, nonatomic) BOOL transitioning;
         [Export("transitioning")]
-        bool Transitioning { [Bind("isTransitioning")] get; }
+        bool Transitioning { get; }
 
         // @property (nonatomic, weak) UIView * _Nullable superview;
         [NullAllowed, Export("superview", ArgumentSemantic.Weak)]
@@ -5490,15 +5490,15 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) UIWindow * _Nonnull window;
         [Export("window", ArgumentSemantic.Strong)]
-        UIWindow Window();
+        UIWindow Window { get; }
 
         // @property (readonly, getter = isForcedRotation, nonatomic) BOOL forcedRotation;
         [Export("forcedRotation")]
-        bool ForcedRotation { get; set; }
+        bool ForcedRotation { get; }
 
         // @property (readonly, nonatomic) SJOrientation deviceOrientation;
         [Export("deviceOrientation")]
-        SJOrientation DeviceOrientation();
+        SJOrientation DeviceOrientation { get; }
 
         // @property (nonatomic) SJOrientation currentOrientation;
         //[Export("currentOrientation")]
@@ -5670,11 +5670,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, copy, nonatomic) NSAttributedString * _Nonnull content;
         [Export("content", ArgumentSemantic.Copy)]
-        NSAttributedString Content();
+        NSAttributedString Content { get; }
 
         // @property (readonly, nonatomic) SJTimeRange range;
         [Export("range")]
-        SJTimeRange Range();
+        SJTimeRange Range { get; }
     }
 
     // @interface SJSubtitlePopupController : NSObject <SJSubtitlePopupController>
@@ -5967,7 +5967,7 @@ namespace IJKPlayer.SJPlayer
     {
         // @property (readonly, nonatomic) SJVideoPlayerAppState state;
         [Export("state")]
-        SJVideoPlayerAppState State();
+        SJVideoPlayerAppState State { get; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(SJVideoPlayerRegistrar * _Nonnull) willResignActive;
         [NullAllowed, Export("willResignActive", ArgumentSemantic.Copy)]
@@ -6025,7 +6025,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) NSURL * _Nonnull URL;
         [Export("URL", ArgumentSemantic.Strong)]
-        NSUrl URL();
+        NSUrl URL { get; }
 
         // @property (nonatomic) NSTimeInterval trialEndPosition;
         [Export("trialEndPosition")]
@@ -6037,11 +6037,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic) BOOL firstVideoFrameRendered;
         [Export("firstVideoFrameRendered")]
-        bool FirstVideoFrameRendered();
+        bool FirstVideoFrameRendered { get; }
 
         // @property (readonly, nonatomic) UIView * _Nonnull view;
         [Export("view")]
-        UIView View();
+        UIView View { get; }
 
         // @property (nonatomic) SJVideoGravity _Nonnull videoGravity;
         [Export("videoGravity")]
@@ -6058,7 +6058,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJIJKMediaPlayer * _Nonnull player;
         [Export("player", ArgumentSemantic.Strong)]
-        SJIJKMediaPlayer Player();
+        SJIJKMediaPlayer Player { get; }
 
         // @property (nonatomic) SJVideoGravity _Nonnull videoGravity;
         [Export("videoGravity")]
@@ -6066,7 +6066,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, getter = isReadyForDisplay, nonatomic) BOOL readyForDisplay;
         [Export("readyForDisplay")]
-        bool ReadyForDisplay { [Bind("isReadyForDisplay")] get; }
+        bool ReadyForDisplay { get; }
     }
 
     // @interface SJIJKMediaPlaybackController : SJMediaPlaybackController
@@ -6079,7 +6079,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (readonly, nonatomic, strong) SJIJKMediaPlayer * _Nullable currentPlayer;
         [NullAllowed, Export("currentPlayer", ArgumentSemantic.Strong)]
-        SJIJKMediaPlayer CurrentPlayer();
+        SJIJKMediaPlayer CurrentPlayer { get; }
     }
 
     // @interface SJBaseVideoPlayerResourceLoader : NSObject
