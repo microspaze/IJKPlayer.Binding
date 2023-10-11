@@ -1926,7 +1926,7 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    //[Protocol, Model]
+    [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJSmallViewFloatingControllerObserverProtocol
     {
