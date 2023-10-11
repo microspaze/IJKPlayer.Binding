@@ -2594,11 +2594,11 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) BOOL automaticallyHidesPlaceholderImageView;
         [Export("automaticallyHidesPlaceholderImageView")]
-        bool GetAutomaticallyHidesPlaceholderImageView { get; set; }
+        bool AutomaticallyHidesPlaceholderImageView { get; set; }
 
         // @property (nonatomic) NSTimeInterval delayInSecondsForHiddenPlaceholderImageView;
         [Export("delayInSecondsForHiddenPlaceholderImageView")]
-        double GetDelayInSecondsForHiddenPlaceholderImageView { get; set; }
+        double DelayInSecondsForHiddenPlaceholderImageView { get; set; }
     //}
 
     // @interface VideoFlipTransition (SJBaseVideoPlayer)
@@ -3222,10 +3222,7 @@ namespace IJKPlayer.SJPlayer
 
         // @property (nonatomic) CGFloat subtitleBottomMargin;
         [Export("subtitleBottomMargin")]
-        nfloat GetSubtitleBottomMargin();
-        
-        [Export("subtitleBottomMargin:")]
-        void SetSubtitleBottomMargin(nfloat bottomMargin);
+        nfloat SubtitleBottomMargin { get; set; }
 
         // @property (nonatomic) CGFloat subtitleHorizontalMinMargin;
         [Export("subtitleHorizontalMinMargin")]
