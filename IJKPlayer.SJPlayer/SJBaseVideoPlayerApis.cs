@@ -782,22 +782,22 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol, Model]
+    [Protocol]
     [BaseType(typeof(NSObject))]
     interface SJMediaModelProtocol
     {
         // @required @property (nonatomic, strong) NSURL * _Nullable mediaURL;
-        [Abstract]
+        //[Abstract]
         [NullAllowed, Export("mediaURL", ArgumentSemantic.Strong)]
         NSUrl MediaURL { get; set; }
 
         // @required @property (nonatomic) NSTimeInterval startPosition;
-        [Abstract]
+        //[Abstract]
         [Export("startPosition")]
         double StartPosition { get; set; }
 
         // @required @property (nonatomic) NSTimeInterval trialEndPosition;
-        [Abstract]
+        //[Abstract]
         [Export("trialEndPosition")]
         double TrialEndPosition { get; set; }
     }
