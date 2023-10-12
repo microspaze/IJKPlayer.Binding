@@ -74,6 +74,7 @@ public class AppDelegate : UIApplicationDelegate {
         };
         player.SmallViewFloatingController = smallViewController;
         player.SmallViewFloatingController.Enabled = true;
+        player.DefaultSmallViewControlLayer.TopContainerView.CleanColors();
 
         var smallViewLabel = new UILabel(Window!.Frame)
         {
