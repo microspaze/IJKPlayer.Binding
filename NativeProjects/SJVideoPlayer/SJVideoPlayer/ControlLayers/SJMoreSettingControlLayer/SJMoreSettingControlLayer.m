@@ -109,11 +109,12 @@ SJEdgeControlButtonItemTag const SJMoreSettingControlLayerItem_Rate = 10002;
 }
 
 - (void)videoPlayer:(__kindof SJBaseVideoPlayer *)videoPlayer rateChanged:(float)rate {
+    int32_t steppedRate = ((((int32_t)(rate * 1000) / 125) + 1) / 2) * 25;
     [videoPlayer.textPopupController show:[NSAttributedString sj_UIKitText:^(id<SJUIKitTextMakerProtocol>  _Nonnull make) {
-        make.append([NSString stringWithFormat:@"%.0f %%", rate * 100]);
+        make.append([NSString stringWithFormat:@"%.0d %%", steppedRate]);
         make.textColor(UIColor.whiteColor);
     }]];
-    [self _setSliderValueForItemTag:SJMoreSettingControlLayerItem_Rate value:rate];
+    [self _setSliderValueForItemTag:SJMoreSettingControlLayerItem_Rate value:steppedRate/100];
 }
 
 #pragma mark -
