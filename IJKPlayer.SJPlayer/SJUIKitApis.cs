@@ -7,7 +7,7 @@ using UIKit;
 
 namespace IJKPlayer.SJPlayer
 {
-    // @protocol SJUIKitTextMakerProtocol <SJUTAttributesProtocol>
+    // @protocol SJUIKitTextMaker <SJUTAttributes>
     /*
       Check whether adding [Model] to this declaration is appropriate.
       [Model] is used to generate a C# class that implements this protocol,
@@ -17,29 +17,28 @@ namespace IJKPlayer.SJPlayer
       protocol, then [Model] is redundant and will generate code that will never
       be used.
     */
-    [Protocol, Model]
-    [BaseType(typeof(NSObject))]
+    [Protocol]
     interface SJUIKitTextMakerProtocol : SJUTAttributesProtocol
     {
-        // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) append;
-        [Abstract]
+        // @required @property (readonly, copy, nonatomic) id<SJUTAttributes>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) append;
+        //[Abstract]
         [Export("append", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTAttributesProtocol> Append { get; }
+        Func<NSString, SJUTAttributes> Append { get; }
 
-        // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(__attribute__((noescape)) SJUTAppendImageHandler _Nonnull) appendImage;
+        // @required @property (readonly, copy, nonatomic) id<SJUTAttributes>  _Nonnull (^ _Nonnull)(__attribute__((noescape)) SJUTAppendImageHandler _Nonnull) appendImage;
         [Abstract]
         [Export("appendImage", ArgumentSemantic.Copy)]
-        Func<SJUTAppendImageHandler, SJUTAttributesProtocol> AppendImage { get; }
+        Func<SJUTAppendImageHandler, SJUTAttributes> AppendImage { get; }
 
-        // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull) appendText;
+        // @required @property (readonly, copy, nonatomic) id<SJUTAttributes>  _Nonnull (^ _Nonnull)(NSAttributedString * _Nonnull) appendText;
         [Abstract]
         [Export("appendText", ArgumentSemantic.Copy)]
-        Func<NSAttributedString, SJUTAttributesProtocol> AppendText { get; }
+        Func<NSAttributedString, SJUTAttributes> AppendText { get; }
 
-        // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSRange) update;
+        // @required @property (readonly, copy, nonatomic) id<SJUTAttributes>  _Nonnull (^ _Nonnull)(NSRange) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Func<NSRange, SJUTAttributesProtocol> Update { get; }
+        Func<NSRange, SJUTAttributes> Update { get; }
 
         // @required @property (readonly, copy, nonatomic) id<SJUTRegexHandlerProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) regex;
         [Abstract]
@@ -58,8 +57,8 @@ namespace IJKPlayer.SJPlayer
     delegate void NSShaowArgumentAction(NSShadow arg0);
     delegate void SJUTStrokeArgumentAction(SJUTStroke arg0);
     delegate void SJUTDecorationArgumentAction(SJUTDecoration arg0);
-    delegate void SJUIKitTextMakerProtocolArgumentAction(SJUIKitTextMakerProtocol arg0);
-    delegate void SJUTAttributesProtocolArgumentAction(SJUTAttributesProtocol arg0);
+    delegate void SJUIKitTextMakerArgumentAction(SJUIKitTextMaker arg0);
+    delegate void SJUTAttributesArgumentAction(SJUTAttributes arg0);
     delegate void NSMutableAttributedStringNSTextCheckingResultArgumentsAction(NSMutableAttributedString arg0, NSTextCheckingResult arg1);
     delegate void SJAttributesRangeOperatorArgumentAction(SJAttributesRangeOperator arg0);
     delegate void SJAttributeWorkerArgumentAction(SJAttributeWorker arg0);
@@ -67,82 +66,82 @@ namespace IJKPlayer.SJPlayer
     // typedef void (^SJUTAppendImageHandler)(id<SJUTImageAttachment> _Nonnull);
     delegate void SJUTAppendImageHandler(SJUTImageAttachment arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTFontAttribute)(UIFont * _Nonnull);
-    delegate SJUTAttributesProtocol SJUTFontAttribute(UIFont arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTFontAttribute)(UIFont * _Nonnull);
+    delegate SJUTAttributes SJUTFontAttribute(UIFont arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTColorAttribute)(UIColor * _Nonnull);
-    delegate SJUTAttributesProtocol SJUTColorAttribute(UIColor arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTColorAttribute)(UIColor * _Nonnull);
+    delegate SJUTAttributes SJUTColorAttribute(UIColor arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTKernAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTKernAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTKernAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTKernAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTShadowAttribute)(void (^ _Nonnull)(NSShadow * _Nonnull));
-    delegate SJUTAttributesProtocol SJUTShadowAttribute(NSShaowArgumentAction arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTShadowAttribute)(void (^ _Nonnull)(NSShadow * _Nonnull));
+    delegate SJUTAttributes SJUTShadowAttribute(NSShaowArgumentAction arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTStrokeAttribute)(void (^ _Nonnull)(id<SJUTStroke> _Nonnull));
-    delegate SJUTAttributesProtocol SJUTStrokeAttribute(SJUTStrokeArgumentAction arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTStrokeAttribute)(void (^ _Nonnull)(id<SJUTStroke> _Nonnull));
+    delegate SJUTAttributes SJUTStrokeAttribute(SJUTStrokeArgumentAction arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTDecorationAttribute)(void (^ _Nonnull)(id<SJUTDecoration> _Nonnull));
-    delegate SJUTAttributesProtocol SJUTDecorationAttribute(SJUTDecorationArgumentAction arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTDecorationAttribute)(void (^ _Nonnull)(id<SJUTDecoration> _Nonnull));
+    delegate SJUTAttributes SJUTDecorationAttribute(SJUTDecorationArgumentAction arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTBaseLineOffsetAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTBaseLineOffsetAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTBaseLineOffsetAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTBaseLineOffsetAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTLineSpacingAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTLineSpacingAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTLineSpacingAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTLineSpacingAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTParagraphSpacingAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTParagraphSpacingAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTParagraphSpacingAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTParagraphSpacingAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTAlignmentAttribute)(NSTextAlignment);
-    delegate SJUTAttributesProtocol SJUTAlignmentAttribute(UITextAlignment arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTAlignmentAttribute)(NSTextAlignment);
+    delegate SJUTAttributes SJUTAlignmentAttribute(UITextAlignment arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTFirstLineHeadIndentAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTFirstLineHeadIndentAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTFirstLineHeadIndentAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTFirstLineHeadIndentAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTHeadIndentAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTHeadIndentAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTHeadIndentAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTHeadIndentAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTTailIndentAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTTailIndentAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTTailIndentAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTTailIndentAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTLineBreakModeAttribute)(NSLineBreakMode);
-    delegate SJUTAttributesProtocol SJUTLineBreakModeAttribute(UILineBreakMode arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTLineBreakModeAttribute)(NSLineBreakMode);
+    delegate SJUTAttributes SJUTLineBreakModeAttribute(UILineBreakMode arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTMinimumLineHeightAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTMinimumLineHeightAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTMinimumLineHeightAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTMinimumLineHeightAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTMaximumLineHeightAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTMaximumLineHeightAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTMaximumLineHeightAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTMaximumLineHeightAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTBaseWritingDirectionAttribute)(NSWritingDirection);
-    delegate SJUTAttributesProtocol SJUTBaseWritingDirectionAttribute(NSWritingDirection arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTBaseWritingDirectionAttribute)(NSWritingDirection);
+    delegate SJUTAttributes SJUTBaseWritingDirectionAttribute(NSWritingDirection arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTLineHeightMultipleAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTLineHeightMultipleAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTLineHeightMultipleAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTLineHeightMultipleAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTParagraphSpacingBeforeAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTParagraphSpacingBeforeAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTParagraphSpacingBeforeAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTParagraphSpacingBeforeAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTHyphenationFactorAttribute)(float);
-    delegate SJUTAttributesProtocol SJUTHyphenationFactorAttribute(float arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTHyphenationFactorAttribute)(float);
+    delegate SJUTAttributes SJUTHyphenationFactorAttribute(float arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTTabStopsAttribute)(NSArray<NSTextTab *> * _Nonnull);
-    delegate SJUTAttributesProtocol SJUTTabStopsAttribute(NSTextTab[] arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTTabStopsAttribute)(NSArray<NSTextTab *> * _Nonnull);
+    delegate SJUTAttributes SJUTTabStopsAttribute(NSTextTab[] arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTDefaultTabIntervalAttribute)(CGFloat);
-    delegate SJUTAttributesProtocol SJUTDefaultTabIntervalAttribute(nfloat arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTDefaultTabIntervalAttribute)(CGFloat);
+    delegate SJUTAttributes SJUTDefaultTabIntervalAttribute(nfloat arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTAllowsDefaultTighteningForTruncationAttribute)(BOOL);
-    delegate SJUTAttributesProtocol SJUTAllowsDefaultTighteningForTruncationAttribute(bool arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTAllowsDefaultTighteningForTruncationAttribute)(BOOL);
+    delegate SJUTAttributes SJUTAllowsDefaultTighteningForTruncationAttribute(bool arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTLineBreakStrategyAttribute)(NSLineBreakStrategy);
-    delegate SJUTAttributesProtocol SJUTLineBreakStrategyAttribute(NSLineBreakStrategy arg0);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTLineBreakStrategyAttribute)(NSLineBreakStrategy);
+    delegate SJUTAttributes SJUTLineBreakStrategyAttribute(NSLineBreakStrategy arg0);
 
-    // typedef id<SJUTAttributesProtocol> _Nonnull (^SJUTSetAttribute)(id _Nullable, NSString * _Nonnull);
-    delegate SJUTAttributesProtocol SJUTSetAttribute(NSObject arg0, string arg1);
+    // typedef id<SJUTAttributes> _Nonnull (^SJUTSetAttribute)(id _Nullable, NSString * _Nonnull);
+    delegate SJUTAttributes SJUTSetAttribute(NSObject arg0, string arg1);
 
-    // @protocol SJUTAttributesProtocol
+    // @protocol SJUTAttributes
     /*
   Check whether adding [Model] to this declaration is appropriate.
   [Model] is used to generate a C# class that implements this protocol,
@@ -152,12 +151,11 @@ namespace IJKPlayer.SJPlayer
   protocol, then [Model] is redundant and will generate code that will never
   be used.
     */
-    [Protocol, Model]
-    [BaseType(typeof(NSObject))]
+    [Protocol]
     interface SJUTAttributesProtocol
     {
         // @required @property (readonly, copy, nonatomic) SJUTFontAttribute _Nonnull font;
-        [Abstract]
+        //[Abstract]
         [Export("font", ArgumentSemantic.Copy)]
         SJUTFontAttribute Font { get; }
 
@@ -308,20 +306,20 @@ namespace IJKPlayer.SJPlayer
     [BaseType(typeof(NSObject))]
     interface SJUTRangeHandlerProtocol
     {
-        // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUTAttributesProtocol> _Nonnull)) update;
+        // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUTAttributes> _Nonnull)) update;
         [Abstract]
         [Export("update", ArgumentSemantic.Copy)]
-        Action<SJUTAttributesProtocolArgumentAction> Update { get; }
+        Action<SJUTAttributesArgumentAction> Update { get; }
 
-        // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUIKitTextMakerProtocol> _Nonnull)) replaceWithText;
+        // @required @property (readonly, copy, nonatomic) void (^ _Nonnull)(void (^ _Nonnull)(id<SJUIKitTextMaker> _Nonnull)) replaceWithText;
         [Abstract]
         [Export("replaceWithText", ArgumentSemantic.Copy)]
-        Action<SJUIKitTextMakerProtocolArgumentAction> ReplaceWithText { get; }
+        Action<SJUIKitTextMakerArgumentAction> ReplaceWithText { get; }
 
-        // @required @property (readonly, copy, nonatomic) id<SJUTAttributesProtocol>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) replaceWithString;
+        // @required @property (readonly, copy, nonatomic) id<SJUTAttributes>  _Nonnull (^ _Nonnull)(NSString * _Nonnull) replaceWithString;
         [Abstract]
         [Export("replaceWithString", ArgumentSemantic.Copy)]
-        Func<NSString, SJUTAttributesProtocol> ReplaceWithString { get; }
+        Func<NSString, SJUTAttributes> ReplaceWithString { get; }
     }
 
     // @protocol SJUTRegexHandlerProtocol <SJUTRangeHandlerProtocol>
@@ -437,10 +435,10 @@ namespace IJKPlayer.SJPlayer
     [BaseType(typeof(NSAttributedString))]
     interface NSAttributedString_SJMake
     {
-        // +(instancetype _Nonnull)sj_UIKitText:(void (^ _Nonnull)(id<SJUIKitTextMakerProtocol> _Nonnull))block;
+        // +(instancetype _Nonnull)sj_UIKitText:(void (^ _Nonnull)(id<SJUIKitTextMaker> _Nonnull))block;
         [Static]
         [Export("sj_UIKitText:")]
-        NSAttributedString Sj_UIKitText(SJUIKitTextMakerProtocolArgumentAction block);
+        NSAttributedString Sj_UIKitText(SJUIKitTextMakerArgumentAction block);
 
         // -(CGSize)sj_textSize;
         [Export("sj_textSize")]
@@ -911,9 +909,9 @@ namespace IJKPlayer.SJPlayer
         [NullAllowed, Export("fromString", ArgumentSemantic.Strong)]
         string FromString { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMakerProtocol> _Nonnull) block;
+        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMaker> _Nonnull) block;
         [NullAllowed, Export("block", ArgumentSemantic.Copy)]
-        SJUIKitTextMakerProtocolArgumentAction Block { get; set; }
+        SJUIKitTextMakerArgumentAction Block { get; set; }
     }
 
     // @interface SJUTRecorder : NSObject
@@ -951,7 +949,7 @@ namespace IJKPlayer.SJPlayer
         void SetValuesForAttributedString(NSAttributedString attributedString);
     }
 
-    // @interface SJUTAttributes : NSObject <SJUTAttributesProtocol>
+    // @interface SJUTAttributes : NSObject <SJUTAttributes>
     [BaseType(typeof(NSObject))]
     interface SJUTAttributes : SJUTAttributesProtocol
     {
@@ -960,7 +958,7 @@ namespace IJKPlayer.SJPlayer
         SJUTRecorder Recorder();
     }
 
-    // @interface SJUIKitTextMaker : SJUTAttributes <SJUIKitTextMakerProtocol>
+    // @interface SJUIKitTextMaker : SJUTAttributes <SJUIKitTextMaker>
     [BaseType(typeof(SJUTAttributes))]
     interface SJUIKitTextMaker : SJUIKitTextMakerProtocol
     {
@@ -991,17 +989,17 @@ namespace IJKPlayer.SJPlayer
         [Export("range", ArgumentSemantic.Assign)]
         NSRange Range { get; set; }
 
-        // @property (nonatomic, strong) id<SJUTAttributesProtocol> _Nullable utOfReplaceWithString;
+        // @property (nonatomic, strong) id<SJUTAttributes> _Nullable utOfReplaceWithString;
         [NullAllowed, Export("utOfReplaceWithString", ArgumentSemantic.Strong)]
-        SJUTAttributesProtocol UtOfReplaceWithString { get; set; }
+        SJUTAttributes UtOfReplaceWithString { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMakerProtocol> _Nonnull) replaceWithText;
+        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMaker> _Nonnull) replaceWithText;
         [NullAllowed, Export("replaceWithText", ArgumentSemantic.Copy)]
-        SJUIKitTextMakerProtocolArgumentAction ReplaceWithText { get; set; }
+        SJUIKitTextMakerArgumentAction ReplaceWithText { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUTAttributesProtocol> _Nonnull) update;
+        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUTAttributes> _Nonnull) update;
         [NullAllowed, Export("update", ArgumentSemantic.Copy)]
-        Action<SJUTAttributesProtocol> Update { get; set; }
+        Action<SJUTAttributes> Update { get; set; }
     }
 
     // @interface SJUTRegexHandler : NSObject <SJUTRegexHandlerProtocol>
@@ -1029,21 +1027,21 @@ namespace IJKPlayer.SJPlayer
         [Export("matchingOptions", ArgumentSemantic.Assign)]
         NSMatchingOptions MatchingOptions { get; set; }
 
-        // @property (nonatomic, strong) id<SJUTAttributesProtocol> _Nullable utOfReplaceWithString;
+        // @property (nonatomic, strong) id<SJUTAttributes> _Nullable utOfReplaceWithString;
         [NullAllowed, Export("utOfReplaceWithString", ArgumentSemantic.Strong)]
-        SJUTAttributesProtocol UtOfReplaceWithString { get; set; }
+        SJUTAttributes UtOfReplaceWithString { get; set; }
 
         // @property (copy, nonatomic) NSString * _Nullable regex;
         [NullAllowed, Export("regex")]
         string Regex { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMakerProtocol> _Nonnull) replaceWithText;
+        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUIKitTextMaker> _Nonnull) replaceWithText;
         [NullAllowed, Export("replaceWithText", ArgumentSemantic.Copy)]
-        SJUIKitTextMakerProtocolArgumentAction ReplaceWithText { get; set; }
+        SJUIKitTextMakerArgumentAction ReplaceWithText { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUTAttributesProtocol> _Nonnull) update;
+        // @property (copy, nonatomic) void (^ _Nullable)(id<SJUTAttributes> _Nonnull) update;
         [NullAllowed, Export("update", ArgumentSemantic.Copy)]
-        Action<SJUTAttributesProtocol> Update { get; set; }
+        Action<SJUTAttributes> Update { get; set; }
 
         // @property (copy, nonatomic) void (^ _Nullable)(NSMutableAttributedString * _Nonnull, NSTextCheckingResult * _Nonnull) handler;
         [NullAllowed, Export("handler", ArgumentSemantic.Copy)]

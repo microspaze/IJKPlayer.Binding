@@ -18,6 +18,11 @@ public class AppDelegate : UIApplicationDelegate {
 		// create a UIViewController with a single UILabel
 		var vc = new UIViewController();
 		var player = new SJVideoPlayer();
+        var urlAsset = new SJVideoPlayerURLAsset(
+            title: "Video Title",
+            URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
+            playModel: new SJPlayModel());
+
         var useIJK = false;
 		if (useIJK)
 		{
@@ -95,15 +100,63 @@ public class AppDelegate : UIApplicationDelegate {
 
         #endregion
 
-        var urlAsset = new SJVideoPlayerURLAsset(
-            title: "Video Title",
-            URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
-            playModel: new SJPlayModel());
+        #region 4. Autoplay Config
+
+        player.AutoplayWhenSetNewAsset = false;
+
+        #endregion
+
+        #region 5. Subtitle Config
+
+        var subtitleDict = new Dictionary<string, int>()
+        {
+            { "Subtitle 1 duration 2s", 2 },
+            { "Subtitle 2 duration 4s", 4 },
+            { "Subtitle 3 duration 6s", 6 },
+            { "Subtitle 4 duration 8s", 8 },
+            { "Subtitle 5 duration 10s", 10 }
+        };
+        var subtitles = new List<SJSubtitleItem>();
+        var start = 1;    // Subtitle show start time
+        var duration = 0; // Subtitle duration seconds
+        foreach (var subtitle in subtitleDict.Keys)
+        {
+            var content = new NSAttributedString();
+            // content object must be reasigned again in C# code (otherwise text maker will not be effected)
+            content = content.Sj_UIKitText((textMaker) =>
+            {
+                // Inorder to fix SJUIKitTextMakerProtocol not found errors in binding project, you may add [BaseType(typeof(NSObject))] to SJUIKitTextMakerProtocol
+                // But it will cause new InvalidCastException because of SJUIKitTextMakerProtocol is a pure protocol can not be used as a NSObject.
+                // The right solution is to replace all SJUIKitTextMakerProtocol to SJUIKitTextMaker expect SJUIKitTextMakerProtocol's self definition.
+                textMaker.Font.Invoke(UIFont.BoldSystemFontOfSize(17));
+                textMaker.Append.Invoke(new NSString(subtitle));
+                textMaker.TextColor.Invoke(UIColor.White);
+                textMaker.Stroke.Invoke((stroke) =>
+                {
+                    stroke.Width = -1;
+                    stroke.Color = UIColor.Black;
+                });
+            });
+            duration = subtitleDict[subtitle];
+            subtitles.Add(new SJSubtitleItem(content, new SJTimeRange() { start = start, duration = duration }));
+            start += duration + 1;
+        }
+
+        urlAsset.Subtitles = subtitles.ToArray();
+
+        //Subtitle view config
+        //player.SubtitlePopupController.View.BackgroundColor = UIColor.FromWhiteAlpha(0, 0.6f);
+        //player.SubtitlePopupController.View.Layer.CornerRadius = 15;
+        //player.SubtitlePopupController.ContentInsets = new UIEdgeInsets(6, 11, 6, 11);
+
+        #endregion
+
         player.URLAsset = urlAsset;
         player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
         player.View.BackgroundColor = UIColor.Black;
         player.View.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
-        player.Pause();
+        //Use Autoplay config instead
+        //player.Pause();
 
         vc.View!.AddSubview(player.View);
 
