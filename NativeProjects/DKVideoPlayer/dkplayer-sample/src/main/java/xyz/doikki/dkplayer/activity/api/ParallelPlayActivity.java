@@ -20,7 +20,7 @@ import xyz.doikki.videoplayer.player.VideoView;
  */
 public class ParallelPlayActivity extends AppCompatActivity {
 
-    private static final String VOD_URL_1 = "http://vfx.mtime.cn/Video/2019/03/18/mp4/190318231014076505.mp4";
+    private static final String VOD_URL_1 = "https://gastaticqn.gatime.cn/big_buck_bunny.mp4";
     private static final String VOD_URL_2 = DataUtil.SAMPLE_URL;
 
     private List<VideoView> mVideoViews = new ArrayList<>();
