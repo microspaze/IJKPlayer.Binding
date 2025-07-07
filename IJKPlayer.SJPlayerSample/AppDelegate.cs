@@ -20,10 +20,11 @@ public class AppDelegate : UIApplicationDelegate {
 		var player = new SJVideoPlayer();
         var urlAsset = new SJVideoPlayerURLAsset(
             title: "Video Title",
-            URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
+            //URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
+            URL: new NSUrl("https://gastaticqn.gatime.cn/glocken_encrypt.mp4"),
             playModel: new SJPlayModel());
 
-        var useIJK = false;
+        var useIJK = true;
 		if (useIJK)
 		{
 			SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
@@ -32,6 +33,7 @@ public class AppDelegate : UIApplicationDelegate {
 			options.SetPlayerOptionIntValue(0, "packet-buffering");
 			options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
 			//options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
+			options.SetFormatOptionValue("76a6c65c5ea762046bd749a2e632ccbb", "decryption_key");
 			controller.Options = options;
 			player.PlaybackController = controller;
 		}
