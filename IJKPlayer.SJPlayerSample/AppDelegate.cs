@@ -17,98 +17,144 @@ public class AppDelegate : UIApplicationDelegate {
 
 		// create a UIViewController with a single UILabel
 		var vc = new UIViewController();
-		var player = new SJVideoPlayer();
+		var avPlayer = new SJVideoPlayer();
+		var ijkPlayer = new SJVideoPlayer();
         var urlAsset = new SJVideoPlayerURLAsset(
-            title: "Video Title",
-            //URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
-            URL: new NSUrl("https://gastaticqn.gatime.cn/glocken_encrypt.mp4"),
+            title: "Big Buck Bunny Trailer",
+            URL: new NSUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4"),
             playModel: new SJPlayModel());
 
-        var useIJK = true;
-		if (useIJK)
-		{
-			SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
-			IJKFFOptions options = IJKFFOptions.OptionsByDefault;
-			options.SetPlayerOptionIntValue(-1, "probesize");
-			options.SetPlayerOptionIntValue(0, "packet-buffering");
-			options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
-			//options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
-			options.SetFormatOptionValue("76a6c65c5ea762046bd749a2e632ccbb", "decryption_key");
-			controller.Options = options;
-			player.PlaybackController = controller;
-		}
-		else
-		{
-            //Use AVMedia for default
-            #region 1. No need set PlaybackController
-            //The following code will cause NSInternalInconsistencyException: You must override playerWithMedia:completionHandler: in a subclass.
-            //SJAVMediaPlaybackController playbackController = new SJAVMediaPlaybackController();
-            //player.PlaybackController = playbackController;
-            #endregion
+        //Use AVMedia for default
+        #region 1. No need set PlaybackController
+        //The following code will cause NSInternalInconsistencyException: You must override playerWithMedia:completionHandler: in a subclass.
+        //SJAVMediaPlaybackController playbackController = new SJAVMediaPlaybackController();
+        //player.PlaybackController = playbackController;
+        #endregion
+        
+        //Set ijkplayer
+        #region 2. Set IJKFFOptions & JKKMediaPlaybackController
+        SJIJKMediaPlaybackController controller = new SJIJKMediaPlaybackController();
+        IJKFFOptions options = IJKFFOptions.OptionsByDefault;
+        //options.SetPlayerOptionIntValue(-1, "probesize");
+        //options.SetPlayerOptionIntValue(0, "packet-buffering");
+        //options.SetPlayerOptionIntValue(0, "enable-accurate-seek");
+        //options.SetPlayerOptionIntValue(10 * 1024 * 1024, "max-buffer-size");
+        controller.Options = options;
+        ijkPlayer.PlaybackController = controller;
+        #endregion
+        
+        #region 3. iOS 14.0 support PictureInPicture
+        //Don't forget add Audio AirPlay and Picture in Picture in Info.plist's Application Background Modes
+        //You can use IsPictureInPictureSupported() to check if PIP is supported
+        Console.WriteLine($"AVPlayer PIP supported: {avPlayer.PlaybackController.IsPictureInPictureSupported()}");
+        Console.WriteLine($"IJKPlayer PIP supported: {ijkPlayer.PlaybackController.IsPictureInPictureSupported()}");
+        #endregion
 
-            #region 2. iOS 14.0 support PictureInPicture
-			//Don't forget add Audio AirPlay and Picture in Picture in Info.plist's Application Background Modes
-            //You can use IsPictureInPictureSupported() to check if PIP is supported
-            Console.WriteLine(player.PlaybackController.IsPictureInPictureSupported());
-            #endregion
-        }
-
-        #region 3. Small View Floating 
-        var smallViewController = new SJSmallViewFloatingController();
-        smallViewController.LayoutPosition = SJSmallViewLayoutPosition.BottomRight;
-        smallViewController.LayoutInsets = new UIEdgeInsets(20, 12, 20, 12);
-        smallViewController.LayoutSize = new CGSize(260, 260 * 9 / 16.0);
-        smallViewController.FloatingViewShouldAppear = (controller) => { return true; };
-        smallViewController.OnSingleTapped = (controller) =>
+        #region 4. Small View Floating 
+        var avSmallViewController = new SJSmallViewFloatingController();
+        avSmallViewController.LayoutPosition = SJSmallViewLayoutPosition.BottomRight;
+        avSmallViewController.LayoutInsets = new UIEdgeInsets(20, 12, 20, 12);
+        avSmallViewController.LayoutSize = new CGSize(260, 260 * 9 / 16.0);
+        avSmallViewController.FloatingViewShouldAppear = (controller) => { return true; };
+        avSmallViewController.OnSingleTapped = (controller) =>
         {
-            if (player.IsPaused)
+            if (avPlayer.IsPaused)
             {
-                player.Play();
+                avPlayer.Play();
             }
             else
             {
-                player.Pause();
+                avPlayer.Pause();
             }
         };
-        smallViewController.OnDoubleTapped = (controller) =>
+        avSmallViewController.OnDoubleTapped = (controller) =>
         {
             controller.Dismiss();
         };
-        var smallViewObserver = smallViewController.Observer();
-        smallViewObserver.OnAppearChanged = (controller) =>
+        var avSmallViewObserver = avSmallViewController.Observer();
+        avSmallViewObserver.OnAppearChanged = (controller) =>
         {
-            Console.WriteLine($"Small view isAppeared: {controller.IsAppeared}");
+            Console.WriteLine($"AVPlayer Small view isAppeared: {controller.IsAppeared}");
         };
-        player.SmallViewFloatingController = smallViewController;
-        player.SmallViewFloatingController.Enabled = true;
-        player.DefaultSmallViewControlLayer.TopContainerView.CleanColors();
+        avPlayer.SmallViewFloatingController = avSmallViewController;
+        avPlayer.SmallViewFloatingController.Enabled = true;
+        avPlayer.DefaultSmallViewControlLayer.TopContainerView.CleanColors();
+        
+        var ijkSmallViewController = new SJSmallViewFloatingController();
+        ijkSmallViewController.LayoutPosition = SJSmallViewLayoutPosition.BottomRight;
+        ijkSmallViewController.LayoutInsets = new UIEdgeInsets(20, 12, 20, 12);
+        ijkSmallViewController.LayoutSize = new CGSize(260, 260 * 9 / 16.0);
+        ijkSmallViewController.FloatingViewShouldAppear = (controller) => { return true; };
+        ijkSmallViewController.OnSingleTapped = (controller) =>
+        {
+            if (avPlayer.IsPaused)
+            {
+                avPlayer.Play();
+            }
+            else
+            {
+                avPlayer.Pause();
+            }
+        };
+        ijkSmallViewController.OnDoubleTapped = (controller) =>
+        {
+            controller.Dismiss();
+        };
+        var ijkSmallViewObserver = ijkSmallViewController.Observer();
+        ijkSmallViewObserver.OnAppearChanged = (controller) =>
+        {
+            Console.WriteLine($"IJKPlayer Small view isAppeared: {controller.IsAppeared}");
+        };
+        ijkPlayer.SmallViewFloatingController = ijkSmallViewController;
+        ijkPlayer.SmallViewFloatingController.Enabled = true;
+        ijkPlayer.DefaultSmallViewControlLayer.TopContainerView.CleanColors();
 
-        var smallViewLabel = new UILabel(Window!.Frame)
+        var avSmallViewLabel = new UILabel(Window!.Frame)
         {
             BackgroundColor = UIColor.SystemBackground,
             TextAlignment = UITextAlignment.Center,
-            Text = $"Small View",
+            Text = $"AVPlayer Small View",
             AutoresizingMask = UIViewAutoresizing.All,
         };
-        var tapGestureRecognizer = new UITapGestureRecognizer();
-        tapGestureRecognizer.AddTarget(() =>
+        avSmallViewLabel.Frame = new CGRect(0, 290, UIScreen.MainScreen.Bounds.Width, 30);
+        var avTapGestureRecognizer = new UITapGestureRecognizer();
+        avTapGestureRecognizer.AddTarget(() =>
         {
             //player.Pause();
-            player.SmallViewFloatingController.Show();
+            avPlayer.SmallViewFloatingController.Show();
         });
-        smallViewLabel.UserInteractionEnabled = true;
-        smallViewLabel.AddGestureRecognizer(tapGestureRecognizer);
-        vc.View!.AddSubview(smallViewLabel);
+        avSmallViewLabel.UserInteractionEnabled = true;
+        avSmallViewLabel.AddGestureRecognizer(avTapGestureRecognizer);
+        vc.View!.AddSubview(avSmallViewLabel);
+        
+        var ijkSmallViewLabel = new UILabel(Window!.Frame)
+        {
+            BackgroundColor = UIColor.SystemBackground,
+            TextAlignment = UITextAlignment.Center,
+            Text = $"IJKPlayer Small View",
+            AutoresizingMask = UIViewAutoresizing.All,
+        };
+        ijkSmallViewLabel.Frame = new CGRect(0, 630, UIScreen.MainScreen.Bounds.Width, 30);
+        var ijkTapGestureRecognizer = new UITapGestureRecognizer();
+        ijkTapGestureRecognizer.AddTarget(() =>
+        {
+            //player.Pause();
+            ijkPlayer.SmallViewFloatingController.Show();
+        });
+        ijkSmallViewLabel.UserInteractionEnabled = true;
+        ijkSmallViewLabel.AddGestureRecognizer(ijkTapGestureRecognizer);
+        vc.View!.AddSubview(ijkSmallViewLabel);
 
         #endregion
 
-        #region 4. Autoplay Config
+        #region 5. Autoplay Config
 
-        player.AutoplayWhenSetNewAsset = false;
+        avPlayer.AutoplayWhenSetNewAsset = false;
+        ijkPlayer.AutoplayWhenSetNewAsset = false;
 
         #endregion
 
-        #region 5. Subtitle Config
+        #region 6. Subtitle Config
 
         var subtitleDict = new Dictionary<string, int>()
         {
@@ -153,14 +199,21 @@ public class AppDelegate : UIApplicationDelegate {
 
         #endregion
 
-        player.URLAsset = urlAsset;
-        player.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
-        player.View.BackgroundColor = UIColor.Black;
-        player.View.Frame = new CGRect(0, 50, UIScreen.MainScreen.Bounds.Width, 220);
+        avPlayer.URLAsset = urlAsset;
+        avPlayer.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
+        avPlayer.View.BackgroundColor = UIColor.Black;
+        avPlayer.View.Frame = new CGRect(0, 60, UIScreen.MainScreen.Bounds.Width, 220);
+        
+        ijkPlayer.URLAsset = urlAsset;
+        ijkPlayer.PresentView.PlaceholderImageView.Image = UIImage.FromFile("big_buck_bunny.jpg");
+        ijkPlayer.View.BackgroundColor = UIColor.Black;
+        ijkPlayer.View.Frame = new CGRect(0, 400, UIScreen.MainScreen.Bounds.Width, 220);
+        
         //Use Autoplay config instead
         //player.Pause();
 
-        vc.View!.AddSubview(player.View);
+        vc.View!.AddSubview(avPlayer.View);
+        vc.View!.AddSubview(ijkPlayer.View);
 
         Window.RootViewController = vc;
 

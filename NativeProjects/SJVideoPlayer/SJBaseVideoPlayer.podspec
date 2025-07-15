@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/changsanjiang/SJBaseVideoPlayer'
   s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author       = { 'SanJiang' => 'changsanjiang@gmail.com' }
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '12.0'
   s.source       = { :git => 'https://github.com/changsanjiang/SJBaseVideoPlayer.git', :tag => "v#{s.version}" }
   s.frameworks  = "UIKit", "AVFoundation"
   s.requires_arc = true
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'IJKPlayer' do |ss|
       ss.source_files = 'SJBaseVideoPlayer/IJKPlayer/**/*.{h,m}'
-      ss.dependency 'PodIJKPlayer'
+      ss.dependency 'PodIJKMedia', '>= 0.2.4'
       ss.dependency 'SJBaseVideoPlayer/Common'
       ss.libraries = 'z', 'c++'
   end

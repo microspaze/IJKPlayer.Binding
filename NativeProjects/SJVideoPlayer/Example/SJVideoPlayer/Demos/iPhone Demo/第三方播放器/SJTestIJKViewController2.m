@@ -12,9 +12,9 @@
 #import "Masonry.h"
 #import <SJUIKit/NSAttributedString+SJMake.h>
 
-#if __has_include(<PodIJKPlayer/PodIJKPlayer.h>)
+#if __has_include(<PodIJKMedia/PodIJKMedia.h>)
 #import "SJIJKMediaPlaybackController.h"
-#import <PodIJKPlayer/PodIJKPlayer.h>
+#import <PodIJKMedia/PodIJKMedia.h>
 #endif
 
 @interface SJTestIJKViewController2 ()
@@ -28,12 +28,12 @@
     self.view.backgroundColor = UIColor.whiteColor;
     
     _player = SJVideoPlayer.player;
-#if __has_include(<PodIJKPlayer/PodIJKPlayer.h>)
+#if __has_include(<PodIJKMedia/PodIJKMedia.h>)
     SJIJKMediaPlaybackController *controller = SJIJKMediaPlaybackController.new;
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
     controller.options = options;
     _player.playbackController = controller;
-    SJVideoPlayerURLAsset *asset = [SJVideoPlayerURLAsset.alloc initWithURL:SourceURL0];
+    SJVideoPlayerURLAsset *asset = [SJVideoPlayerURLAsset.alloc initWithURL:SourceURL6];
 //    asset.trialEndPosition = 30; // 试看30秒
     _player.URLAsset = asset;
 #else

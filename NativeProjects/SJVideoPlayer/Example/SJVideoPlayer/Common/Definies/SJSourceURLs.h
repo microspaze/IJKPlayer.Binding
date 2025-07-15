@@ -21,7 +21,9 @@
 
 #define SourceURL5 [NSURL URLWithString:@"https://xy2.v.netease.com/r/video/20190110/bea8e70d-ffc0-4433-b250-0393cff10b75.mp4"]
 
-#define SourceURLs  @[SourceURL0, SourceURL1, SourceURL2, SourceURL3, SourceURL4, SourceURL5]
+#define SourceURL6 [NSURL URLWithString:@"https://gastaticqn.gatime.cn/big_buck_bunny.mp4"]
+
+#define SourceURLs  @[SourceURL0, SourceURL1, SourceURL2, SourceURL3, SourceURL4, SourceURL5, SourceURL6]
 
 
 

@@ -6,36 +6,9 @@
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
     <Configurations>Debug;Release</Configurations>
-    <Platforms>Simulator;Device;AnyCPU</Platforms>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Simulator' ">
-    <CreatePackage>false</CreatePackage>
-    <CodesignKey>iPhone Developer</CodesignKey>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Simulator' ">
-    <CreatePackage>false</CreatePackage>
-    <CodesignKey>iPhone Developer</CodesignKey>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Device' ">
-    <CreatePackage>false</CreatePackage>
-    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Device' ">
-    <CreatePackage>false</CreatePackage>
-    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-    <CodesignKey>iPhone Developer</CodesignKey>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <CreatePackage>false</CreatePackage>
-    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <CreatePackage>false</CreatePackage>
-    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IJKPlayer.SJPlayer">
-      <HintPath>..\IJKPlayer.SJPlayer\bin\IJKPlayer.SJPlayer.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\IJKPlayer.SJPlayer\IJKPlayer.SJPlayer.csproj" />
   </ItemGroup>
 </Project>

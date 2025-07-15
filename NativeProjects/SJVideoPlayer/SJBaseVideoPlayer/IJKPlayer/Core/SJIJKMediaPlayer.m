@@ -11,7 +11,7 @@
 #elif __has_include(<IJKMediaFrameworkWithSSL/IJKMediaFrameworkWithSSL.h>)
 #import <IJKMediaFrameworkWithSSL/IJKMediaFrameworkWithSSL.h>
 #else
-#import <PodIJKPlayer/PodIJKPlayer.h>
+#import <PodIJKMedia/PodIJKMedia.h>
 #endif
 #import "NSTimer+SJAssetAdd.h"
 
