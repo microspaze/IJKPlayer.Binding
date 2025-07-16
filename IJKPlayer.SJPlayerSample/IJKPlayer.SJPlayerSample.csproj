@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net9.0-ios</TargetFramework>
     <OutputType>Exe</OutputType>
@@ -9,6 +9,8 @@
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IJKPlayer.SJPlayer\IJKPlayer.SJPlayer.csproj" />
+    <Reference Include="IJKPlayer.SJPlayer">
+      <HintPath>..\IJKPlayer.SJPlayer\Refs\IJKPlayer.SJPlayer.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

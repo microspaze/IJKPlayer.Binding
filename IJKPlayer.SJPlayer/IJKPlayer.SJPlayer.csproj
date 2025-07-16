@@ -1,52 +1,62 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>net9.0-ios</TargetFrameworks>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>true</ImplicitUsings>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <IsBindingProject>true</IsBindingProject>
-    <Configurations>Debug;Release</Configurations>
-    <Platforms>AnyCPU</Platforms>
-    <OutputPath>bin</OutputPath>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net9.0-ios</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <IsBindingProject>true</IsBindingProject>
+        <Platforms>AnyCPU</Platforms>
+        <OutputPath>bin</OutputPath>
+        <LibRefsPath>Refs</LibRefsPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="IJKMediaApis.cs" />
-    <ObjcBindingCoreSource Include="IJKMediaEnums.cs" />
-    <ObjcBindingApiDefinition Include="SJUIKitApis.cs" />
-    <ObjcBindingCoreSource Include="SJUIKitEnums.cs" />
-    <ObjcBindingApiDefinition Include="SJBaseVideoPlayerApis.cs" />
-    <ObjcBindingCoreSource Include="SJBaseVideoPlayerEnums.cs" />
-    <ObjcBindingApiDefinition Include="SJVideoPlayerApis.cs" />
-    <ObjcBindingCoreSource Include="SJVideoPlayerEnums.cs" />
-  </ItemGroup>
+    <Target Name="CopyBinToRefs" AfterTargets="AfterBuild">
+        <MakeDir Directories="$(LibRefsPath)" Condition="!Exists('$(LibRefsPath)')" />
+        <ItemGroup>
+            <BinFilesToCopy Include="$(OutputPath)**\*.*" />
+        </ItemGroup>
+        <Copy SourceFiles="@(BinFilesToCopy)"
+              DestinationFolder="$(LibRefsPath)\%(RecursiveDir)"
+              OverwriteReadOnlyFiles="true" />
+    </Target>
 
-  <ItemGroup>
-    <NativeReference Include="Libs/IJKMediaFramework.xcframework">
-      <Kind>Framework</Kind>
-      <IsXCFramework>true</IsXCFramework>
-    </NativeReference>
-    <NativeReference Include="Libs/Masonry.xcframework">
-      <Kind>Framework</Kind>
-      <IsXCFramework>true</IsXCFramework>
-    </NativeReference>
-    <NativeReference Include="Libs/SJUIKit.xcframework">
-      <Kind>Framework</Kind>
-      <IsXCFramework>true</IsXCFramework>
-    </NativeReference>
-    <NativeReference Include="Libs/SJBaseVideoPlayer.xcframework">
-      <Kind>Framework</Kind>
-      <IsXCFramework>true</IsXCFramework>
-    </NativeReference>
-    <NativeReference Include="Libs/SJVideoPlayer.xcframework">
-      <Kind>Framework</Kind>
-      <IsXCFramework>true</IsXCFramework>
-    </NativeReference>
-    <NativeReference Include="Libs/YYModel.xcframework">
-      <Kind>Framework</Kind>
-      <IsXCFramework>true</IsXCFramework>
-    </NativeReference>
-  </ItemGroup>
-  
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="IJKMediaApis.cs" />
+        <ObjcBindingCoreSource Include="IJKMediaEnums.cs" />
+        <ObjcBindingApiDefinition Include="SJUIKitApis.cs" />
+        <ObjcBindingCoreSource Include="SJUIKitEnums.cs" />
+        <ObjcBindingApiDefinition Include="SJBaseVideoPlayerApis.cs" />
+        <ObjcBindingCoreSource Include="SJBaseVideoPlayerEnums.cs" />
+        <ObjcBindingApiDefinition Include="SJVideoPlayerApis.cs" />
+        <ObjcBindingCoreSource Include="SJVideoPlayerEnums.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <NativeReference Include="Libs/IJKMediaFramework.xcframework">
+            <Kind>Framework</Kind>
+            <IsXCFramework>true</IsXCFramework>
+        </NativeReference>
+        <NativeReference Include="Libs/Masonry.xcframework">
+            <Kind>Framework</Kind>
+            <IsXCFramework>true</IsXCFramework>
+        </NativeReference>
+        <NativeReference Include="Libs/SJUIKit.xcframework">
+            <Kind>Framework</Kind>
+            <IsXCFramework>true</IsXCFramework>
+        </NativeReference>
+        <NativeReference Include="Libs/SJBaseVideoPlayer.xcframework">
+            <Kind>Framework</Kind>
+            <IsXCFramework>true</IsXCFramework>
+        </NativeReference>
+        <NativeReference Include="Libs/SJVideoPlayer.xcframework">
+            <Kind>Framework</Kind>
+            <IsXCFramework>true</IsXCFramework>
+        </NativeReference>
+        <NativeReference Include="Libs/YYModel.xcframework">
+            <Kind>Framework</Kind>
+            <IsXCFramework>true</IsXCFramework>
+        </NativeReference>
+    </ItemGroup>
+
 </Project>
