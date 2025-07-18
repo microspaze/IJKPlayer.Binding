@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <!-- Enable trim analyzers for Android class libraries. To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming -->
+        <IsTrimmable>true</IsTrimmable>
+        <!-- NOTE: you can simply add .aar or .jar files in this directory to be included in the project. To learn more, see: https://learn.microsoft.com/dotnet/maui/migration/android-binding-projects -->
+        <RootNamespace>IJKPlayer.DKPlayer</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AndroidLibrary Include="Libs/dkplayer-java-3.3.7.aar">
+            <Bind>false</Bind>
+            <Visible>false</Visible>
+        </AndroidLibrary>
+        <AndroidLibrary Include="Libs/dkplayer-ui-3.3.7.aar">
+            <Bind>false</Bind>
+            <Visible>false</Visible>
+        </AndroidLibrary>
+        <AndroidLibrary Include="Libs/videocache-3.3.7.aar">
+            <Bind>false</Bind>
+            <Visible>false</Visible>
+        </AndroidLibrary>
+        <AndroidLibrary Include="Libs/player-ijk-3.3.7.aar">
+            <Bind>false</Bind>
+            <Visible>false</Visible>
+        </AndroidLibrary>
+    </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+  </ItemGroup>
+</Project>

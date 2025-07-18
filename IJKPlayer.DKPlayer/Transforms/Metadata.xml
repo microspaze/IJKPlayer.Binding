@@ -1,0 +1,19 @@
+﻿<metadata>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <attr path="/api/package[@name='tv.danmaku.ijk.media.player']/class[@name='IjkMediaPlayer']/method[@name='getTrackInfo' and count(parameter)=0]" name="managedOverride">override</attr>
+
+    <attr path="/api/package[@name='xyz.doikki.videoplayer.ijk']/class[@name='IjkPlayerFactory']/method[@name='createPlayer' and count(parameter)=1 and parameter[1][@type='android.content.Context']]" name="managedOverride">override</attr>
+
+    <attr path="/api/package[@name='xyz.doikki.videoplayer.player']/class[@name='AndroidMediaPlayerFactory']/method[@name='createPlayer' and count(parameter)=1 and parameter[1][@type='android.content.Context']]" name="managedOverride">override</attr>
+
+    <attr path="/api/package[@name='xyz.doikki.videoplayer.player']/class[@name='AudioFocusHelper']" name="visibility">public</attr>
+
+    <remove-node path="/api/package[@name='xyz.doikki.videoplayer.player']/interface[@name='BaseVideoView.OnStateChangeListener']" />
+
+</metadata>
