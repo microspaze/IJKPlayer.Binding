@@ -75,6 +75,7 @@ namespace IJKPlayer.DKPlayerSample
             //playerView.SetPlayerFactory(AndroidMediaPlayerFactory.Create());
             playerView.SetUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4");
             playerView.SetVideoController(playerController);
+            playerView.SetScreenScaleType(VideoView.ScreenScaleMatchParent);
             playerView.SetLooping(true);
 
             var playerLayoutParams = new LinearLayout.LayoutParams(
