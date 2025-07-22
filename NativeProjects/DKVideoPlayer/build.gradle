@@ -5,10 +5,10 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-//        mavenLocal()
+//      mavenLocal()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.4.1'
         // maven publish tool
         classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.4.30'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -20,9 +20,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenCentral()
-//        mavenLocal()
+//      mavenLocal()
     }
 }
 

@@ -9,6 +9,7 @@ android {
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
     }
+    namespace 'xyz.doikki.videoplayer.ijk'
 }
 
 dependencies {
