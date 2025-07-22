@@ -11,7 +11,11 @@ using VideoView = Xyz.Doikki.Videoplayer.Player.VideoView;
 
 namespace IJKPlayer.DKPlayerSample
 {
-    [Activity(Theme = "@style/Maui.MainTheme", Label = "@string/app_name", MainLauncher = true)]
+    [Activity(
+        Theme = "@style/Maui.MainTheme",
+        Label = "@string/app_name",
+        MainLauncher = true,
+        ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
     public class MainActivity : AppCompatActivity
     {
         private VideoView? playerView = null;
