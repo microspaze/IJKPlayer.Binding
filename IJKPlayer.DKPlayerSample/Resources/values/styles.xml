@@ -1,0 +1,9 @@
+﻿<resources>
+  <!-- 修改 Maui.SplashTheme 和 Maui.MainTheme 的父主题 -->
+  <style name="Maui.SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+  </style>
+
+  <style name="Maui.MainTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- 其他主题项 -->
+  </style>
+</resources>

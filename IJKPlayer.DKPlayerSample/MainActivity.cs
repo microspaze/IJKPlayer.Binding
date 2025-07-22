@@ -1,5 +1,7 @@
 using Android.Util;
 using Android.Views;
+using AndroidX.AppCompat.App;
+using AndroidX.ConstraintLayout.Widget;
 using Bumptech.Glide;
 using Xyz.Doikki.Videocontroller;
 using Xyz.Doikki.Videocontroller.Component;
@@ -9,8 +11,8 @@ using VideoView = Xyz.Doikki.Videoplayer.Player.VideoView;
 
 namespace IJKPlayer.DKPlayerSample
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true)]
-    public class MainActivity : Activity
+    [Activity(Theme = "@style/Maui.MainTheme", Label = "@string/app_name", MainLauncher = true)]
+    public class MainActivity : AppCompatActivity
     {
         private VideoView? playerView = null;
         private StandardVideoController? playerController = null;
@@ -20,18 +22,12 @@ namespace IJKPlayer.DKPlayerSample
             base.OnCreate(savedInstanceState);
 
             // Create a vertical LinearLayout to hold the VideoViews
-            var layout = new LinearLayout(this)
+            var layout = new ConstraintLayout(this)
             {
-                Orientation = Orientation.Vertical
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MatchParent,
+                    ViewGroup.LayoutParams.MatchParent)
             };
-
-            // 关键修改2：创建全屏容器
-            var playerContainer = new FrameLayout(this);
-            var layoutParams = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MatchParent,
-                (int)TypedValue.ApplyDimension(ComplexUnitType.Dip, 200, Resources.DisplayMetrics)
-            );
-            playerContainer.LayoutParameters = layoutParams;
 
             var isLive = false;
 
@@ -75,18 +71,22 @@ namespace IJKPlayer.DKPlayerSample
             //playerView.SetPlayerFactory(AndroidMediaPlayerFactory.Create());
             playerView.SetUrl("https://gastaticqn.gatime.cn/big_buck_bunny.mp4");
             playerView.SetVideoController(playerController);
-            playerView.SetScreenScaleType(VideoView.ScreenScaleMatchParent);
+            playerView.SetScreenScaleType(BaseVideoView.ScreenScaleMatchParent);
             playerView.SetLooping(true);
 
-            var playerLayoutParams = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MatchParent,
-                ViewGroup.LayoutParams.MatchParent
+            var layoutParams = new ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.MatchParent,
+                0 // 高度设为0
             );
-            playerView.LayoutParameters = playerLayoutParams;
+            layoutParams.TopToTop = ConstraintLayout.LayoutParams.ParentId;
+            layoutParams.LeftToLeft = ConstraintLayout.LayoutParams.ParentId;
+            layoutParams.RightToRight = ConstraintLayout.LayoutParams.ParentId;
+            layoutParams.DimensionRatio = "16:9";
+
+            playerView.LayoutParameters = layoutParams;
 
             // Add VideoViews to layout
-            playerContainer.AddView(playerView);
-            layout.AddView(playerContainer);
+            layout.AddView(playerView);
 
             // Set the layout as the content view
             SetContentView(layout);
