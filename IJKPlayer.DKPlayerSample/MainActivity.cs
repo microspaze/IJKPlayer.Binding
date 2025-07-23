@@ -32,6 +32,7 @@ namespace IJKPlayer.DKPlayerSample
                     ViewGroup.LayoutParams.MatchParent,
                     ViewGroup.LayoutParams.MatchParent)
             };
+            layout.SetFitsSystemWindows(true);
 
             var isLive = false;
 
